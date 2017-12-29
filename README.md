@@ -1,1 +1,1 @@
-# flugsau-magento
+# Flugsau GmbH Magento Shop
