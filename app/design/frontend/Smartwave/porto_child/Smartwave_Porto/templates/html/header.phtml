@@ -1,0 +1,28 @@
+<?php
+    $header_type = $this->getConfig('porto_settings/header/header_type');
+    $class = $header_type == 16 || $header_type == 17 || $header_type == 19 || $header_type == 20 || $header_type == 21 || $header_type == 23 || $header_type == 24 || $header_type == 25  || $header_type == 26 || $header_type == 27 ? 'header-newskin':'';
+?>
+<header class="page-header type<?php echo $header_type; ?> <?php echo $class;?>" >
+<?php echo $this->getChildHtml("header_customer_form_login"); ?>
+    <div class="main-panel-top">
+        <div class="container">
+            <div class="main-panel-inner">
+                <div class="panel wrapper">
+                    <div class="panel header">
+                        <?php echo $this->getChildHtml("skip_to_content"); ?>
+                        <?php echo $this->getChildHtml("currency"); ?>
+                        <?php echo $this->getChildHtml("store_language"); ?>
+                        <?php echo $this->getChildHtml("header.links"); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header content">
+        <?php echo $this->getChildHtml("minicart"); ?>
+        <?php echo $this->getChildHtml("top.search"); ?>
+        <?php echo $this->getChildHtml("logo"); ?>
+        <?php echo $this->getChildHtml("custom_block"); ?>
+    </div>
+    <?php echo $this->getChildHtml("navigation.sections"); ?>
+</header>
