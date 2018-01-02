@@ -2733,15 +2733,15 @@ Disallow: /*SID=
           'tab_full_background' => '1',
           'custom_block_next_tab' => 'porto_custom_block_product_tab_for_demo14',
           'move_upsell' => '0',
-          'aspect_ratio' => '0',
           'ratio_width' => NULL,
           'ratio_height' => NULL,
-          'enable_addtocart_sticky' => '0',
           'tab_style' => NULL,
-          'move_tab' => '0',
-          'move_upsell_full' => '0',
           'custom_cms_tabs' => 'a:0:{}',
           'custom_attr_tabs' => 'a:0:{}',
+          'aspect_ratio' => '0',
+          'enable_addtocart_sticky' => '0',
+          'move_tab' => '0',
+          'move_upsell_full' => '0',
         ),
         'product_label' => 
         array (
@@ -3705,6 +3705,62 @@ Disallow: /*SID=
       ),
       'base' => 
       array (
+        'design' => 
+        array (
+          'theme' => 
+          array (
+            'theme_id' => 'frontend/Smartwave/port_child',
+          ),
+          'pagination' => 
+          array (
+            'pagination_frame_skip' => NULL,
+            'anchor_text_for_previous' => NULL,
+            'anchor_text_for_next' => NULL,
+          ),
+          'head' => 
+          array (
+            'title_prefix' => NULL,
+            'title_suffix' => NULL,
+            'default_description' => NULL,
+            'default_keywords' => NULL,
+            'includes' => NULL,
+          ),
+          'header' => 
+          array (
+            'logo_width' => NULL,
+            'logo_height' => NULL,
+            'logo_alt' => NULL,
+            'welcome' => NULL,
+            'logo_src' => 'websites/1/Flugsau_Blau_Logo.png',
+          ),
+          'footer' => 
+          array (
+            'copyright' => 'Copyright © 2017 Flugsau GmbH All rights reserved.',
+            'absolute_footer' => NULL,
+          ),
+          'search_engine_robots' => 
+          array (
+            'custom_instructions' => NULL,
+          ),
+          'watermark' => 
+          array (
+            'image_size' => NULL,
+            'image_imageOpacity' => NULL,
+            'small_image_size' => NULL,
+            'small_image_imageOpacity' => NULL,
+            'thumbnail_size' => NULL,
+            'thumbnail_imageOpacity' => NULL,
+            'swatch_image_size' => NULL,
+            'swatch_image_imageOpacity' => NULL,
+          ),
+          'email' => 
+          array (
+            'logo_alt' => NULL,
+            'logo_width' => NULL,
+            'logo_height' => NULL,
+            'logo' => 'websites/1/flugsau_gruen_1.png',
+          ),
+        ),
         'web' => 
         array (
           'seo' => 
@@ -3732,56 +3788,6 @@ Disallow: /*SID=
             'base' => 'CHF',
             'default' => 'CHF',
             'allow' => 'CHF',
-          ),
-        ),
-        'design' => 
-        array (
-          'head' => 
-          array (
-            'title_prefix' => NULL,
-            'title_suffix' => NULL,
-            'includes' => NULL,
-          ),
-          'header' => 
-          array (
-            'logo_width' => NULL,
-            'logo_height' => NULL,
-            'logo_alt' => NULL,
-            'welcome' => NULL,
-            'logo_src' => 'websites/1/Flugsau_Blau_Logo.png',
-          ),
-          'footer' => 
-          array (
-            'absolute_footer' => NULL,
-            'copyright' => 'Copyright © 2017 Flugsau GmbH All rights reserved.',
-          ),
-          'theme' => 
-          array (
-            'theme_id' => 'frontend/Smartwave/port_child',
-          ),
-          'pagination' => 
-          array (
-            'pagination_frame_skip' => NULL,
-            'anchor_text_for_previous' => NULL,
-            'anchor_text_for_next' => NULL,
-          ),
-          'watermark' => 
-          array (
-            'image_size' => NULL,
-            'image_imageOpacity' => NULL,
-            'small_image_size' => NULL,
-            'small_image_imageOpacity' => NULL,
-            'thumbnail_size' => NULL,
-            'thumbnail_imageOpacity' => NULL,
-            'swatch_image_size' => NULL,
-            'swatch_image_imageOpacity' => NULL,
-          ),
-          'email' => 
-          array (
-            'logo_alt' => NULL,
-            'logo_width' => NULL,
-            'logo_height' => NULL,
-            'logo' => 'websites/1/flugsau_gruen_1.png',
           ),
         ),
       ),
