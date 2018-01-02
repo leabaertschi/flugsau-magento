@@ -4,11 +4,12 @@ return array (
   array (
     'Magento_Store' => 1,
     'Magento_Directory' => 1,
+    'Magento_Backend' => 1,
     'Magento_AdvancedPricingImportExport' => 1,
     'Magento_Config' => 1,
-    'Magento_Backend' => 1,
-    'Magento_Theme' => 1,
+    'Magento_Authorization' => 1,
     'Magento_Eav' => 1,
+    'Magento_Theme' => 1,
     'Magento_Backup' => 1,
     'Magento_Customer' => 1,
     'Magento_AdminNotification' => 1,
@@ -18,31 +19,31 @@ return array (
     'Magento_Cms' => 1,
     'Magento_Security' => 1,
     'Magento_CatalogImportExport' => 1,
-    'Magento_Rule' => 1,
-    'Magento_Cron' => 1,
     'Magento_Catalog' => 1,
+    'Magento_Cron' => 1,
+    'Magento_Payment' => 1,
     'Magento_Search' => 1,
     'Magento_CatalogUrlRewrite' => 1,
-    'Magento_Widget' => 1,
+    'Magento_Rule' => 1,
     'Magento_Quote' => 1,
     'Magento_SalesSequence' => 1,
-    'Magento_Payment' => 1,
+    'Magento_Sales' => 1,
     'Magento_CmsUrlRewrite' => 1,
     'Magento_User' => 1,
     'Magento_ConfigurableImportExport' => 1,
+    'Magento_CatalogRule' => 1,
     'Magento_Msrp' => 1,
-    'Magento_CatalogInventory' => 1,
     'Magento_Contact' => 1,
     'Magento_Cookie' => 1,
-    'Magento_Newsletter' => 1,
+    'Magento_Widget' => 1,
     'Magento_CurrencySymbol' => 1,
-    'Magento_Sales' => 1,
+    'Magento_CatalogInventory' => 1,
     'Magento_Integration' => 1,
     'Magento_CustomerImportExport' => 1,
     'Magento_Deploy' => 1,
     'Magento_Developer' => 1,
     'Magento_Dhl' => 1,
-    'Magento_Authorization' => 1,
+    'Magento_Checkout' => 1,
     'Magento_Downloadable' => 1,
     'Magento_ImportExport' => 1,
     'Magento_Bundle' => 1,
@@ -50,19 +51,19 @@ return array (
     'Magento_EncryptionKey' => 1,
     'Magento_Fedex' => 1,
     'Magento_GiftMessage' => 1,
-    'Magento_Checkout' => 1,
+    'Magento_GoogleAdwords' => 1,
     'Magento_GoogleAnalytics' => 1,
     'Magento_Ui' => 1,
     'Magento_GroupedImportExport' => 1,
     'Magento_GroupedProduct' => 1,
     'Magento_DownloadableImportExport' => 1,
-    'Magento_CatalogRule' => 1,
+    'Magento_ConfigurableProduct' => 1,
     'Magento_InstantPurchase' => 1,
     'Magento_Analytics' => 1,
     'Magento_LayeredNavigation' => 1,
     'Magento_Marketplace' => 1,
     'Magento_MediaStorage' => 1,
-    'Magento_ConfigurableProduct' => 1,
+    'Magento_CatalogRuleConfigurable' => 1,
     'Magento_Multishipping' => 1,
     'Magento_NewRelicReporting' => 1,
     'Magento_Reports' => 1,
@@ -83,7 +84,7 @@ return array (
     'Magento_ReviewAnalytics' => 1,
     'Magento_Robots' => 1,
     'Magento_Rss' => 1,
-    'Magento_CatalogRuleConfigurable' => 1,
+    'Magento_CatalogWidget' => 1,
     'Magento_Captcha' => 1,
     'Magento_SalesAnalytics' => 1,
     'Magento_SalesInventory' => 1,
@@ -93,16 +94,16 @@ return array (
     'Magento_CatalogSearch' => 1,
     'Magento_CustomerAnalytics' => 1,
     'Magento_SendFriend' => 1,
-    'Magento_Wishlist' => 1,
+    'Magento_Newsletter' => 1,
     'Magento_Signifyd' => 1,
     'Magento_Sitemap' => 1,
-    'Magento_Authorizenet' => 1,
+    'Magefan_Blog' => 1,
     'Magento_Swagger' => 1,
     'Magento_Swatches' => 1,
     'Magento_SwatchesLayeredNavigation' => 1,
     'Magento_Tax' => 1,
     'Magento_TaxImportExport' => 1,
-    'Magento_GoogleAdwords' => 1,
+    'Magento_Authorizenet' => 1,
     'Magento_Translation' => 1,
     'Magento_GoogleOptimizer' => 1,
     'Magento_Ups' => 1,
@@ -115,7 +116,7 @@ return array (
     'Magento_Webapi' => 1,
     'Magento_WebapiSecurity' => 1,
     'Magento_Weee' => 1,
-    'Magento_CatalogWidget' => 1,
+    'Magento_Wishlist' => 1,
     'Dotdigitalgroup_Email' => 1,
     'Magento_WishlistAnalytics' => 1,
     'Mageplaza_Core' => 1,
@@ -316,6 +317,9 @@ Disallow: /*SID=
         'header' => 
         array (
           'welcome' => 'Default welcome msg!',
+          'logo_width' => NULL,
+          'logo_height' => NULL,
+          'logo_src' => 'default/logo_white_small.png',
         ),
         'footer' => 
         array (
@@ -339,16 +343,20 @@ Disallow: /*SID=
         'debug' => 
         array (
           'profiler' => '0',
+          'template_hints_storefront' => '0',
+          'template_hints_admin' => '0',
+          'template_hints_blocks' => '0',
         ),
         'js' => 
         array (
-          'merge_files' => '0',
+          'merge_files' => '1',
           'minify_files' => '0',
           'minify_exclude' => '
                     /tiny_mce/
                 ',
           'session_storage_logging' => '0',
           'translate_strategy' => 'dictionary',
+          'enable_js_bundling' => '0',
         ),
         'css' => 
         array (
@@ -356,6 +364,7 @@ Disallow: /*SID=
           'minify_exclude' => '
                     /tiny_mce/
                 ',
+          'merge_css_files' => '0',
         ),
         'image' => 
         array (
@@ -377,6 +386,7 @@ Disallow: /*SID=
         'template' => 
         array (
           'minify_html' => '0',
+          'allow_symlink' => '0',
         ),
         'static' => 
         array (
@@ -523,8 +533,8 @@ Disallow: /*SID=
         'secure' => 
         array (
           'base_web_url' => '{{secure_base_url}}',
-          'use_in_frontend' => NULL,
-          'use_in_adminhtml' => NULL,
+          'use_in_frontend' => '0',
+          'use_in_adminhtml' => '0',
           'offloader_header' => 'X-Forwarded-Proto',
         ),
         'session' => 
@@ -543,12 +553,12 @@ Disallow: /*SID=
         ),
         'seo' => 
         array (
-          'use_rewrites' => '1',
+          'use_rewrites' => '0',
         ),
         'default' => 
         array (
           'cms_home_page' => 'home',
-          'cms_no_route' => 'no-route',
+          'cms_no_route' => 'no-route-2',
           'cms_no_cookies' => 'enable-cookies',
           'no_route' => 'cms/noroute/index',
           'show_cms_breadcrumbs' => '1',
@@ -619,7 +629,7 @@ Disallow: /*SID=
           'eu_countries' => 'AT,BE,BG,CY,CZ,DK,EE,FI,FR,DE,GR,HR,HU,IE,IT,LV,LT,LU,MT,NL,PL,PT,RO,SK,SI,ES,SE,GB',
           'optional_zip_countries' => 'HK,IE,MO,PA,GB',
           'allow' => 'AF,AL,DZ,AS,AD,AO,AI,AQ,AG,AR,AM,AW,AU,AT,AX,AZ,BS,BH,BD,BB,BY,BE,BZ,BJ,BM,BL,BT,BO,BA,BW,BV,BR,IO,VG,BN,BG,BF,BI,KH,CM,CA,CD,CV,KY,CF,TD,CL,CN,CX,CC,CO,KM,CG,CK,CR,HR,CU,CY,CZ,DK,DJ,DM,DO,EC,EG,SV,GQ,ER,EE,ET,FK,FO,FJ,FI,FR,GF,PF,TF,GA,GM,GE,DE,GG,GH,GI,GR,GL,GD,GP,GU,GT,GN,GW,GY,HT,HM,HN,HK,HU,IS,IM,IN,ID,IR,IQ,IE,IL,IT,CI,JE,JM,JP,JO,KZ,KE,KI,KW,KG,LA,LV,LB,LS,LR,LY,LI,LT,LU,ME,MF,MO,MK,MG,MW,MY,MV,ML,MT,MH,MQ,MR,MU,YT,FX,MX,FM,MD,MC,MN,MS,MA,MZ,MM,NA,NR,NP,NL,AN,NC,NZ,NI,NE,NG,NU,NF,KP,MP,NO,OM,PK,PW,PA,PG,PY,PE,PH,PN,PL,PS,PT,PR,QA,RE,RO,RS,RU,RW,SH,KN,LC,PM,VC,WS,SM,ST,SA,SN,SC,SL,SG,SK,SI,SB,SO,ZA,GS,KR,ES,LK,SD,SR,SJ,SZ,SE,CH,SY,TL,TW,TJ,TZ,TH,TG,TK,TO,TT,TN,TR,TM,TC,TV,VI,UG,UA,AE,GB,US,UM,UY,UZ,VU,VA,VE,VN,WF,EH,YE,ZM,ZW',
-          'default' => 'US',
+          'default' => 'CH',
         ),
         'locale' => 
         array (
@@ -685,7 +695,7 @@ Disallow: /*SID=
         ),
         'single_store_mode' => 
         array (
-          'enabled' => '0',
+          'enabled' => '1',
         ),
         'validator_data' => 
         array (
@@ -709,6 +719,19 @@ Disallow: /*SID=
         array (
           'display_all' => '1',
           'state_required' => 'AT,BR,CA,CH,EE,ES,FI,HR,LT,LV,RO,US',
+        ),
+        'store_information' => 
+        array (
+          'name' => 'Flugsau GmbH',
+          'phone' => NULL,
+          'hours' => NULL,
+          'country_id' => 'CH',
+          'region_id' => 'null',
+          'postcode' => NULL,
+          'city' => 'Grafenort',
+          'street_line1' => NULL,
+          'street_line2' => NULL,
+          'merchant_vat_number' => NULL,
         ),
       ),
       'theme' => 
@@ -882,7 +905,7 @@ Disallow: /*SID=
       array (
         'wysiwyg' => 
         array (
-          'enabled' => 'enabled',
+          'enabled' => 'hidden',
         ),
       ),
       'export' => 
@@ -1298,13 +1321,6 @@ Disallow: /*SID=
       ),
       'sales' => 
       array (
-        'msrp' => 
-        array (
-          'enabled' => '0',
-          'display_price_type' => '1',
-          'explanation_message' => 'Our price is lower than the manufacturer\'s "minimum advertised price." As a result, we cannot show you the price in catalog or the product page. <br /><br /> You have no obligation to purchase the product once you know the price. You can simply remove the item from your cart.',
-          'explanation_message_whats_this' => 'Our price is lower than the manufacturer\'s "minimum advertised price." As a result, we cannot show you the price in catalog or the product page. <br /><br /> You have no obligation to purchase the product once you know the price. You can simply remove the item from your cart.',
-        ),
         'totals_sort' => 
         array (
           'discount' => '20',
@@ -1328,6 +1344,13 @@ Disallow: /*SID=
           'items_per_page' => '20',
           'delete_pending_after' => '480',
         ),
+        'msrp' => 
+        array (
+          'enabled' => '0',
+          'display_price_type' => '1',
+          'explanation_message' => 'Our price is lower than the manufacturer\'s "minimum advertised price." As a result, we cannot show you the price in catalog or the product page. <br /><br /> You have no obligation to purchase the product once you know the price. You can simply remove the item from your cart.',
+          'explanation_message_whats_this' => 'Our price is lower than the manufacturer\'s "minimum advertised price." As a result, we cannot show you the price in catalog or the product page. <br /><br /> You have no obligation to purchase the product once you know the price. You can simply remove the item from your cart.',
+        ),
         'gift_messages' => 
         array (
           'allow_items' => '0',
@@ -1337,58 +1360,6 @@ Disallow: /*SID=
         array (
           'active' => '1',
           'button_text' => 'Instant Purchase',
-        ),
-      ),
-      'cataloginventory' => 
-      array (
-        'options' => 
-        array (
-          'can_subtract' => '1',
-          'can_back_in_stock' => '1',
-          'show_out_of_stock' => '0',
-          'stock_threshold_qty' => '0',
-          'display_product_stock_status' => '1',
-        ),
-        'item_options' => 
-        array (
-          'manage_stock' => '1',
-          'backorders' => '0',
-          'max_sale_qty' => '10000',
-          'min_sale_qty' => '1',
-          'min_qty' => '0',
-          'notify_stock_qty' => '1',
-          'enable_qty_increments' => '0',
-          'qty_increments' => '1',
-        ),
-      ),
-      'contact' => 
-      array (
-        'contact' => 
-        array (
-          'enabled' => '1',
-        ),
-        'email' => 
-        array (
-          'sender_email_identity' => 'custom2',
-          'email_template' => 'contact_email_email_template',
-        ),
-      ),
-      'newsletter' => 
-      array (
-        'subscription' => 
-        array (
-          'allow_guest_subscribe' => '1',
-          'confirm' => '0',
-          'confirm_email_identity' => 'support',
-          'confirm_email_template' => 'newsletter_subscription_confirm_email_template',
-          'success_email_identity' => 'general',
-          'success_email_template' => 'newsletter_subscription_success_email_template',
-          'un_email_identity' => 'support',
-          'un_email_template' => 'newsletter_subscription_un_email_template',
-        ),
-        'sending' => 
-        array (
-          'set_return_path' => '0',
         ),
       ),
       'sales_email' => 
@@ -1480,6 +1451,40 @@ Disallow: /*SID=
       'dashboard' => 
       array (
         'use_aggregated_data' => '0',
+      ),
+      'contact' => 
+      array (
+        'contact' => 
+        array (
+          'enabled' => '1',
+        ),
+        'email' => 
+        array (
+          'sender_email_identity' => 'custom2',
+          'email_template' => 'contact_email_email_template',
+        ),
+      ),
+      'cataloginventory' => 
+      array (
+        'options' => 
+        array (
+          'can_subtract' => '1',
+          'can_back_in_stock' => '1',
+          'show_out_of_stock' => '0',
+          'stock_threshold_qty' => '0',
+          'display_product_stock_status' => '1',
+        ),
+        'item_options' => 
+        array (
+          'manage_stock' => '1',
+          'backorders' => '0',
+          'max_sale_qty' => '10000',
+          'min_sale_qty' => '1',
+          'min_qty' => '0',
+          'notify_stock_qty' => '1',
+          'enable_qty_increments' => '0',
+          'qty_increments' => '1',
+        ),
       ),
       'oauth' => 
       array (
@@ -1648,18 +1653,6 @@ Disallow: /*SID=
           'sovereign_endpoint' => NULL,
         ),
       ),
-      'import' => 
-      array (
-        'format_v1' => 
-        array (
-          'page_size' => '5000',
-        ),
-        'format_v2' => 
-        array (
-          'page_size' => '10000',
-          'bunch_size' => '100',
-        ),
-      ),
       'checkout' => 
       array (
         'options' => 
@@ -1691,6 +1684,86 @@ Disallow: /*SID=
           'identity' => 'general',
           'receiver' => 'general',
           'template' => 'checkout_payment_failed_template',
+        ),
+      ),
+      'import' => 
+      array (
+        'format_v1' => 
+        array (
+          'page_size' => '5000',
+        ),
+        'format_v2' => 
+        array (
+          'page_size' => '10000',
+          'bunch_size' => '100',
+        ),
+      ),
+      'google' => 
+      array (
+        'adwords' => 
+        array (
+          'active' => '0',
+          'conversion_language' => 'en',
+          'conversion_format' => '2',
+          'conversion_color' => 'FFFFFF',
+          'conversion_value_type' => '1',
+          'conversion_value' => '0',
+          'languages' => 
+          array (
+            'ar' => 'ar',
+            'bg' => 'bg',
+            'ca' => 'ca',
+            'cs' => 'cs',
+            'da' => 'da',
+            'de' => 'de',
+            'el' => 'el',
+            'en' => 'en',
+            'es' => 'es',
+            'et' => 'et',
+            'fi' => 'fi',
+            'fr' => 'fr',
+            'hi' => 'hi',
+            'hr' => 'hr',
+            'hu' => 'hu',
+            'id' => 'id',
+            'is' => 'is',
+            'it' => 'it',
+            'iw' => 'iw',
+            'ja' => 'ja',
+            'ko' => 'ko',
+            'lt' => 'lt',
+            'lv' => 'lv',
+            'nl' => 'nl',
+            'no' => 'no',
+            'pl' => 'pl',
+            'pt' => 'pt',
+            'ro' => 'ro',
+            'ru' => 'ru',
+            'sk' => 'sk',
+            'sl' => 'sl',
+            'sr' => 'sr',
+            'sv' => 'sv',
+            'th' => 'th',
+            'tl' => 'tl',
+            'tr' => 'tr',
+            'uk' => 'uk',
+            'ur' => 'ur',
+            'vi' => 'vi',
+            'zh_TW' => 'zh_TW',
+            'zh_CN' => 'zh_CN',
+          ),
+          'language_convert' => 
+          array (
+            'zh_CN' => 'zh_Hans',
+            'zh_TW' => 'zh_Hant',
+            'iw' => 'he',
+          ),
+          'conversion_js_src' => 'https://www.googleadservices.com/pagead/conversion.js',
+          'conversion_img_src' => 'https://www.googleadservices.com/pagead/conversion/%s/?label=%s&guid=ON&script=0',
+        ),
+        'optimizer' => 
+        array (
+          'active' => '0',
         ),
       ),
       'analytics' => 
@@ -1777,9 +1850,17 @@ Disallow: /*SID=
       array (
         'origin' => 
         array (
-          'country_id' => 'US',
-          'postcode' => '90034',
-          'region_id' => '12',
+          'country_id' => 'CH',
+          'postcode' => '6388',
+          'region_id' => '118',
+          'city' => 'Grafenort',
+          'street_line1' => NULL,
+          'street_line2' => NULL,
+        ),
+        'shipping_policy' => 
+        array (
+          'enable_shipping_policy' => '0',
+          'shipping_policy_content' => NULL,
         ),
       ),
       'captcha' => 
@@ -1871,18 +1952,22 @@ Disallow: /*SID=
           'check_by' => '0',
         ),
       ),
-      'wishlist' => 
+      'newsletter' => 
       array (
-        'general' => 
+        'subscription' => 
         array (
-          'active' => '1',
+          'allow_guest_subscribe' => '1',
+          'confirm' => '0',
+          'confirm_email_identity' => 'support',
+          'confirm_email_template' => 'newsletter_subscription_confirm_email_template',
+          'success_email_identity' => 'general',
+          'success_email_template' => 'newsletter_subscription_success_email_template',
+          'un_email_identity' => 'support',
+          'un_email_template' => 'newsletter_subscription_un_email_template',
         ),
-        'email' => 
+        'sending' => 
         array (
-          'email_identity' => 'general',
-          'email_template' => 'wishlist_email_email_template',
-          'number_limit' => '10',
-          'text_limit' => '255',
+          'set_return_path' => '0',
         ),
       ),
       'fraud_protection' => 
@@ -1937,6 +2022,130 @@ Disallow: /*SID=
           ),
         ),
       ),
+      'mfblog' => 
+      array (
+        'general' => 
+        array (
+          'enabled' => '1',
+        ),
+        'index_page' => 
+        array (
+          'title' => 'Blog',
+          'display_mode' => '0>',
+          'meta_keywords' => NULL,
+          'meta_description' => NULL,
+        ),
+        'post_view' => 
+        array (
+          'related_posts' => 
+          array (
+            'enabled' => '1',
+            'number_of_posts' => '5',
+          ),
+          'related_products' => 
+          array (
+            'enabled' => '1',
+            'number_of_products' => '5',
+          ),
+          'comments' => 
+          array (
+            'type' => 'facebook',
+            'number_of_comments' => '4',
+            'number_of_replies' => '5',
+            'guest_comments' => '1',
+            'fb_app_id' => NULL,
+          ),
+          'nextprev' => 
+          array (
+            'enabled' => '1',
+          ),
+        ),
+        'post_list' => 
+        array (
+          'shortcotent_length' => '1000',
+          'posts_per_page' => '10',
+          'lazyload_padding' => '200',
+          'lazyload_enabled' => '0',
+        ),
+        'author' => 
+        array (
+          'enabled' => '0',
+          'page_enabled' => '1',
+        ),
+        'sidebar' => 
+        array (
+          'search' => 
+          array (
+            'enabled' => '1',
+            'sort_order' => '10',
+          ),
+          'categories' => 
+          array (
+            'enabled' => '1',
+            'show_posts_count' => '1',
+            'sort_order' => '20',
+            'max_depth' => '2',
+          ),
+          'recent_posts' => 
+          array (
+            'enabled' => '1',
+            'posts_per_page' => '5',
+            'sort_order' => '30',
+          ),
+          'featured_posts' => 
+          array (
+            'enabled' => '0',
+            'posts_ids' => NULL,
+            'sort_order' => '35',
+          ),
+          'archive' => 
+          array (
+            'enabled' => '1',
+            'sort_order' => '40',
+          ),
+          'tag_claud' => 
+          array (
+            'enabled' => '1',
+            'sort_order' => '45',
+          ),
+          'rss_feed' => 
+          array (
+            'title' => 'Blog Rss',
+            'sort_order' => '50',
+            'enabled' => '0',
+            'description' => NULL,
+          ),
+        ),
+        'product_page' => 
+        array (
+          'related_posts_enabled' => '0',
+          'number_of_related_posts' => '5',
+        ),
+        'permalink' => 
+        array (
+          'route' => 'blog',
+          'type' => 'default',
+          'post_route' => 'post',
+          'category_route' => 'category',
+          'archive_route' => 'archive',
+          'tag_route' => 'tag',
+          'author_route' => 'author',
+          'search_route' => 'search',
+        ),
+        'social' => 
+        array (
+          'add_this_enabled' => '1',
+          'add_this_pubid' => 'ra-4def63cd3cf37569',
+          'add_this_language' => 'en',
+        ),
+        'top_menu' => 
+        array (
+          'show_item' => '0',
+          'item_text' => 'Blog',
+          'include_categories' => '1',
+          'max_depth' => '0',
+        ),
+      ),
       'tax' => 
       array (
         'classes' => 
@@ -1950,20 +2159,22 @@ Disallow: /*SID=
           'algorithm' => 'TOTAL_BASE_CALCULATION',
           'apply_after_discount' => '1',
           'discount_tax' => '0',
-          'based_on' => 'shipping',
+          'based_on' => 'origin',
           'price_includes_tax' => '0',
           'shipping_includes_tax' => '0',
           'apply_tax_on' => '0',
+          'cross_border_trade_enabled' => '0',
         ),
         'defaults' => 
         array (
           'country' => 'US',
           'region' => '0',
+          'postcode' => NULL,
         ),
         'display' => 
         array (
-          'type' => '1',
-          'shipping' => '1',
+          'type' => '2',
+          'shipping' => '2',
         ),
         'cart_display' => 
         array (
@@ -1988,6 +2199,9 @@ Disallow: /*SID=
         'notification' => 
         array (
           'info_url' => 'http://docs.magento.com/m2/ce/user_guide/tax/warning-messages.html',
+          'ignore_discount' => '0',
+          'ignore_price_display' => '0',
+          'ignore_apply_discount' => '0',
         ),
         'weee' => 
         array (
@@ -2000,79 +2214,25 @@ Disallow: /*SID=
           'include_in_subtotal' => '0',
         ),
       ),
-      'google' => 
-      array (
-        'adwords' => 
-        array (
-          'active' => '0',
-          'conversion_language' => 'en',
-          'conversion_format' => '2',
-          'conversion_color' => 'FFFFFF',
-          'conversion_value_type' => '1',
-          'conversion_value' => '0',
-          'languages' => 
-          array (
-            'ar' => 'ar',
-            'bg' => 'bg',
-            'ca' => 'ca',
-            'cs' => 'cs',
-            'da' => 'da',
-            'de' => 'de',
-            'el' => 'el',
-            'en' => 'en',
-            'es' => 'es',
-            'et' => 'et',
-            'fi' => 'fi',
-            'fr' => 'fr',
-            'hi' => 'hi',
-            'hr' => 'hr',
-            'hu' => 'hu',
-            'id' => 'id',
-            'is' => 'is',
-            'it' => 'it',
-            'iw' => 'iw',
-            'ja' => 'ja',
-            'ko' => 'ko',
-            'lt' => 'lt',
-            'lv' => 'lv',
-            'nl' => 'nl',
-            'no' => 'no',
-            'pl' => 'pl',
-            'pt' => 'pt',
-            'ro' => 'ro',
-            'ru' => 'ru',
-            'sk' => 'sk',
-            'sl' => 'sl',
-            'sr' => 'sr',
-            'sv' => 'sv',
-            'th' => 'th',
-            'tl' => 'tl',
-            'tr' => 'tr',
-            'uk' => 'uk',
-            'ur' => 'ur',
-            'vi' => 'vi',
-            'zh_TW' => 'zh_TW',
-            'zh_CN' => 'zh_CN',
-          ),
-          'language_convert' => 
-          array (
-            'zh_CN' => 'zh_Hans',
-            'zh_TW' => 'zh_Hant',
-            'iw' => 'he',
-          ),
-          'conversion_js_src' => 'https://www.googleadservices.com/pagead/conversion.js',
-          'conversion_img_src' => 'https://www.googleadservices.com/pagead/conversion/%s/?label=%s&guid=ON&script=0',
-        ),
-        'optimizer' => 
-        array (
-          'active' => '0',
-        ),
-      ),
       'webapi' => 
       array (
         'webapisecurity' => 
         array (
           'allow_insecure' => '0',
+        ),
+      ),
+      'wishlist' => 
+      array (
+        'general' => 
+        array (
+          'active' => '1',
+        ),
+        'email' => 
+        array (
+          'email_identity' => 'general',
+          'email_template' => 'wishlist_email_email_template',
+          'number_limit' => '10',
+          'text_limit' => '255',
         ),
       ),
       'connector_api_credentials' => 
@@ -2471,13 +2631,23 @@ Disallow: /*SID=
         array (
           'boxed' => 'wide',
           'custom_notice_block' => 'porto_custom_notice',
+          'layout' => '1170',
+          'disable_border_radius' => '1',
+          'show_site_notice' => '0',
+          'boxed_custom_style' => NULL,
+          'smartlayers' => '0',
         ),
         'header' => 
         array (
-          'header_type' => '1',
+          'header_type' => '17',
           'static_block' => 'porto_custom_block_for_header',
           'toggle_text' => '<em class="porto-icon-menu"></em> SHOP BY CATEGORY',
           'static_block_8' => 'porto_custom_block_type_8',
+          'sticky_header_logo' => NULL,
+          'currency_short' => '1',
+          'language_flag' => '0',
+          'login_popup' => '0',
+          'sticky_header' => '0',
         ),
         'footer' => 
         array (
@@ -2485,20 +2655,20 @@ Disallow: /*SID=
           'footer_newsletter_text' => 'Get all the latest information on Events,<br/>Sales and Offers. Sign up for newsletter today.',
           'footer_top' => '0',
           'footer_top_block' => 'custom',
-          'footer_top_custom' => 'porto_footer_top_custom_block',
+          'footer_top_custom' => NULL,
           'footer_middle' => '1',
-          'footer_ribbon' => '1',
+          'footer_ribbon' => '0',
           'footer_ribbon_text' => 'Ribbon Text',
           'footer_middle_column_1' => 'custom',
-          'footer_middle_column_1_custom' => 'porto_footer_links',
-          'footer_middle_column_1_size' => '3',
+          'footer_middle_column_1_custom' => 'porto_footer_middle_1_for_14_new',
+          'footer_middle_column_1_size' => '4',
           'footer_middle_column_2' => 'custom',
-          'footer_middle_column_2_custom' => 'porto_footer_contact_information',
-          'footer_middle_column_2_size' => '3',
-          'footer_middle_column_3' => 'custom',
+          'footer_middle_column_2_custom' => 'porto_footer_middle_2_for_14_new',
+          'footer_middle_column_2_size' => '8',
+          'footer_middle_column_3' => NULL,
           'footer_middle_column_3_custom' => 'porto_footer_features',
           'footer_middle_column_3_size' => '3',
-          'footer_middle_column_4' => 'newsletter',
+          'footer_middle_column_4' => NULL,
           'footer_middle_column_4_custom' => 'porto_footer_links',
           'footer_middle_column_4_size' => '3',
           'footer_middle_2' => '0',
@@ -2514,17 +2684,17 @@ Disallow: /*SID=
           'footer_middle_2_column_4' => 'custom',
           'footer_middle_2_column_4_custom' => 'porto_footer_links',
           'footer_middle_2_column_4_size' => '3',
-          'footer_bottom' => '1',
+          'footer_bottom' => '0',
           'footer_store_switcher' => '0',
-          'footer_logo_src' => NULL,
-          'footer_bottom_copyrights' => '&copy;Copyright 2015 by SW-THEMES. All Rights Reserved.',
+          'footer_logo_src' => 'default/logo_footer_black.png',
+          'footer_bottom_copyrights' => '&copy;Copyright 2017 by SW-THEMES. All Rights Reserved.',
           'footer_bottom_custom_1' => 'porto_footer_bottom_custom_block',
           'footer_bottom_custom_2' => NULL,
         ),
         'category' => 
         array (
           'alternative_image' => '1',
-          'aspect_ratio' => '0',
+          'aspect_ratio' => '1',
           'ratio_width' => '300',
           'ratio_height' => '400',
           'rating_star' => '1',
@@ -2533,26 +2703,45 @@ Disallow: /*SID=
           'addtocompare' => '1',
           'addtowishlist' => '1',
           'page_layout' => 'page-layout-2columns-left',
-          'category_description' => 'main_column',
+          'category_description' => 'full_width',
           'side_custom_block' => 'porto_category_side_custom_block',
+          'qty_field' => '0',
         ),
         'category_grid' => 
         array (
           'columns' => '4',
           'move_actions' => '0',
+          'flex_grid' => '0',
+          'xs_one_column' => '0',
+          'move_title' => '0',
+          'infinite_scroller' => '0',
         ),
         'product' => 
         array (
-          'product_image_size' => '6',
+          'product_image_size' => '5',
           'main_custom_block' => NULL,
           'side_custom_block' => 'porto_product_side_custom_block',
           'prev_next' => '1',
           'prev_text' => '<em class="porto-icon-left-open"></em>',
           'next_text' => '<em class="porto-icon-right-open"></em>',
-          'page_layout' => 'page-layout-2columns-right',
+          'page_layout' => 'page-layout-1column',
           'upsell_columns' => '4',
           'custom_social' => '<div class="addthis_inline_share_toolbox"></div>
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55d6907796e30f69"></script>',
+          'main_custom_block2' => 'porto_custom_block_product_for_demo14',
+          'move_addtolinks' => '1',
+          'tab_full_background' => '1',
+          'custom_block_next_tab' => 'porto_custom_block_product_tab_for_demo14',
+          'move_upsell' => '0',
+          'aspect_ratio' => '0',
+          'ratio_width' => NULL,
+          'ratio_height' => NULL,
+          'enable_addtocart_sticky' => '0',
+          'tab_style' => NULL,
+          'move_tab' => '0',
+          'move_upsell_full' => '0',
+          'custom_cms_tabs' => 'a:0:{}',
+          'custom_attr_tabs' => 'a:0:{}',
         ),
         'product_label' => 
         array (
@@ -2564,9 +2753,9 @@ Disallow: /*SID=
         ),
         'newsletter' => 
         array (
-          'enable' => '1',
+          'enable' => '0',
           'delay' => '5000',
-          'logo_src' => 'default/logo.png',
+          'logo_src' => 'default/logo_black.png',
           'content' => '<h2>BE THE FIRST TO KNOW</h2><p>Subscribe to the Porto eCommerce newsletter to receive timely updates from your favorite products.</p>',
           'width' => '700px',
           'height' => '324px',
@@ -2576,7 +2765,7 @@ Disallow: /*SID=
         ),
         'contacts' => 
         array (
-          'enable' => '1',
+          'enable' => '0',
           'api_key' => NULL,
           'full_width' => '0',
           'address' => 'Porto2 Store',
@@ -2584,34 +2773,762 @@ Disallow: /*SID=
           'longitude' => '150.884',
           'zoom' => '18',
           'infoblock' => '<div class="row">
-    <div class="col-sm-12">
-        <i class="porto-icon-phone"></i>
-        <p>0201 203 2032</p>
-        <p>0201 203 2032</p>
-    </div>
+<div class="col-sm-12">
+    <i class="porto-icon-phone"></i>
+    <p>0201 203 2032</p>
+    <p>0201 203 2032</p>
+</div>
 </div>
 <div class="row">
-    <div class="col-sm-12">
-        <i class="porto-icon-mobile"></i>
-        <p>201-123-3922</p>
-        <p>302-123-3928</p>
-    </div>
+<div class="col-sm-12">
+    <i class="porto-icon-mobile"></i>
+    <p>201-123-3922</p>
+    <p>302-123-3928</p>
+</div>
 </div>
 <div class="row">
-    <div class="col-sm-12">
-        <i class="porto-icon-mail-alt"></i>
-        <p>porto@gmail.com</p>
-        <p>porto@portotemplate.com</p>
-    </div>
+<div class="col-sm-12">
+    <i class="porto-icon-mail-alt"></i>
+    <p>porto@gmail.com</p>
+    <p>porto@portotemplate.com</p>
+</div>
 </div>
 <div class="row">
-    <div class="col-sm-12">
-        <i class="porto-icon-skype"></i>
-        <p>porto_skype</p>
-        <p>proto_template</p>
-    </div>
+<div class="col-sm-12">
+    <i class="porto-icon-skype"></i>
+    <p>porto_skype</p>
+    <p>proto_template</p>
+</div>
 </div>',
           'customblock' => NULL,
+        ),
+        'custom_settings' => 
+        array (
+          'custom_style' => '@import url(\'http://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i\');
+@import url(\'http://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700\');
+
+.page-wrapper > .breadcrumbs {
+    font-family: \'Oswald\';
+    font-size: 12px;
+    letter-spacing: 0.075em;
+    font-weight: 400;
+    text-transform: uppercase;
+    border-bottom: #e6e6e6 solid 1px;
+    line-height: 25px;
+}
+.breadcrumbs .item:not(:last-child):after {
+    content: \'\\f809\';
+    font-size: 12px;
+}
+.page-main {
+    padding: 37px 15px 68px;
+}
+.block-category-list .block-title, .filter-options-title,.filter .filter-current-subtitle {
+    border: none;
+    background: none;
+    padding: 8px 13px 0 0;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #21293c;
+    letter-spacing: 0.01em;
+}
+.block-category-list .block-title strong {
+    font-weight: 600;
+}
+.filter-options-title {
+    padding-bottom: 4px;
+}
+.block-category-list .block-content,.filter-options-content {
+    border: none;
+    background-color: transparent;
+    padding: 10px 13px 28px 0;
+    border-bottom: #efefef solid 1px;
+}
+.block-category-list .block-content ol li.item {
+    margin: 0;
+}
+.block-category-list .block-content .item a {
+    font-size: 14px;
+    line-height: 33px;
+    letter-spacing: 0.01em;
+    color: #7a7d82;
+}
+.filter-options-title:after {
+    content: \'\\f803\';
+    border: 0;
+    color: #21293c;
+    font-size: 17px;
+    margin-right: -10px;
+    margin-top: -11px;
+}
+.active > .filter-options-title:after {
+    content: \'\\f800\';
+}
+.filter-options-title:hover:after {
+    background: none;
+    color: #21293c;
+}
+#ln_slider_price.ui-slider-horizontal {
+    background: #e1ddc3;
+    height: 3px;
+    box-shadow: none;
+}
+#ln_slider_price .ui-slider-handle {
+    background: #e1ddc3;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+}
+.filter-current .item {
+    padding: 0;
+}
+.filter-current .items {
+    border: none;
+    background-color: transparent;
+    padding: 10px 13px 0 0;
+}
+.filter-actions {
+    background: none;
+    border: none;
+    border-bottom: #efefef solid 1px;
+}
+.filter-current .action.remove {
+    right: 0;
+}
+.filter-actions a {
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.sidebar-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #21293c;
+    letter-spacing: 0.01em;
+    margin-bottom: 20px;
+}
+.porto-icon-left-open-huge:before {
+    content: \'\\f802\';
+}
+.porto-icon-right-open-huge:before {
+    content: \'\\f801\';
+}
+.sidebar .owl-top-narrow .owl-theme .owl-controls {
+    top: -40px;
+    right: 0;
+}
+.sidebar .owl-top-narrow .owl-theme .owl-controls .owl-nav div *:before {
+    color:#21293c;
+}
+.sidebar .product-items .product-item-info .product-item-photo {
+    max-width: 25.19%;
+}
+.sidebar .product-items .product-item-details {
+    margin-left: calc(31% + 15px);
+}
+.sidebar .product-items .product-item-name a {
+    font-size: 14px;
+    color: #7a7d82;
+    font-weight: 600;
+}
+.sidebar .sidebar-filterproducts {
+    margin-bottom: 30px;
+    padding-bottom: 40px;
+    background: none;
+    border-bottom: #efefef solid 1px;
+}
+.sidebar .product-items .product-item .product-reviews-summary {
+    display: block;
+}
+.sidebar-filterproducts.custom-block + h2 {
+    font-size: 15px !important;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #21293c !important;
+    letter-spacing: 0.01em;
+}
+.sidebar-filterproducts.custom-block + h2 +h5 {
+    font-family: \'Open Sans\' !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    color: #7a7d82 !important;
+    letter-spacing: 0.022em;
+}
+.sidebar-filterproducts.custom-block + h2 + h5 + p {
+    color: #21293c !important;
+    font-size: 15px !important;
+    letter-spacing: 0.022em;
+}
+.page-with-filter .toolbar-amount {
+    display: none;
+}
+.page-products .toolbar .limiter .limiter-text {
+    display: none;
+}
+.modes-mode.active {
+    border: none;
+    background: none;
+    color: #111;
+}
+.modes-mode,.modes-mode:hover {
+    border: none;
+    background: none;
+    color: #111;
+    width: 15px;
+}
+.toolbar select {
+    border: 1px solid #e4e4e4;
+    height: 37px;
+    color: #7a7d82;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: capitalize;
+    padding: 0 10px;
+    padding-right: 30px;
+    line-height: 31px;
+}
+.sorter-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #21293c;
+}
+.sorter-action {
+    margin-top: 6px;
+}
+.pages strong.page {
+    background: none;
+    border-color: #fff;
+    color: #21293c;
+    font-size: 15px;
+    width: 36px;
+    line-height: 34px;
+}
+.pages a.page,.pages a.page:hover {
+    background: none;
+    border-color: #fff;
+    color: #21293c;
+    font-size: 15px;
+    width: 36px;
+    line-height: 34px;
+}
+.pages a.page:visited {
+    color: #21293c;
+}
+.pages .action.next,.pages .action.previous {
+    border: solid 1px #e1ddc3;
+    background-color: #e1ddc3;
+    color: #78755c;
+    font-size: 15px;
+    width: 36px;
+    line-height: 34px;
+}
+.full-width-image-banner, .parallax-content {
+    height: 400px;
+}
+.products-grid + .toolbar-products{
+    border-top: solid 1px #e4e4e4;
+    padding-top: 25px;
+}
+.product-item-photo {
+    border-radius: 0;
+    border: 0;
+}
+.product-item .product-reviews-summary {
+    display: none;
+}
+.products-grid:not(.side-list) .product-item .product-item-info {
+    padding-bottom: 100px;
+    margin-bottom: 37px;
+}
+.products-grid:not(.side-list) .product-item .product-item-details {
+    position: absolute !important;
+    background-color: #fff;
+    padding: 27px 0 5px;
+    transition: all 0.3s;
+    left: 0;
+    right: 0;
+    bottom: -8px;
+    z-index: 2;
+}
+.products-grid:not(.side-list) .product-item:hover .product-item-details {
+    bottom: 52px;
+}
+.products-grid:not(.side-list) .product-item .product-item-details .price-box {
+    border-bottom: solid 1px #e4e4e4;
+    padding-bottom: 20px;
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+.products-grid:not(.side-list) .product-item .product-item-inner {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -55px;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.products-grid:not(.side-list) .product-item:hover .product-item-inner {
+    opacity: 1;
+}
+.products-grid:not(.side-list) .product-item-details .product-item-actions .actions-secondary.tocompare {
+    left: 0;
+    visibility: visible;
+    opacity: 1;
+    height: 38px;
+    line-height: 36px;
+    width: 38px;
+}
+.products-grid:not(.side-list) .product-item-details .product-item-actions .actions-secondary.towishlist {
+    right: 0;
+    visibility: visible;
+    opacity: 1;
+    height: 38px;
+    line-height: 36px;
+    width: 38px;
+}
+.products-grid:not(.side-list) .has-qty .product-item-actions .actions-secondary.towishlist {display: none;}
+.product-social-links .action.towishlist:before, .product-addto-links .action.towishlist:before, .block-bundle-summary .action.towishlist:before, .product-item .action.towishlist:before, .table-comparison .action.towishlist:before {
+    content: \'\\e811\';
+}
+.products-grid .product-item .has-qty {
+    margin-top: 0;
+}
+.products.wrapper .product-item .qty-box {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+}
+.products.wrapper .product-item .qty-box input {
+    height: 38px;
+}
+.products.wrapper .product-item .qty-box .qtyminus, .products.wrapper .product-item .qty-box .qtyplus {
+    height: 38px;
+    line-height: 36px;
+    border: solid 1px #e1ddc3;
+    color: #e1ddc3;
+}
+.products-grid .has-qty .product-item-details .product-item-actions .tocart {
+    text-indent: -999em;
+    position: relative;
+}
+.products-grid .has-qty .product-item-details .product-item-actions .tocart span:before {
+    content: \'\\e881\';
+    font-family: \'Porto-icons\';
+    position: absolute;
+    top:0;
+    left: 0;
+    color: #e1ddc3;
+    font-size: 20px;
+    text-indent: 7px;
+}
+.products-grid:not(.side-list) .product-item-details .product-item-actions .tocart {
+    height: 38px;
+    line-height: 36px;
+    color: #61605a;
+    border-color: #e1ddc3;
+    background-color: transparent;
+    font-size: 12px;
+    padding: 0 17.4px;
+    text-transform: uppercase;
+    font-family: \'Oswald\';
+}
+.products-grid .product-item .product-item-info:hover .weltpixel-quickview.weltpixel_quickview_button_v2 {
+    background-color: #fff;
+    color: #a19d81;
+    padding: 5px;
+    margin: 5px;
+    line-height: 23px;
+    height: 30px;
+    width: 30px;
+}
+.products-grid .product-item .product-item-info .weltpixel-quickview span span {
+    display: none;
+}
+.porto-icon-eye:before {
+    content:\'\\e885\';
+    font-size: 15px;
+}
+.price-box .price {
+    font-size: 18px;
+    font-family: \'Oswald\';
+    font-weight: 400;
+}
+.old-price .price {
+    font-size: 16px;
+}
+.product-item-name, .product.name a {
+    font-size: 16px;
+    color: #21293c;
+    font-weight: 400;
+}
+.products-grid .product-item-info div[class^="swatch-opt-"] {
+    display: none;
+}
+.products-grid .product-item-info:hover .product-item-details .product-item-actions .tocart {
+    background-color: #fff;
+    color: #61605a;
+    border-color: #e1ddc3;
+}
+.product-item .tocart:before {
+    display: none;
+}
+
+.product-info-main .page-title-wrapper h1 {
+    margin: 15px 0 11px;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1;
+    color: #21293c;
+    letter-spacing: -0.01em;
+}
+.prev-next-products {
+    margin-top: 12px;
+}
+.product-reviews-summary.empty .reviews-actions:before {
+    font-size: 18px;
+}
+.product-info-main .product.overview {
+    font-size: 15px;
+    border-color: #e6e6e6;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+.product-info-main .custom-block {
+    border-bottom: solid 1px #e6e6e6;
+    padding: 23px 0 25px;
+    margin-bottom: 25px;
+}
+.product-info-main .custom-block .item:first-child {
+    border-left: 0;
+    padding-left: 0;
+}
+.product-info-main .custom-block .item {
+    border-left: 1px solid #e6e6e6;
+    display: inline-block;
+    padding: 0 10px;
+    text-align: left;
+}
+.product-info-main .custom-block i {
+    font-size: 34px;
+    color: #c8c29d;
+    display: inline-block;
+    vertical-align: middle;
+}
+.product-info-main .custom-block .text-area {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    margin-left: 5px;
+}
+.product-info-main .custom-block .text-area h3 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #7a7d82;
+    margin: 0;
+}
+.product-options-bottom .price-box .price-container .price, .product-info-price .price-box .price-container .price {
+    font-size: 26px;
+    line-height: 36px;
+    font-weight: 400;
+}
+.product-info-main .fieldset > .field.qty, .product-info-main .nested.options-list > .field.qty {
+    position: relative;
+    width: 106px;
+}
+.product-info-main .qty.field .control, .product-info-main .qty.field .qty-changer {
+    margin-left: 29px;
+}
+.product-info-main .qty.field .qty-changer > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 43px;
+    width: 30px;
+    line-height: 41px;
+    text-align: center;
+    margin: 0;
+    border-color: #e1ddc3;
+}
+.product-info-main .qty.field .qty-changer > a:first-child {
+    left: auto;
+    right: 4px;
+}
+.product-info-main .box-tocart .input-text.qty {
+    font-family: \'Oswald\';
+    display: inline-block;
+    vertical-align: middle;
+    height: 43px;
+    width: 44px!important;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    color: #61605a;
+    margin: 0;
+    border-color: #e1ddc3;
+}
+.product-info-main .qty.field .qty-changer > a .porto-icon-up-dir:before {
+    content: \'\\f882\';
+}
+.product-info-main .qty.field .qty-changer > a .porto-icon-down-dir:before {
+    content: \'\\f883\';
+}
+.catalog-product-view:not(.weltpixel-quickview-catalog-product-view) .box-tocart .action.tocart {
+    height: 43px;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    font-weight: 400;
+}
+.action.primary,.action.primary:active {
+    font-family: "Oswald";
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.product-addto-links .action.towishlist,.product-addto-links .action.tocompare,.moved-add-to-links .action.mailto.friend {
+    width: 43px;
+    height: 43px;
+    line-height: 41px;
+}
+.product-info-main {
+    margin-bottom: 0;
+}
+.product.info.detailed {
+    margin-bottom: 0;
+}
+.move-product-tab .product-items .product-item-details .product-item-link {
+    font-size: 14px;
+    color: #7a7d82;
+    font-weight: 600;
+}
+.product.data.items > .item.title > .switch {
+    font-size: 18px;
+    color: #21293c;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    border-radius: 0;
+    line-height: 30px;
+    background: none;
+}
+.product.data.items > .item.content {
+    background-color: #efefef;
+    font-size: 15px;
+    letter-spacing: 0.005em;
+}
+.block.upsell {
+    padding-top: 75px;
+}
+.block.upsell .title {
+    background: none;
+    text-align: center;
+    margin-bottom: 17px;
+}
+.block.upsell .title strong {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #21293c;
+}
+
+.block.upsell .products-grid:not(.side-list) .product-item:hover .product-item-details {
+    bottom: -8px;
+}
+.block.upsell .products-grid:not(.side-list) .product-item .product-item-details .price-box {
+    border: none;
+}
+
+
+.footer-middle {
+    padding: 67px 0;
+    font-size: 13px;
+}
+.footer-middle .container > .row > .col-sm-4 > .block {
+    padding-right: 58px;
+}
+.footer-middle p{
+    font-size: 13px;
+    line-height: 30px;
+}
+.footer-middle .block .block-title {
+    margin-bottom: 23px;
+}
+.footer-middle .block .block-title strong {
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.035em;
+    font-family: \'Oswald\';
+    text-transform: uppercase;
+}
+.footer-middle ul.links li,
+.footer-middle ul.features li {
+    padding: 13.8px 0;
+}
+.footer-middle .newsletter div.mage-error {position: absolute;bottom: -25px;left:15px;}
+.footer-middle .newsletter label {display: none;}
+.footer-middle .newsletter input {
+    background-color: #33332f;
+    color: #686865;
+    height: 48px;
+    border: none;
+    font-size: 13px;
+    padding-left: 15px;
+    float: left;
+    max-width: 300px;
+    width: 100%;
+}
+.footer-middle .newsletter button {
+    float: left;
+    width:50px;
+    height: 48px;
+    margin-left: -50px;
+}
+.footer-middle .block-bottom {
+    border-top: 1px solid #3d3d38;
+    margin-top: 45px;
+    text-align: left;
+    padding: 20px 0;
+    overflow: hidden;
+}
+.footer-middle .block-bottom .social-icons a {
+    background-image: none;
+    background-color: #33332f;
+    text-indent: 0;
+    color: #fff;
+    border-radius: 0;
+    font-size: 15px;
+    width: 37px;
+    height: 37px;
+    text-align: center;
+    margin-left: 4px;
+    float: left;
+    line-height:35px;
+}
+.footer-middle ul.contact-info li:first-child{
+    border-top-width: 0;
+}
+.footer-middle ul.contact-info li {
+    border-top: solid 1px #3d3d38;
+    padding: 25px 0;
+}
+.footer-middle ul.contact-info [class^="porto-icon-"] {
+    color: #e1ddc3 !important;
+    font-size: 26px;
+    line-height: 28px;
+}
+.footer-middle ul.contact-info p{
+    line-height: 1;
+}
+.footer-middle ul.contact-info b {
+    font-weight: 400;
+    font-size: 13px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+@media(max-width: 1199px){
+    .footer-middle .container > .row > .col-sm-4 > .block {
+        padding-right: 0;
+    }
+    .product-info-main .custom-block .item {
+        width: 100% !important;
+        border: none;
+        padding:0;
+    }
+}
+@media (max-width: 767px){
+    .fieldset > .field.qty {
+        margin-bottom: 20px;
+    }
+    .product-info-main .box-tocart .actions {
+        vertical-align: top;
+    }
+    .block-category-list .block-title, .filter-options-title, .filter .filter-current-subtitle {
+        padding: 10px 15px;
+    }
+    .block-category-list .block-content, .filter-options-content {
+        padding: 15px;
+    }
+    .filter.active .filter-title strong {
+        top: 1px;
+    }
+    .footer-middle .custom-block.f-right {
+        margin-left: 0;
+    }
+    .footer-middle .social-icons {padding-bottom: 15px;float:left !important;}
+    .footer-middle address {
+        overflow: hidden;
+        width: 100%;
+        padding: 10px 0 0;
+        margin-left: 0 !important;
+    }
+}
+@media (min-width: 640px) {
+    .page-products .sorter {
+        float: left;
+    }
+    .modes {
+        float: right;
+        margin-right: 0;
+        margin-left: 20px;
+        margin-top: 5px;
+    }
+    .modes-mode:before {
+        content: \'\\e880\';
+        font-size: 14px;
+    }
+    .mode-list:before {
+        content: \'\\e87b\';
+        font-size: 14px;
+    }
+    .products.wrapper ~ .toolbar .limiter {
+        float: left;
+    }
+    .products.wrapper ~ .toolbar .pages {
+        float: right;
+    }
+}
+@media (min-width: 768px) {
+    .product-info-main {
+        padding-left: 25px;
+    }
+    .product.data.items > .item.title {
+        padding: 10px 30px 10px 0;
+    }
+    .product.data.items > .item.title > .switch {
+        font-size: 18px;
+        color: #21293c;
+        text-transform: uppercase;
+        border: none;
+        border-bottom: 2px solid transparent;
+        border-radius: 0;
+        line-height: 30px;
+        padding: 0;
+        background: none;
+    }
+    .product.data.items > .item.title:not(.disabled) > .switch:focus,
+    .product.data.items > .item.title:not(.disabled) > .switch:hover {
+        background: none;
+    }
+    .product.data.items > .item.title.active > .switch {
+        border-bottom-color: #ccc69d;
+        background: none;
+        color: #61605a;
+    }
+    .product.data.items > .item.content {
+        padding: 35px 0 0;
+    }
+    .page-products .toolbar .limiter {
+        display: block;
+    }
+}',
+          'custom_style_2' => NULL,
+        ),
+        'richsnippets' => 
+        array (
+          'enable' => '0',
+        ),
+        'install' => 
+        array (
+          'demo_version' => '0',
+          'overwrite_blocks' => '0',
+          'overwrite_pages' => '0',
         ),
       ),
       'sw_socialfeeds' => 
@@ -2628,6 +3545,125 @@ Disallow: /*SID=
           'api_key' => 'dd14978e9347319cdc672f3336cfdf9f',
           'photo_set_id' => '72157636619779965',
           'showing_counts' => '6',
+        ),
+      ),
+      'porto_design' => 
+      array (
+        'general' => 
+        array (
+          'theme_color' => '21293C',
+        ),
+        'font' => 
+        array (
+          'custom' => '0',
+          'font_size' => NULL,
+          'font_family' => NULL,
+          'custom_font_family' => NULL,
+          'google_font_family' => NULL,
+          'char_latin_ext' => NULL,
+          'char_subset' => NULL,
+        ),
+        'colors' => 
+        array (
+          'custom' => '1',
+          'text_color' => '7A7D82',
+          'link_color' => NULL,
+          'link_hover_color' => NULL,
+          'button_bg_color' => 'E1DDC3',
+          'button_text_color' => '61605A',
+          'button_hover_bg_color' => 'E1DDC3',
+          'button_hover_text_color' => '61605A',
+          'addtowishlist_color' => 'E1DDC3',
+          'addtowishlist_hover_color' => 'E1DDC3',
+          'addtocompare_color' => 'E1DDC3',
+          'addtocompare_hover_color' => 'E1DDC3',
+          'breadcrumbs_bg_color' => 'FFFFFF',
+          'breadcrumbs_color' => '3C4250',
+          'breadcrumbs_links_color' => '3C4250',
+          'breadcrumbs_links_hover_color' => '3C4250',
+          'sale_bg_color' => NULL,
+          'sale_font_color' => NULL,
+          'new_bg_color' => NULL,
+          'new_font_color' => NULL,
+          'price_slider_bg_color' => NULL,
+          'price_slider_handle_color' => NULL,
+        ),
+        'header' => 
+        array (
+          'custom' => '1',
+          'header_bgcolor' => NULL,
+          'header_bg_image' => NULL,
+          'header_bordercolor' => NULL,
+          'header_textcolor' => NULL,
+          'header_linkcolor' => NULL,
+          'header_top_links_bgcolor' => NULL,
+          'header_top_links_color' => NULL,
+          'header_menu_bgcolor' => NULL,
+          'header_menu_color' => NULL,
+          'header_menu_hover_bgcolor' => NULL,
+          'header_menu_hover_color' => NULL,
+          'header_menu_classicmenu_bgcolor' => NULL,
+          'header_menu_classicmenu_bordercolor' => NULL,
+          'header_menu_classicmenu_color' => NULL,
+          'header_menu_classicmenu_hover_bgcolor' => NULL,
+          'header_menu_classicmenu_hover_color' => NULL,
+          'header_menu_megamenu_color' => '777777',
+          'header_search_bgcolor' => NULL,
+          'header_search_text_color' => NULL,
+          'header_search_bordercolor' => NULL,
+          'header_minicart_bgcolor' => 'FFFFFF',
+          'header_minicart_color' => 'FFFFFF',
+          'header_minicart_icon_color' => 'FFFFFF',
+          'header_menu_megamenu_bgcolor' => NULL,
+          'header_menu_megamenu_bordercolor' => NULL,
+          'header_menu_megamenu_hover_color' => NULL,
+          'header_menu_label1_bg_color' => NULL,
+          'header_menu_label1_font_color' => NULL,
+          'header_menu_label2_bg_color' => NULL,
+          'header_menu_label2_font_color' => NULL,
+          'header_menu_label3_bg_color' => NULL,
+          'header_menu_label3_font_color' => NULL,
+        ),
+        'footer' => 
+        array (
+          'custom' => '1',
+          'footer_top_bgcolor' => NULL,
+          'footer_top_color' => NULL,
+          'footer_top_link_color' => NULL,
+          'footer_top_link_hover_color' => NULL,
+          'footer_middle_bgcolor' => '272723',
+          'footer_middle_color' => 'A8A8A8',
+          'footer_middle_link_color' => 'A8A8A8',
+          'footer_middle_link_hover_color' => 'A8A8A8',
+          'footer_middle_title_color' => 'FFFFFF',
+          'footer_middle_links_icon_color' => 'E1DDC3',
+          'footer_middle_ribbon_bgcolor' => NULL,
+          'footer_middle_ribbon_shadow_color' => '282D3A',
+          'footer_middle_ribbon_color' => NULL,
+          'footer_middle_2_bgcolor' => NULL,
+          'footer_middle_2_color' => NULL,
+          'footer_middle_2_link_color' => NULL,
+          'footer_middle_2_link_hover_color' => NULL,
+          'footer_middle_2_title_color' => NULL,
+          'footer_middle_2_links_icon_color' => NULL,
+          'footer_bottom_bgcolor' => 'FFFFFF',
+          'footer_bottom_color' => NULL,
+          'footer_bottom_link_color' => NULL,
+          'footer_bottom_link_hover_color' => NULL,
+        ),
+        'page' => 
+        array (
+          'custom' => '0',
+          'page_bgcolor' => NULL,
+          'page_bg_image' => NULL,
+          'page_custom_style' => NULL,
+        ),
+        'main' => 
+        array (
+          'custom' => '0',
+          'main_bgcolor' => NULL,
+          'main_bg_image' => NULL,
+          'main_custom_style' => NULL,
         ),
       ),
     ),
@@ -2664,6 +3700,88 @@ Disallow: /*SID=
           'default' => 
           array (
             'no_route' => 'admin/noroute/index',
+          ),
+        ),
+      ),
+      'base' => 
+      array (
+        'web' => 
+        array (
+          'seo' => 
+          array (
+            'use_rewrites' => '1',
+          ),
+          'secure' => 
+          array (
+            'use_in_frontend' => NULL,
+            'use_in_adminhtml' => NULL,
+          ),
+        ),
+        'general' => 
+        array (
+          'locale' => 
+          array (
+            'code' => 'de_CH',
+            'timezone' => 'Europe/Zurich',
+          ),
+        ),
+        'currency' => 
+        array (
+          'options' => 
+          array (
+            'base' => 'CHF',
+            'default' => 'CHF',
+            'allow' => 'CHF',
+          ),
+        ),
+        'design' => 
+        array (
+          'head' => 
+          array (
+            'title_prefix' => NULL,
+            'title_suffix' => NULL,
+            'includes' => NULL,
+          ),
+          'header' => 
+          array (
+            'logo_width' => NULL,
+            'logo_height' => NULL,
+            'logo_alt' => NULL,
+            'welcome' => NULL,
+            'logo_src' => 'websites/1/Flugsau_Blau_Logo.png',
+          ),
+          'footer' => 
+          array (
+            'absolute_footer' => NULL,
+            'copyright' => 'Copyright © 2017 Flugsau GmbH All rights reserved.',
+          ),
+          'theme' => 
+          array (
+            'theme_id' => 'frontend/Smartwave/port_child',
+          ),
+          'pagination' => 
+          array (
+            'pagination_frame_skip' => NULL,
+            'anchor_text_for_previous' => NULL,
+            'anchor_text_for_next' => NULL,
+          ),
+          'watermark' => 
+          array (
+            'image_size' => NULL,
+            'image_imageOpacity' => NULL,
+            'small_image_size' => NULL,
+            'small_image_imageOpacity' => NULL,
+            'thumbnail_size' => NULL,
+            'thumbnail_imageOpacity' => NULL,
+            'swatch_image_size' => NULL,
+            'swatch_image_imageOpacity' => NULL,
+          ),
+          'email' => 
+          array (
+            'logo_alt' => NULL,
+            'logo_width' => NULL,
+            'logo_height' => NULL,
+            'logo' => 'websites/1/flugsau_gruen_1.png',
           ),
         ),
       ),
@@ -2738,6 +3856,16 @@ Disallow: /*SID=
       'area' => 'frontend',
       'type' => '0',
       'code' => 'Smartwave/porto_rtl',
+    ),
+    'frontend/Smartwave/port_child' => 
+    array (
+      'parent_id' => 'Smartwave/porto',
+      'theme_path' => 'Smartwave/port_child',
+      'theme_title' => 'Smartwave Porto Child',
+      'is_featured' => '0',
+      'area' => 'frontend',
+      'type' => '0',
+      'code' => 'Smartwave/port_child',
     ),
   ),
   'i18n' => 
