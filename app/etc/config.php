@@ -204,6 +204,8 @@ return array (
    * Sensitive data can be stored in the following environment variables:
    * CONFIG__DEFAULT__DEV__RESTRICT__ALLOW_IPS for dev/restrict/allow_ips
    * CONFIG__DEFAULT__SYSTEM__SMTP__HOST for system/smtp/host
+   * CONFIG__DEFAULT__SYSTEM__FULL_PAGE_CACHE__VARNISH__ACCESS_LIST for system/full_page_cache/varnish/access_list
+   * CONFIG__DEFAULT__SYSTEM__FULL_PAGE_CACHE__VARNISH__BACKEND_HOST for system/full_page_cache/varnish/backend_host
    * CONFIG__DEFAULT__ADMIN__URL__CUSTOM for admin/url/custom
    * CONFIG__DEFAULT__CURRENCY__IMPORT__ERROR_EMAIL for currency/import/error_email
    * CONFIG__DEFAULT__CATALOG__PRODUCTALERT_CRON__ERROR_EMAIL for catalog/productalert_cron/error_email
@@ -346,6 +348,7 @@ Disallow: /*SID=
           'template_hints_storefront' => '0',
           'template_hints_admin' => '0',
           'template_hints_blocks' => '0',
+          'debug_logging' => '0',
         ),
         'js' => 
         array (
@@ -398,7 +401,7 @@ Disallow: /*SID=
         ),
         'front_end_development_workflow' => 
         array (
-          'type' => 'server_side_compilation',
+          'type' => 'client_side_compilation',
         ),
         'translate_inline' => 
         array (
@@ -482,6 +485,10 @@ Disallow: /*SID=
             'backend_host' => 'localhost',
             'backend_port' => '8080',
             'ttl' => '86400',
+            'grace_period' => '300',
+          ),
+          'varnish' => 
+          array (
             'grace_period' => '300',
           ),
         ),

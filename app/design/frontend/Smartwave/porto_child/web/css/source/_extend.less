@@ -1,8 +1,14 @@
 
 @color: #4f4d4d;
+@headerColor: #000;
 
 body {
     color: @color;
+    font-family: 'Oswald' 'Helvetica Neue' helvetica sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    color: @headerColor;
 }
 
 .page-header.type17 {
@@ -15,4 +21,35 @@ body {
 
 .page-header.type17 .block-search .action.search {
     border-left: 2px solid #ffffff;
+}
+
+@media (min-width: 768px) {
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .header.content {
+        height: 160px;
+    }
+
+    .page-header.type17 {
+        .block-search {
+            width: 300px;
+            margin: 60px 0;
+        }
+
+        .minicart-wrapper {
+            background-color: #fff;
+            border-color: #fff;
+            box-shadow: none;
+
+            .action.showcart {
+                &:after, &:before {
+                    color: @color !important;
+                }
+            }
+        }
+    }
 }
