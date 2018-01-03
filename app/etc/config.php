@@ -3,6 +3,7 @@ return array (
   'modules' => 
   array (
     'Magento_Store' => 1,
+    'Flugsau_Shop' => 1,
     'Magento_Directory' => 1,
     'Magento_Backend' => 1,
     'Magento_AdvancedPricingImportExport' => 1,
