@@ -731,13 +731,13 @@ Disallow: /*SID=
         'store_information' => 
         array (
           'name' => 'Flugsau GmbH',
-          'phone' => NULL,
-          'hours' => NULL,
+          'phone' => '+41 41 637 09 39',
+          'hours' => 'Di, Mi, Fr, Sa: 10:00 - 12:00, 13:00 - 17:00',
           'country_id' => 'CH',
-          'region_id' => 'null',
-          'postcode' => NULL,
+          'region_id' => 'OW',
+          'postcode' => '6388',
           'city' => 'Grafenort',
-          'street_line1' => NULL,
+          'street_line1' => 'Älplerhaus 3',
           'street_line2' => NULL,
           'merchant_vat_number' => NULL,
         ),
