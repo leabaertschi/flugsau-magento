@@ -2,9 +2,12 @@
 @color: #4f4d4d;
 @headerColor: #000;
 
+@fontOpenSans: "Open Sans", "Helvetica Neue", helvetica, sans-serif;
+@fontOswald: 'Oswald', 'Helvetica Neue', helvetica, sans-serif;
+
 body {
     color: @color;
-    font-family: 'Oswald' 'Helvetica Neue' helvetica sans-serif;
+    font-family: @fontOswald;
 }
 
 h1, h2, h3, h4, h5 {
@@ -28,35 +31,93 @@ h1, h2, h3, h4, h5 {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
+        margin: 25px 0;
     }
 
     .header.content {
-        height: 160px;
+        height: 120px;
     }
 
     .page-header.type17 {
         .block-search {
             width: 300px;
-            margin: 60px 0;
+            margin: 40px 0;
         }
 
-        .minicart-wrapper {
-            background-color: #fff;
-            border-color: #fff;
-            box-shadow: none;
+        .cart-area {
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            margin-top: -20px;
 
-            .action.showcart {
-                &:after, &:before {
-                    color: @color !important;
+            .minicart-wrapper {
+                position: static;
+                margin-left: 5px;
+                background-color: #fff;
+                border-color: #fff;
+                box-shadow: none;
+
+                .action.showcart {
+                    &:after, &:before {
+                        color: @color !important;
+                    }
+
+                    .counter {
+                        font-family: @fontOpenSans;
+                    }
+                }
+            }
+
+            .contact-us {
+                font-family: @fontOpenSans;
+                color: @color;
+                display: inline-block;
+                padding: 2px 20px 2px 0;
+                border-right: 2px solid #dde0e2;
+
+                .title {
+                    color: #787d7f;
+                }
+
+                .phone {
+                    font-size: 18px;
+                    line-height: 18px;
+                    font-weight: 600;
                 }
             }
         }
 
-        .contact-us {
-            color: @color;
-            position: absolute;
-            right: 150px;
-            top: 60px;
+        .nav-sections {
+            background-color: #fff;
+            color: @headerColor;
+
+            .nav-sections-item-content {
+                text-align: center;
+
+                & > .navigation {
+                    ul {
+                        text-align: center;
+
+                        .level0 {
+                            display: inline-block;
+
+                            .level-top {
+                                font-size: 18px;
+                                font-weight: 500;
+                            }
+
+                            .submenu {
+                                top: 50px;
+                            }
+                        }
+                    }
+                }
+
+                .navigation {
+                    .level0 > .level-top {
+                    }
+                }
+            }
         }
     }
 }

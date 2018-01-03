@@ -2619,12 +2619,12 @@ Disallow: /*SID=
           'enable' => '1',
           'menu_type' => 'fullwidth',
           'static_width' => '500px',
-          'max_level' => NULL,
+          'max_level' => '2',
         ),
         'custom_links' => 
         array (
           'staticblock_before' => 'porto_custom_menu_before',
-          'staticblock_after' => 'porto_custom_menu',
+          'staticblock_after' => 'NULL',
         ),
         'cat_labels' => 
         array (
