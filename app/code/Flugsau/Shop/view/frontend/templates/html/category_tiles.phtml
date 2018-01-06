@@ -1,0 +1,21 @@
+<?php
+    /** @var \Flugsau\Shop\Block\Categories $block */
+    $categories = $block->getCategoryCollection();
+?>
+<div class="category-tiles-wrapper">
+    <div class="category-tiles">
+        <?php
+        foreach($categories as $category):
+            $cat = $this->getCategorymodel($category->getId());
+            $image = $cat->getImageUrl();
+        ?>
+            <div class="category-tile">
+                <div class="category-tile-title">
+                    <div><?php echo $category->getName(); ?></div>
+                    <a class="button" href="<?php echo $category->getUrl() ?>">Zu den Produkten</a>
+                </div>
+                <img src="<?php echo $image ?>" />
+            </div>
+        <?php endforeach; ?>
+    </div>
+</div>

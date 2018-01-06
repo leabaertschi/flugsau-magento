@@ -1,9 +1,15 @@
 
 @color: #4f4d4d;
 @headerColor: #000;
+@backgroundColor: #eeeeee;
+@white: #ffffff;
+@buttonBorderColor: #4b90cd;
 
 @fontOpenSans: "Open Sans", "Helvetica Neue", helvetica, sans-serif;
 @fontOswald: 'Oswald', 'Helvetica Neue', helvetica, sans-serif;
+
+@contentMaxWidth: 1170px;
+@contentPadding: 15px;
 
 body {
     color: @color;
@@ -14,16 +20,33 @@ h1, h2, h3, h4, h5 {
     color: @headerColor;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 .page-header.type17 {
-    background-color: #ffffff;
+    background-color: @white;
 }
 
 .page-header.type17 .block-search input {
-    background-color: #eeeeee;
+    background-color: @backgroundColor;
 }
 
 .page-header.type17 .block-search .action.search {
-    border-left: 2px solid #ffffff;
+    border-left: 2px solid @white;
+}
+
+.button {
+    display: inline-block;
+    height: 38px;
+    padding: 0 17.4px;
+    background-color: transparent;
+    font-family: @fontOswald;
+    font-size: 12px;
+    line-height: 36px;
+    text-transform: uppercase;
+    color: @color;
+    border: 1px solid @buttonBorderColor;
 }
 
 @media (min-width: 768px) {
@@ -53,8 +76,8 @@ h1, h2, h3, h4, h5 {
             .minicart-wrapper {
                 position: static;
                 margin-left: 5px;
-                background-color: #fff;
-                border-color: #fff;
+                background-color: @white;
+                border-color: @white;
                 box-shadow: none;
 
                 .action.showcart {
@@ -88,7 +111,7 @@ h1, h2, h3, h4, h5 {
         }
 
         .nav-sections {
-            background-color: #fff;
+            background-color: @white;
             color: @headerColor;
 
             .nav-sections-item-content {
@@ -124,4 +147,48 @@ h1, h2, h3, h4, h5 {
     .home-cover {
         width: 100%;
     }
+
+    .category-tiles-wrapper {
+        background-color: @backgroundColor;
+        width: 100%;
+        max-width: @contentMaxWidth;
+        margin: 0 auto;
+        padding: 0 @contentPadding;
+
+        .category-tiles {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            margin: -1px;
+
+            .category-tile {
+                background-color: @white;
+                width: 33%;
+                height: 150px;
+                margin: 1px;
+                padding: 20px 40px;
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .category-tile-title {
+                    font-family: @fontOpenSans;
+                    font-size: 24px;
+                    color: @headerColor;
+
+                    .button {
+                        margin-top: 10px;
+                    }
+                }
+
+                img {
+                    max-width: 40%;
+                    max-height: 95%;
+                }
+            }
+        }
+    }
+
 }

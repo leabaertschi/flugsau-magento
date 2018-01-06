@@ -39,6 +39,7 @@ class UpgradeData implements UpgradeDataInterface
             $layoutXml = <<<XML
 <referenceContainer name="page.top">
     <block class="Magento\Framework\View\Element\Template" name="home_cover" template="Flugsau_Shop::html/home_cover.phtml" before="-" />
+    <block class="Flugsau\Shop\Block\Categories" name="category_tiles" template="Flugsau_Shop::html/category_tiles.phtml" />
 </referenceContainer>
 XML;
 
