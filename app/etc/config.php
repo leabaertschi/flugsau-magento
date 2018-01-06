@@ -565,7 +565,7 @@ Disallow: /*SID=
         ),
         'default' => 
         array (
-          'cms_home_page' => 'home',
+          'cms_home_page' => 'flugsau-home-page',
           'cms_no_route' => 'no-route-2',
           'cms_no_cookies' => 'enable-cookies',
           'no_route' => 'cms/noroute/index',
