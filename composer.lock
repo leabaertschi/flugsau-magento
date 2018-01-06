@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "fe21adb9b13b538b86995ea11958da21",
+    "content-hash": "3c5ea8abd4f3d422957cca7f93be8ae8",
     "packages": [
         {
             "name": "braintree/braintree_php",
@@ -6069,6 +6069,83 @@
             "time": "2017-06-21T14:56:23+00:00"
         },
         {
+            "name": "mageplaza/magento-2-german-language-pack",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mageplaza/magento-2-german-language-pack.git",
+                "reference": "e3f46c6ce055e2bd5b24296d49e5946136a3f3f6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mageplaza/magento-2-german-language-pack/zipball/e3f46c6ce055e2bd5b24296d49e5946136a3f3f6",
+                "reference": "e3f46c6ce055e2bd5b24296d49e5946136a3f3f6",
+                "shasum": ""
+            },
+            "require": {
+                "mageplaza/module-core": "^1.3.1|dev-master"
+            },
+            "type": "magento2-language",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mageplaza team",
+                    "email": "hi@mageplaza.com",
+                    "homepage": "https://www.mageplaza.com",
+                    "role": "Leader"
+                }
+            ],
+            "description": "German language package for Magento 2",
+            "homepage": "https://www.mageplaza.com",
+            "time": "2017-08-24T04:35:32+00:00"
+        },
+        {
+            "name": "mageplaza/module-core",
+            "version": "1.3.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mageplaza/module-core.git",
+                "reference": "104306f5d3ae18d62efb234e47e94f0cafe8a4b6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mageplaza/module-core/zipball/104306f5d3ae18d62efb234e47e94f0cafe8a4b6",
+                "reference": "104306f5d3ae18d62efb234e47e94f0cafe8a4b6",
+                "shasum": ""
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Mageplaza\\Core\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Mageplaza License"
+            ],
+            "authors": [
+                {
+                    "name": "Mageplaza",
+                    "email": "hi@mageplaza.com",
+                    "homepage": "https://www.mageplaza.com",
+                    "role": "Leader"
+                }
+            ],
+            "description": "Mageplaza Core for Magento 2",
+            "time": "2018-01-05T10:31:02+00:00"
+        },
+        {
             "name": "monolog/monolog",
             "version": "1.23.0",
             "source": {
@@ -11861,6 +11938,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "composer/composer": 15,
+        "mageplaza/magento-2-german-language-pack": 20,
         "phpmd/phpmd": 0
     },
     "prefer-stable": false,

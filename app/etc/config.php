@@ -650,9 +650,9 @@ Disallow: /*SID=
           'date_format_medium' => '%a, %b %e %Y',
           'date_format_short' => '%m/%d/%y',
           'language' => 'en',
-          'code' => 'de_CH',
+          'code' => 'de_DE',
           'timezone' => 'Europe/Zurich',
-          'weight_unit' => 'lbs',
+          'weight_unit' => 'kg',
         ),
         'file' => 
         array (
@@ -2605,6 +2605,14 @@ Disallow: /*SID=
           'review_wishlist' => '*/15 * * * *',
         ),
       ),
+      'mageplaza' => 
+      array (
+        'general' => 
+        array (
+          'notice_enable' => '1',
+          'notice_type' => 'announcement,new_update,marketing',
+        ),
+      ),
       'layered_navigation' => 
       array (
         'general' => 
@@ -3779,14 +3787,6 @@ Disallow: /*SID=
           array (
             'use_in_frontend' => NULL,
             'use_in_adminhtml' => NULL,
-          ),
-        ),
-        'general' => 
-        array (
-          'locale' => 
-          array (
-            'code' => 'de_CH',
-            'timezone' => 'Europe/Zurich',
           ),
         ),
         'currency' => 
