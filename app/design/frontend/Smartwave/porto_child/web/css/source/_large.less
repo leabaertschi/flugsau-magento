@@ -98,44 +98,17 @@
     }
 
     .category-tiles-wrapper {
-        background-color: @backgroundColor;
-        width: 100%;
         max-width: @contentMaxWidth;
         margin: 0 auto;
         padding: 0 @contentPadding;
 
         .category-tiles {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-
             margin: -1px;
 
             .category-tile {
-                background-color: @white;
                 width: 33%;
-                height: 150px;
                 margin: 1px;
                 padding: 20px 40px;
-
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-
-                .category-tile-title {
-                    font-family: @fontOpenSans;
-                    font-size: 24px;
-                    color: @headerColor;
-
-                    .button {
-                        margin-top: 10px;
-                    }
-                }
-
-                img {
-                    max-width: 40%;
-                    max-height: 95%;
-                }
             }
         }
     }
