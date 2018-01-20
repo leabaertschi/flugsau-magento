@@ -88,17 +88,38 @@
     }
 
     .category-tiles-wrapper {
-        max-width: @contentMaxWidth;
-        margin: 0 auto;
         padding: 0 @contentPadding;
 
         .category-tiles {
-            margin: -1px;
+            width: 100%;
+            max-width: @contentMaxWidth;
+            margin: -1px auto;
 
             .category-tile {
                 width: 33%;
                 margin: 1px;
                 padding: 20px 40px;
+            }
+        }
+    }
+
+    .home-teaser-wrapper {
+        padding: 70px @contentPadding;
+
+        .home-teaser {
+            margin: 0 auto;
+            width: 100%;
+            max-width: @contentMaxWidth;
+
+            .home-teaser-video {
+                flex: 1;
+            }
+
+            .home-teaser-text {
+                font-size: 34px;
+                margin-left: 70px;
+                align-self: center;
+                width: 50%;
             }
         }
     }

@@ -144,5 +144,33 @@ a:hover {
     }
 }
 
+.home-teaser-wrapper {
+    background-image: url('@{baseDir}images/teaser.jpg');
+    background-size: cover;
+
+    .home-teaser {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+
+        .home-teaser-video {
+            height: 300px;
+
+            iframe {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .home-teaser-text {
+            color: @headerColor;
+
+            p {
+                margin: 5px 0;
+            }
+        }
+    }
+}
+
 @import "_large.less";
 @import "_mobile.less";
