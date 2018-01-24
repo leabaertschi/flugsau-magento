@@ -37,6 +37,11 @@ a:hover {
     border: 1px solid @buttonBorderColor;
 }
 
+.block-product-link.widget {
+    &:extend(.button);
+    margin: 0;
+}
+
 .page-header.type17 {
     background-color: @white !important;
     color: @color !important;
@@ -167,6 +172,85 @@ a:hover {
 
             p {
                 margin: 5px 0;
+            }
+        }
+    }
+}
+
+.home-news-wrapper {
+    background-color: @backgroundColor;
+    width: 100%;
+
+    .home-news {
+
+        h3 {
+            font-family: @fontOpenSans;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: @headerColor;
+            margin: 0;
+            padding: 20px 0;
+        }
+
+        .home-news-entries {
+            .home-news-entry {
+                display: flex;
+
+                .home-news-entry-img {
+                    width: 250px;
+                    height: 320px;
+                    background-color: #333232;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    overflow: hidden;
+
+                    img {
+                        min-width: 100%;
+                        min-height: 100%;
+                    }
+                }
+
+                .home-news-entry-content-wrapper {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    height: 270px;
+                    margin-top: 40px;
+                    margin-left: -30px;
+                    padding: 20px;
+                    background-color: @white;
+                }
+
+                .home-news-entry-title {
+                    font-family: @fontOpenSans;
+                    font-size: 24px;
+                    color: @headerColor;
+                    font-weight: 600;
+                }
+
+                .home-news-entry-date {
+                    color: @white;
+                    font-size: 20px;
+                    font-weight: 300;
+                    display: inline-block;
+                    padding: 5px 15px;
+                    margin: 10px 0;
+                    background-color: #009fe3;
+                }
+
+                .home-news-entry-content {
+                    font-family: @fontOpenSans;
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+
+                    .block-product-link.widget {
+                        margin-top: auto;
+                    }
+                }
             }
         }
     }

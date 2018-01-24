@@ -57,6 +57,7 @@ atlassian*
 /pub/media/tmp/*
 !/pub/media/tmp/.htaccess
 /pub/media/captcha/*
+/pub/media/magefan_blog/*
 /pub/static/*
 !/pub/static/.htaccess
 
