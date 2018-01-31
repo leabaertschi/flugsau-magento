@@ -49,6 +49,7 @@ class UpgradeData implements UpgradeDataInterface
             <argument name="custom_template" xsi:type="string">Flugsau_Shop::html/home_news.phtml</argument>
         </arguments>
     </block>
+    <referenceBlock name="main.content" remove="true" />
 </referenceContainer>
 XML;
 
