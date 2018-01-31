@@ -12,5 +12,13 @@
 
             <referenceBlock name="custom_block" remove="true" />
         </referenceContainer>
+        <referenceContainer name="footer-container">
+            <referenceBlock name="footer_block">
+                <action method="setTemplate">
+                    <argument name="template" xsi:type="string">Flugsau_Shop::html/footer.phtml</argument>
+                </action>
+                <block class="Flugsau\Shop\Block\StoreInformation" name="footer_contact_information" template="html/footer_contact.phtml" />
+            </referenceBlock>
+        </referenceContainer>
     </body>
 </page>
