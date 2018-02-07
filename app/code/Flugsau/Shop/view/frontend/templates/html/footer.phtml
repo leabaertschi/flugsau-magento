@@ -1,9 +1,43 @@
+<?php
+    $footer = $this->getConfig('porto_settings/footer');
+?>
 <div class="footer">
     <div class="footer-middle">
         <div class="container">
             <div class="row">
-                <?php echo $this->getChildHtml('footer_contact_information') ?>
+                <div class="col-sm-4">
+                    <?php echo $this->getChildHtml('footer_contact_information') ?>
+                </div>
+                <div class="col-sm-8">
+                    <div class="row">
+                        <div class="block">
+                            <div class="block-title"><strong><?php echo __('Links') ?></strong></div>
+                            <div class="block-content">
+                                <ul class="links">
+                                    <li><em class="porto-icon-right-dir theme-color"></em><a href="/about-us" title="About us"><?php echo __('About Us') ?></a></li>
+                                    <li><em class="porto-icon-right-dir theme-color"></em><a href="/contact" title="Contact us"><?php echo __('Contact Us') ?></a></li>
+                                    <li><em class="porto-icon-right-dir theme-color"></em><a href="/customer/account" title="My account"><?php echo __('My Account') ?></a></li>
+                                    <li><em class="porto-icon-right-dir theme-color"></em><a href="/sales/order/history" title="Orders history"><?php echo __('Orders') ?></a></li>
+                                    <li><em class="porto-icon-right-dir theme-color"></em><a href="/catalogsearch/advanced" title="Advanced search"><?php echo __('Advanced Search') ?></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="block-bottom">
+<!--                                <div class="custom-block" style="float:left;"><img src="<?php echo $this->getMediaUrl('wysiwyg/smartwave/porto/footer/payment-icon.png') ?>"  style="max-width: 100%;" alt="" /></div>-->
+                                <div class="social-icons" style="float:right;">
+                                    <a href="https://www.facebook.com/flugsau" title="Facebook" target="_blank"><i class="porto-icon-facebook"></i></a>
+                                    <a href="https://instagram.com/flugsaugmbh" title="Instagram" target="_blank"><i class="porto-icon-instagram"></i></a>
+                                </div>
+                                <address style="float:right; margin-right: 44px;margin-top:10px;font-size:11px;">© Flugsau GmbH. 2018. All Rights Reserved</address>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
+<a href="javascript:void(0)" id="totop"><em class="porto-icon-up-open"></em></a>
