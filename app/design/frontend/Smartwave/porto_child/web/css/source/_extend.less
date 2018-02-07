@@ -260,5 +260,33 @@ a:hover {
     color: @buttonBorderColor !important;
 }
 
+.product {
+    .product-item-actions .action.towishlist,
+    .product-addto-links .action.towishlist,
+    .action.towishlist,
+    .product-addto-links .action.tocompare,
+    .product-item-actions .action.tocompare,
+    .action.tocompare {
+        color: @buttonBorderColor;
+        border-color: @buttonBorderColor;
+    }
+
+}
+.products-grid:not(.side-list) .product-item-details .product-item-actions .tocart {
+    border-color: @buttonBorderColor !important;
+}
+
+.product-item-photo {
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .product-image-photo {
+        max-height: 100%;
+    }
+}
+
+
 @import "_large.less";
 @import "_mobile.less";

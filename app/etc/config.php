@@ -2175,7 +2175,7 @@ Disallow: /*SID=
         ),
         'defaults' => 
         array (
-          'country' => 'US',
+          'country' => 'CH',
           'region' => '0',
           'postcode' => NULL,
         ),
@@ -2709,7 +2709,7 @@ Disallow: /*SID=
         ),
         'category' => 
         array (
-          'alternative_image' => '1',
+          'alternative_image' => '0',
           'aspect_ratio' => '1',
           'ratio_width' => '300',
           'ratio_height' => '400',
@@ -3585,14 +3585,14 @@ Disallow: /*SID=
           'text_color' => '7A7D82',
           'link_color' => NULL,
           'link_hover_color' => NULL,
-          'button_bg_color' => 'E1DDC3',
+          'button_bg_color' => '4b90cd',
           'button_text_color' => '61605A',
-          'button_hover_bg_color' => 'E1DDC3',
+          'button_hover_bg_color' => '4b90cd',
           'button_hover_text_color' => '61605A',
-          'addtowishlist_color' => 'E1DDC3',
-          'addtowishlist_hover_color' => 'E1DDC3',
-          'addtocompare_color' => 'E1DDC3',
-          'addtocompare_hover_color' => 'E1DDC3',
+          'addtowishlist_color' => '4b90cd',
+          'addtowishlist_hover_color' => '4b90cd',
+          'addtocompare_color' => '4b90cd',
+          'addtocompare_hover_color' => '4b90cd',
           'breadcrumbs_bg_color' => 'FFFFFF',
           'breadcrumbs_color' => '3C4250',
           'breadcrumbs_links_color' => '3C4250',
