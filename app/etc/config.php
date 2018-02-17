@@ -3561,6 +3561,13 @@ Disallow: /*SID=
           'photo_set_id' => '72157636619779965',
           'showing_counts' => '6',
         ),
+        'instagram_photos' => 
+        array (
+          'enable' => '1',
+          'accesstocken' => '6982065089.c906d6b.f09646d484cb480dba612b9a0519da7e',
+          'user_id' => '6982065089',
+          'showing_counts' => '12',
+        ),
       ),
       'porto_design' => 
       array (

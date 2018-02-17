@@ -41,6 +41,11 @@ class UpgradeData implements UpgradeDataInterface
     <block class="Magento\Framework\View\Element\Template" name="home_cover" template="Flugsau_Shop::html/home_cover.phtml" before="-" />
     <block class="Flugsau\Shop\Block\Categories" name="category_tiles" template="Flugsau_Shop::html/category_tiles.phtml" />
     <block class="Magento\Framework\View\Element\Template" name="home_teaser" template="Flugsau_Shop::html/home_teaser.phtml" />
+    <block class="Smartwave\Porto\Block\Template" name="home_instagram" template="Flugsau_Shop::html/instagramphotos.phtml">
+        <arguments>
+            <argument name="padding_item" xsi:type="string">15px</argument>
+        </arguments>
+    </block>
     <block class="Magefan\Blog\Block\Widget\Recent">
         <arguments>
             <argument name="title" xsi:type="string">News</argument>
