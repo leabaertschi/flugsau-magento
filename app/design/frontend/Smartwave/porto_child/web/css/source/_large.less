@@ -57,7 +57,7 @@
                 text-align: center;
 
                 & > .navigation {
-                    ul {
+                    & > ul {
                         text-align: center;
 
                         .level0 {
@@ -76,7 +76,9 @@
                 }
 
                 .navigation {
-                    .level0 > .level-top {
+                    li.level0.fullwidth .submenu a:hover > span {
+                        text-decoration: none;
+                        color: @buttonBorderColor;
                     }
                 }
             }
