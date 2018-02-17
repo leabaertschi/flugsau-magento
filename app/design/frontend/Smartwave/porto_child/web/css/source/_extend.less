@@ -1,9 +1,11 @@
 
 @color: #4f4d4d;
+@colorHover: darken(@color, 10%);
 @headerColor: #000;
 @backgroundColor: #eeeeee;
 @white: #ffffff;
 @buttonBorderColor: #4b90cd;
+@buttonHoverBorderColor: darken(@buttonBorderColor, 20%);
 
 @fontOpenSans: "Open Sans", "Helvetica Neue", helvetica, sans-serif;
 @fontOswald: 'Oswald', 'Helvetica Neue', helvetica, sans-serif;
@@ -24,6 +26,12 @@ a:hover {
     text-decoration: none;
 }
 
+.button.hover {
+/*    border-color: @buttonHoverBorderColor !important;
+    color: @colorHover !important;*/
+    background-color: @backgroundColor !important;
+}
+
 .button {
     display: inline-block;
     height: 38px;
@@ -35,15 +43,33 @@ a:hover {
     text-transform: uppercase;
     color: @color;
     border: 1px solid @buttonBorderColor;
+    transition: background-color;
+
+    &:hover {
+        &:extend(.button.hover);
+    }
 }
 
-.action.button.primary {
-    border: 1px solid @buttonBorderColor !important;
+button.action.primary {
+    border-color: @buttonBorderColor !important;
+    transition: background-color;
+
+    &:hover {
+        &:extend(.button.hover);
+    }
+
+    &:focus {
+        &:extend(.button.hover);
+    }
 }
 
 .block-product-link.widget {
     &:extend(.button);
     margin: 0;
+
+    &:hover {
+        &:extend(.button.hover);
+    }
 }
 
 .page-header.type17 {
@@ -281,7 +307,21 @@ a:hover {
             object-fit: contain;
         }
     }
+}
 
+.product-item-actions .action.towishlist:hover,
+.product-addto-links .action.towishlist:hover,
+.action.towishlist:hover,
+.product-addto-links .action.tocompare:hover,
+.product-item-actions .action.tocompare:hover,
+.action.tocompare:hover {
+    transition: background-color;
+    &:extend(.button.hover);
+}
+
+.pages .action.next,
+.pages .action.previous {
+    background-color: #fff !important;
 }
 
 
