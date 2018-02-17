@@ -309,12 +309,22 @@ button.action.primary {
     }
 }
 
+.product-addto-links .action.mailto.friend,
+.moved-add-to-links .action.mailto.friend,
+.product-social-links .action.mailto.friend {
+    color: @buttonBorderColor;
+    border-color: @buttonBorderColor;
+}
+
 .product-item-actions .action.towishlist:hover,
 .product-addto-links .action.towishlist:hover,
 .action.towishlist:hover,
 .product-addto-links .action.tocompare:hover,
 .product-item-actions .action.tocompare:hover,
-.action.tocompare:hover {
+.action.tocompare:hover,
+.product-addto-links .action.mailto.friend:hover,
+.moved-add-to-links .action.mailto.friend:hover,
+.product-social-links .action.mailto.friend:hover {
     transition: background-color;
     &:extend(.button.hover);
 }
@@ -322,8 +332,26 @@ button.action.primary {
 .pages .action.next,
 .pages .action.previous {
     background-color: #fff !important;
-}
+    transition: background-color;
 
+    &:before {
+        color: @color !important;
+    }
+
+    &:hover {
+        background-color: @backgroundColor !important;
+
+        &:before {
+            color: @color !important;
+        }
+    }
+
+    &:visited {
+        &:before {
+            color: @color !important;
+        }
+    }
+}
 
 @import "_large.less";
 @import "_mobile.less";
