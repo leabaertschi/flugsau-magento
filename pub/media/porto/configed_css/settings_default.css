@@ -1,6 +1,6 @@
 /**
  * WARNING: Do not change this file. Your changes will be lost.
- * 2018-01-02 12:13:43 */
+ * 2018-02-17 13:05:10 */
 body.boxed {
 }
 @media (min-width: 768px) {
@@ -106,12 +106,12 @@ body.boxed {
     color: #21293c;
 }
 #ln_slider_price.ui-slider-horizontal {
-    background: #e1ddc3;
+    background: #4b90cd;
     height: 3px;
     box-shadow: none;
 }
 #ln_slider_price .ui-slider-handle {
-    background: #e1ddc3;
+    background: #4b90cd;
     width: 12px;
     height: 12px;
     border-radius: 100%;
@@ -251,8 +251,8 @@ body.boxed {
     color: #21293c;
 }
 .pages .action.next,.pages .action.previous {
-    border: solid 1px #e1ddc3;
-    background-color: #e1ddc3;
+    border: solid 1px #4b90cd;
+    background-color: #4b90cd;
     color: #78755c;
     font-size: 15px;
     width: 36px;
@@ -340,8 +340,8 @@ body.boxed {
 .products.wrapper .product-item .qty-box .qtyminus, .products.wrapper .product-item .qty-box .qtyplus {
     height: 38px;
     line-height: 36px;
-    border: solid 1px #e1ddc3;
-    color: #e1ddc3;
+    border: solid 1px #4b90cd;
+    color: #4b90cd;
 }
 .products-grid .has-qty .product-item-details .product-item-actions .tocart {
     text-indent: -999em;
@@ -353,7 +353,7 @@ body.boxed {
     position: absolute;
     top:0;
     left: 0;
-    color: #e1ddc3;
+    color: #4b90cd;
     font-size: 20px;
     text-indent: 7px;
 }
@@ -361,7 +361,7 @@ body.boxed {
     height: 38px;
     line-height: 36px;
     color: #61605a;
-    border-color: #e1ddc3;
+    border-color: #4b90cd;
     background-color: transparent;
     font-size: 12px;
     padding: 0 17.4px;
@@ -403,7 +403,7 @@ body.boxed {
 .products-grid .product-item-info:hover .product-item-details .product-item-actions .tocart {
     background-color: #fff;
     color: #61605a;
-    border-color: #e1ddc3;
+    border-color: #4b90cd;
 }
 .product-item .tocart:before {
     display: none;
@@ -483,7 +483,7 @@ body.boxed {
     line-height: 41px;
     text-align: center;
     margin: 0;
-    border-color: #e1ddc3;
+    border-color: #4b90cd;
 }
 .product-info-main .qty.field .qty-changer > a:first-child {
     left: auto;
@@ -500,7 +500,7 @@ body.boxed {
     text-align: center;
     color: #61605a;
     margin: 0;
-    border-color: #e1ddc3;
+    border-color: #4b90cd;
 }
 .product-info-main .qty.field .qty-changer > a .porto-icon-up-dir:before {
     content: '\f882';
@@ -645,7 +645,7 @@ body.boxed {
     padding: 25px 0;
 }
 .footer-middle ul.contact-info [class^="porto-icon-"] {
-    color: #e1ddc3 !important;
+    color: #4b90cd !important;
     font-size: 26px;
     line-height: 28px;
 }

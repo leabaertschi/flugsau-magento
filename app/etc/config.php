@@ -2886,12 +2886,12 @@ Disallow: /*SID=
     color: #21293c;
 }
 #ln_slider_price.ui-slider-horizontal {
-    background: #e1ddc3;
+    background: #4b90cd;
     height: 3px;
     box-shadow: none;
 }
 #ln_slider_price .ui-slider-handle {
-    background: #e1ddc3;
+    background: #4b90cd;
     width: 12px;
     height: 12px;
     border-radius: 100%;
@@ -3031,8 +3031,8 @@ Disallow: /*SID=
     color: #21293c;
 }
 .pages .action.next,.pages .action.previous {
-    border: solid 1px #e1ddc3;
-    background-color: #e1ddc3;
+    border: solid 1px #4b90cd;
+    background-color: #4b90cd;
     color: #78755c;
     font-size: 15px;
     width: 36px;
@@ -3120,8 +3120,8 @@ Disallow: /*SID=
 .products.wrapper .product-item .qty-box .qtyminus, .products.wrapper .product-item .qty-box .qtyplus {
     height: 38px;
     line-height: 36px;
-    border: solid 1px #e1ddc3;
-    color: #e1ddc3;
+    border: solid 1px #4b90cd;
+    color: #4b90cd;
 }
 .products-grid .has-qty .product-item-details .product-item-actions .tocart {
     text-indent: -999em;
@@ -3133,7 +3133,7 @@ Disallow: /*SID=
     position: absolute;
     top:0;
     left: 0;
-    color: #e1ddc3;
+    color: #4b90cd;
     font-size: 20px;
     text-indent: 7px;
 }
@@ -3141,7 +3141,7 @@ Disallow: /*SID=
     height: 38px;
     line-height: 36px;
     color: #61605a;
-    border-color: #e1ddc3;
+    border-color: #4b90cd;
     background-color: transparent;
     font-size: 12px;
     padding: 0 17.4px;
@@ -3183,7 +3183,7 @@ Disallow: /*SID=
 .products-grid .product-item-info:hover .product-item-details .product-item-actions .tocart {
     background-color: #fff;
     color: #61605a;
-    border-color: #e1ddc3;
+    border-color: #4b90cd;
 }
 .product-item .tocart:before {
     display: none;
@@ -3263,7 +3263,7 @@ Disallow: /*SID=
     line-height: 41px;
     text-align: center;
     margin: 0;
-    border-color: #e1ddc3;
+    border-color: #4b90cd;
 }
 .product-info-main .qty.field .qty-changer > a:first-child {
     left: auto;
@@ -3280,7 +3280,7 @@ Disallow: /*SID=
     text-align: center;
     color: #61605a;
     margin: 0;
-    border-color: #e1ddc3;
+    border-color: #4b90cd;
 }
 .product-info-main .qty.field .qty-changer > a .porto-icon-up-dir:before {
     content: \'\\f882\';
@@ -3425,7 +3425,7 @@ Disallow: /*SID=
     padding: 25px 0;
 }
 .footer-middle ul.contact-info [class^="porto-icon-"] {
-    color: #e1ddc3 !important;
+    color: #4b90cd !important;
     font-size: 26px;
     line-height: 28px;
 }
@@ -3582,13 +3582,13 @@ Disallow: /*SID=
         'colors' => 
         array (
           'custom' => '1',
-          'text_color' => '7A7D82',
+          'text_color' => '4f4d4d',
           'link_color' => NULL,
           'link_hover_color' => NULL,
-          'button_bg_color' => '4b90cd',
-          'button_text_color' => '61605A',
-          'button_hover_bg_color' => '4b90cd',
-          'button_hover_text_color' => '61605A',
+          'button_bg_color' => 'ffffff',
+          'button_text_color' => '4f4d4d',
+          'button_hover_bg_color' => 'ffffff',
+          'button_hover_text_color' => '4f4d4d',
           'addtowishlist_color' => '4b90cd',
           'addtowishlist_hover_color' => '4b90cd',
           'addtocompare_color' => '4b90cd',
@@ -3652,7 +3652,7 @@ Disallow: /*SID=
           'footer_middle_link_color' => 'A8A8A8',
           'footer_middle_link_hover_color' => 'A8A8A8',
           'footer_middle_title_color' => 'FFFFFF',
-          'footer_middle_links_icon_color' => 'E1DDC3',
+          'footer_middle_links_icon_color' => '4b90cd',
           'footer_middle_ribbon_bgcolor' => NULL,
           'footer_middle_ribbon_shadow_color' => '282D3A',
           'footer_middle_ribbon_color' => NULL,

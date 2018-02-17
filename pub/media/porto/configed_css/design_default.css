@@ -1,6 +1,6 @@
 /**
  * WARNING: Do not change this file. Your changes will be lost.
- * 2018-01-02 12:13:40 */
+ * 2018-02-17 13:14:43 */
 
 .theme-color{color:#21293C !important;}
 .theme-hover-color:hover{color:#21293C !important;}
@@ -51,19 +51,19 @@ a,a:hover, .page-header a, .page-header a:hover, .page-header .panel.header .hea
         border-top-color:#21293C;
     }
 }
-html,body{color:#7A7D82}
+html,body{color:#4f4d4d}
 button.action.primary{
-    background-color:#E1DDC3;
-    border-color:#E1DDC3;
-    color:#61605A}
+    background-color:#ffffff;
+    border-color:#ffffff;
+    color:#4f4d4d}
 button.action.primary:hover{
-    background-color:#E1DDC3;
-    border-color:#E1DDC3;
-    color:#61605A}
-.product-item-actions .action.towishlist,.product-addto-links .action.towishlist,.action.towishlist{color:#E1DDC3;border-color:#E1DDC3}
-.product-item-actions .action.towishlist:hover,.product-addto-links .action.towishlist:hover,.action.towishlist:hover{color:#E1DDC3;border-color:#E1DDC3}
-.product-addto-links .action.tocompare,.product-item-actions .action.tocompare,.action.tocompare{color:#E1DDC3;border-color:#E1DDC3}
-.product-addto-links .action.tocompare:hover,.product-item-actions .action.tocompare:hover,.action.tocompare:hover{color:#E1DDC3;border-color:#E1DDC3}
+    background-color:#ffffff;
+    border-color:#ffffff;
+    color:#4f4d4d}
+.product-item-actions .action.towishlist,.product-addto-links .action.towishlist,.action.towishlist{color:#4b90cd;border-color:#4b90cd}
+.product-item-actions .action.towishlist:hover,.product-addto-links .action.towishlist:hover,.action.towishlist:hover{color:#4b90cd;border-color:#4b90cd}
+.product-addto-links .action.tocompare,.product-item-actions .action.tocompare,.action.tocompare{color:#4b90cd;border-color:#4b90cd}
+.product-addto-links .action.tocompare:hover,.product-item-actions .action.tocompare:hover,.action.tocompare:hover{color:#4b90cd;border-color:#4b90cd}
 .page-wrapper > .breadcrumbs{background-color:#FFFFFF}
 .page-wrapper > .breadcrumbs{color:#3C4250}
 .page-wrapper > .breadcrumbs a, .page-wrapper > .breadcrumbs a:focus{color:#3C4250}
@@ -104,7 +104,7 @@ button.action.primary:hover{
     color:#FFFFFF;
 }
 .footer-middle [class^="porto-icon-"].theme-color, .footer-middle [class*=" porto-icon-"].theme-color{
-    color:#E1DDC3 !important;
+    color:#4b90cd !important;
 }
 .footer-ribbon:before{
     border-right-color:#282D3A;
