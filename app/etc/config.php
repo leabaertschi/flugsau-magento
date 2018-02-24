@@ -196,6 +196,16 @@ return array (
         'sort_order' => '0',
         'is_active' => '1',
       ),
+      'en' => 
+      array (
+        'store_id' => '2',
+        'code' => 'en',
+        'website_id' => '1',
+        'group_id' => '1',
+        'name' => 'English',
+        'sort_order' => '0',
+        'is_active' => '1',
+      ),
     ),
   ),
   /**
@@ -210,6 +220,7 @@ return array (
    * CONFIG__DEFAULT__ADMIN__URL__CUSTOM for admin/url/custom
    * CONFIG__DEFAULT__CURRENCY__IMPORT__ERROR_EMAIL for currency/import/error_email
    * CONFIG__DEFAULT__CATALOG__PRODUCTALERT_CRON__ERROR_EMAIL for catalog/productalert_cron/error_email
+   * CONFIG__DEFAULT__PAYMENT__CHECKMO__MAILING_ADDRESS for payment/checkmo/mailing_address
    * CONFIG__DEFAULT__PAYMENT__PAYFLOWPRO__USER for payment/payflowpro/user
    * CONFIG__DEFAULT__PAYMENT__PAYFLOWPRO__PWD for payment/payflowpro/pwd
    * CONFIG__DEFAULT__PAYMENT__PAYFLOW_LINK__PWD for payment/payflow_link/pwd
@@ -223,6 +234,11 @@ return array (
    * CONFIG__DEFAULT__PAYMENT__AUTHORIZENET_DIRECTPOST__CGI_URL for payment/authorizenet_directpost/cgi_url
    * CONFIG__DEFAULT__PAYMENT__AUTHORIZENET_DIRECTPOST__CGI_URL_TD for payment/authorizenet_directpost/cgi_url_td
    * CONFIG__DEFAULT__PAYMENT__BRAINTREE__PRIVATE_KEY for payment/braintree/private_key
+   * CONFIG__DEFAULT__PAYMENT__BRAINTREE__MERCHANT_ID for payment/braintree/merchant_id
+   * CONFIG__DEFAULT__PAYMENT__BRAINTREE__MERCHANT_ACCOUNT_ID for payment/braintree/merchant_account_id
+   * CONFIG__DEFAULT__PAYMENT__BRAINTREE__DESCRIPTOR_PHONE for payment/braintree/descriptor_phone
+   * CONFIG__DEFAULT__PAYMENT__BRAINTREE__DESCRIPTOR_URL for payment/braintree/descriptor_url
+   * CONFIG__DEFAULT__PAYMENT__BRAINTREE_PAYPAL__MERCHANT_NAME_OVERRIDE for payment/braintree_paypal/merchant_name_override
    * CONFIG__DEFAULT__CONTACT__EMAIL__RECIPIENT_EMAIL for contact/email/recipient_email
    * CONFIG__DEFAULT__CARRIERS__DHL__ACCOUNT for carriers/dhl/account
    * CONFIG__DEFAULT__CARRIERS__DHL__GATEWAY_URL for carriers/dhl/gateway_url
@@ -267,6 +283,10 @@ return array (
    * CONFIG__DEFAULT__PAYPAL__WPP__API_USERNAME for paypal/wpp/api_username
    * CONFIG__DEFAULT__PAYPAL__FETCH_REPORTS__FTP_LOGIN for paypal/fetch_reports/ftp_login
    * CONFIG__DEFAULT__PAYPAL__FETCH_REPORTS__FTP_PASSWORD for paypal/fetch_reports/ftp_password
+   * CONFIG__DEFAULT__PAYPAL__FETCH_REPORTS__FTP_IP for paypal/fetch_reports/ftp_ip
+   * CONFIG__DEFAULT__PAYPAL__FETCH_REPORTS__FTP_PATH for paypal/fetch_reports/ftp_path
+   * CONFIG__DEFAULT__PAYPAL__GENERAL__MERCHANT_COUNTRY for paypal/general/merchant_country
+   * CONFIG__DEFAULT__PAYPAL__GENERAL__BUSINESS_ACCOUNT for paypal/general/business_account
    * CONFIG__DEFAULT__FRAUD_PROTECTION__SIGNIFYD__API_URL for fraud_protection/signifyd/api_url
    * CONFIG__DEFAULT__FRAUD_PROTECTION__SIGNIFYD__API_KEY for fraud_protection/signifyd/api_key
    * CONFIG__DEFAULT__SITEMAP__GENERATE__ERROR_EMAIL for sitemap/generate/error_email
@@ -641,7 +661,7 @@ Disallow: /*SID=
         ),
         'locale' => 
         array (
-          'firstday' => '0',
+          'firstday' => '1',
           'weekend' => '0,6',
           'datetime_format_long' => '%A, %B %e %Y [%I:%M %p]',
           'datetime_format_medium' => '%a, %b %e %Y [%I:%M %p]',
@@ -652,7 +672,7 @@ Disallow: /*SID=
           'language' => 'en',
           'code' => 'de_DE',
           'timezone' => 'Europe/Zurich',
-          'weight_unit' => 'kg',
+          'weight_unit' => 'kgs',
         ),
         'file' => 
         array (
@@ -1047,6 +1067,7 @@ Disallow: /*SID=
           'allowspecific' => '0',
           'sort_order' => '1',
           'group' => 'offline',
+          'specificcountry' => NULL,
         ),
         'substitution' => 
         array (
@@ -1062,6 +1083,11 @@ Disallow: /*SID=
           'title' => 'Check / Money order',
           'allowspecific' => '0',
           'group' => 'offline',
+          'specificcountry' => NULL,
+          'payable_to' => NULL,
+          'min_order_total' => NULL,
+          'max_order_total' => NULL,
+          'sort_order' => NULL,
         ),
         'purchaseorder' => 
         array (
@@ -1071,6 +1097,10 @@ Disallow: /*SID=
           'title' => 'Purchase Order',
           'allowspecific' => '0',
           'group' => 'offline',
+          'specificcountry' => NULL,
+          'min_order_total' => NULL,
+          'max_order_total' => NULL,
+          'sort_order' => NULL,
         ),
         'banktransfer' => 
         array (
@@ -1080,6 +1110,11 @@ Disallow: /*SID=
           'title' => 'Bank Transfer Payment',
           'allowspecific' => '0',
           'group' => 'offline',
+          'specificcountry' => NULL,
+          'instructions' => NULL,
+          'min_order_total' => NULL,
+          'max_order_total' => NULL,
+          'sort_order' => NULL,
         ),
         'cashondelivery' => 
         array (
@@ -1089,6 +1124,11 @@ Disallow: /*SID=
           'title' => 'Cash On Delivery',
           'allowspecific' => '0',
           'group' => 'offline',
+          'specificcountry' => NULL,
+          'instructions' => NULL,
+          'min_order_total' => NULL,
+          'max_order_total' => NULL,
+          'sort_order' => NULL,
         ),
         'vault' => 
         array (
@@ -1111,6 +1151,12 @@ Disallow: /*SID=
           'child_authorization_number' => '1',
           'verify_peer' => '1',
           'skip_order_review_step' => '1',
+          'active' => '0',
+          'in_context' => '0',
+          'sort_order' => NULL,
+          'allowspecific' => '0',
+          'transfer_shipping_options' => '0',
+          'require_billing_address' => '0',
         ),
         'paypal_express_bml' => 
         array (
@@ -1180,6 +1226,10 @@ Disallow: /*SID=
           'title' => 'PayPal Billing Agreement',
           'group' => 'paypal',
           'verify_peer' => '1',
+          'sort_order' => NULL,
+          'payment_action' => 'Authorization',
+          'allowspecific' => '0',
+          'line_items_enabled' => '0',
         ),
         'payflow_link' => 
         array (
@@ -1242,6 +1292,11 @@ Disallow: /*SID=
           'place_order_url' => 'authorizenet/directpost_payment/place',
           'cgi_url_test_mode' => 'https://test.authorize.net/gateway/transact.dll',
           'cgi_url_td_test_mode' => 'https://apitest.authorize.net/xml/v1/request.api',
+          'useccv' => '0',
+          'specificcountry' => NULL,
+          'min_order_total' => NULL,
+          'max_order_total' => NULL,
+          'sort_order' => NULL,
         ),
         'braintree' => 
         array (
@@ -1277,6 +1332,16 @@ Disallow: /*SID=
           'paymentInfoKeys' => 'cc_type,cc_number,avsPostalCodeResponseCode,avsStreetAddressResponseCode,cvvResponseCode,processorAuthorizationCode,processorResponseCode,processorResponseText,liabilityShifted,liabilityShiftPossible,riskDataId,riskDataDecision',
           'avs_ems_adapter' => 'Magento\\Braintree\\Model\\AvsEmsCodeMapper',
           'cvv_ems_adapter' => 'Magento\\Braintree\\Model\\CvvEmsCodeMapper',
+          'fraudprotection' => '0',
+          'debug' => '0',
+          'sort_order' => NULL,
+          'specificcountry' => NULL,
+          'countrycreditcard' => '[]',
+          'verify_3dsecure' => '0',
+          'threshold_amount' => NULL,
+          'verify_all_countries' => '0',
+          'verify_specific_countries' => NULL,
+          'descriptor_name' => NULL,
         ),
         'braintree_paypal' => 
         array (
@@ -1303,6 +1368,10 @@ Disallow: /*SID=
           'privateInfoKeys' => 'processorResponseCode,processorResponseText,paymentId',
           'paymentInfoKeys' => 'processorResponseCode,processorResponseText,paymentId,payerEmail',
           'supported_locales' => 'en_US,en_GB,en_AU,da_DK,fr_FR,fr_CA,de_DE,zh_HK,it_IT,nl_NL,no_NO,pl_PL,es_ES,sv_SE,tr_TR,pt_BR,ja_JP,id_ID,ko_KR,pt_PT,ru_RU,th_TH,zh_CN,zh_TW',
+          'sort_order' => NULL,
+          'specificcountry' => NULL,
+          'debug' => '0',
+          'skip_order_review' => '0',
         ),
         'braintree_cc_vault' => 
         array (
@@ -1314,6 +1383,7 @@ Disallow: /*SID=
             'tokenFormat' => 'Magento\\Braintree\\Model\\InstantPurchase\\CreditCard\\TokenFormatter',
             'additionalInformation' => 'Magento\\Braintree\\Model\\InstantPurchase\\PaymentAdditionalInformationProvider',
           ),
+          'active' => '0',
         ),
         'braintree_paypal_vault' => 
         array (
@@ -1325,6 +1395,11 @@ Disallow: /*SID=
             'tokenFormat' => 'Magento\\Braintree\\Model\\InstantPurchase\\PayPal\\TokenFormatter',
             'additionalInformation' => 'Magento\\Braintree\\Model\\InstantPurchase\\PaymentAdditionalInformationProvider',
           ),
+          'active' => '0',
+        ),
+        'wps_express' => 
+        array (
+          'active' => '0',
         ),
       ),
       'sales' => 
@@ -1563,7 +1638,7 @@ Disallow: /*SID=
         ),
         'flatrate' => 
         array (
-          'active' => '1',
+          'active' => '0',
           'sallowspecific' => '0',
           'model' => 'Magento\\OfflineShipping\\Model\\Carrier\\Flatrate',
           'name' => 'Fixed',
@@ -1575,7 +1650,7 @@ Disallow: /*SID=
         ),
         'tablerate' => 
         array (
-          'active' => '0',
+          'active' => '1',
           'sallowspecific' => '0',
           'condition_name' => 'package_weight',
           'include_virtual_price' => '1',
@@ -1826,10 +1901,17 @@ Disallow: /*SID=
         'style' => 
         array (
           'logo' => NULL,
+          'page_style' => NULL,
+          'paypal_hdrimg' => NULL,
+          'paypal_hdrbackcolor' => NULL,
+          'paypal_hdrbordercolor' => NULL,
+          'paypal_payflowcolor' => NULL,
         ),
         'wpp' => 
         array (
           'button_flavor' => 'dynamic',
+          'api_authentication' => '0',
+          'use_proxy' => '0',
         ),
         'wpuk' => 
         array (
@@ -1840,6 +1922,7 @@ Disallow: /*SID=
         array (
           'schedule' => '1',
           'time' => '00,00,00',
+          'active' => '0',
         ),
       ),
       'persistent' => 
@@ -3705,6 +3788,20 @@ Disallow: /*SID=
           ),
         ),
       ),
+      'en' => 
+      array (
+        'general' => 
+        array (
+          'locale' => 
+          array (
+            'code' => 'en_US',
+          ),
+          'store_information' => 
+          array (
+            'hours' => 'Tue, We, Fr, Sa: 10:00 - 12:00, 13:00 - 17:00',
+          ),
+        ),
+      ),
     ),
     'websites' => 
     array (
@@ -3781,6 +3878,13 @@ Disallow: /*SID=
             'logo_width' => NULL,
             'logo_height' => NULL,
             'logo' => 'websites/1/flugsau_gruen_1.png',
+          ),
+        ),
+        'payment' => 
+        array (
+          'paypal_express_bml' => 
+          array (
+            'sort_order' => NULL,
           ),
         ),
         'web' => 
