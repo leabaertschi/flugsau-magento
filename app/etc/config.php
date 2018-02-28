@@ -186,13 +186,13 @@ return array (
         'sort_order' => '0',
         'is_active' => '1',
       ),
-      'default' => 
+      'de' => 
       array (
         'store_id' => '1',
-        'code' => 'default',
+        'code' => 'de',
         'website_id' => '1',
         'group_id' => '1',
-        'name' => 'Default Store View',
+        'name' => 'Deutsch',
         'sort_order' => '0',
         'is_active' => '1',
       ),
@@ -2269,9 +2269,9 @@ Disallow: /*SID=
         ),
         'cart_display' => 
         array (
-          'price' => '1',
-          'subtotal' => '1',
-          'shipping' => '1',
+          'price' => '2',
+          'subtotal' => '2',
+          'shipping' => '2',
           'discount' => '1',
           'grandtotal' => '0',
           'full_summary' => '0',
@@ -2279,9 +2279,9 @@ Disallow: /*SID=
         ),
         'sales_display' => 
         array (
-          'price' => '1',
-          'subtotal' => '1',
-          'shipping' => '1',
+          'price' => '2',
+          'subtotal' => '2',
+          'shipping' => '2',
           'discount' => '1',
           'grandtotal' => '0',
           'full_summary' => '0',
