@@ -186,10 +186,10 @@ return array (
         'sort_order' => '0',
         'is_active' => '1',
       ),
-      'de' => 
+      'default' => 
       array (
         'store_id' => '1',
-        'code' => 'de',
+        'code' => 'default',
         'website_id' => '1',
         'group_id' => '1',
         'name' => 'Deutsch',
@@ -250,12 +250,14 @@ return array (
    * CONFIG__DEFAULT__CARRIERS__FEDEX__PASSWORD for carriers/fedex/password
    * CONFIG__DEFAULT__CARRIERS__FEDEX__PRODUCTION_WEBSERVICES_URL for carriers/fedex/production_webservices_url
    * CONFIG__DEFAULT__CARRIERS__FEDEX__SANDBOX_WEBSERVICES_URL for carriers/fedex/sandbox_webservices_url
+   * CONFIG__DEFAULT__CARRIERS__FEDEX__SMARTPOST_HUBID for carriers/fedex/smartpost_hubid
    * CONFIG__DEFAULT__CARRIERS__UPS__ACCESS_LICENSE_NUMBER for carriers/ups/access_license_number
    * CONFIG__DEFAULT__CARRIERS__UPS__GATEWAY_URL for carriers/ups/gateway_url
    * CONFIG__DEFAULT__CARRIERS__UPS__GATEWAY_XML_URL for carriers/ups/gateway_xml_url
    * CONFIG__DEFAULT__CARRIERS__UPS__TRACKING_XML_URL for carriers/ups/tracking_xml_url
    * CONFIG__DEFAULT__CARRIERS__UPS__USERNAME for carriers/ups/username
    * CONFIG__DEFAULT__CARRIERS__UPS__PASSWORD for carriers/ups/password
+   * CONFIG__DEFAULT__CARRIERS__UPS__SHIPPER_NUMBER for carriers/ups/shipper_number
    * CONFIG__DEFAULT__CARRIERS__USPS__GATEWAY_URL for carriers/usps/gateway_url
    * CONFIG__DEFAULT__CARRIERS__USPS__GATEWAY_SECURE_URL for carriers/usps/gateway_secure_url
    * CONFIG__DEFAULT__CARRIERS__USPS__USERID for carriers/usps/userid
@@ -1077,7 +1079,7 @@ Disallow: /*SID=
         ),
         'checkmo' => 
         array (
-          'active' => '1',
+          'active' => '0',
           'model' => 'Magento\\OfflinePayments\\Model\\Checkmo',
           'order_status' => 'pending',
           'title' => 'Check / Money order',
@@ -1091,7 +1093,7 @@ Disallow: /*SID=
         ),
         'purchaseorder' => 
         array (
-          'active' => '0',
+          'active' => '1',
           'model' => 'Magento\\OfflinePayments\\Model\\Purchaseorder',
           'order_status' => 'pending',
           'title' => 'Purchase Order',
@@ -1319,7 +1321,7 @@ Disallow: /*SID=
           'can_edit' => '1',
           'can_review_payment' => '1',
           'can_deny_payment' => '1',
-          'cctypes' => 'AE,VI,MC,DI,JCB,CUP,DN,MI',
+          'cctypes' => NULL,
           'useccv' => '1',
           'cctypes_braintree_mapper' => '{"american-express":"AE","discover":"DI","jcb":"JCB","mastercard":"MC","master-card":"MC","visa":"VI","maestro":"MI","diners-club":"DN","unionpay":"CUP"}',
           'order_status' => 'processing',
@@ -1614,6 +1616,12 @@ Disallow: /*SID=
           'shipment_days' => 'Mon,Tue,Wed,Thu,Fri',
           'active_rma' => '0',
           'is_online' => '1',
+          'handling_fee' => NULL,
+          'free_method_nondoc' => NULL,
+          'free_shipping_enable' => '0',
+          'specificcountry' => NULL,
+          'showmethod' => '0',
+          'sort_order' => NULL,
         ),
         'fedex' => 
         array (
@@ -1635,6 +1643,13 @@ Disallow: /*SID=
           'handling_action' => 'O',
           'active_rma' => '0',
           'is_online' => '1',
+          'handling_fee' => NULL,
+          'residence_delivery' => '0',
+          'free_shipping_enable' => '0',
+          'specificcountry' => NULL,
+          'debug' => '0',
+          'showmethod' => '0',
+          'sort_order' => NULL,
         ),
         'flatrate' => 
         array (
@@ -1647,6 +1662,10 @@ Disallow: /*SID=
           'type' => 'I',
           'specificerrmsg' => 'This shipping method is not available. To use this shipping method, please contact us.',
           'handling_type' => 'F',
+          'handling_fee' => NULL,
+          'specificcountry' => NULL,
+          'showmethod' => '0',
+          'sort_order' => NULL,
         ),
         'tablerate' => 
         array (
@@ -1659,6 +1678,10 @@ Disallow: /*SID=
           'title' => 'Best Way',
           'specificerrmsg' => 'This shipping method is not available. To use this shipping method, please contact us.',
           'handling_type' => 'F',
+          'handling_fee' => NULL,
+          'specificcountry' => NULL,
+          'showmethod' => '0',
+          'sort_order' => NULL,
         ),
         'freeshipping' => 
         array (
@@ -1669,6 +1692,10 @@ Disallow: /*SID=
           'name' => 'Free',
           'title' => 'Free Shipping',
           'specificerrmsg' => 'This shipping method is not available. To use this shipping method, please contact us.',
+          'free_shipping_subtotal' => NULL,
+          'specificcountry' => NULL,
+          'showmethod' => '0',
+          'sort_order' => NULL,
         ),
         'ups' => 
         array (
@@ -1696,6 +1723,11 @@ Disallow: /*SID=
           'type' => 'UPS',
           'active_rma' => '0',
           'is_online' => '1',
+          'handling_fee' => NULL,
+          'free_shipping_enable' => '0',
+          'specificcountry' => NULL,
+          'showmethod' => '0',
+          'sort_order' => NULL,
         ),
         'usps' => 
         array (
@@ -1719,6 +1751,12 @@ Disallow: /*SID=
           'handling_action' => 'O',
           'active_rma' => '0',
           'is_online' => '1',
+          'handling_fee' => NULL,
+          'free_shipping_enable' => '0',
+          'specificcountry' => NULL,
+          'debug' => '0',
+          'showmethod' => '0',
+          'sort_order' => NULL,
         ),
         'temando' => 
         array (
@@ -1734,6 +1772,10 @@ Disallow: /*SID=
           'api_version' => '1.0',
           'session_endpoint' => NULL,
           'sovereign_endpoint' => NULL,
+          'logging_enabled' => '0',
+          'specificcountry' => NULL,
+          'showmethod' => '0',
+          'sort_order' => NULL,
         ),
       ),
       'checkout' => 
@@ -3801,6 +3843,133 @@ Disallow: /*SID=
             'hours' => 'Tue, We, Fr, Sa: 10:00 - 12:00, 13:00 - 17:00',
           ),
         ),
+        'carriers' => 
+        array (
+          'tablerate' => 
+          array (
+            'title' => 'Post/DHL',
+            'name' => 'By Weight',
+          ),
+        ),
+        'design' => 
+        array (
+          'pagination' => 
+          array (
+            'pagination_frame_skip' => NULL,
+            'anchor_text_for_previous' => NULL,
+            'anchor_text_for_next' => NULL,
+          ),
+          'head' => 
+          array (
+            'title_prefix' => NULL,
+            'title_suffix' => NULL,
+            'default_description' => NULL,
+            'default_keywords' => NULL,
+            'includes' => NULL,
+          ),
+          'header' => 
+          array (
+            'logo_width' => NULL,
+            'logo_height' => NULL,
+            'logo_alt' => NULL,
+            'welcome' => NULL,
+          ),
+          'footer' => 
+          array (
+            'absolute_footer' => NULL,
+          ),
+          'search_engine_robots' => 
+          array (
+            'custom_instructions' => NULL,
+          ),
+          'watermark' => 
+          array (
+            'image_size' => NULL,
+            'image_imageOpacity' => NULL,
+            'small_image_size' => NULL,
+            'small_image_imageOpacity' => NULL,
+            'thumbnail_size' => NULL,
+            'thumbnail_imageOpacity' => NULL,
+            'swatch_image_size' => NULL,
+            'swatch_image_imageOpacity' => NULL,
+          ),
+          'email' => 
+          array (
+            'logo' => 'stores/2/Flugsau_Blau_Logo.png',
+            'logo_alt' => NULL,
+            'logo_width' => NULL,
+            'logo_height' => NULL,
+          ),
+        ),
+      ),
+      'default' => 
+      array (
+        'carriers' => 
+        array (
+          'tablerate' => 
+          array (
+            'title' => 'Post/DHL',
+            'name' => 'Nach Gewicht',
+            'specificerrmsg' => 'Diese Versandart ist nicht verfügbar. Bitte kontaktiere uns.',
+          ),
+        ),
+        'design' => 
+        array (
+          'pagination' => 
+          array (
+            'pagination_frame_skip' => NULL,
+            'anchor_text_for_previous' => NULL,
+            'anchor_text_for_next' => NULL,
+          ),
+          'head' => 
+          array (
+            'title_prefix' => NULL,
+            'title_suffix' => NULL,
+            'default_description' => NULL,
+            'default_keywords' => NULL,
+            'includes' => NULL,
+          ),
+          'header' => 
+          array (
+            'logo_width' => NULL,
+            'logo_height' => NULL,
+            'logo_alt' => NULL,
+            'welcome' => NULL,
+          ),
+          'footer' => 
+          array (
+            'absolute_footer' => NULL,
+          ),
+          'search_engine_robots' => 
+          array (
+            'custom_instructions' => NULL,
+          ),
+          'watermark' => 
+          array (
+            'image_size' => NULL,
+            'image_imageOpacity' => NULL,
+            'small_image_size' => NULL,
+            'small_image_imageOpacity' => NULL,
+            'thumbnail_size' => NULL,
+            'thumbnail_imageOpacity' => NULL,
+            'swatch_image_size' => NULL,
+            'swatch_image_imageOpacity' => NULL,
+          ),
+          'email' => 
+          array (
+            'logo' => 'stores/1/Flugsau_Blau_Logo.png',
+            'logo_alt' => NULL,
+            'logo_width' => NULL,
+            'logo_height' => NULL,
+          ),
+        ),
+        'payment' => 
+        array (
+          'purchaseorder' => 
+          array (
+            'title' => 'Rechnung',
+          ),
+        ),
       ),
     ),
     'websites' => 
@@ -3885,6 +4054,17 @@ Disallow: /*SID=
           'paypal_express_bml' => 
           array (
             'sort_order' => NULL,
+          ),
+        ),
+        'carriers' => 
+        array (
+          'tablerate' => 
+          array (
+            'import' => '1520429650,tablerates-2.csv,text/csv,/Applications/MAMP/tmp/php/phpL0swmz,0,103',
+          ),
+          'dhl' => 
+          array (
+            'doc_methods' => NULL,
           ),
         ),
         'web' => 
