@@ -4,8 +4,8 @@
 @headerColor: #000;
 @backgroundColor: #eeeeee;
 @white: #ffffff;
-@buttonBorderColor: #4b90cd;
-@buttonHoverBorderColor: darken(@buttonBorderColor, 20%);
+@contrastColor: #4b90cd;
+@buttonHoverBorderColor: darken(@contrastColor, 20%);
 
 @fontOpenSans: "Open Sans", "Helvetica Neue", helvetica, sans-serif;
 @fontOswald: 'Oswald', 'Helvetica Neue', helvetica, sans-serif;
@@ -42,7 +42,7 @@ a:hover {
     line-height: 36px;
     text-transform: uppercase;
     color: @color;
-    border: 1px solid @buttonBorderColor;
+    border: 1px solid @contrastColor;
     transition: background-color;
 
     &:hover {
@@ -54,7 +54,7 @@ button.action.primary {
     font-family: @fontOswald;
     color: @color;
     background-color: transparent;
-    border-color: @buttonBorderColor !important;
+    border-color: @contrastColor !important;
     transition: background-color;
 
     &:hover {
@@ -78,6 +78,10 @@ button.action.primary {
 .page-header.type17 {
     background-color: @white !important;
     color: @color !important;
+
+    .main-panel-top {
+        background-color: @contrastColor;
+    }
 
     .block-search {
         position: relative;
@@ -352,6 +356,7 @@ button.action.primary {
             width: auto;
             max-width: 100%;
             object-fit: contain;
+            background-color: @white;
         }
     }
 }
@@ -359,8 +364,8 @@ button.action.primary {
 .product-addto-links .action.mailto.friend,
 .moved-add-to-links .action.mailto.friend,
 .product-social-links .action.mailto.friend {
-    color: @buttonBorderColor;
-    border-color: @buttonBorderColor;
+    color: @contrastColor;
+    border-color: @contrastColor;
 }
 
 .product-item-actions .action.towishlist:hover,
