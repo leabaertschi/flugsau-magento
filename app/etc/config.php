@@ -303,6 +303,9 @@ return array (
         array (
           'list_allow_all' => '1',
           'pagination_frame' => '5',
+          'pagination_frame_skip' => NULL,
+          'anchor_text_for_previous' => NULL,
+          'anchor_text_for_next' => NULL,
         ),
         'invalid_caches' => 
         array (
@@ -317,6 +320,11 @@ return array (
           'default_media_type' => 'text/html',
           'default_charset' => 'utf-8',
           'demonotice' => '0',
+          'title_prefix' => NULL,
+          'title_suffix' => NULL,
+          'default_description' => NULL,
+          'default_keywords' => NULL,
+          'includes' => NULL,
         ),
         'search_engine_robots' => 
         array (
@@ -338,6 +346,7 @@ Disallow: /sendfriend/
 Disallow: /review/
 Disallow: /*SID=
                     ',
+          'custom_instructions' => NULL,
         ),
         'header' => 
         array (
@@ -345,10 +354,12 @@ Disallow: /*SID=
           'logo_width' => NULL,
           'logo_height' => NULL,
           'logo_src' => 'default/logo_white_small.png',
+          'logo_alt' => NULL,
         ),
         'footer' => 
         array (
           'copyright' => 'Copyright © 2013-2017 Magento, Inc. All rights reserved.',
+          'absolute_footer' => NULL,
         ),
         'watermark' => 
         array (
@@ -356,11 +367,27 @@ Disallow: /*SID=
           'small_image_position' => 'stretch',
           'thumbnail_position' => 'stretch',
           'swatch_image_position' => 'stretch',
+          'image_size' => NULL,
+          'image_imageOpacity' => NULL,
+          'small_image_size' => NULL,
+          'small_image_imageOpacity' => NULL,
+          'thumbnail_size' => NULL,
+          'thumbnail_imageOpacity' => NULL,
+          'swatch_image_size' => NULL,
+          'swatch_image_imageOpacity' => NULL,
         ),
         'email' => 
         array (
           'header_template' => 'design_email_header_template',
           'footer_template' => 'design_email_footer_template',
+          'logo' => 'default/Flugsau_Blau_Logo.png',
+          'logo_alt' => NULL,
+          'logo_width' => '120',
+          'logo_height' => '70',
+        ),
+        'theme' => 
+        array (
+          'theme_id' => 'frontend/Smartwave/port_child',
         ),
       ),
       'dev' => 
@@ -3895,10 +3922,10 @@ Disallow: /*SID=
           ),
           'email' => 
           array (
-            'logo' => 'stores/2/Flugsau_Blau_Logo.png',
             'logo_alt' => NULL,
             'logo_width' => NULL,
             'logo_height' => NULL,
+            'logo' => 'stores/2/Flugsau_Blau_Logo.png',
           ),
         ),
       ),
@@ -3957,10 +3984,10 @@ Disallow: /*SID=
           ),
           'email' => 
           array (
-            'logo' => 'stores/1/Flugsau_Blau_Logo.png',
             'logo_alt' => NULL,
             'logo_width' => NULL,
             'logo_height' => NULL,
+            'logo' => 'stores/1/Flugsau_Blau_Logo.png',
           ),
         ),
         'payment' => 
