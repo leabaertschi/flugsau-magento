@@ -12,16 +12,16 @@ function categories($bigware_item, $items_to_categories, $categories, $categorie
     });
 
     $paths = array_map(function ($cat) use ($categories, $categories_description) {
-        return 'Default Category/' . categoryPath($cat, $categories, $categories_description);
+        return 'Default Category/Produkte/' . categoryPath($cat, $categories, $categories_description, '5');
     }, $cats);
 
     return join(',', $paths);
 }
 
-function categoryPath($category, $categories, $categories_description) {
+function categoryPath($category, $categories, $categories_description, $language_id) {
     $desc = array_shift(
-        array_filter($categories_description, function($d) use ($category) {
-            return $d['categories_id'] === $category['categories_id'] && $d['language_id'] === '5';
+        array_filter($categories_description, function($d) use ($category, $language_id) {
+            return $d['categories_id'] === $category['categories_id'] && $d['language_id'] === $language_id;
         })
     );
 
@@ -35,18 +35,18 @@ function categoryPath($category, $categories, $categories_description) {
         })
     );
 
-    return categoryPath($parentCat, $categories, $categories_description) . '/' . $desc['categories_name'];
+    return categoryPath($parentCat, $categories, $categories_description, $language_id) . '/' . $desc['categories_name'];
 }
 
-function itemDescription($item, $items_descriptions) {
+function itemDescription($item, $items_descriptions, $language_id) {
     return array_shift(
-        array_filter($items_descriptions, function($d) use ($item) {
-            return $d['items_id'] === $item['items_id'] && $d['language_id'] === '5';
+        array_filter($items_descriptions, function($d) use ($item, $language_id) {
+            return $d['items_id'] === $item['items_id'] && $d['language_id'] === $language_id;
         })
     );
 }
 
-function itemOptions($item, $items_characteristics, $items_options, $items_options_values) {
+function itemOptions($item, $items_characteristics, $items_options, $items_options_values, $language_id) {
     $characteristics = array_filter($items_characteristics, function ($c) use ($item) {
         return $item['items_id'] === $c['items_id'];
     });
@@ -58,16 +58,16 @@ function itemOptions($item, $items_characteristics, $items_options, $items_optio
 
     $options_strings = [];
     foreach ($options as $o_id => $o) {
-        $option = array_shift(array_filter($items_options, function ($io) use ($o_id) {
-            return $io['items_options_id'] == $o_id && $io['language_id'] === '5';
+        $option = array_shift(array_filter($items_options, function ($io) use ($o_id, $language_id) {
+            return $io['items_options_id'] == $o_id && $io['language_id'] === $language_id;
         }));
 
         foreach ($o as $option_value) {
             $s = "name={$option['items_options_name']}";
             $s .= ',type=drop_down,required=1,price_type=fixed,sku=';
 
-            $value = array_shift(array_filter($items_options_values, function ($v) use ($option_value) {
-                return $v['items_options_values_id'] === $option_value['options_values_id'] && $v['language_id'] === '5';
+            $value = array_shift(array_filter($items_options_values, function ($v) use ($option_value, $language_id) {
+                return $v['items_options_values_id'] === $option_value['options_values_id'] && $v['language_id'] === $language_id;
             }));
 
             $s .= ",option_title={$value['items_options_values_name']}";
