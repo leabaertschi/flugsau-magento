@@ -1,6 +1,6 @@
 <?php
 return array (
-  'modules' => 
+  'modules' =>
   array (
     'Magento_Store' => 1,
     'Flugsau_Shop' => 1,
@@ -36,8 +36,8 @@ return array (
     'Magento_Msrp' => 1,
     'Magento_Contact' => 1,
     'Magento_Cookie' => 1,
+    'Magento_Email' => 1,
     'Magento_Widget' => 1,
-    'Magento_CurrencySymbol' => 1,
     'Magento_CatalogInventory' => 1,
     'Magento_Integration' => 1,
     'Magento_CustomerImportExport' => 1,
@@ -48,7 +48,7 @@ return array (
     'Magento_Downloadable' => 1,
     'Magento_ImportExport' => 1,
     'Magento_Bundle' => 1,
-    'Magento_Email' => 1,
+    'Magento_Newsletter' => 1,
     'Magento_EncryptionKey' => 1,
     'Magento_Fedex' => 1,
     'Magento_GiftMessage' => 1,
@@ -67,21 +67,21 @@ return array (
     'Magento_CatalogRuleConfigurable' => 1,
     'Magento_Multishipping' => 1,
     'Magento_NewRelicReporting' => 1,
-    'Magento_Reports' => 1,
+    'Magento_ProductAlert' => 1,
     'Magento_OfflinePayments' => 1,
     'Magento_SalesRule' => 1,
     'Magento_PageCache' => 1,
     'Magento_Vault' => 1,
     'Magento_Paypal' => 1,
     'Magento_Persistent' => 1,
-    'Magento_ProductAlert' => 1,
+    'Magento_Reports' => 1,
     'Magento_ProductVideo' => 1,
     'Magento_CheckoutAgreements' => 1,
     'Magento_QuoteAnalytics' => 1,
     'Magento_ReleaseNotification' => 1,
     'Magento_Review' => 1,
     'Magento_RequireJs' => 1,
-    'Magento_Shipping' => 1,
+    'Magento_SendFriend' => 1,
     'Magento_ReviewAnalytics' => 1,
     'Magento_Robots' => 1,
     'Magento_Rss' => 1,
@@ -94,8 +94,8 @@ return array (
     'Magento_UrlRewrite' => 1,
     'Magento_CatalogSearch' => 1,
     'Magento_CustomerAnalytics' => 1,
-    'Magento_SendFriend' => 1,
-    'Magento_Newsletter' => 1,
+    'Magento_Shipping' => 1,
+    'Magento_Wishlist' => 1,
     'Magento_Signifyd' => 1,
     'Magento_Sitemap' => 1,
     'Magefan_Blog' => 1,
@@ -117,7 +117,7 @@ return array (
     'Magento_Webapi' => 1,
     'Magento_WebapiSecurity' => 1,
     'Magento_Weee' => 1,
-    'Magento_Wishlist' => 1,
+    'Magento_CurrencySymbol' => 1,
     'Dotdigitalgroup_Email' => 1,
     'Magento_WishlistAnalytics' => 1,
     'Mageplaza_Core' => 1,
@@ -130,11 +130,11 @@ return array (
     'Smartwave_Socialfeeds' => 1,
     'Temando_Shipping' => 1,
   ),
-  'scopes' => 
+  'scopes' =>
   array (
-    'websites' => 
+    'websites' =>
     array (
-      'admin' => 
+      'admin' =>
       array (
         'website_id' => '0',
         'code' => 'admin',
@@ -143,7 +143,7 @@ return array (
         'default_group_id' => '0',
         'is_default' => '0',
       ),
-      'base' => 
+      'base' =>
       array (
         'website_id' => '1',
         'code' => 'base',
@@ -153,9 +153,9 @@ return array (
         'is_default' => '1',
       ),
     ),
-    'groups' => 
+    'groups' =>
     array (
-      0 => 
+      0 =>
       array (
         'group_id' => '0',
         'website_id' => '0',
@@ -164,7 +164,7 @@ return array (
         'root_category_id' => '0',
         'default_store_id' => '0',
       ),
-      1 => 
+      1 =>
       array (
         'group_id' => '1',
         'website_id' => '1',
@@ -174,9 +174,9 @@ return array (
         'default_store_id' => '1',
       ),
     ),
-    'stores' => 
+    'stores' =>
     array (
-      'admin' => 
+      'admin' =>
       array (
         'store_id' => '0',
         'code' => 'admin',
@@ -186,7 +186,7 @@ return array (
         'sort_order' => '0',
         'is_active' => '1',
       ),
-      'default' => 
+      'default' =>
       array (
         'store_id' => '1',
         'code' => 'default',
@@ -196,7 +196,7 @@ return array (
         'sort_order' => '0',
         'is_active' => '1',
       ),
-      'en' => 
+      'en' =>
       array (
         'store_id' => '2',
         'code' => 'en',
@@ -293,13 +293,13 @@ return array (
    * CONFIG__DEFAULT__FRAUD_PROTECTION__SIGNIFYD__API_KEY for fraud_protection/signifyd/api_key
    * CONFIG__DEFAULT__SITEMAP__GENERATE__ERROR_EMAIL for sitemap/generate/error_email
    */
-  'system' => 
+  'system' =>
   array (
-    'default' => 
+    'default' =>
     array (
-      'design' => 
+      'design' =>
       array (
-        'pagination' => 
+        'pagination' =>
         array (
           'list_allow_all' => '1',
           'pagination_frame' => '5',
@@ -307,14 +307,14 @@ return array (
           'anchor_text_for_previous' => NULL,
           'anchor_text_for_next' => NULL,
         ),
-        'invalid_caches' => 
+        'invalid_caches' =>
         array (
           'block_html' => NULL,
           'layout' => NULL,
           'translate' => NULL,
           'full_page' => NULL,
         ),
-        'head' => 
+        'head' =>
         array (
           'default_title' => 'Magento Commerce',
           'default_media_type' => 'text/html',
@@ -326,7 +326,7 @@ return array (
           'default_keywords' => NULL,
           'includes' => NULL,
         ),
-        'search_engine_robots' => 
+        'search_engine_robots' =>
         array (
           'default_robots' => 'INDEX,FOLLOW',
           'default_custom_instructions' => '
@@ -348,7 +348,7 @@ Disallow: /*SID=
                     ',
           'custom_instructions' => NULL,
         ),
-        'header' => 
+        'header' =>
         array (
           'welcome' => 'Default welcome msg!',
           'logo_width' => NULL,
@@ -356,12 +356,12 @@ Disallow: /*SID=
           'logo_src' => 'default/logo_white_small.png',
           'logo_alt' => NULL,
         ),
-        'footer' => 
+        'footer' =>
         array (
           'copyright' => 'Copyright © 2013-2017 Magento, Inc. All rights reserved.',
           'absolute_footer' => NULL,
         ),
-        'watermark' => 
+        'watermark' =>
         array (
           'image_position' => 'stretch',
           'small_image_position' => 'stretch',
@@ -376,7 +376,7 @@ Disallow: /*SID=
           'swatch_image_size' => NULL,
           'swatch_image_imageOpacity' => NULL,
         ),
-        'email' => 
+        'email' =>
         array (
           'header_template' => 'design_email_header_template',
           'footer_template' => 'design_email_footer_template',
@@ -385,14 +385,14 @@ Disallow: /*SID=
           'logo_width' => '120',
           'logo_height' => '70',
         ),
-        'theme' => 
+        'theme' =>
         array (
           'theme_id' => 'frontend/Smartwave/port_child',
         ),
       ),
-      'dev' => 
+      'dev' =>
       array (
-        'debug' => 
+        'debug' =>
         array (
           'profiler' => '0',
           'template_hints_storefront' => '0',
@@ -400,7 +400,7 @@ Disallow: /*SID=
           'template_hints_blocks' => '0',
           'debug_logging' => '0',
         ),
-        'js' => 
+        'js' =>
         array (
           'merge_files' => '1',
           'minify_files' => '0',
@@ -411,7 +411,7 @@ Disallow: /*SID=
           'translate_strategy' => 'dictionary',
           'enable_js_bundling' => '0',
         ),
-        'css' => 
+        'css' =>
         array (
           'minify_files' => '0',
           'minify_exclude' => '
@@ -419,62 +419,62 @@ Disallow: /*SID=
                 ',
           'merge_css_files' => '0',
         ),
-        'image' => 
+        'image' =>
         array (
           'default_adapter' => 'GD2',
-          'adapters' => 
+          'adapters' =>
           array (
-            'GD2' => 
+            'GD2' =>
             array (
               'title' => 'PHP GD2',
               'class' => 'Magento\\Framework\\Image\\Adapter\\Gd2',
             ),
-            'IMAGEMAGICK' => 
+            'IMAGEMAGICK' =>
             array (
               'title' => 'ImageMagick',
               'class' => 'Magento\\Framework\\Image\\Adapter\\ImageMagick',
             ),
           ),
         ),
-        'template' => 
+        'template' =>
         array (
           'minify_html' => '0',
           'allow_symlink' => '0',
         ),
-        'static' => 
+        'static' =>
         array (
           'sign' => '1',
         ),
-        'grid' => 
+        'grid' =>
         array (
           'async_indexing' => '0',
         ),
-        'front_end_development_workflow' => 
+        'front_end_development_workflow' =>
         array (
           'type' => 'client_side_compilation',
         ),
-        'translate_inline' => 
+        'translate_inline' =>
         array (
           'active' => '0',
           'active_admin' => '0',
-          'invalid_caches' => 
+          'invalid_caches' =>
           array (
             'block_html' => NULL,
           ),
         ),
       ),
-      'system' => 
+      'system' =>
       array (
-        'filesystem' => 
+        'filesystem' =>
         array (
           'media' => '{{media_dir}}',
         ),
-        'media_storage_configuration' => 
+        'media_storage_configuration' =>
         array (
           'media_storage' => '0',
           'media_database' => 'default_setup',
           'configuration_update_time' => '3600',
-          'allowed_resources' => 
+          'allowed_resources' =>
           array (
             'compiled_css_folder' => 'css',
             'compiled_css_secure_folder' => 'css_secure',
@@ -491,20 +491,20 @@ Disallow: /*SID=
             'captcha_folder' => 'captcha',
           ),
         ),
-        'currency' => 
+        'currency' =>
         array (
           'installed' => 'AZN,AZM,AFN,ALL,DZD,AOA,ARS,AMD,AWG,AUD,BSD,BHD,BDT,BBD,BYR,BZD,BMD,BTN,BOB,BAM,BWP,BRL,GBP,BND,BGN,BUK,BIF,KHR,CAD,CVE,CZK,KYD,CLP,CNY,COP,KMF,CDF,CRC,HRK,CUP,DKK,DJF,DOP,XCD,EGP,SVC,GQE,ERN,EEK,ETB,EUR,FKP,FJD,GMD,GEK,GEL,GHS,GIP,GTQ,GNF,GYD,HTG,HNL,HKD,HUF,ISK,INR,IDR,IRR,IQD,ILS,JMD,JPY,JOD,KZT,KES,KWD,KGS,LAK,LVL,LBP,LSL,LRD,LYD,LTL,MOP,MKD,MGA,MWK,MYR,MVR,LSM,MRO,MUR,MXN,MDL,MNT,MAD,MZN,MMK,NAD,NPR,ANG,TRL,TRY,NZD,NIC,NGN,KPW,NOK,OMR,PKR,PAB,PGK,PYG,PEN,PHP,PLN,QAR,RHD,RON,ROL,RUB,RWF,SHP,STD,SAR,RSD,SCR,SLL,SGD,SKK,SBD,SOS,ZAR,KRW,LKR,SDG,SRD,SZL,SEK,CHF,SYP,TWD,TJS,TZS,THB,TOP,TTD,TND,TMM,USD,UGX,UAH,AED,UYU,UZS,VUV,VEB,VEF,VND,CHE,CHW,XOF,XPF,WST,YER,ZMK,ZWD',
         ),
-        'emails' => 
+        'emails' =>
         array (
           'forgot_email_template' => 'system_emails_forgot_email_template',
           'forgot_email_identity' => 'general',
         ),
-        'dashboard' => 
+        'dashboard' =>
         array (
           'enable_charts' => '1',
         ),
-        'adminnotification' => 
+        'adminnotification' =>
         array (
           'feed_url' => 'notifications.magentocommerce.com/magento2/community/notifications.rss',
           'popup_url' => 'widgets.magentocommerce.com/notificationPopup',
@@ -513,23 +513,23 @@ Disallow: /*SID=
           'frequency' => '1',
           'last_update' => '0',
         ),
-        'smtp' => 
+        'smtp' =>
         array (
           'disable' => '0',
         ),
-        'full_page_cache' => 
+        'full_page_cache' =>
         array (
-          'varnish5' => 
+          'varnish5' =>
           array (
             'path' => 'varnish5.vcl',
           ),
-          'varnish4' => 
+          'varnish4' =>
           array (
             'path' => 'varnish4.vcl',
           ),
           'ttl' => '86400',
           'caching_application' => '1',
-          'default' => 
+          'default' =>
           array (
             'access_list' => 'localhost',
             'backend_host' => 'localhost',
@@ -537,14 +537,14 @@ Disallow: /*SID=
             'ttl' => '86400',
             'grace_period' => '300',
           ),
-          'varnish' => 
+          'varnish' =>
           array (
             'grace_period' => '300',
           ),
         ),
-        'cron' => 
+        'cron' =>
         array (
-          'index' => 
+          'index' =>
           array (
             'schedule_generate_every' => '1',
             'schedule_ahead_for' => '4',
@@ -554,7 +554,7 @@ Disallow: /*SID=
             'history_failure_lifetime' => '10080',
             'use_separate_process' => '1',
           ),
-          'default' => 
+          'default' =>
           array (
             'schedule_generate_every' => '15',
             'schedule_ahead_for' => '20',
@@ -564,7 +564,7 @@ Disallow: /*SID=
             'history_failure_lifetime' => '10080',
             'use_separate_process' => '0',
           ),
-          'ddg_automation' => 
+          'ddg_automation' =>
           array (
             'schedule_generate_every' => '1',
             'schedule_ahead_for' => '4',
@@ -576,25 +576,25 @@ Disallow: /*SID=
           ),
         ),
       ),
-      'web' => 
+      'web' =>
       array (
-        'url' => 
+        'url' =>
         array (
           'use_store' => '0',
           'redirect_to_base' => '1',
         ),
-        'unsecure' => 
+        'unsecure' =>
         array (
           'base_web_url' => '{{unsecure_base_url}}',
         ),
-        'secure' => 
+        'secure' =>
         array (
           'base_web_url' => '{{secure_base_url}}',
           'use_in_frontend' => '0',
           'use_in_adminhtml' => '0',
           'offloader_header' => 'X-Forwarded-Proto',
         ),
-        'session' => 
+        'session' =>
         array (
           'use_remote_addr' => '0',
           'use_http_via' => '0',
@@ -602,17 +602,17 @@ Disallow: /*SID=
           'use_http_user_agent' => '0',
           'use_frontend_sid' => '1',
         ),
-        'browser_capabilities' => 
+        'browser_capabilities' =>
         array (
           'cookies' => '1',
           'javascript' => '1',
           'local_storage' => '0',
         ),
-        'seo' => 
+        'seo' =>
         array (
           'use_rewrites' => '0',
         ),
-        'default' => 
+        'default' =>
         array (
           'cms_home_page' => 'flugsau-home-page',
           'cms_no_route' => 'no-route-2',
@@ -620,7 +620,7 @@ Disallow: /*SID=
           'no_route' => 'cms/noroute/index',
           'show_cms_breadcrumbs' => '1',
         ),
-        'cookie' => 
+        'cookie' =>
         array (
           'cookie_lifetime' => '3600',
           'cookie_httponly' => '1',
@@ -628,18 +628,18 @@ Disallow: /*SID=
           'cookie_restriction_lifetime' => '31536000',
         ),
       ),
-      'admin' => 
+      'admin' =>
       array (
-        'startup' => 
+        'startup' =>
         array (
           'menu_item_id' => 'dashboard',
         ),
-        'url' => 
+        'url' =>
         array (
           'use_custom' => '0',
           'use_custom_path' => '0',
         ),
-        'security' => 
+        'security' =>
         array (
           'use_form_key' => '1',
           'admin_account_sharing' => '0',
@@ -653,13 +653,13 @@ Disallow: /*SID=
           'password_is_forced' => '1',
           'session_lifetime' => '900',
         ),
-        'emails' => 
+        'emails' =>
         array (
           'forgot_email_template' => 'admin_emails_forgot_email_template',
           'forgot_email_identity' => 'general',
           'user_notification_template' => 'admin_emails_user_notification_template',
         ),
-        'captcha' => 
+        'captcha' =>
         array (
           'type' => 'default',
           'enable' => '1',
@@ -673,22 +673,22 @@ Disallow: /*SID=
           'symbols' => 'ABCDEFGHJKMnpqrstuvwxyz23456789',
           'case_sensitive' => '0',
           'shown_to_logged_in_user' => NULL,
-          'always_for' => 
+          'always_for' =>
           array (
             'backend_forgotpassword' => '1',
           ),
         ),
       ),
-      'general' => 
+      'general' =>
       array (
-        'country' => 
+        'country' =>
         array (
           'eu_countries' => 'AT,BE,BG,CY,CZ,DK,EE,FI,FR,DE,GR,HR,HU,IE,IT,LV,LT,LU,MT,NL,PL,PT,RO,SK,SI,ES,SE,GB',
           'optional_zip_countries' => 'HK,IE,MO,PA,GB',
           'allow' => 'AF,AL,DZ,AS,AD,AO,AI,AQ,AG,AR,AM,AW,AU,AT,AX,AZ,BS,BH,BD,BB,BY,BE,BZ,BJ,BM,BL,BT,BO,BA,BW,BV,BR,IO,VG,BN,BG,BF,BI,KH,CM,CA,CD,CV,KY,CF,TD,CL,CN,CX,CC,CO,KM,CG,CK,CR,HR,CU,CY,CZ,DK,DJ,DM,DO,EC,EG,SV,GQ,ER,EE,ET,FK,FO,FJ,FI,FR,GF,PF,TF,GA,GM,GE,DE,GG,GH,GI,GR,GL,GD,GP,GU,GT,GN,GW,GY,HT,HM,HN,HK,HU,IS,IM,IN,ID,IR,IQ,IE,IL,IT,CI,JE,JM,JP,JO,KZ,KE,KI,KW,KG,LA,LV,LB,LS,LR,LY,LI,LT,LU,ME,MF,MO,MK,MG,MW,MY,MV,ML,MT,MH,MQ,MR,MU,YT,FX,MX,FM,MD,MC,MN,MS,MA,MZ,MM,NA,NR,NP,NL,AN,NC,NZ,NI,NE,NG,NU,NF,KP,MP,NO,OM,PK,PW,PA,PG,PY,PE,PH,PN,PL,PS,PT,PR,QA,RE,RO,RS,RU,RW,SH,KN,LC,PM,VC,WS,SM,ST,SA,SN,SC,SL,SG,SK,SI,SB,SO,ZA,GS,KR,ES,LK,SD,SR,SJ,SZ,SE,CH,SY,TL,TW,TJ,TZ,TH,TG,TK,TO,TT,TN,TR,TM,TC,TV,VI,UG,UA,AE,GB,US,UM,UY,UZ,VU,VA,VE,VN,WF,EH,YE,ZM,ZW',
           'default' => 'CH',
         ),
-        'locale' => 
+        'locale' =>
         array (
           'firstday' => '1',
           'weekend' => '0,6',
@@ -703,9 +703,9 @@ Disallow: /*SID=
           'timezone' => 'Europe/Zurich',
           'weight_unit' => 'kgs',
         ),
-        'file' => 
+        'file' =>
         array (
-          'protected_extensions' => 
+          'protected_extensions' =>
           array (
             'php' => 'php',
             'php3' => 'php3',
@@ -724,9 +724,9 @@ Disallow: /*SID=
             'phtml' => 'phtml',
             'shtml' => 'shtml',
           ),
-          'public_files_valid_paths' => 
+          'public_files_valid_paths' =>
           array (
-            'protected' => 
+            'protected' =>
             array (
               'app' => '/app/*/*',
               'bin' => '/bin/*/*',
@@ -738,9 +738,9 @@ Disallow: /*SID=
               'vendor' => '/vendor/*/*',
             ),
           ),
-          'importexport_local_valid_paths' => 
+          'importexport_local_valid_paths' =>
           array (
-            'available' => 
+            'available' =>
             array (
               'export_xml' => 'var/export/*/*.xml',
               'export_csv' => 'var/export/*/*.csv',
@@ -750,13 +750,13 @@ Disallow: /*SID=
           ),
           'bunch_size' => '100',
         ),
-        'single_store_mode' => 
+        'single_store_mode' =>
         array (
           'enabled' => '1',
         ),
-        'validator_data' => 
+        'validator_data' =>
         array (
-          'input_types' => 
+          'input_types' =>
           array (
             'price' => 'price',
             'media_image' => 'media_image',
@@ -772,12 +772,12 @@ Disallow: /*SID=
             'weee' => 'weee',
           ),
         ),
-        'region' => 
+        'region' =>
         array (
           'display_all' => '1',
           'state_required' => 'AT,BR,CA,CH,EE,ES,FI,HR,LT,LV,RO,US',
         ),
-        'store_information' => 
+        'store_information' =>
         array (
           'name' => 'Flugsau GmbH',
           'phone' => '+41 41 637 09 39',
@@ -791,49 +791,49 @@ Disallow: /*SID=
           'merchant_vat_number' => NULL,
         ),
       ),
-      'theme' => 
+      'theme' =>
       array (
-        'customization' => 
+        'customization' =>
         array (
           'css' => 'Magento\\Framework\\View\\Design\\Theme\\Customization\\File\\Css',
           'js' => 'Magento\\Framework\\View\\Design\\Theme\\Customization\\File\\Js',
           'custom_css' => 'Magento\\Theme\\Model\\Theme\\Customization\\File\\CustomCss',
         ),
       ),
-      'currency' => 
+      'currency' =>
       array (
-        'options' => 
+        'options' =>
         array (
           'allow' => 'CHF',
           'base' => 'CHF',
           'default' => 'CHF',
         ),
-        'yahoofinance' => 
+        'yahoofinance' =>
         array (
           'timeout' => '100',
         ),
-        'fixerio' => 
+        'fixerio' =>
         array (
           'timeout' => '100',
         ),
-        'webservicex' => 
+        'webservicex' =>
         array (
           'timeout' => '100',
         ),
-        'import' => 
+        'import' =>
         array (
           'enabled' => '0',
           'error_email_identity' => 'general',
           'error_email_template' => 'currency_import_error_email_template',
         ),
       ),
-      'customer' => 
+      'customer' =>
       array (
-        'account_share' => 
+        'account_share' =>
         array (
           'scope' => '1',
         ),
-        'create_account' => 
+        'create_account' =>
         array (
           'confirm' => '0',
           'default_group' => '1',
@@ -845,16 +845,16 @@ Disallow: /*SID=
           'email_confirmed_template' => 'customer_create_account_email_confirmed_template',
           'vat_frontend_visibility' => '0',
         ),
-        'default' => 
+        'default' =>
         array (
           'group' => '1',
         ),
-        'account_information' => 
+        'account_information' =>
         array (
           'change_email_template' => 'customer_account_information_change_email_template',
           'change_email_and_password_template' => 'customer_account_information_change_email_and_password_template',
         ),
-        'password' => 
+        'password' =>
         array (
           'forgot_email_identity' => 'support',
           'forgot_email_template' => 'customer_password_forgot_email_template',
@@ -870,7 +870,7 @@ Disallow: /*SID=
           'max_number_password_reset_requests' => '5',
           'min_time_between_password_reset_requests' => '10',
         ),
-        'address' => 
+        'address' =>
         array (
           'street_lines' => '2',
           'prefix_show' => NULL,
@@ -884,11 +884,11 @@ Disallow: /*SID=
           'company_show' => 'opt',
           'fax_show' => NULL,
         ),
-        'startup' => 
+        'startup' =>
         array (
           'redirect_dashboard' => '0',
         ),
-        'address_templates' => 
+        'address_templates' =>
         array (
           'text' => '{{depend prefix}}{{var prefix}} {{/depend}}{{var firstname}} {{depend middlename}}{{var middlename}} {{/depend}}{{var lastname}}{{depend suffix}} {{var suffix}}{{/depend}}
 {{depend company}}{{var company}}{{/depend}}
@@ -926,11 +926,11 @@ Disallow: /*SID=
 {{depend fax}}F: {{var fax}}|{{/depend}}|
 {{depend vat_id}}VAT: {{var vat_id}}{{/depend}}|',
         ),
-        'online_customers' => 
+        'online_customers' =>
         array (
           'section_data_lifetime' => '60',
         ),
-        'captcha' => 
+        'captcha' =>
         array (
           'type' => 'default',
           'enable' => '1',
@@ -943,12 +943,12 @@ Disallow: /*SID=
           'length' => '4-5',
           'symbols' => 'ABCDEFGHJKMnpqrstuvwxyz23456789',
           'case_sensitive' => '0',
-          'shown_to_logged_in_user' => 
+          'shown_to_logged_in_user' =>
           array (
             'contact_us' => '1',
             'user_edit' => '1',
           ),
-          'always_for' => 
+          'always_for' =>
           array (
             'user_create' => '1',
             'user_forgotpassword' => '1',
@@ -958,28 +958,28 @@ Disallow: /*SID=
           ),
         ),
       ),
-      'cms' => 
+      'cms' =>
       array (
-        'wysiwyg' => 
+        'wysiwyg' =>
         array (
           'enabled' => 'hidden',
         ),
       ),
-      'export' => 
+      'export' =>
       array (
-        'customer_page_size' => 
+        'customer_page_size' =>
         array (
           'customer' => '10000',
           'address' => '5000',
         ),
       ),
-      'catalog' => 
+      'catalog' =>
       array (
-        'navigation' => 
+        'navigation' =>
         array (
           'max_depth' => '0',
         ),
-        'recently_products' => 
+        'recently_products' =>
         array (
           'recently_viewed_lifetime' => '1000',
           'recently_compared_lifetime' => '1000',
@@ -987,14 +987,14 @@ Disallow: /*SID=
           'viewed_count' => '5',
           'compared_count' => '5',
         ),
-        'fields_masks' => 
+        'fields_masks' =>
         array (
           'sku' => '{{name}}',
           'meta_title' => '{{name}}',
           'meta_keyword' => '{{name}}',
           'meta_description' => '{{name}} {{description}}',
         ),
-        'frontend' => 
+        'frontend' =>
         array (
           'list_mode' => 'grid-list',
           'grid_per_page_values' => '9,15,30',
@@ -1007,15 +1007,15 @@ Disallow: /*SID=
           'swatches_per_product' => '16',
           'show_swatches_in_product_list' => '1',
         ),
-        'product' => 
+        'product' =>
         array (
-          'flat' => 
+          'flat' =>
           array (
             'max_index_count' => '64',
           ),
           'default_tax_group' => '2',
         ),
-        'seo' => 
+        'seo' =>
         array (
           'product_url_suffix' => '.html',
           'category_url_suffix' => '.html',
@@ -1026,13 +1026,13 @@ Disallow: /*SID=
           'product_canonical_tag' => '0',
           'search_terms' => '1',
         ),
-        'custom_options' => 
+        'custom_options' =>
         array (
           'date_fields_order' => 'm,d,y',
           'time_format' => '12h',
           'forbidden_extensions' => 'php,exe',
         ),
-        'downloadable' => 
+        'downloadable' =>
         array (
           'downloads_number' => '0',
           'order_item_status' => '9',
@@ -1042,7 +1042,7 @@ Disallow: /*SID=
           'content_disposition' => 'inline',
           'disable_guest_checkout' => '1',
         ),
-        'layered_navigation' => 
+        'layered_navigation' =>
         array (
           'price_range_calculation' => 'auto',
           'price_range_step' => '100',
@@ -1051,7 +1051,7 @@ Disallow: /*SID=
           'interval_division_limit' => '9',
           'display_product_count' => '1',
         ),
-        'productalert' => 
+        'productalert' =>
         array (
           'allow_price' => '0',
           'allow_stock' => '0',
@@ -1059,35 +1059,35 @@ Disallow: /*SID=
           'email_stock_template' => 'catalog_productalert_email_stock_template',
           'email_identity' => 'general',
         ),
-        'productalert_cron' => 
+        'productalert_cron' =>
         array (
           'error_email_template' => 'catalog_productalert_cron_error_email_template',
           'error_email_identity' => 'general',
         ),
-        'product_video' => 
+        'product_video' =>
         array (
           'play_if_base' => '0',
           'show_related' => '0',
           'video_auto_restart' => '0',
         ),
-        'review' => 
+        'review' =>
         array (
           'allow_guest' => '1',
         ),
-        'search' => 
+        'search' =>
         array (
           'engine' => 'mysql',
           'min_query_length' => '1',
           'max_query_length' => '128',
         ),
-        'category' => 
+        'category' =>
         array (
           'root_id' => '2',
         ),
       ),
-      'payment' => 
+      'payment' =>
       array (
-        'free' => 
+        'free' =>
         array (
           'active' => '1',
           'model' => 'Magento\\Payment\\Model\\Method\\Free',
@@ -1098,13 +1098,13 @@ Disallow: /*SID=
           'group' => 'offline',
           'specificcountry' => NULL,
         ),
-        'substitution' => 
+        'substitution' =>
         array (
           'active' => '0',
           'model' => 'Magento\\Payment\\Model\\Method\\Substitution',
           'allowspecific' => '0',
         ),
-        'checkmo' => 
+        'checkmo' =>
         array (
           'active' => '0',
           'model' => 'Magento\\OfflinePayments\\Model\\Checkmo',
@@ -1118,7 +1118,7 @@ Disallow: /*SID=
           'max_order_total' => NULL,
           'sort_order' => NULL,
         ),
-        'purchaseorder' => 
+        'purchaseorder' =>
         array (
           'active' => '1',
           'model' => 'Magento\\OfflinePayments\\Model\\Purchaseorder',
@@ -1131,7 +1131,7 @@ Disallow: /*SID=
           'max_order_total' => NULL,
           'sort_order' => NULL,
         ),
-        'banktransfer' => 
+        'banktransfer' =>
         array (
           'active' => '0',
           'model' => 'Magento\\OfflinePayments\\Model\\Banktransfer',
@@ -1145,7 +1145,7 @@ Disallow: /*SID=
           'max_order_total' => NULL,
           'sort_order' => NULL,
         ),
-        'cashondelivery' => 
+        'cashondelivery' =>
         array (
           'active' => '0',
           'model' => 'Magento\\OfflinePayments\\Model\\Cashondelivery',
@@ -1159,12 +1159,12 @@ Disallow: /*SID=
           'max_order_total' => NULL,
           'sort_order' => NULL,
         ),
-        'vault' => 
+        'vault' =>
         array (
           'debug' => '1',
           'model' => 'Magento\\Vault\\Model\\VaultPaymentInterface',
         ),
-        'paypal_express' => 
+        'paypal_express' =>
         array (
           'model' => 'Magento\\Paypal\\Model\\Express',
           'title' => 'PayPal Express Checkout',
@@ -1187,13 +1187,13 @@ Disallow: /*SID=
           'transfer_shipping_options' => '0',
           'require_billing_address' => '0',
         ),
-        'paypal_express_bml' => 
+        'paypal_express_bml' =>
         array (
           'model' => 'Magento\\Paypal\\Model\\Bml',
           'title' => 'PayPal Credit',
           'group' => 'paypal',
         ),
-        'payflow_express' => 
+        'payflow_express' =>
         array (
           'title' => 'PayPal Express Checkout Payflow Edition',
           'payment_action' => 'Authorization',
@@ -1204,13 +1204,13 @@ Disallow: /*SID=
           'verify_peer' => '1',
           'model' => 'Magento\\Paypal\\Model\\PayflowExpress',
         ),
-        'payflow_express_bml' => 
+        'payflow_express_bml' =>
         array (
           'model' => 'Magento\\Paypal\\Model\\Payflow\\Bml',
           'title' => 'PayPal Credit',
           'group' => 'paypal',
         ),
-        'payflowpro' => 
+        'payflowpro' =>
         array (
           'model' => 'Magento\\Paypal\\Model\\Payflow\\Transparent',
           'title' => 'Credit Card',
@@ -1238,16 +1238,16 @@ Disallow: /*SID=
           'avs_ems_adapter' => 'Magento\\Paypal\\Model\\Payflow\\AvsEmsCodeMapper',
           'cvv_ems_adapter' => 'Magento\\Paypal\\Model\\Payflow\\CvvEmsCodeMapper',
         ),
-        'payflowpro_cc_vault' => 
+        'payflowpro_cc_vault' =>
         array (
           'model' => 'PayflowProCreditCardVaultFacade',
           'title' => 'Stored Cards (Payflow Pro)',
-          'instant_purchase' => 
+          'instant_purchase' =>
           array (
             'tokenFormat' => '\\Magento\\Paypal\\Model\\InstantPurchase\\Payflow\\Pro\\TokenFormatter',
           ),
         ),
-        'paypal_billing_agreement' => 
+        'paypal_billing_agreement' =>
         array (
           'active' => '1',
           'allow_billing_agreement_wizard' => '1',
@@ -1260,7 +1260,7 @@ Disallow: /*SID=
           'allowspecific' => '0',
           'line_items_enabled' => '0',
         ),
-        'payflow_link' => 
+        'payflow_link' =>
         array (
           'model' => 'Magento\\Paypal\\Model\\Payflowlink',
           'payment_action' => 'Authorization',
@@ -1278,7 +1278,7 @@ Disallow: /*SID=
           'cgi_url_test_mode' => 'https://pilot-payflowlink.paypal.com',
           'cgi_url' => 'https://payflowlink.paypal.com',
         ),
-        'payflow_advanced' => 
+        'payflow_advanced' =>
         array (
           'model' => 'Magento\\Paypal\\Model\\Payflowadvanced',
           'payment_action' => 'Authorization',
@@ -1296,7 +1296,7 @@ Disallow: /*SID=
           'cgi_url_test_mode' => 'https://pilot-payflowlink.paypal.com',
           'cgi_url' => 'https://payflowlink.paypal.com',
         ),
-        'hosted_pro' => 
+        'hosted_pro' =>
         array (
           'model' => 'Magento\\Paypal\\Model\\Hostedpro',
           'title' => 'Payment by cards or by PayPal account',
@@ -1305,7 +1305,7 @@ Disallow: /*SID=
           'display_ec' => '0',
           'verify_peer' => '1',
         ),
-        'authorizenet_directpost' => 
+        'authorizenet_directpost' =>
         array (
           'active' => '0',
           'cctypes' => 'AE,VI,MC,DI,JCB,DN',
@@ -1327,7 +1327,7 @@ Disallow: /*SID=
           'max_order_total' => NULL,
           'sort_order' => NULL,
         ),
-        'braintree' => 
+        'braintree' =>
         array (
           'model' => 'BraintreeFacade',
           'title' => 'Credit Card (Braintree)',
@@ -1372,7 +1372,7 @@ Disallow: /*SID=
           'verify_specific_countries' => NULL,
           'descriptor_name' => NULL,
         ),
-        'braintree_paypal' => 
+        'braintree_paypal' =>
         array (
           'model' => 'BraintreePayPalFacade',
           'title' => 'PayPal (Braintree)',
@@ -1402,11 +1402,11 @@ Disallow: /*SID=
           'debug' => '0',
           'skip_order_review' => '0',
         ),
-        'braintree_cc_vault' => 
+        'braintree_cc_vault' =>
         array (
           'model' => 'BraintreeCreditCardVaultFacade',
           'title' => 'Stored Cards (Braintree)',
-          'instant_purchase' => 
+          'instant_purchase' =>
           array (
             'available' => 'Magento\\Braintree\\Model\\InstantPurchase\\CreditCard\\AvailabilityChecker',
             'tokenFormat' => 'Magento\\Braintree\\Model\\InstantPurchase\\CreditCard\\TokenFormatter',
@@ -1414,26 +1414,26 @@ Disallow: /*SID=
           ),
           'active' => '0',
         ),
-        'braintree_paypal_vault' => 
+        'braintree_paypal_vault' =>
         array (
           'model' => 'BraintreePayPalVaultFacade',
           'title' => 'Stored Accounts (Braintree PayPal)',
           'can_use_internal' => '1',
-          'instant_purchase' => 
+          'instant_purchase' =>
           array (
             'tokenFormat' => 'Magento\\Braintree\\Model\\InstantPurchase\\PayPal\\TokenFormatter',
             'additionalInformation' => 'Magento\\Braintree\\Model\\InstantPurchase\\PaymentAdditionalInformationProvider',
           ),
           'active' => '0',
         ),
-        'wps_express' => 
+        'wps_express' =>
         array (
           'active' => '0',
         ),
       ),
-      'sales' => 
+      'sales' =>
       array (
-        'totals_sort' => 
+        'totals_sort' =>
         array (
           'discount' => '20',
           'grand_total' => '100',
@@ -1443,44 +1443,44 @@ Disallow: /*SID=
           'weee' => '35',
           'weee_tax' => '35',
         ),
-        'reorder' => 
+        'reorder' =>
         array (
           'allow' => '1',
         ),
-        'minimum_order' => 
+        'minimum_order' =>
         array (
           'tax_including' => '1',
         ),
-        'orders' => 
+        'orders' =>
         array (
           'items_per_page' => '20',
           'delete_pending_after' => '480',
         ),
-        'msrp' => 
+        'msrp' =>
         array (
           'enabled' => '0',
           'display_price_type' => '1',
           'explanation_message' => 'Our price is lower than the manufacturer\'s "minimum advertised price." As a result, we cannot show you the price in catalog or the product page. <br /><br /> You have no obligation to purchase the product once you know the price. You can simply remove the item from your cart.',
           'explanation_message_whats_this' => 'Our price is lower than the manufacturer\'s "minimum advertised price." As a result, we cannot show you the price in catalog or the product page. <br /><br /> You have no obligation to purchase the product once you know the price. You can simply remove the item from your cart.',
         ),
-        'gift_messages' => 
+        'gift_messages' =>
         array (
           'allow_items' => '0',
           'allow_order' => '0',
         ),
-        'instant_purchase' => 
+        'instant_purchase' =>
         array (
           'active' => '1',
           'button_text' => 'Instant Purchase',
         ),
       ),
-      'sales_email' => 
+      'sales_email' =>
       array (
-        'general' => 
+        'general' =>
         array (
           'async_sending' => '0',
         ),
-        'order' => 
+        'order' =>
         array (
           'enabled' => '1',
           'template' => 'sales_email_order_template',
@@ -1488,7 +1488,7 @@ Disallow: /*SID=
           'identity' => 'sales',
           'copy_method' => 'bcc',
         ),
-        'order_comment' => 
+        'order_comment' =>
         array (
           'enabled' => '1',
           'template' => 'sales_email_order_comment_template',
@@ -1496,7 +1496,7 @@ Disallow: /*SID=
           'identity' => 'sales',
           'copy_method' => 'bcc',
         ),
-        'invoice' => 
+        'invoice' =>
         array (
           'enabled' => '1',
           'template' => 'sales_email_invoice_template',
@@ -1504,7 +1504,7 @@ Disallow: /*SID=
           'identity' => 'sales',
           'copy_method' => 'bcc',
         ),
-        'invoice_comment' => 
+        'invoice_comment' =>
         array (
           'enabled' => '1',
           'template' => 'sales_email_invoice_comment_template',
@@ -1512,7 +1512,7 @@ Disallow: /*SID=
           'identity' => 'sales',
           'copy_method' => 'bcc',
         ),
-        'shipment' => 
+        'shipment' =>
         array (
           'enabled' => '1',
           'template' => 'sales_email_shipment_template',
@@ -1520,7 +1520,7 @@ Disallow: /*SID=
           'identity' => 'sales',
           'copy_method' => 'bcc',
         ),
-        'shipment_comment' => 
+        'shipment_comment' =>
         array (
           'enabled' => '1',
           'template' => 'sales_email_shipment_comment_template',
@@ -1528,7 +1528,7 @@ Disallow: /*SID=
           'identity' => 'sales',
           'copy_method' => 'bcc',
         ),
-        'creditmemo' => 
+        'creditmemo' =>
         array (
           'enabled' => '1',
           'template' => 'sales_email_creditmemo_template',
@@ -1536,7 +1536,7 @@ Disallow: /*SID=
           'identity' => 'sales',
           'copy_method' => 'bcc',
         ),
-        'creditmemo_comment' => 
+        'creditmemo_comment' =>
         array (
           'enabled' => '1',
           'template' => 'sales_email_creditmemo_comment_template',
@@ -1545,40 +1545,40 @@ Disallow: /*SID=
           'copy_method' => 'bcc',
         ),
       ),
-      'sales_pdf' => 
+      'sales_pdf' =>
       array (
-        'invoice' => 
+        'invoice' =>
         array (
           'put_order_id' => '1',
         ),
-        'shipment' => 
+        'shipment' =>
         array (
           'put_order_id' => '1',
         ),
-        'creditmemo' => 
+        'creditmemo' =>
         array (
           'put_order_id' => '1',
         ),
       ),
-      'dashboard' => 
+      'dashboard' =>
       array (
         'use_aggregated_data' => '0',
       ),
-      'contact' => 
+      'contact' =>
       array (
-        'contact' => 
+        'contact' =>
         array (
           'enabled' => '1',
         ),
-        'email' => 
+        'email' =>
         array (
           'sender_email_identity' => 'custom2',
           'email_template' => 'contact_email_email_template',
         ),
       ),
-      'cataloginventory' => 
+      'cataloginventory' =>
       array (
-        'options' => 
+        'options' =>
         array (
           'can_subtract' => '1',
           'can_back_in_stock' => '1',
@@ -1586,7 +1586,7 @@ Disallow: /*SID=
           'stock_threshold_qty' => '0',
           'display_product_stock_status' => '1',
         ),
-        'item_options' => 
+        'item_options' =>
         array (
           'manage_stock' => '1',
           'backorders' => '0',
@@ -1598,33 +1598,33 @@ Disallow: /*SID=
           'qty_increments' => '1',
         ),
       ),
-      'oauth' => 
+      'oauth' =>
       array (
-        'cleanup' => 
+        'cleanup' =>
         array (
           'cleanup_probability' => '100',
           'expiration_period' => '120',
         ),
-        'consumer' => 
+        'consumer' =>
         array (
           'expiration_period' => '300',
           'post_maxredirects' => '0',
           'post_timeout' => '5',
         ),
-        'authentication_lock' => 
+        'authentication_lock' =>
         array (
           'max_failures_count' => '6',
           'timeout' => '1800',
         ),
-        'access_token_lifetime' => 
+        'access_token_lifetime' =>
         array (
           'customer' => '1',
           'admin' => '4',
         ),
       ),
-      'carriers' => 
+      'carriers' =>
       array (
-        'dhl' => 
+        'dhl' =>
         array (
           'model' => 'Magento\\Dhl\\Model\\Carrier',
           'active' => '0',
@@ -1650,7 +1650,7 @@ Disallow: /*SID=
           'showmethod' => '0',
           'sort_order' => NULL,
         ),
-        'fedex' => 
+        'fedex' =>
         array (
           'shipment_requesttype' => '0',
           'active' => '0',
@@ -1678,7 +1678,7 @@ Disallow: /*SID=
           'showmethod' => '0',
           'sort_order' => NULL,
         ),
-        'flatrate' => 
+        'flatrate' =>
         array (
           'active' => '0',
           'sallowspecific' => '0',
@@ -1694,7 +1694,7 @@ Disallow: /*SID=
           'showmethod' => '0',
           'sort_order' => NULL,
         ),
-        'tablerate' => 
+        'tablerate' =>
         array (
           'active' => '1',
           'sallowspecific' => '0',
@@ -1710,7 +1710,7 @@ Disallow: /*SID=
           'showmethod' => '0',
           'sort_order' => NULL,
         ),
-        'freeshipping' => 
+        'freeshipping' =>
         array (
           'active' => '0',
           'sallowspecific' => '0',
@@ -1724,7 +1724,7 @@ Disallow: /*SID=
           'showmethod' => '0',
           'sort_order' => NULL,
         ),
-        'ups' => 
+        'ups' =>
         array (
           'active' => '0',
           'sallowspecific' => '0',
@@ -1756,7 +1756,7 @@ Disallow: /*SID=
           'showmethod' => '0',
           'sort_order' => NULL,
         ),
-        'usps' => 
+        'usps' =>
         array (
           'active' => '0',
           'sallowspecific' => '0',
@@ -1785,7 +1785,7 @@ Disallow: /*SID=
           'showmethod' => '0',
           'sort_order' => NULL,
         ),
-        'temando' => 
+        'temando' =>
         array (
           'active' => '0',
           'title' => 'Magento Shipping',
@@ -1805,15 +1805,15 @@ Disallow: /*SID=
           'sort_order' => NULL,
         ),
       ),
-      'checkout' => 
+      'checkout' =>
       array (
-        'options' => 
+        'options' =>
         array (
           'onepage_checkout_enabled' => '1',
           'guest_checkout' => '1',
           'max_items_display_count' => '10',
         ),
-        'cart' => 
+        'cart' =>
         array (
           'delete_quote_after' => '30',
           'redirect_to_cart' => '0',
@@ -1821,38 +1821,38 @@ Disallow: /*SID=
           'grouped_product_image' => 'itself',
           'configurable_product_image' => 'parent',
         ),
-        'cart_link' => 
+        'cart_link' =>
         array (
           'use_qty' => '1',
         ),
-        'sidebar' => 
+        'sidebar' =>
         array (
           'display' => '1',
           'count' => '5',
           'max_items_display_count' => '10',
         ),
-        'payment_failed' => 
+        'payment_failed' =>
         array (
           'identity' => 'general',
           'receiver' => 'general',
           'template' => 'checkout_payment_failed_template',
         ),
       ),
-      'import' => 
+      'import' =>
       array (
-        'format_v1' => 
+        'format_v1' =>
         array (
           'page_size' => '5000',
         ),
-        'format_v2' => 
+        'format_v2' =>
         array (
           'page_size' => '10000',
           'bunch_size' => '100',
         ),
       ),
-      'google' => 
+      'google' =>
       array (
-        'adwords' => 
+        'adwords' =>
         array (
           'active' => '0',
           'conversion_language' => 'en',
@@ -1860,7 +1860,7 @@ Disallow: /*SID=
           'conversion_color' => 'FFFFFF',
           'conversion_value_type' => '1',
           'conversion_value' => '0',
-          'languages' => 
+          'languages' =>
           array (
             'ar' => 'ar',
             'bg' => 'bg',
@@ -1904,7 +1904,7 @@ Disallow: /*SID=
             'zh_TW' => 'zh_TW',
             'zh_CN' => 'zh_CN',
           ),
-          'language_convert' => 
+          'language_convert' =>
           array (
             'zh_CN' => 'zh_Hans',
             'zh_TW' => 'zh_Hant',
@@ -1913,61 +1913,61 @@ Disallow: /*SID=
           'conversion_js_src' => 'https://www.googleadservices.com/pagead/conversion.js',
           'conversion_img_src' => 'https://www.googleadservices.com/pagead/conversion/%s/?label=%s&guid=ON&script=0',
         ),
-        'optimizer' => 
+        'optimizer' =>
         array (
           'active' => '0',
         ),
       ),
-      'analytics' => 
+      'analytics' =>
       array (
         'integration_name' => 'Magento Analytics user',
-        'general' => 
+        'general' =>
         array (
           'collection_time' => '02,00,00',
         ),
-        'subscription' => 
+        'subscription' =>
         array (
           'enabled' => '1',
         ),
       ),
-      'multishipping' => 
+      'multishipping' =>
       array (
-        'options' => 
+        'options' =>
         array (
           'checkout_multiple' => '1',
           'checkout_multiple_maximum_qty' => '100',
         ),
       ),
-      'newrelicreporting' => 
+      'newrelicreporting' =>
       array (
-        'general' => 
+        'general' =>
         array (
           'enable' => '0',
         ),
-        'cron' => 
+        'cron' =>
         array (
           'enable_cron' => '0',
         ),
       ),
-      'reports' => 
+      'reports' =>
       array (
-        'dashboard' => 
+        'dashboard' =>
         array (
           'ytd_start' => '1,1',
           'mtd_start' => '1',
         ),
       ),
-      'promo' => 
+      'promo' =>
       array (
-        'auto_generated_coupon_codes' => 
+        'auto_generated_coupon_codes' =>
         array (
           'length' => '12',
           'format' => '1',
         ),
       ),
-      'paypal' => 
+      'paypal' =>
       array (
-        'style' => 
+        'style' =>
         array (
           'logo' => NULL,
           'page_style' => NULL,
@@ -1976,27 +1976,27 @@ Disallow: /*SID=
           'paypal_hdrbordercolor' => NULL,
           'paypal_payflowcolor' => NULL,
         ),
-        'wpp' => 
+        'wpp' =>
         array (
           'button_flavor' => 'dynamic',
           'api_authentication' => '0',
           'use_proxy' => '0',
         ),
-        'wpuk' => 
+        'wpuk' =>
         array (
           'user' => NULL,
           'pwd' => NULL,
         ),
-        'fetch_reports' => 
+        'fetch_reports' =>
         array (
           'schedule' => '1',
           'time' => '00,00,00',
           'active' => '0',
         ),
       ),
-      'persistent' => 
+      'persistent' =>
       array (
-        'options' => 
+        'options' =>
         array (
           'enabled' => '0',
           'lifetime' => '31536000',
@@ -2006,9 +2006,9 @@ Disallow: /*SID=
           'shopping_cart' => '1',
         ),
       ),
-      'shipping' => 
+      'shipping' =>
       array (
-        'origin' => 
+        'origin' =>
         array (
           'country_id' => 'CH',
           'postcode' => '6388',
@@ -2017,92 +2017,92 @@ Disallow: /*SID=
           'street_line1' => NULL,
           'street_line2' => NULL,
         ),
-        'shipping_policy' => 
+        'shipping_policy' =>
         array (
           'enable_shipping_policy' => '0',
           'shipping_policy_content' => NULL,
         ),
       ),
-      'captcha' => 
+      'captcha' =>
       array (
-        'fonts' => 
+        'fonts' =>
         array (
-          'linlibertine' => 
+          'linlibertine' =>
           array (
             'label' => 'LinLibertine',
             'path' => 'LinLibertineFont/LinLibertine_Bd-2.8.1.ttf',
           ),
         ),
-        'frontend' => 
+        'frontend' =>
         array (
-          'areas' => 
+          'areas' =>
           array (
-            'user_create' => 
+            'user_create' =>
             array (
               'label' => 'Create user',
             ),
-            'user_login' => 
+            'user_login' =>
             array (
               'label' => 'Login',
             ),
-            'user_forgotpassword' => 
+            'user_forgotpassword' =>
             array (
               'label' => 'Forgot password',
             ),
-            'guest_checkout' => 
+            'guest_checkout' =>
             array (
               'label' => 'Check Out as Guest',
             ),
-            'register_during_checkout' => 
+            'register_during_checkout' =>
             array (
               'label' => 'Register during Checkout',
             ),
-            'contact_us' => 
+            'contact_us' =>
             array (
               'label' => 'Contact Us',
             ),
-            'user_edit' => 
+            'user_edit' =>
             array (
               'label' => 'Change password',
             ),
           ),
         ),
-        'backend' => 
+        'backend' =>
         array (
-          'areas' => 
+          'areas' =>
           array (
-            'backend_login' => 
+            'backend_login' =>
             array (
               'label' => 'Admin Login',
             ),
-            'backend_forgotpassword' => 
+            'backend_forgotpassword' =>
             array (
               'label' => 'Admin Forgot Password',
             ),
           ),
         ),
       ),
-      'url_rewrite' => 
+      'url_rewrite' =>
       array (
-        'entity_types' => 
+        'entity_types' =>
         array (
-          'product' => 
+          'product' =>
           array (
             'generator' => 'Magento\\Framework\\DataObject',
           ),
-          'category' => 
+          'category' =>
           array (
             'generator' => 'Magento\\Framework\\DataObject',
           ),
-          'cms-page' => 
+          'cms-page' =>
           array (
             'generator' => 'Magento\\Framework\\DataObject',
           ),
         ),
       ),
-      'sendfriend' => 
+      'sendfriend' =>
       array (
-        'email' => 
+        'email' =>
         array (
           'enabled' => '1',
           'template' => 'sendfriend_email_template',
@@ -2112,9 +2112,9 @@ Disallow: /*SID=
           'check_by' => '0',
         ),
       ),
-      'newsletter' => 
+      'newsletter' =>
       array (
-        'subscription' => 
+        'subscription' =>
         array (
           'allow_guest_subscribe' => '1',
           'confirm' => '0',
@@ -2125,89 +2125,89 @@ Disallow: /*SID=
           'un_email_identity' => 'support',
           'un_email_template' => 'newsletter_subscription_un_email_template',
         ),
-        'sending' => 
+        'sending' =>
         array (
           'set_return_path' => '0',
         ),
       ),
-      'fraud_protection' => 
+      'fraud_protection' =>
       array (
-        'signifyd' => 
+        'signifyd' =>
         array (
           'active' => '0',
           'debug' => '0',
         ),
       ),
-      'sitemap' => 
+      'sitemap' =>
       array (
-        'limit' => 
+        'limit' =>
         array (
           'max_lines' => '50000',
           'max_file_size' => '10485760',
         ),
-        'page' => 
+        'page' =>
         array (
           'priority' => '0.25',
           'changefreq' => 'daily',
         ),
-        'category' => 
+        'category' =>
         array (
           'priority' => '0.5',
           'changefreq' => 'daily',
         ),
-        'product' => 
+        'product' =>
         array (
           'priority' => '1',
           'changefreq' => 'daily',
           'image_include' => 'all',
         ),
-        'generate' => 
+        'generate' =>
         array (
           'enabled' => '0',
           'error_email_template' => 'sitemap_generate_error_email_template',
           'error_email_identity' => 'general',
         ),
-        'search_engines' => 
+        'search_engines' =>
         array (
           'submission_robots' => '0',
         ),
-        'file' => 
+        'file' =>
         array (
-          'valid_paths' => 
+          'valid_paths' =>
           array (
-            'available' => 
+            'available' =>
             array (
               'any_path' => '/*/*.xml',
             ),
           ),
         ),
       ),
-      'mfblog' => 
+      'mfblog' =>
       array (
-        'general' => 
+        'general' =>
         array (
           'enabled' => '1',
         ),
-        'index_page' => 
+        'index_page' =>
         array (
           'title' => 'Blog',
           'display_mode' => '0>',
           'meta_keywords' => NULL,
           'meta_description' => NULL,
         ),
-        'post_view' => 
+        'post_view' =>
         array (
-          'related_posts' => 
+          'related_posts' =>
           array (
             'enabled' => '1',
             'number_of_posts' => '5',
           ),
-          'related_products' => 
+          'related_products' =>
           array (
             'enabled' => '1',
             'number_of_products' => '5',
           ),
-          'comments' => 
+          'comments' =>
           array (
             'type' => 'facebook',
             'number_of_comments' => '4',
@@ -2215,60 +2215,60 @@ Disallow: /*SID=
             'guest_comments' => '1',
             'fb_app_id' => NULL,
           ),
-          'nextprev' => 
+          'nextprev' =>
           array (
             'enabled' => '1',
           ),
         ),
-        'post_list' => 
+        'post_list' =>
         array (
           'shortcotent_length' => '1000',
           'posts_per_page' => '10',
           'lazyload_padding' => '200',
           'lazyload_enabled' => '0',
         ),
-        'author' => 
+        'author' =>
         array (
           'enabled' => '0',
           'page_enabled' => '1',
         ),
-        'sidebar' => 
+        'sidebar' =>
         array (
-          'search' => 
+          'search' =>
           array (
             'enabled' => '1',
             'sort_order' => '10',
           ),
-          'categories' => 
+          'categories' =>
           array (
             'enabled' => '1',
             'show_posts_count' => '1',
             'sort_order' => '20',
             'max_depth' => '2',
           ),
-          'recent_posts' => 
+          'recent_posts' =>
           array (
             'enabled' => '1',
             'posts_per_page' => '5',
             'sort_order' => '30',
           ),
-          'featured_posts' => 
+          'featured_posts' =>
           array (
             'enabled' => '0',
             'posts_ids' => NULL,
             'sort_order' => '35',
           ),
-          'archive' => 
+          'archive' =>
           array (
             'enabled' => '1',
             'sort_order' => '40',
           ),
-          'tag_claud' => 
+          'tag_claud' =>
           array (
             'enabled' => '1',
             'sort_order' => '45',
           ),
-          'rss_feed' => 
+          'rss_feed' =>
           array (
             'title' => 'Blog Rss',
             'sort_order' => '50',
@@ -2276,12 +2276,12 @@ Disallow: /*SID=
             'description' => NULL,
           ),
         ),
-        'product_page' => 
+        'product_page' =>
         array (
           'related_posts_enabled' => '0',
           'number_of_related_posts' => '5',
         ),
-        'permalink' => 
+        'permalink' =>
         array (
           'route' => 'blog',
           'type' => 'default',
@@ -2292,13 +2292,13 @@ Disallow: /*SID=
           'author_route' => 'author',
           'search_route' => 'search',
         ),
-        'social' => 
+        'social' =>
         array (
           'add_this_enabled' => '1',
           'add_this_pubid' => 'ra-4def63cd3cf37569',
           'add_this_language' => 'en',
         ),
-        'top_menu' => 
+        'top_menu' =>
         array (
           'show_item' => '0',
           'item_text' => 'Blog',
@@ -2306,15 +2306,15 @@ Disallow: /*SID=
           'max_depth' => '0',
         ),
       ),
-      'tax' => 
+      'tax' =>
       array (
-        'classes' => 
+        'classes' =>
         array (
           'shipping_tax_class' => '0',
           'default_product_tax_class' => '2',
           'default_customer_tax_class' => '3',
         ),
-        'calculation' => 
+        'calculation' =>
         array (
           'algorithm' => 'TOTAL_BASE_CALCULATION',
           'apply_after_discount' => '1',
@@ -2325,18 +2325,18 @@ Disallow: /*SID=
           'apply_tax_on' => '0',
           'cross_border_trade_enabled' => '0',
         ),
-        'defaults' => 
+        'defaults' =>
         array (
           'country' => 'CH',
           'region' => '0',
           'postcode' => NULL,
         ),
-        'display' => 
+        'display' =>
         array (
           'type' => '2',
           'shipping' => '2',
         ),
-        'cart_display' => 
+        'cart_display' =>
         array (
           'price' => '2',
           'subtotal' => '2',
@@ -2346,7 +2346,7 @@ Disallow: /*SID=
           'full_summary' => '0',
           'zero_tax' => '0',
         ),
-        'sales_display' => 
+        'sales_display' =>
         array (
           'price' => '2',
           'subtotal' => '2',
@@ -2356,14 +2356,14 @@ Disallow: /*SID=
           'full_summary' => '0',
           'zero_tax' => '0',
         ),
-        'notification' => 
+        'notification' =>
         array (
           'info_url' => 'http://docs.magento.com/m2/ce/user_guide/tax/warning-messages.html',
           'ignore_discount' => '0',
           'ignore_price_display' => '0',
           'ignore_apply_discount' => '0',
         ),
-        'weee' => 
+        'weee' =>
         array (
           'enable' => '0',
           'display' => '1',
@@ -2374,20 +2374,20 @@ Disallow: /*SID=
           'include_in_subtotal' => '0',
         ),
       ),
-      'webapi' => 
+      'webapi' =>
       array (
-        'webapisecurity' => 
+        'webapisecurity' =>
         array (
           'allow_insecure' => '0',
         ),
       ),
-      'wishlist' => 
+      'wishlist' =>
       array (
-        'general' => 
+        'general' =>
         array (
           'active' => '1',
         ),
-        'email' => 
+        'email' =>
         array (
           'email_identity' => 'general',
           'email_template' => 'wishlist_email_email_template',
@@ -2395,24 +2395,24 @@ Disallow: /*SID=
           'text_limit' => '255',
         ),
       ),
-      'connector_api_credentials' => 
+      'connector_api_credentials' =>
       array (
-        'api' => 
+        'api' =>
         array (
           'enabled' => '0',
           'username' => NULL,
           'password' => NULL,
         ),
       ),
-      'connector_sync_settings' => 
+      'connector_sync_settings' =>
       array (
-        'address_book' => 
+        'address_book' =>
         array (
           'customers' => '0',
           'subscribers' => '0',
           'guests' => '0',
         ),
-        'sync' => 
+        'sync' =>
         array (
           'contact_enabled' => '0',
           'guest_enabled' => '0',
@@ -2422,15 +2422,15 @@ Disallow: /*SID=
           'review_enabled' => '0',
           'catalog_enabled' => '0',
         ),
-        'dynamic_addressbook' => 
+        'dynamic_addressbook' =>
         array (
           'addressbook_name' => NULL,
           'visibility' => NULL,
         ),
       ),
-      'connector_lost_baskets' => 
+      'connector_lost_baskets' =>
       array (
-        'customers' => 
+        'customers' =>
         array (
           'enabled_1' => '0',
           'send_after_1' => NULL,
@@ -2442,7 +2442,7 @@ Disallow: /*SID=
           'send_after_3' => NULL,
           'campaign_3' => NULL,
         ),
-        'guests' => 
+        'guests' =>
         array (
           'enabled_1' => '0',
           'send_after_1' => NULL,
@@ -2455,9 +2455,9 @@ Disallow: /*SID=
           'campaign_3' => NULL,
         ),
       ),
-      'connector_automation_studio' => 
+      'connector_automation_studio' =>
       array (
-        'visitor_automation' => 
+        'visitor_automation' =>
         array (
           'customer_automation' => '0',
           'subscriber_automation' => '0',
@@ -2467,11 +2467,11 @@ Disallow: /*SID=
           'wishlist_automation' => '0',
           'first_order_automation' => '0',
         ),
-        'order_status_automation' => 
+        'order_status_automation' =>
         array (
           'status_to_automation' => NULL,
         ),
-        'review_settings' => 
+        'review_settings' =>
         array (
           'enabled' => '0',
           'status' => NULL,
@@ -2480,7 +2480,7 @@ Disallow: /*SID=
           'campaign' => NULL,
           'anchor' => NULL,
         ),
-        'feefo_feedback_engine' => 
+        'feefo_feedback_engine' =>
         array (
           'logon' => NULL,
           'reviews_per_product' => NULL,
@@ -2489,9 +2489,9 @@ Disallow: /*SID=
           'product_reviews_url' => NULL,
         ),
       ),
-      'connector_dynamic_content' => 
+      'connector_dynamic_content' =>
       array (
-        'products' => 
+        'products' =>
         array (
           'related_display_type' => 'grid',
           'related_items_to_display' => '2',
@@ -2510,7 +2510,7 @@ Disallow: /*SID=
           'review_display_type' => 'grid',
           'wishlist_display_type' => 'grid',
         ),
-        'external_dynamic_content_urls' => 
+        'external_dynamic_content_urls' =>
         array (
           'passcode' => 'secret',
           'lost_basket_url' => NULL,
@@ -2542,39 +2542,39 @@ Disallow: /*SID=
           'shipment_update_guest_url' => NULL,
           'wishlist_url' => NULL,
         ),
-        'manual_product_search' => 
+        'manual_product_search' =>
         array (
           'display_type' => 'list',
           'items_to_display' => '2',
           'products_push_items' => NULL,
         ),
-        'fallback_products' => 
+        'fallback_products' =>
         array (
           'product_list' => NULL,
         ),
       ),
-      'connector_transactional_emails' => 
+      'connector_transactional_emails' =>
       array (
-        'ddg_transactional' => 
+        'ddg_transactional' =>
         array (
           'enabled' => '0',
         ),
       ),
-      'connector_configuration' => 
+      'connector_configuration' =>
       array (
-        'data_fields' => 
+        'data_fields' =>
         array (
           'order_status' => 'complete,pending',
           'brand_attribute' => '0',
         ),
-        'transactional_data' => 
+        'transactional_data' =>
         array (
           'order_statuses' => 'complete,pending',
           'order_custom_attributes' => '0',
           'order_product_attributes' => '0',
           'order_product_custom_options' => '0',
         ),
-        'abandoned_carts' => 
+        'abandoned_carts' =>
         array (
           'email_capture' => '0',
           'limits' => NULL,
@@ -2584,12 +2584,12 @@ Disallow: /*SID=
           'cart_url' => NULL,
           'login_url' => NULL,
         ),
-        'tracking' => 
+        'tracking' =>
         array (
           'roi_enabled' => '0',
           'page_enabled' => '0',
         ),
-        'dynamic_content_style' => 
+        'dynamic_content_style' =>
         array (
           'dynamic_styling' => 'table{font-family: Arial, Helvetica, sans-serif; font-size:12px;}',
           'font_color' => '#000000',
@@ -2612,22 +2612,22 @@ Disallow: /*SID=
           'coupon_font_picker' => 'Arial, Helvetica, sans-serif',
           'coupon_background_color' => '#FFFFFF',
         ),
-        'dynamic_content_edit' => 
+        'dynamic_content_edit' =>
         array (
           'link_text' => NULL,
         ),
-        'admin' => 
+        'admin' =>
         array (
           'disable_newsletter_success' => '0',
           'disable_customer_success' => '0',
         ),
-        'catalog_sync' => 
+        'catalog_sync' =>
         array (
           'catalog_values' => '1',
           'catalog_visibility' => '0',
           'catalog_type' => '0',
         ),
-        'customer_addressbook' => 
+        'customer_addressbook' =>
         array (
           'can_change' => '0',
           'show_books' => '0',
@@ -2635,9 +2635,9 @@ Disallow: /*SID=
           'fields_to_show' => '0',
         ),
       ),
-      'connector_data_mapping' => 
+      'connector_data_mapping' =>
       array (
-        'customer_data' => 
+        'customer_data' =>
         array (
           'customer_id' => NULL,
           'firstname' => NULL,
@@ -2686,7 +2686,7 @@ Disallow: /*SID=
           'billing_company' => NULL,
           'delivery_company' => NULL,
         ),
-        'dynamic_datafield' => 
+        'dynamic_datafield' =>
         array (
           'datafield_name' => NULL,
           'datafield_type' => NULL,
@@ -2694,26 +2694,26 @@ Disallow: /*SID=
           'datafield_access' => NULL,
         ),
       ),
-      'connector_roi_tracking' => 
+      'connector_roi_tracking' =>
       array (
-        'page_tracking' => 
+        'page_tracking' =>
         array (
           'enabled' => '0',
         ),
-        'roi_tracking' => 
+        'roi_tracking' =>
         array (
           'enabled' => '0',
         ),
       ),
-      'connector_developer_settings' => 
+      'connector_developer_settings' =>
       array (
-        'import_settings' => 
+        'import_settings' =>
         array (
           'batch_size' => '500',
           'orders' => '50',
           'importer_bulk_limit' => '1',
         ),
-        'sync_settings' => 
+        'sync_settings' =>
         array (
           'setup_data_fields' => NULL,
           'contact_sync' => NULL,
@@ -2725,12 +2725,12 @@ Disallow: /*SID=
           'reimport_orders' => NULL,
           'suppressed_contacts' => NULL,
         ),
-        'debug' => 
+        'debug' =>
         array (
           'debug_enabled' => '1',
           'api_request_time_limit' => '60',
         ),
-        'feed_configuration' => 
+        'feed_configuration' =>
         array (
           'feed_enabled' => '1',
           'feed_url' => 'dotmailerformagento.co.uk/feed.xml',
@@ -2738,17 +2738,17 @@ Disallow: /*SID=
           'frequency' => '1',
           'last_update' => NULL,
         ),
-        'oauth' => 
+        'oauth' =>
         array (
           'client_id' => NULL,
           'client_key' => NULL,
           'test_connect' => NULL,
         ),
-        'ip_restriction' => 
+        'ip_restriction' =>
         array (
           'ip_addresses' => '104.208.235.109, 52.174.92.164, 104.210.118.87, 89.197.25.33',
         ),
-        'cron_schedules' => 
+        'cron_schedules' =>
         array (
           'importer' => '*/5 * * * *',
           'contact' => '*/15 * * * *',
@@ -2757,45 +2757,45 @@ Disallow: /*SID=
           'review_wishlist' => '*/15 * * * *',
         ),
       ),
-      'mageplaza' => 
+      'mageplaza' =>
       array (
-        'general' => 
+        'general' =>
         array (
           'notice_enable' => '1',
           'notice_type' => 'announcement,new_update,marketing',
         ),
       ),
-      'layered_navigation' => 
+      'layered_navigation' =>
       array (
-        'general' => 
+        'general' =>
         array (
           'enable' => '1',
         ),
       ),
-      'sw_megamenu' => 
+      'sw_megamenu' =>
       array (
-        'general' => 
+        'general' =>
         array (
           'enable' => '1',
           'menu_type' => 'fullwidth',
           'static_width' => '500px',
           'max_level' => '2',
         ),
-        'custom_links' => 
+        'custom_links' =>
         array (
           'staticblock_before' => 'porto_custom_menu_before',
           'staticblock_after' => 'NULL',
         ),
-        'cat_labels' => 
+        'cat_labels' =>
         array (
           'label1' => 'New',
           'label2' => 'Hot!',
           'label3' => 'Sale',
         ),
       ),
-      'porto_settings' => 
+      'porto_settings' =>
       array (
-        'general' => 
+        'general' =>
         array (
           'boxed' => 'wide',
           'custom_notice_block' => 'porto_custom_notice',
@@ -2805,7 +2805,7 @@ Disallow: /*SID=
           'boxed_custom_style' => NULL,
           'smartlayers' => '0',
         ),
-        'header' => 
+        'header' =>
         array (
           'header_type' => '17',
           'static_block' => 'porto_custom_block_for_header',
@@ -2817,7 +2817,7 @@ Disallow: /*SID=
           'login_popup' => '0',
           'sticky_header' => '0',
         ),
-        'footer' => 
+        'footer' =>
         array (
           'footer_newsletter_title' => 'Be the First to Know',
           'footer_newsletter_text' => 'Get all the latest information on Events,<br/>Sales and Offers. Sign up for newsletter today.',
@@ -2859,7 +2859,7 @@ Disallow: /*SID=
           'footer_bottom_custom_1' => 'porto_footer_bottom_custom_block',
           'footer_bottom_custom_2' => NULL,
         ),
-        'category' => 
+        'category' =>
         array (
           'alternative_image' => '0',
           'aspect_ratio' => '1',
@@ -2875,7 +2875,7 @@ Disallow: /*SID=
           'side_custom_block' => 'NULL',
           'qty_field' => '0',
         ),
-        'category_grid' => 
+        'category_grid' =>
         array (
           'columns' => '4',
           'move_actions' => '0',
@@ -2884,7 +2884,7 @@ Disallow: /*SID=
           'move_title' => '0',
           'infinite_scroller' => '0',
         ),
-        'product' => 
+        'product' =>
         array (
           'product_image_size' => '5',
           'main_custom_block' => NULL,
@@ -2910,7 +2910,7 @@ Disallow: /*SID=
           'move_tab' => '0',
           'move_upsell_full' => '0',
         ),
-        'product_label' => 
+        'product_label' =>
         array (
           'new_label' => '1',
           'new_label_text' => 'NEW',
@@ -2918,7 +2918,7 @@ Disallow: /*SID=
           'sale_label_percent' => '1',
           'sale_label_text' => 'SALE',
         ),
-        'newsletter' => 
+        'newsletter' =>
         array (
           'enable' => '0',
           'delay' => '5000',
@@ -2930,7 +2930,7 @@ Disallow: /*SID=
           'bg_image' => NULL,
           'custom_style' => NULL,
         ),
-        'contacts' => 
+        'contacts' =>
         array (
           'enable' => '0',
           'api_key' => NULL,
@@ -2969,7 +2969,7 @@ Disallow: /*SID=
 </div>',
           'customblock' => NULL,
         ),
-        'custom_settings' => 
+        'custom_settings' =>
         array (
           'custom_style' => '@import url(\'http://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i\');
 @import url(\'http://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700\');
@@ -3687,33 +3687,33 @@ Disallow: /*SID=
 }',
           'custom_style_2' => NULL,
         ),
-        'richsnippets' => 
+        'richsnippets' =>
         array (
           'enable' => '0',
         ),
-        'install' => 
+        'install' =>
         array (
           'demo_version' => '0',
           'overwrite_blocks' => '0',
           'overwrite_pages' => '0',
         ),
       ),
-      'sw_socialfeeds' => 
+      'sw_socialfeeds' =>
       array (
-        'facebook_fanbox' => 
+        'facebook_fanbox' =>
         array (
           'enable' => '1',
           'facebook_name' => 'promokit.eu',
           'showing_counts' => '6',
         ),
-        'flickr_photos' => 
+        'flickr_photos' =>
         array (
           'enable' => '1',
           'api_key' => 'dd14978e9347319cdc672f3336cfdf9f',
           'photo_set_id' => '72157636619779965',
           'showing_counts' => '6',
         ),
-        'instagram_photos' => 
+        'instagram_photos' =>
         array (
           'enable' => '1',
           'accesstocken' => '6982065089.c906d6b.f09646d484cb480dba612b9a0519da7e',
@@ -3721,13 +3721,13 @@ Disallow: /*SID=
           'showing_counts' => '12',
         ),
       ),
-      'porto_design' => 
+      'porto_design' =>
       array (
-        'general' => 
+        'general' =>
         array (
           'theme_color' => '21293C',
         ),
-        'font' => 
+        'font' =>
         array (
           'custom' => '0',
           'font_size' => NULL,
@@ -3737,7 +3737,7 @@ Disallow: /*SID=
           'char_latin_ext' => NULL,
           'char_subset' => NULL,
         ),
-        'colors' => 
+        'colors' =>
         array (
           'custom' => '1',
           'text_color' => '4f4d4d',
@@ -3762,7 +3762,7 @@ Disallow: /*SID=
           'price_slider_bg_color' => NULL,
           'price_slider_handle_color' => NULL,
         ),
-        'header' => 
+        'header' =>
         array (
           'custom' => '1',
           'header_bgcolor' => NULL,
@@ -3798,7 +3798,7 @@ Disallow: /*SID=
           'header_menu_label3_bg_color' => NULL,
           'header_menu_label3_font_color' => NULL,
         ),
-        'footer' => 
+        'footer' =>
         array (
           'custom' => '1',
           'footer_top_bgcolor' => NULL,
@@ -3825,14 +3825,14 @@ Disallow: /*SID=
           'footer_bottom_link_color' => NULL,
           'footer_bottom_link_hover_color' => NULL,
         ),
-        'page' => 
+        'page' =>
         array (
           'custom' => '0',
           'page_bgcolor' => NULL,
           'page_bg_image' => NULL,
           'page_custom_style' => NULL,
         ),
-        'main' => 
+        'main' =>
         array (
           'custom' => '0',
           'main_bgcolor' => NULL,
@@ -3841,52 +3841,52 @@ Disallow: /*SID=
         ),
       ),
     ),
-    'stores' => 
+    'stores' =>
     array (
-      'admin' => 
+      'admin' =>
       array (
-        'design' => 
+        'design' =>
         array (
-          'package' => 
+          'package' =>
           array (
             'name' => 'default',
           ),
-          'theme' => 
+          'theme' =>
           array (
             'default' => 'default',
           ),
         ),
       ),
-      'en' => 
+      'en' =>
       array (
-        'general' => 
+        'general' =>
         array (
-          'locale' => 
+          'locale' =>
           array (
             'code' => 'en_US',
           ),
-          'store_information' => 
+          'store_information' =>
           array (
             'hours' => 'Tue, We, Fr, Sa: 10:00 - 12:00, 13:00 - 17:00',
           ),
         ),
-        'carriers' => 
+        'carriers' =>
         array (
-          'tablerate' => 
+          'tablerate' =>
           array (
             'title' => 'Post/DHL',
             'name' => 'By Weight',
           ),
         ),
-        'design' => 
+        'design' =>
         array (
-          'pagination' => 
+          'pagination' =>
           array (
             'pagination_frame_skip' => NULL,
             'anchor_text_for_previous' => NULL,
             'anchor_text_for_next' => NULL,
           ),
-          'head' => 
+          'head' =>
           array (
             'title_prefix' => NULL,
             'title_suffix' => NULL,
@@ -3894,22 +3894,22 @@ Disallow: /*SID=
             'default_keywords' => NULL,
             'includes' => NULL,
           ),
-          'header' => 
+          'header' =>
           array (
             'logo_width' => NULL,
             'logo_height' => NULL,
             'logo_alt' => NULL,
             'welcome' => NULL,
           ),
-          'footer' => 
+          'footer' =>
           array (
             'absolute_footer' => NULL,
           ),
-          'search_engine_robots' => 
+          'search_engine_robots' =>
           array (
             'custom_instructions' => NULL,
           ),
-          'watermark' => 
+          'watermark' =>
           array (
             'image_size' => NULL,
             'image_imageOpacity' => NULL,
@@ -3920,7 +3920,7 @@ Disallow: /*SID=
             'swatch_image_size' => NULL,
             'swatch_image_imageOpacity' => NULL,
           ),
-          'email' => 
+          'email' =>
           array (
             'logo_alt' => NULL,
             'logo_width' => NULL,
@@ -3929,26 +3929,26 @@ Disallow: /*SID=
           ),
         ),
       ),
-      'default' => 
+      'default' =>
       array (
-        'carriers' => 
+        'carriers' =>
         array (
-          'tablerate' => 
+          'tablerate' =>
           array (
             'title' => 'Post/DHL',
             'name' => 'Nach Gewicht',
             'specificerrmsg' => 'Diese Versandart ist nicht verfügbar. Bitte kontaktiere uns.',
           ),
         ),
-        'design' => 
+        'design' =>
         array (
-          'pagination' => 
+          'pagination' =>
           array (
             'pagination_frame_skip' => NULL,
             'anchor_text_for_previous' => NULL,
             'anchor_text_for_next' => NULL,
           ),
-          'head' => 
+          'head' =>
           array (
             'title_prefix' => NULL,
             'title_suffix' => NULL,
@@ -3956,22 +3956,22 @@ Disallow: /*SID=
             'default_keywords' => NULL,
             'includes' => NULL,
           ),
-          'header' => 
+          'header' =>
           array (
             'logo_width' => NULL,
             'logo_height' => NULL,
             'logo_alt' => NULL,
             'welcome' => NULL,
           ),
-          'footer' => 
+          'footer' =>
           array (
             'absolute_footer' => NULL,
           ),
-          'search_engine_robots' => 
+          'search_engine_robots' =>
           array (
             'custom_instructions' => NULL,
           ),
-          'watermark' => 
+          'watermark' =>
           array (
             'image_size' => NULL,
             'image_imageOpacity' => NULL,
@@ -3982,7 +3982,7 @@ Disallow: /*SID=
             'swatch_image_size' => NULL,
             'swatch_image_imageOpacity' => NULL,
           ),
-          'email' => 
+          'email' =>
           array (
             'logo_alt' => NULL,
             'logo_width' => NULL,
@@ -3990,49 +3990,49 @@ Disallow: /*SID=
             'logo' => 'stores/1/Flugsau_Blau_Logo.png',
           ),
         ),
-        'payment' => 
+        'payment' =>
         array (
-          'purchaseorder' => 
+          'purchaseorder' =>
           array (
             'title' => 'Rechnung',
           ),
         ),
       ),
     ),
-    'websites' => 
+    'websites' =>
     array (
-      'admin' => 
+      'admin' =>
       array (
-        'web' => 
+        'web' =>
         array (
-          'routers' => 
+          'routers' =>
           array (
-            'frontend' => 
+            'frontend' =>
             array (
               'disabled' => 'true',
             ),
           ),
-          'default' => 
+          'default' =>
           array (
             'no_route' => 'admin/noroute/index',
           ),
         ),
       ),
-      'base' => 
+      'base' =>
       array (
-        'design' => 
+        'design' =>
         array (
-          'theme' => 
+          'theme' =>
           array (
             'theme_id' => 'frontend/Smartwave/port_child',
           ),
-          'pagination' => 
+          'pagination' =>
           array (
             'pagination_frame_skip' => NULL,
             'anchor_text_for_previous' => NULL,
             'anchor_text_for_next' => NULL,
           ),
-          'head' => 
+          'head' =>
           array (
             'title_prefix' => NULL,
             'title_suffix' => NULL,
@@ -4040,7 +4040,7 @@ Disallow: /*SID=
             'default_keywords' => NULL,
             'includes' => NULL,
           ),
-          'header' => 
+          'header' =>
           array (
             'logo_width' => NULL,
             'logo_height' => NULL,
@@ -4048,16 +4048,16 @@ Disallow: /*SID=
             'welcome' => NULL,
             'logo_src' => 'websites/1/Flugsau_Blau_Logo.png',
           ),
-          'footer' => 
+          'footer' =>
           array (
             'copyright' => 'Copyright © 2017 Flugsau GmbH All rights reserved.',
             'absolute_footer' => NULL,
           ),
-          'search_engine_robots' => 
+          'search_engine_robots' =>
           array (
             'custom_instructions' => NULL,
           ),
-          'watermark' => 
+          'watermark' =>
           array (
             'image_size' => NULL,
             'image_imageOpacity' => NULL,
@@ -4068,7 +4068,7 @@ Disallow: /*SID=
             'swatch_image_size' => NULL,
             'swatch_image_imageOpacity' => NULL,
           ),
-          'email' => 
+          'email' =>
           array (
             'logo_alt' => NULL,
             'logo_width' => NULL,
@@ -4076,39 +4076,39 @@ Disallow: /*SID=
             'logo' => 'websites/1/flugsau_gruen_1.png',
           ),
         ),
-        'payment' => 
+        'payment' =>
         array (
-          'paypal_express_bml' => 
+          'paypal_express_bml' =>
           array (
             'sort_order' => NULL,
           ),
         ),
-        'carriers' => 
+        'carriers' =>
         array (
-          'tablerate' => 
+          'tablerate' =>
           array (
             'import' => '1520429650,tablerates-2.csv,text/csv,/Applications/MAMP/tmp/php/phpL0swmz,0,103',
           ),
-          'dhl' => 
+          'dhl' =>
           array (
             'doc_methods' => NULL,
           ),
         ),
-        'web' => 
+        'web' =>
         array (
-          'seo' => 
+          'seo' =>
           array (
             'use_rewrites' => '1',
           ),
-          'secure' => 
+          'secure' =>
           array (
             'use_in_frontend' => NULL,
             'use_in_adminhtml' => NULL,
           ),
         ),
-        'currency' => 
+        'currency' =>
         array (
-          'options' => 
+          'options' =>
           array (
             'base' => 'CHF',
             'default' => 'CHF',
@@ -4117,17 +4117,17 @@ Disallow: /*SID=
         ),
       ),
     ),
-    'website' => 
+    'website' =>
     array (
-      'admin' => 
+      'admin' =>
       array (
-        'connector_configuration' => 
+        'connector_configuration' =>
         array (
-          'transactional_data' => 
+          'transactional_data' =>
           array (
             'order_statuses' => 'canceled,closed,complete,fraud,holded,payment_review,paypal_canceled_reversal,paypal_reversed,pending,pending_payment,pending_paypal,processing',
           ),
-          'catalog_sync' => 
+          'catalog_sync' =>
           array (
             'catalog_type' => 'simple,virtual,downloadable,bundle,grouped,configurable',
             'catalog_visibility' => '1,2,3,4',
@@ -4136,9 +4136,9 @@ Disallow: /*SID=
       ),
     ),
   ),
-  'themes' => 
+  'themes' =>
   array (
-    'frontend/Magento/blank' => 
+    'frontend/Magento/blank' =>
     array (
       'parent_id' => NULL,
       'theme_path' => 'Magento/blank',
@@ -4148,7 +4148,7 @@ Disallow: /*SID=
       'type' => '0',
       'code' => 'Magento/blank',
     ),
-    'frontend/Magento/luma' => 
+    'frontend/Magento/luma' =>
     array (
       'parent_id' => 'Magento/blank',
       'theme_path' => 'Magento/luma',
@@ -4158,7 +4158,7 @@ Disallow: /*SID=
       'type' => '0',
       'code' => 'Magento/luma',
     ),
-    'adminhtml/Magento/backend' => 
+    'adminhtml/Magento/backend' =>
     array (
       'parent_id' => NULL,
       'theme_path' => 'Magento/backend',
@@ -4168,7 +4168,7 @@ Disallow: /*SID=
       'type' => '0',
       'code' => 'Magento/backend',
     ),
-    'frontend/Smartwave/porto' => 
+    'frontend/Smartwave/porto' =>
     array (
       'parent_id' => 'Magento/blank',
       'theme_path' => 'Smartwave/porto',
@@ -4178,7 +4178,7 @@ Disallow: /*SID=
       'type' => '0',
       'code' => 'Smartwave/porto',
     ),
-    'frontend/Smartwave/porto_rtl' => 
+    'frontend/Smartwave/porto_rtl' =>
     array (
       'parent_id' => 'Smartwave/porto',
       'theme_path' => 'Smartwave/porto_rtl',
@@ -4188,7 +4188,7 @@ Disallow: /*SID=
       'type' => '0',
       'code' => 'Smartwave/porto_rtl',
     ),
-    'frontend/Smartwave/port_child' => 
+    'frontend/Smartwave/port_child' =>
     array (
       'parent_id' => 'Smartwave/porto',
       'theme_path' => 'Smartwave/port_child',
@@ -4199,7 +4199,7 @@ Disallow: /*SID=
       'code' => 'Smartwave/port_child',
     ),
   ),
-  'i18n' => 
+  'i18n' =>
   array (
 
   ),
