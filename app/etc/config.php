@@ -240,6 +240,16 @@ return array (
    * CONFIG__DEFAULT__PAYMENT__BRAINTREE__DESCRIPTOR_URL for payment/braintree/descriptor_url
    * CONFIG__DEFAULT__PAYMENT__BRAINTREE_PAYPAL__MERCHANT_NAME_OVERRIDE for payment/braintree_paypal/merchant_name_override
    * CONFIG__DEFAULT__CONTACT__EMAIL__RECIPIENT_EMAIL for contact/email/recipient_email
+   * CONFIG__DEFAULT__TRANS_EMAIL__IDENT_CUSTOM1__EMAIL for trans_email/ident_custom1/email
+   * CONFIG__DEFAULT__TRANS_EMAIL__IDENT_CUSTOM1__NAME for trans_email/ident_custom1/name
+   * CONFIG__DEFAULT__TRANS_EMAIL__IDENT_CUSTOM2__EMAIL for trans_email/ident_custom2/email
+   * CONFIG__DEFAULT__TRANS_EMAIL__IDENT_CUSTOM2__NAME for trans_email/ident_custom2/name
+   * CONFIG__DEFAULT__TRANS_EMAIL__IDENT_GENERAL__EMAIL for trans_email/ident_general/email
+   * CONFIG__DEFAULT__TRANS_EMAIL__IDENT_GENERAL__NAME for trans_email/ident_general/name
+   * CONFIG__DEFAULT__TRANS_EMAIL__IDENT_SALES__EMAIL for trans_email/ident_sales/email
+   * CONFIG__DEFAULT__TRANS_EMAIL__IDENT_SALES__NAME for trans_email/ident_sales/name
+   * CONFIG__DEFAULT__TRANS_EMAIL__IDENT_SUPPORT__EMAIL for trans_email/ident_support/email
+   * CONFIG__DEFAULT__TRANS_EMAIL__IDENT_SUPPORT__NAME for trans_email/ident_support/name
    * CONFIG__DEFAULT__CARRIERS__DHL__ACCOUNT for carriers/dhl/account
    * CONFIG__DEFAULT__CARRIERS__DHL__GATEWAY_URL for carriers/dhl/gateway_url
    * CONFIG__DEFAULT__CARRIERS__DHL__ID for carriers/dhl/id
@@ -262,16 +272,6 @@ return array (
    * CONFIG__DEFAULT__CARRIERS__USPS__GATEWAY_SECURE_URL for carriers/usps/gateway_secure_url
    * CONFIG__DEFAULT__CARRIERS__USPS__USERID for carriers/usps/userid
    * CONFIG__DEFAULT__CARRIERS__USPS__PASSWORD for carriers/usps/password
-   * CONFIG__DEFAULT__TRANS_EMAIL__IDENT_CUSTOM1__EMAIL for trans_email/ident_custom1/email
-   * CONFIG__DEFAULT__TRANS_EMAIL__IDENT_CUSTOM1__NAME for trans_email/ident_custom1/name
-   * CONFIG__DEFAULT__TRANS_EMAIL__IDENT_CUSTOM2__EMAIL for trans_email/ident_custom2/email
-   * CONFIG__DEFAULT__TRANS_EMAIL__IDENT_CUSTOM2__NAME for trans_email/ident_custom2/name
-   * CONFIG__DEFAULT__TRANS_EMAIL__IDENT_GENERAL__EMAIL for trans_email/ident_general/email
-   * CONFIG__DEFAULT__TRANS_EMAIL__IDENT_GENERAL__NAME for trans_email/ident_general/name
-   * CONFIG__DEFAULT__TRANS_EMAIL__IDENT_SALES__EMAIL for trans_email/ident_sales/email
-   * CONFIG__DEFAULT__TRANS_EMAIL__IDENT_SALES__NAME for trans_email/ident_sales/name
-   * CONFIG__DEFAULT__TRANS_EMAIL__IDENT_SUPPORT__EMAIL for trans_email/ident_support/email
-   * CONFIG__DEFAULT__TRANS_EMAIL__IDENT_SUPPORT__NAME for trans_email/ident_support/name
    * CONFIG__DEFAULT__ANALYTICS__URL__SIGNUP for analytics/url/signup
    * CONFIG__DEFAULT__ANALYTICS__URL__UPDATE for analytics/url/update
    * CONFIG__DEFAULT__ANALYTICS__URL__BI_ESSENTIALS for analytics/url/bi_essentials
@@ -1365,7 +1365,6 @@ Disallow: /*SID=
           'debug' => '0',
           'sort_order' => NULL,
           'specificcountry' => NULL,
-          'countrycreditcard' => '[]',
           'verify_3dsecure' => '0',
           'threshold_amount' => NULL,
           'verify_all_countries' => '0',
@@ -1790,6 +1789,7 @@ Disallow: /*SID=
           'active' => '0',
           'title' => 'Magento Shipping',
           'sallowspecific' => '0',
+          'active_rma' => '0',
           'specificerrmsg' => 'This shipping method is not available. To use this shipping method, please contact us.',
           'model' => 'Temando\\Shipping\\Model\\Shipping\\Carrier',
           'register_account_url' => 'https://account.magento.com/shipping/onboarding/start',
@@ -1848,6 +1848,24 @@ Disallow: /*SID=
         array (
           'page_size' => '10000',
           'bunch_size' => '100',
+        ),
+      ),
+      'newsletter' =>
+      array (
+        'subscription' =>
+        array (
+          'allow_guest_subscribe' => '1',
+          'confirm' => '0',
+          'confirm_email_identity' => 'support',
+          'confirm_email_template' => 'newsletter_subscription_confirm_email_template',
+          'success_email_identity' => 'general',
+          'success_email_template' => 'newsletter_subscription_success_email_template',
+          'un_email_identity' => 'support',
+          'un_email_template' => 'newsletter_subscription_un_email_template',
+        ),
+        'sending' =>
+        array (
+          'set_return_path' => '0',
         ),
       ),
       'google' =>
@@ -1949,14 +1967,6 @@ Disallow: /*SID=
           'enable_cron' => '0',
         ),
       ),
-      'reports' =>
-      array (
-        'dashboard' =>
-        array (
-          'ytd_start' => '1,1',
-          'mtd_start' => '1',
-        ),
-      ),
       'promo' =>
       array (
         'auto_generated_coupon_codes' =>
@@ -2006,21 +2016,24 @@ Disallow: /*SID=
           'shopping_cart' => '1',
         ),
       ),
-      'shipping' =>
+      'reports' =>
       array (
-        'origin' =>
+        'dashboard' =>
         array (
-          'country_id' => 'CH',
-          'postcode' => '6388',
-          'region_id' => '118',
-          'city' => 'Grafenort',
-          'street_line1' => NULL,
-          'street_line2' => NULL,
+          'ytd_start' => '1,1',
+          'mtd_start' => '1',
         ),
-        'shipping_policy' =>
+      ),
+      'sendfriend' =>
+      array (
+        'email' =>
         array (
-          'enable_shipping_policy' => '0',
-          'shipping_policy_content' => NULL,
+          'enabled' => '1',
+          'template' => 'sendfriend_email_template',
+          'allow_guest' => '0',
+          'max_recipients' => '5',
+          'max_per_hour' => '5',
+          'check_by' => '0',
         ),
       ),
       'captcha' =>
@@ -2100,34 +2113,35 @@ Disallow: /*SID=
           ),
         ),
       ),
-      'sendfriend' =>
+      'shipping' =>
       array (
-        'email' =>
+        'origin' =>
         array (
-          'enabled' => '1',
-          'template' => 'sendfriend_email_template',
-          'allow_guest' => '0',
-          'max_recipients' => '5',
-          'max_per_hour' => '5',
-          'check_by' => '0',
+          'country_id' => 'CH',
+          'postcode' => '6388',
+          'region_id' => '118',
+          'city' => 'Grafenort',
+          'street_line1' => NULL,
+          'street_line2' => NULL,
+        ),
+        'shipping_policy' =>
+        array (
+          'enable_shipping_policy' => '0',
+          'shipping_policy_content' => NULL,
         ),
       ),
-      'newsletter' =>
+      'wishlist' =>
       array (
-        'subscription' =>
+        'general' =>
         array (
-          'allow_guest_subscribe' => '1',
-          'confirm' => '0',
-          'confirm_email_identity' => 'support',
-          'confirm_email_template' => 'newsletter_subscription_confirm_email_template',
-          'success_email_identity' => 'general',
-          'success_email_template' => 'newsletter_subscription_success_email_template',
-          'un_email_identity' => 'support',
-          'un_email_template' => 'newsletter_subscription_un_email_template',
+          'active' => '1',
         ),
-        'sending' =>
+        'email' =>
         array (
-          'set_return_path' => '0',
+          'email_identity' => 'general',
+          'email_template' => 'wishlist_email_email_template',
+          'number_limit' => '10',
+          'text_limit' => '255',
         ),
       ),
       'fraud_protection' =>
@@ -2381,20 +2395,6 @@ Disallow: /*SID=
           'allow_insecure' => '0',
         ),
       ),
-      'wishlist' =>
-      array (
-        'general' =>
-        array (
-          'active' => '1',
-        ),
-        'email' =>
-        array (
-          'email_identity' => 'general',
-          'email_template' => 'wishlist_email_email_template',
-          'number_limit' => '10',
-          'text_limit' => '255',
-        ),
-      ),
       'connector_api_credentials' =>
       array (
         'api' =>
@@ -2553,7 +2553,7 @@ Disallow: /*SID=
           'product_list' => NULL,
         ),
       ),
-      'connector_transactional_emails' =>
+      'transactional_emails' =>
       array (
         'ddg_transactional' =>
         array (
@@ -2710,8 +2710,10 @@ Disallow: /*SID=
         'import_settings' =>
         array (
           'batch_size' => '500',
-          'orders' => '50',
+          'transactional_data' => '50',
           'importer_bulk_limit' => '1',
+          'subscriber_sales_data_enabled' => '0',
+          'orders' => '50',
         ),
         'sync_settings' =>
         array (
@@ -2728,6 +2730,7 @@ Disallow: /*SID=
         'debug' =>
         array (
           'debug_enabled' => '1',
+          'api_log_time' => '60',
           'api_request_time_limit' => '60',
         ),
         'feed_configuration' =>
@@ -3838,6 +3841,13 @@ Disallow: /*SID=
           'main_bgcolor' => NULL,
           'main_bg_image' => NULL,
           'main_custom_style' => NULL,
+        ),
+      ),
+      'connector_transactional_emails' =>
+      array (
+        'ddg_transactional' =>
+        array (
+          'enabled' => '0',
         ),
       ),
     ),
