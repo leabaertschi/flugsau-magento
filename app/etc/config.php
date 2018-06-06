@@ -4135,10 +4135,6 @@ UID Nr: CHE-116.135.646',
         ),
         'carriers' =>
         array (
-          'tablerate' =>
-          array (
-            'import' => '1520429650,tablerates-2.csv,text/csv,/Applications/MAMP/tmp/php/phpL0swmz,0,103',
-          ),
           'dhl' =>
           array (
             'doc_methods' => NULL,
