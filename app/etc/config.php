@@ -1693,22 +1693,6 @@ Disallow: /*SID=
           'showmethod' => '0',
           'sort_order' => NULL,
         ),
-        'tablerate' =>
-        array (
-          'active' => '1',
-          'sallowspecific' => '0',
-          'condition_name' => 'package_weight',
-          'include_virtual_price' => '1',
-          'model' => 'Magento\\OfflineShipping\\Model\\Carrier\\Tablerate',
-          'name' => 'Table Rate',
-          'title' => 'Best Way',
-          'specificerrmsg' => 'This shipping method is not available. To use this shipping method, please contact us.',
-          'handling_type' => 'F',
-          'handling_fee' => NULL,
-          'specificcountry' => NULL,
-          'showmethod' => '0',
-          'sort_order' => NULL,
-        ),
         'freeshipping' =>
         array (
           'active' => '0',
@@ -4095,10 +4079,6 @@ Disallow: /*SID=
         ),
         'carriers' =>
         array (
-          'tablerate' =>
-          array (
-            'import' => '1520429650,tablerates-2.csv,text/csv,/Applications/MAMP/tmp/php/phpL0swmz,0,103',
-          ),
           'dhl' =>
           array (
             'doc_methods' => NULL,
