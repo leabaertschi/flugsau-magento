@@ -1120,7 +1120,7 @@ Disallow: /*SID=
         ),
         'purchaseorder' =>
         array (
-          'active' => '1',
+          'active' => '0',
           'model' => 'Magento\\OfflinePayments\\Model\\Purchaseorder',
           'order_status' => 'pending',
           'title' => 'Purchase Order',
@@ -1133,7 +1133,7 @@ Disallow: /*SID=
         ),
         'banktransfer' =>
         array (
-          'active' => '0',
+          'active' => '1',
           'model' => 'Magento\\OfflinePayments\\Model\\Banktransfer',
           'order_status' => 'pending',
           'title' => 'Bank Transfer Payment',
@@ -1686,6 +1686,22 @@ Disallow: /*SID=
           'price' => '5.00',
           'title' => 'Flat Rate',
           'type' => 'I',
+          'specificerrmsg' => 'This shipping method is not available. To use this shipping method, please contact us.',
+          'handling_type' => 'F',
+          'handling_fee' => NULL,
+          'specificcountry' => NULL,
+          'showmethod' => '0',
+          'sort_order' => NULL,
+        ),
+        'tablerate' =>
+        array (
+          'active' => '1',
+          'sallowspecific' => '0',
+          'condition_name' => 'package_weight',
+          'include_virtual_price' => '1',
+          'model' => 'Magento\\OfflineShipping\\Model\\Carrier\\Tablerate',
+          'name' => 'Table Rate',
+          'title' => 'Best Way',
           'specificerrmsg' => 'This shipping method is not available. To use this shipping method, please contact us.',
           'handling_type' => 'F',
           'handling_fee' => NULL,
@@ -3922,6 +3938,21 @@ Disallow: /*SID=
             'logo' => 'stores/2/Flugsau_Blau_Logo.png',
           ),
         ),
+        'payment' =>
+        array (
+          'banktransfer' =>
+          array (
+            'instructions' => 'Bank Account
+Raiffeisen Region Stans
+BC-Nr.: 81223
+
+SWIFT: RAIFCH22
+IBAN: CH72 8122 3000 0072 2095 1
+
+for payments from Germany:
+UID Nr: CHE-116.135.646',
+          ),
+        ),
       ),
       'default' =>
       array (
@@ -3989,6 +4020,10 @@ Disallow: /*SID=
           'purchaseorder' =>
           array (
             'title' => 'Rechnung',
+          ),
+          'banktransfer' =>
+          array (
+            'title' => 'Banküberweisung',
           ),
         ),
       ),
@@ -4076,9 +4111,34 @@ Disallow: /*SID=
           array (
             'sort_order' => NULL,
           ),
+          'paypal_express' =>
+          array (
+            'in_context' => '0',
+            'specificcountry' => NULL,
+          ),
+          'paypal_billing_agreement' =>
+          array (
+            'specificcountry' => NULL,
+          ),
+          'banktransfer' =>
+          array (
+            'instructions' => 'Bankverbindung
+Raiffeisen Region Stans
+BC-Nr.: 81223
+
+SWIFT: RAIFCH22
+IBAN: CH72 8122 3000 0072 2095 1
+
+für Lieferungen aus Deutschland:
+UID Nr: CHE-116.135.646',
+          ),
         ),
         'carriers' =>
         array (
+          'tablerate' =>
+          array (
+            'import' => '1520429650,tablerates-2.csv,text/csv,/Applications/MAMP/tmp/php/phpL0swmz,0,103',
+          ),
           'dhl' =>
           array (
             'doc_methods' => NULL,
