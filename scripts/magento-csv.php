@@ -109,6 +109,7 @@ foreach ($items as $item) {
     }
 
     $item_sku = $item['items_model'] != null ? $item['items_model'] : 'FS' . $sku++;
+    $item_price = $item['items_price'] / 100 * 108 / 107.7 * 100;
 
 
     foreach (['3', '5'] as $language_id) {
@@ -128,8 +129,8 @@ foreach ($items as $item) {
             $item['items_weight'],
             '1',
             'Taxable Goods',
-            'Catalog, Search',
-            $item['items_price'],
+            'Katalog, Suche',
+            $item_price,
             '',
             '',
             '',
