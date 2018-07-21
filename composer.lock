@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "83c4ad6b08c26923af222bb46ec91ccb",
+    "content-hash": "6662cdc2c68927e24915c44fdea27fb3",
     "packages": [
         {
             "name": "amzn/amazon-pay-and-login-magento-2-module",
@@ -7310,6 +7310,36 @@
             "description": "Connect your shop to Facebook page"
         },
         {
+            "name": "staempfli/magento2-language-de-ch",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/staempfli/magento2-language-de-ch.git",
+                "reference": "ed33fa23ac4c42dbb423b2317bd7df01f89821c8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/staempfli/magento2-language-de-ch/zipball/ed33fa23ac4c42dbb423b2317bd7df01f89821c8",
+                "reference": "ed33fa23ac4c42dbb423b2317bd7df01f89821c8",
+                "shasum": ""
+            },
+            "require": {
+                "magento/framework": "^100.0.0 || ^101.0.0"
+            },
+            "type": "magento2-language",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OSL-3.0"
+            ],
+            "description": "German (Switzerland) language",
+            "time": "2017-10-26T09:13:46+00:00"
+        },
+        {
             "name": "symfony/console",
             "version": "v2.8.42",
             "source": {
@@ -8342,16 +8372,16 @@
         },
         {
             "name": "zendframework/zend-diactoros",
-            "version": "1.8.1",
+            "version": "1.8.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-diactoros.git",
-                "reference": "63d920d1c9ebc009d860c3666593a66298727dd6"
+                "reference": "273c18bf6aaab20be9667a3aa4e7702e1e4e7ced"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/63d920d1c9ebc009d860c3666593a66298727dd6",
-                "reference": "63d920d1c9ebc009d860c3666593a66298727dd6",
+                "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/273c18bf6aaab20be9667a3aa4e7702e1e4e7ced",
+                "reference": "273c18bf6aaab20be9667a3aa4e7702e1e4e7ced",
                 "shasum": ""
             },
             "require": {
@@ -8401,7 +8431,7 @@
                 "psr",
                 "psr-7"
             ],
-            "time": "2018-07-09T21:17:27+00:00"
+            "time": "2018-07-19T18:38:31+00:00"
         },
         {
             "name": "zendframework/zend-escaper",

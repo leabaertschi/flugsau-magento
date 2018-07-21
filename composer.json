@@ -11,7 +11,8 @@
         "magento/product-community-edition": "2.2.5",
         "composer/composer": "@alpha",
         "magefan/module-blog": "2.7.1",
-        "mageplaza/magento-2-german-language-pack": "dev-master"
+        "mageplaza/magento-2-german-language-pack": "dev-master",
+        "staempfli/magento2-language-de-ch": "^1.1"
     },
     "require-dev": {
         "phpunit/phpunit": "~6.2.0",
