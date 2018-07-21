@@ -90,6 +90,7 @@ fputcsv($fh_de, $title_row);
 fputcsv($fh_en, $title_row);
 
 $sku = 1000;
+$skus = [];
 foreach ($items as $item) {
     if ($item['items_status'] === '0') {
         continue;
@@ -97,15 +98,15 @@ foreach ($items as $item) {
 
     $additional_images = [];
     if ($item['items_3picture']) {
-        array_push($additional_images, $item['items_3picture']);
+        array_push($additional_images, imagePath($item['items_3picture']));
     }
 
     if ($item['items_4picture']) {
-        array_push($additional_images, $item['items_4picture']);
+        array_push($additional_images, imagePath($item['items_4picture']));
     }
 
     if ($item['items_5picture']) {
-        array_push($additional_images, $item['items_5picture']);
+        array_push($additional_images, imagePath($item['items_5picture']));
     }
 
     $item_sku = $item['items_model'] != null ? $item['items_model'] : 'FS' . $sku++;
@@ -190,10 +191,10 @@ foreach ($items as $item) {
             '',
             '',
             '',
-            $language_id === '5' ? str_replace('[1]', '', $item['items_picture']) : '',
-            $language_id === '5' ? str_replace('[1]', '', $item['items_picture']) : '',
-            $language_id === '5' ? str_replace('[1]', '', $item['items_picture']) : '',
-            $language_id === '5' ? str_replace('[1]', '', join(',', $additional_images)) : ''
+            $language_id === '5' ? imagePath($item['items_picture']) : '',
+            $language_id === '5' ? imagePath($item['items_picture']) : '',
+            $language_id === '5' ? imagePath($item['items_picture']) : '',
+            $language_id === '5' ? join(',', $additional_images) : ''
         ];
 
         fputcsv($language_id === '5' ? $fh_de : $fh_en, $row);

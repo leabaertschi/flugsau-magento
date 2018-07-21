@@ -83,6 +83,13 @@ function itemOptions($item, $items_characteristics, $items_options, $items_optio
     return join('|', $options_strings);
 }
 
+function imagePath($path) {
+    $sanitizedPath = str_replace('[1]', '', $path);
+    $newPath = str_replace('/', '-', $sanitizedPath);
+    copy('pictures/' . $sanitizedPath, 'output/pictures/' . $newPath);
+    return $newPath;
+}
+
 
 // name=Custom Yoga Option,type=drop_down,required=0,price=10.0000,price_type=fixed,sku=,option_title=Gold|name=Custom Yoga Option,type=drop_down,required=0,price=10.0000,price_type=fixed,sku=,option_title=Silver|name=Custom Yoga Option,type=drop_down,required=0,price=10.0000,price_type=fixed,sku=yoga3sku,option_title=Platinum
 
