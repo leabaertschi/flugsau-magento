@@ -9,6 +9,7 @@ return [
         'Magento_Theme' => 1,
         'Magento_Customer' => 1,
         'Magento_AdminNotification' => 1,
+        'Magefan_Community' => 1,
         'Magento_Indexer' => 1,
         'Magento_Cms' => 1,
         'Magento_AdvancedPricingImportExport' => 1,
