@@ -10,7 +10,7 @@
     "require": {
         "magento/product-community-edition": "2.2.5",
         "composer/composer": "@alpha",
-        "magefan/module-blog": "2.8.1",
+        "magefan/module-blog": "2.8.2",
         "mageplaza/magento-2-german-language-pack": "dev-master",
         "staempfli/magento2-language-de-ch": "^1.1"
     },
