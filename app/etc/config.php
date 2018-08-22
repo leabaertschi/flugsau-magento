@@ -1219,7 +1219,9 @@ Disallow: /*SID=
                     'debug' => '0',
                     'sort_order' => NULL,
                     'specificcountry' => NULL,
-                    'countrycreditcard' => [],
+                    'countrycreditcard' => [
+
+                    ],
                     'verify_3dsecure' => '0',
                     'threshold_amount' => NULL,
                     'verify_all_countries' => '0',
