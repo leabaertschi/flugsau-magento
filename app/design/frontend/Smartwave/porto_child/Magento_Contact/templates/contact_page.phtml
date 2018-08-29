@@ -1,0 +1,28 @@
+<?php
+    $contacts_config = $this->helper('Smartwave\Porto\Helper\Data')->getConfig('porto_settings/contacts');
+    $_infoblock = $contacts_config['infoblock'];
+    $_customblock = $contacts_config['customblock'];
+
+    if($_customblock) {
+        $block = $this->getLayout()->createBlock('Magento\Cms\Block\Block');
+        if($block) {
+            $block->setBlockId($_customblock);
+        }
+        if($block){
+            echo '<div class="row"><div class="col-sm-12">'.$block->toHtml().'</div></div>';
+        }
+    }
+?>
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="contact-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2727.6642871883164!2d8.373184951382603!3d46.86997864646088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478ff6016c246e9f%3A0x717bb29612653748!2sFlugsau+GmbH!5e0!3m2!1sen!2sch!4v1535549728945" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-8"><?php echo $this->getChildHtml('contactForm')?></div>
+    <div class="col-sm-4 contact-info">
+        <div class="contacts-title"><?php echo __('Contact') ?> <?php echo __('Details') ?></div>
+        <?php echo $this->getChildHtml('contact_page_contact_details') ?>
+    </div>
+</div>

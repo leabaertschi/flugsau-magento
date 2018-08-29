@@ -413,5 +413,36 @@ button.action.primary {
     background-color: @white;
 }
 
+.contact-index-index .page-main {
+    .contact-info {
+        .contact-detail {
+            display: flex;
+            align-items: baseline;
+
+            [class^="porto-icon-"] {
+                background-color: @white !important;
+                color: @contrastColor;
+                font-size: 25px;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .contact-map {
+        margin-bottom: 40px;
+    }
+}
+
+.contact-index-index .fieldset > .legend,
+.contact-index-index .contact-info .contacts-title {
+    font-family: @fontOpenSans;
+    color: @headerColor;
+    font-weight: normal;
+
+    b {
+        font-weight: normal;
+    }
+}
+
 @import "_large.less";
 @import "_mobile.less";

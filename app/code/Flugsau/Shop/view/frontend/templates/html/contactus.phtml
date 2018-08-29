@@ -1,5 +1,5 @@
 <?php /** @var \Flugsau\Shop\Block\StoreInformation $block */ ?>
-<div class="contact-us">
+<a class="contact-us" href="<?php echo $this->getUrl('contact') ?>">
     <div class="title"><?php echo __('Call us') ?></div>
     <div class="phone"><?php echo $block->getPhoneNumber() ?></div>
-</div>
+</a>

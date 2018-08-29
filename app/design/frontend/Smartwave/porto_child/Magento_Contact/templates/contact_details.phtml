@@ -1,0 +1,17 @@
+<?php /** @var \Flugsau\Shop\Block\StoreInformation $block */ ?>
+<div class="contact-detail">
+    <i class="porto-icon-direction">&nbsp;</i>
+    <?php echo $block->getAddress() ?>
+</div>
+<div class="contact-detail">
+    <i class="porto-icon-phone-1">&nbsp;</i>
+    <?php echo $block->getPhoneNumber() ?>
+</div>
+<div class="contact-detail">
+    <i class="porto-icon-mail">&nbsp;</i>
+    <a href="mailto:info@flugsau.ch">info@flugsau.ch</a>
+</div>
+<div class="contact-detail">
+    <i class="porto-icon-clock-1">&nbsp;</i>
+    <?php echo $block->getHours() ?>
+</div>
