@@ -378,14 +378,14 @@ HTML;
      <div class="this_frame_text">
 																	<br>
 																			<ul>
-	<li><a href="/webcams#stanserhorn">Stanserhorn</a></li>
-	<li><a href="/webcams#oberdorf">Oberdorf</a></li>
-	<li><a href="/webcams#wirzweli">Wirzweli</a></li>
-	<li><a href="/webcams#gummenalp">Gummenalp</a></li>
-	<li><a href="/webcams#haldigrat">Haldigrat</a></li>
-	<li><a href="/webcams#wolfenschiessen">Wolfenschiessen</a></li>
-	<li><a href="/webcams#brunni">Brunni</a></li>
-	<li><a href="/webcams#klewenalp">Klewenalp</a></li>
+	<li><a href="#stanserhorn">Stanserhorn</a></li>
+	<li><a href="#oberdorf">Oberdorf</a></li>
+	<li><a href="#wirzweli">Wirzweli</a></li>
+	<li><a href="#gummenalp">Gummenalp</a></li>
+	<li><a href="#haldigrat">Haldigrat</a></li>
+	<li><a href="#wolfenschiessen">Wolfenschiessen</a></li>
+	<li><a href="#brunni">Brunni</a></li>
+	<li><a href="#klewenalp">Klewenalp</a></li>
 </ul>
 
 <h3><a name="stanserhorn">Stanserhorn</a></h3>
