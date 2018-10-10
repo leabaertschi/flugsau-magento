@@ -72,3 +72,9 @@ atlassian*
 scripts/output/*
 scripts/bigware-data.php
 scripts/pictures
+
+.breadcrumbs
+.github/
+.item.content
+*.patch
+
