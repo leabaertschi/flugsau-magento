@@ -50,7 +50,7 @@ return [
         'Magento_Deploy' => 1,
         'Magento_Developer' => 1,
         'Magento_Dhl' => 1,
-        'Amazon_Core' => 1,
+        'Amazon_Core' => 0,
         'Magento_Downloadable' => 1,
         'Magento_ImportExport' => 1,
         'Magento_Authorizenet' => 1,
@@ -92,11 +92,11 @@ return [
         'Magento_Robots' => 1,
         'Magento_Rss' => 1,
         'Magento_CatalogRuleConfigurable' => 1,
-        'Amazon_Login' => 1,
+        'Amazon_Login' => 0,
         'Magento_SalesAnalytics' => 1,
         'Magento_SalesInventory' => 1,
         'Magento_OfflineShipping' => 1,
-        'Amazon_Payment' => 1,
+        'Amazon_Payment' => 0,
         'Magento_UrlRewrite' => 1,
         'Magento_CatalogSearch' => 1,
         'Magento_CustomerAnalytics' => 1,
@@ -2537,7 +2537,7 @@ Disallow: /*SID=
             ],
             'layered_navigation' => [
                 'general' => [
-                    'enable' => '1',
+                    'enable' => '0',
                 ],
             ],
             'sw_megamenu' => [
