@@ -883,10 +883,11 @@ Disallow: /*SID=
                 ],
                 'frontend' => [
                     'list_mode' => 'grid-list',
-                    'grid_per_page_values' => '9,15,30',
+                    'grid_per_page_values' => '20,50,100',
                     'list_per_page_values' => '5,10,15,20,25',
-                    'grid_per_page' => '9',
+                    'grid_per_page' => '20',
                     'list_per_page' => '10',
+                    'list_allow_all' => '1',
                     'flat_catalog_category' => '0',
                     'default_sort_by' => 'position',
                     'parse_url_directives' => '1',
