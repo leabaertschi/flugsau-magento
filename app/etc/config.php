@@ -9,6 +9,7 @@ return [
         'Magento_Cms' => 1,
         'Magento_Customer' => 1,
         'Magento_AdminNotification' => 1,
+        'Lillik_PriceDecimal' => 1,
         'Magefan_Community' => 1,
         'Magento_Indexer' => 1,
         'Magento_Catalog' => 1,
@@ -412,12 +413,12 @@ Disallow: /*SID=
                         ],
                     ],
                 ],
+                'static' => [
+                    'sign' => '0',
+                ],
                 'template' => [
                     'minify_html' => '0',
                     'allow_symlink' => '0',
-                ],
-                'static' => [
-                    'sign' => '0',
                 ],
                 'grid' => [
                     'async_indexing' => '0',
@@ -446,26 +447,19 @@ Disallow: /*SID=
                         'compiled_css_secure_folder' => 'css_secure',
                         'compiled_js_folder' => 'js',
                         'design_theme_folder' => 'theme',
-                        'email_folder' => 'email',
                         'site_favicons' => 'favicon',
                         'site_logos' => 'logo',
                         'wysiwyg_image_folder' => 'wysiwyg',
                         'tmp_images_folder' => 'tmp',
                         'catalog_images_folder' => 'catalog',
                         'product_custom_options_fodler' => 'custom_options',
+                        'email_folder' => 'email',
                         'dhl_folder' => 'dhl',
                         'captcha_folder' => 'captcha',
                     ],
                 ],
                 'currency' => [
                     'installed' => 'AZN,AZM,AFN,ALL,DZD,AOA,ARS,AMD,AWG,AUD,BSD,BHD,BDT,BBD,BYR,BZD,BMD,BTN,BOB,BAM,BWP,BRL,GBP,BND,BGN,BUK,BIF,KHR,CAD,CVE,CZK,KYD,CLP,CNY,COP,KMF,CDF,CRC,HRK,CUP,DKK,DJF,DOP,XCD,EGP,SVC,GQE,ERN,EEK,ETB,EUR,FKP,FJD,GMD,GEK,GEL,GHS,GIP,GTQ,GNF,GYD,HTG,HNL,HKD,HUF,ISK,INR,IDR,IRR,IQD,ILS,JMD,JPY,JOD,KZT,KES,KWD,KGS,LAK,LVL,LBP,LSL,LRD,LYD,LTL,MOP,MKD,MGA,MWK,MYR,MVR,LSM,MRO,MUR,MXN,MDL,MNT,MAD,MZN,MMK,NAD,NPR,ANG,TRL,TRY,NZD,NIC,NGN,KPW,NOK,OMR,PKR,PAB,PGK,PYG,PEN,PHP,PLN,QAR,RHD,RON,ROL,RUB,RWF,SHP,STD,SAR,RSD,SCR,SLL,SGD,SKK,SBD,SOS,ZAR,KRW,LKR,SDG,SRD,SZL,SEK,CHF,SYP,TWD,TJS,TZS,THB,TOP,TTD,TND,TMM,USD,UGX,UAH,AED,UYU,UZS,VUV,VEB,VEF,VND,CHE,CHW,XOF,XPF,WST,YER,ZMK,ZWD',
-                ],
-                'emails' => [
-                    'forgot_email_template' => 'system_emails_forgot_email_template',
-                    'forgot_email_identity' => 'general',
-                ],
-                'dashboard' => [
-                    'enable_charts' => '1',
                 ],
                 'adminnotification' => [
                     'feed_url' => 'notifications.magentocommerce.com/magento2/community/notifications.rss',
@@ -474,6 +468,13 @@ Disallow: /*SID=
                     'use_https' => '1',
                     'frequency' => '1',
                     'last_update' => '0',
+                ],
+                'emails' => [
+                    'forgot_email_template' => 'system_emails_forgot_email_template',
+                    'forgot_email_identity' => 'general',
+                ],
+                'dashboard' => [
+                    'enable_charts' => '1',
                 ],
                 'smtp' => [
                     'disable' => '0',
@@ -554,15 +555,15 @@ Disallow: /*SID=
                     'javascript' => '1',
                     'local_storage' => '0',
                 ],
-                'seo' => [
-                    'use_rewrites' => '0',
-                ],
                 'default' => [
                     'cms_home_page' => 'flugsau-home-page',
                     'cms_no_route' => 'no-route-2',
                     'cms_no_cookies' => 'enable-cookies',
                     'no_route' => 'cms/noroute/index',
                     'show_cms_breadcrumbs' => '1',
+                ],
+                'seo' => [
+                    'use_rewrites' => '0',
                 ],
                 'cookie' => [
                     'cookie_lifetime' => '3600',
@@ -594,6 +595,7 @@ Disallow: /*SID=
                 ],
                 'emails' => [
                     'forgot_email_template' => 'admin_emails_forgot_email_template',
+                    'new_user_notification_template' => 'admin_emails_new_user_notification_template',
                     'forgot_email_identity' => 'general',
                     'user_notification_template' => 'admin_emails_user_notification_template',
                 ],
@@ -741,6 +743,11 @@ Disallow: /*SID=
                     'error_email_template' => 'currency_import_error_email_template',
                 ],
             ],
+            'cms' => [
+                'wysiwyg' => [
+                    'enabled' => 'hidden',
+                ],
+            ],
             'customer' => [
                 'account_share' => [
                     'scope' => '1',
@@ -859,9 +866,11 @@ Disallow: /*SID=
                     ],
                 ],
             ],
-            'cms' => [
-                'wysiwyg' => [
-                    'enabled' => 'hidden',
+            'catalog_price_decimal' => [
+                'general' => [
+                    'price_precision' => '2',
+                    'enable' => '1',
+                    'can_show_decimal' => '1',
                 ],
             ],
             'catalog' => [
@@ -887,12 +896,12 @@ Disallow: /*SID=
                     'list_per_page_values' => '5,10,15,20,25',
                     'grid_per_page' => '20',
                     'list_per_page' => '10',
-                    'list_allow_all' => '1',
                     'flat_catalog_category' => '0',
                     'default_sort_by' => 'position',
                     'parse_url_directives' => '1',
                     'swatches_per_product' => '16',
                     'show_swatches_in_product_list' => '1',
+                    'list_allow_all' => '1',
                 ],
                 'product' => [
                     'flat' => [
@@ -959,6 +968,11 @@ Disallow: /*SID=
                 ],
                 'category' => [
                     'root_id' => '2',
+                ],
+            ],
+            'indexer' => [
+                'catalog_product_price' => [
+                    'dimensions_mode' => 'none',
                 ],
             ],
             'payment' => [
@@ -1220,9 +1234,6 @@ Disallow: /*SID=
                     'debug' => '0',
                     'sort_order' => NULL,
                     'specificcountry' => NULL,
-                    'countrycreditcard' => [
-
-                    ],
                     'verify_3dsecure' => '0',
                     'threshold_amount' => NULL,
                     'verify_all_countries' => '0',
@@ -1278,41 +1289,6 @@ Disallow: /*SID=
                     ],
                     'active' => '0',
                 ],
-                'amazon_payment' => [
-                    'amazon_login_in_popup' => '1',
-                    'active' => '0',
-                    'is_gateway' => '1',
-                    'title' => 'Amazon Pay',
-                    'sort_order' => '1',
-                    'model' => 'Amazon\\Payment\\Model\\Method\\Amazon',
-                    'order_status' => 'processing',
-                    'payment_action' => 'authorize',
-                    'can_authorize' => '1',
-                    'can_capture' => '1',
-                    'can_void' => '1',
-                    'can_use_checkout' => '1',
-                    'packstation_terms' => 'Packstation,Pack-Station,Pack Station,PO Box,Post Office box,Locker',
-                    'lwa_enabled' => '0',
-                    'authorization_mode' => 'synchronous',
-                    'update_mechanism' => 'polling',
-                    'pwa_pp_button_is_visible' => '1',
-                    'minicart_button_is_visible' => '1',
-                    'button_type' => 'full',
-                    'button_color' => 'Gold',
-                    'button_size' => 'medium',
-                    'logging' => '1',
-                    'merchant_id' => NULL,
-                    'access_key' => NULL,
-                    'secret_key' => NULL,
-                    'client_id' => NULL,
-                    'client_secret' => NULL,
-                    'credentials_json' => NULL,
-                    'payment_region' => NULL,
-                    'sandbox' => '0',
-                    'button_display_language' => NULL,
-                    'storename' => NULL,
-                    'allowed_ips' => NULL,
-                ],
                 'klarna_kp' => [
                     'model' => 'Klarna\\Kp\\Model\\Payment\\Kp',
                     'payment_action' => 'authorize',
@@ -1345,38 +1321,7 @@ Disallow: /*SID=
                     'active' => '0',
                 ],
             ],
-            'export' => [
-                'customer_page_size' => [
-                    'customer' => '10000',
-                    'address' => '5000',
-                ],
-            ],
-            'cataloginventory' => [
-                'options' => [
-                    'can_subtract' => '1',
-                    'can_back_in_stock' => '1',
-                    'show_out_of_stock' => '0',
-                    'stock_threshold_qty' => '0',
-                    'display_product_stock_status' => '1',
-                ],
-                'item_options' => [
-                    'manage_stock' => '1',
-                    'backorders' => '0',
-                    'max_sale_qty' => '10000',
-                    'min_sale_qty' => '1',
-                    'min_qty' => '0',
-                    'notify_stock_qty' => '1',
-                    'enable_qty_increments' => '0',
-                    'qty_increments' => '1',
-                ],
-            ],
             'sales' => [
-                'msrp' => [
-                    'enabled' => '0',
-                    'display_price_type' => '1',
-                    'explanation_message' => 'Our price is lower than the manufacturer\'s "minimum advertised price." As a result, we cannot show you the price in catalog or the product page. <br /><br /> You have no obligation to purchase the product once you know the price. You can simply remove the item from your cart.',
-                    'explanation_message_whats_this' => 'Our price is lower than the manufacturer\'s "minimum advertised price." As a result, we cannot show you the price in catalog or the product page. <br /><br /> You have no obligation to purchase the product once you know the price. You can simply remove the item from your cart.',
-                ],
                 'totals_sort' => [
                     'discount' => '20',
                     'grand_total' => '100',
@@ -1395,6 +1340,12 @@ Disallow: /*SID=
                 'orders' => [
                     'items_per_page' => '20',
                     'delete_pending_after' => '480',
+                ],
+                'msrp' => [
+                    'enabled' => '0',
+                    'display_price_type' => '1',
+                    'explanation_message' => 'Our price is lower than the manufacturer\'s "minimum advertised price." As a result, we cannot show you the price in catalog or the product page. <br /><br /> You have no obligation to purchase the product once you know the price. You can simply remove the item from your cart.',
+                    'explanation_message_whats_this' => 'Our price is lower than the manufacturer\'s "minimum advertised price." As a result, we cannot show you the price in catalog or the product page. <br /><br /> You have no obligation to purchase the product once you know the price. You can simply remove the item from your cart.',
                 ],
                 'gift_messages' => [
                     'allow_items' => '0',
@@ -1479,6 +1430,31 @@ Disallow: /*SID=
             ],
             'dashboard' => [
                 'use_aggregated_data' => '0',
+            ],
+            'export' => [
+                'customer_page_size' => [
+                    'customer' => '10000',
+                    'address' => '5000',
+                ],
+            ],
+            'cataloginventory' => [
+                'options' => [
+                    'can_subtract' => '1',
+                    'can_back_in_stock' => '1',
+                    'show_out_of_stock' => '0',
+                    'stock_threshold_qty' => '0',
+                    'display_product_stock_status' => '1',
+                ],
+                'item_options' => [
+                    'manage_stock' => '1',
+                    'backorders' => '0',
+                    'max_sale_qty' => '10000',
+                    'min_sale_qty' => '1',
+                    'min_qty' => '0',
+                    'notify_stock_qty' => '1',
+                    'enable_qty_increments' => '0',
+                    'qty_increments' => '1',
+                ],
             ],
             'checkout' => [
                 'options' => [
@@ -1862,6 +1838,7 @@ Disallow: /*SID=
                         'number_of_comments' => '4',
                         'number_of_replies' => '5',
                         'guest_comments' => '1',
+                        'display_privacy_policy_checkbox' => '0',
                         'fb_app_id' => NULL,
                     ],
                     'nextprev' => [
@@ -1927,6 +1904,7 @@ Disallow: /*SID=
                     'tag_route' => 'tag',
                     'author_route' => 'author',
                     'search_route' => 'search',
+                    'rss_route' => 'rss',
                 ],
                 'social' => [
                     'add_this_enabled' => '1',
@@ -1992,6 +1970,15 @@ Disallow: /*SID=
                 'dashboard' => [
                     'ytd_start' => '1,1',
                     'mtd_start' => '1',
+                ],
+                'options' => [
+                    'enabled' => '1',
+                    'product_view_enabled' => '1',
+                    'product_send_enabled' => '1',
+                    'product_compare_enabled' => '1',
+                    'product_to_cart_enabled' => '1',
+                    'product_to_wishlist_enabled' => '1',
+                    'wishlist_share_enabled' => '1',
                 ],
             ],
             'captcha' => [
@@ -2125,6 +2112,17 @@ Disallow: /*SID=
                     ],
                 ],
             ],
+            'crontab' => [
+                'default' => [
+                    'jobs' => [
+                        'sitemap_generate' => [
+                            'schedule' => [
+                                'cron_expr' => '0 0 * * *',
+                            ],
+                        ],
+                    ],
+                ],
+            ],
             'tax' => [
                 'classes' => [
                     'shipping_tax_class' => '0',
@@ -2215,8 +2213,9 @@ Disallow: /*SID=
                     'password' => NULL,
                 ],
             ],
-            'connector_sync_settings' => [
-                'address_book' => [
+            'sync_settings' => [
+                'addressbook' => [
+                    'allow_non_subscribers' => '1',
                     'customers' => '0',
                     'subscribers' => '0',
                     'guests' => '0',
@@ -2235,7 +2234,7 @@ Disallow: /*SID=
                     'visibility' => NULL,
                 ],
             ],
-            'connector_lost_baskets' => [
+            'abandoned_carts' => [
                 'customers' => [
                     'enabled_1' => '0',
                     'send_after_1' => NULL,
@@ -2339,13 +2338,18 @@ Disallow: /*SID=
                     'shipment_update_guest_url' => NULL,
                     'wishlist_url' => NULL,
                 ],
-                'manual_product_search' => [
+                'manual_product_push' => [
                     'display_type' => 'list',
                     'items_to_display' => '2',
                     'products_push_items' => NULL,
                 ],
                 'fallback_products' => [
                     'product_list' => NULL,
+                ],
+                'manual_product_search' => [
+                    'display_type' => 'list',
+                    'items_to_display' => '2',
+                    'products_push_items' => NULL,
                 ],
             ],
             'transactional_emails' => [
@@ -2378,6 +2382,11 @@ Disallow: /*SID=
                     'roi_enabled' => '0',
                     'page_enabled' => '0',
                 ],
+                'consent' => [
+                    'dotmailer_consent_subscriber_enabled' => '0',
+                    'dotmailer_consent_subscriber_text' => 'Default subscriber text',
+                    'dotmailer_consent_customer_text' => 'Default text',
+                ],
                 'dynamic_content_style' => [
                     'dynamic_styling' => 'table{font-family: Arial, Helvetica, sans-serif; font-size:12px;}',
                     'font_color' => '#000000',
@@ -2400,7 +2409,7 @@ Disallow: /*SID=
                     'coupon_font_picker' => 'Arial, Helvetica, sans-serif',
                     'coupon_background_color' => '#FFFFFF',
                 ],
-                'dynamic_content_edit' => [
+                'dynamic_content' => [
                     'link_text' => NULL,
                 ],
                 'admin' => [
@@ -2417,6 +2426,9 @@ Disallow: /*SID=
                     'show_books' => '0',
                     'can_show_fields' => '0',
                     'fields_to_show' => '0',
+                ],
+                'dynamic_content_edit' => [
+                    'link_text' => NULL,
                 ],
             ],
             'connector_data_mapping' => [
@@ -2473,14 +2485,6 @@ Disallow: /*SID=
                     'datafield_type' => NULL,
                     'datafield_default' => NULL,
                     'datafield_access' => NULL,
-                ],
-            ],
-            'connector_roi_tracking' => [
-                'page_tracking' => [
-                    'enabled' => '0',
-                ],
-                'roi_tracking' => [
-                    'enabled' => '0',
                 ],
             ],
             'connector_developer_settings' => [
@@ -3580,6 +3584,58 @@ Disallow: /*SID=
                     'main_custom_style' => NULL,
                 ],
             ],
+            'connector_sync_settings' => [
+                'address_book' => [
+                    'customers' => '0',
+                    'subscribers' => '0',
+                    'guests' => '0',
+                ],
+                'sync' => [
+                    'contact_enabled' => '0',
+                    'guest_enabled' => '0',
+                    'subscriber_enabled' => '0',
+                    'order_enabled' => '0',
+                    'wishlist_enabled' => '0',
+                    'review_enabled' => '0',
+                    'catalog_enabled' => '0',
+                ],
+                'dynamic_addressbook' => [
+                    'addressbook_name' => NULL,
+                    'visibility' => NULL,
+                ],
+            ],
+            'connector_lost_baskets' => [
+                'customers' => [
+                    'enabled_1' => '0',
+                    'send_after_1' => NULL,
+                    'campaign_1' => NULL,
+                    'enabled_2' => '0',
+                    'send_after_2' => NULL,
+                    'campaign_2' => NULL,
+                    'enabled_3' => '0',
+                    'send_after_3' => NULL,
+                    'campaign_3' => NULL,
+                ],
+                'guests' => [
+                    'enabled_1' => '0',
+                    'send_after_1' => NULL,
+                    'campaign_1' => NULL,
+                    'enabled_2' => '0',
+                    'send_after_2' => NULL,
+                    'campaign_2' => NULL,
+                    'enabled_3' => '0',
+                    'send_after_3' => NULL,
+                    'campaign_3' => NULL,
+                ],
+            ],
+            'connector_roi_tracking' => [
+                'page_tracking' => [
+                    'enabled' => '0',
+                ],
+                'roi_tracking' => [
+                    'enabled' => '0',
+                ],
+            ],
             'connector_automation_studio' => [
                 'visitor_automation' => [
                     'customer_automation' => '0',
@@ -3612,6 +3668,124 @@ Disallow: /*SID=
             'connector_transactional_emails' => [
                 'ddg_transactional' => [
                     'enabled' => '0',
+                ],
+            ],
+        ],
+        'websites' => [
+            'admin' => [
+                'catalog_price_decimal' => [
+                    'general' => [
+                        'enable' => '0',
+                    ],
+                ],
+                'web' => [
+                    'routers' => [
+                        'frontend' => [
+                            'disabled' => 'true',
+                        ],
+                    ],
+                    'default' => [
+                        'no_route' => 'admin/noroute/index',
+                    ],
+                ],
+            ],
+            'base' => [
+                'design' => [
+                    'theme' => [
+                        'theme_id' => 'frontend/Smartwave/port_child',
+                    ],
+                    'pagination' => [
+                        'pagination_frame_skip' => NULL,
+                        'anchor_text_for_previous' => NULL,
+                        'anchor_text_for_next' => NULL,
+                    ],
+                    'head' => [
+                        'title_prefix' => NULL,
+                        'title_suffix' => NULL,
+                        'default_description' => NULL,
+                        'default_keywords' => NULL,
+                        'includes' => NULL,
+                    ],
+                    'header' => [
+                        'logo_width' => NULL,
+                        'logo_height' => NULL,
+                        'logo_alt' => NULL,
+                        'welcome' => NULL,
+                        'logo_src' => 'websites/1/Flugsau_Blau_Logo.png',
+                    ],
+                    'footer' => [
+                        'copyright' => 'Copyright © 2017 Flugsau GmbH All rights reserved.',
+                        'absolute_footer' => NULL,
+                    ],
+                    'search_engine_robots' => [
+                        'custom_instructions' => NULL,
+                    ],
+                    'watermark' => [
+                        'image_size' => NULL,
+                        'image_imageOpacity' => NULL,
+                        'small_image_size' => NULL,
+                        'small_image_imageOpacity' => NULL,
+                        'thumbnail_size' => NULL,
+                        'thumbnail_imageOpacity' => NULL,
+                        'swatch_image_size' => NULL,
+                        'swatch_image_imageOpacity' => NULL,
+                    ],
+                    'email' => [
+                        'logo_alt' => NULL,
+                        'logo_width' => NULL,
+                        'logo_height' => NULL,
+                        'logo' => 'websites/1/flugsau_gruen_1.png',
+                    ],
+                ],
+                'payment' => [
+                    'paypal_express_bml' => [
+                        'sort_order' => NULL,
+                    ],
+                    'paypal_express' => [
+                        'in_context' => '0',
+                        'specificcountry' => NULL,
+                    ],
+                    'paypal_billing_agreement' => [
+                        'specificcountry' => NULL,
+                    ],
+                    'banktransfer' => [
+                        'instructions' => 'Bankverbindung
+Raiffeisen Region Stans
+BC-Nr.: 81223
+
+SWIFT: RAIFCH22
+IBAN: CH72 8122 3000 0072 2095 1
+
+für Lieferungen aus Deutschland:
+UID Nr: CHE-116.135.646',
+                    ],
+                ],
+                'carriers' => [
+                    'tablerate' => [
+                        'import' => '1532523472,tablerates.csv,text/csv,/Applications/MAMP/tmp/php/phpWoO5iq,0,101',
+                    ],
+                    'dhl' => [
+                        'doc_methods' => NULL,
+                    ],
+                    'temando' => [
+                        'collectionpoints_countries' => NULL,
+                    ],
+                ],
+                'web' => [
+                    'seo' => [
+                        'use_rewrites' => '1',
+                    ],
+                    'secure' => [
+                        'use_in_frontend' => NULL,
+                        'use_in_adminhtml' => NULL,
+                    ],
+                ],
+                'currency' => [
+                    'options' => [
+                        'base' => 'CHF',
+                        'default' => 'CHF',
+                        'allow' => 'CHF',
+                    ],
                 ],
             ],
         ],
@@ -3758,116 +3932,6 @@ UID Nr: CHE-116.135.646',
                     ],
                     'banktransfer' => [
                         'title' => 'Banküberweisung',
-                    ],
-                ],
-            ],
-        ],
-        'websites' => [
-            'admin' => [
-                'web' => [
-                    'routers' => [
-                        'frontend' => [
-                            'disabled' => 'true',
-                        ],
-                    ],
-                    'default' => [
-                        'no_route' => 'admin/noroute/index',
-                    ],
-                ],
-            ],
-            'base' => [
-                'design' => [
-                    'theme' => [
-                        'theme_id' => 'frontend/Smartwave/port_child',
-                    ],
-                    'pagination' => [
-                        'pagination_frame_skip' => NULL,
-                        'anchor_text_for_previous' => NULL,
-                        'anchor_text_for_next' => NULL,
-                    ],
-                    'head' => [
-                        'title_prefix' => NULL,
-                        'title_suffix' => NULL,
-                        'default_description' => NULL,
-                        'default_keywords' => NULL,
-                        'includes' => NULL,
-                    ],
-                    'header' => [
-                        'logo_width' => NULL,
-                        'logo_height' => NULL,
-                        'logo_alt' => NULL,
-                        'welcome' => NULL,
-                        'logo_src' => 'websites/1/Flugsau_Blau_Logo.png',
-                    ],
-                    'footer' => [
-                        'copyright' => 'Copyright © 2017 Flugsau GmbH All rights reserved.',
-                        'absolute_footer' => NULL,
-                    ],
-                    'search_engine_robots' => [
-                        'custom_instructions' => NULL,
-                    ],
-                    'watermark' => [
-                        'image_size' => NULL,
-                        'image_imageOpacity' => NULL,
-                        'small_image_size' => NULL,
-                        'small_image_imageOpacity' => NULL,
-                        'thumbnail_size' => NULL,
-                        'thumbnail_imageOpacity' => NULL,
-                        'swatch_image_size' => NULL,
-                        'swatch_image_imageOpacity' => NULL,
-                    ],
-                    'email' => [
-                        'logo_alt' => NULL,
-                        'logo_width' => NULL,
-                        'logo_height' => NULL,
-                        'logo' => 'websites/1/flugsau_gruen_1.png',
-                    ],
-                ],
-                'payment' => [
-                    'paypal_express_bml' => [
-                        'sort_order' => NULL,
-                    ],
-                    'paypal_express' => [
-                        'in_context' => '0',
-                        'specificcountry' => NULL,
-                    ],
-                    'paypal_billing_agreement' => [
-                        'specificcountry' => NULL,
-                    ],
-                    'banktransfer' => [
-                        'instructions' => 'Bankverbindung
-Raiffeisen Region Stans
-BC-Nr.: 81223
-
-SWIFT: RAIFCH22
-IBAN: CH72 8122 3000 0072 2095 1
-
-für Lieferungen aus Deutschland:
-UID Nr: CHE-116.135.646',
-                    ],
-                ],
-                'carriers' => [
-                    'dhl' => [
-                        'doc_methods' => NULL,
-                    ],
-                    'temando' => [
-                        'collectionpoints_countries' => NULL,
-                    ],
-                ],
-                'web' => [
-                    'seo' => [
-                        'use_rewrites' => '1',
-                    ],
-                    'secure' => [
-                        'use_in_frontend' => NULL,
-                        'use_in_adminhtml' => NULL,
-                    ],
-                ],
-                'currency' => [
-                    'options' => [
-                        'base' => 'CHF',
-                        'default' => 'CHF',
-                        'allow' => 'CHF',
                     ],
                 ],
             ],
