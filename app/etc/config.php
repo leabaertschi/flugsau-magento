@@ -2137,7 +2137,7 @@ Disallow: /*SID=
                     'reward_points_code' => 'reward-points',
                 ],
                 'calculation' => [
-                    'algorithm' => 'TOTAL_BASE_CALCULATION',
+                    'algorithm' => 'UNIT_BASE_CALCULATION',
                     'apply_after_discount' => '1',
                     'discount_tax' => '0',
                     'based_on' => 'shipping',
