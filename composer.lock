@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "34fb7613eefaa849ba61d5119f7b53ab",
+    "content-hash": "c2c9c8eb164d44d15f404675e415b364",
     "packages": [
         {
             "name": "amzn/amazon-pay-and-login-magento-2-module",
@@ -1849,21 +1849,15 @@
         },
         {
             "name": "magefan/module-blog",
-            "version": "2.8.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/magefan/module-blog.git",
-                "reference": "e7d26eae2dacc7a1a523550c9074ad113d957a82"
-            },
+            "version": "2.8.6",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/magefan/module-blog/zipball/e7d26eae2dacc7a1a523550c9074ad113d957a82",
-                "reference": "e7d26eae2dacc7a1a523550c9074ad113d957a82",
-                "shasum": ""
+                "url": "https://repo.magento.com/archives/magefan/module-blog/magefan-module-blog-2.8.6.0.zip",
+                "reference": null,
+                "shasum": "f966d61aa11a63994909b23248ad01cbf6f09b0a"
             },
             "require": {
-                "magefan/module-community": ">=2.0.1",
-                "php": "~5.6.5 || >=7.0"
+                "magefan/module-community": ">=2.0.4"
             },
             "type": "magento2-module",
             "autoload": {
@@ -1874,13 +1868,11 @@
                     "Magefan\\Blog\\": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "OSL-3.0",
                 "AFL-3.0"
             ],
-            "description": "Implements Blog functionality on Magento 2 store",
-            "time": "2018-08-12T07:38:40+00:00"
+            "description": "Implements Blog functionality on Magento 2 store"
         },
         {
             "name": "magefan/module-community",
