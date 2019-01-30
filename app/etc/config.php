@@ -1365,7 +1365,8 @@ Disallow: /*SID=
                     'template' => 'sales_email_order_template',
                     'guest_template' => 'sales_email_order_guest_template',
                     'identity' => 'sales',
-                    'copy_method' => 'bcc',
+                    'copy_method' => 'copy',
+                    'copy_to' => 'info@flugsau.ch'
                 ],
                 'order_comment' => [
                     'enabled' => '1',
