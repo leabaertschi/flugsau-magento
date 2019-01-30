@@ -281,6 +281,8 @@ return [
      * CONFIG__DEFAULT__SYSTEM__FULL_PAGE_CACHE__VARNISH__BACKEND_HOST for system/full_page_cache/varnish/backend_host
      * CONFIG__DEFAULT__ADMIN__URL__CUSTOM for admin/url/custom
      * CONFIG__DEFAULT__CURRENCY__IMPORT__ERROR_EMAIL for currency/import/error_email
+     * CONFIG__DEFAULT__CATALOG__SEARCH__ELASTICSEARCH_SERVER_HOSTNAME for catalog/search/elasticsearch_server_hostname
+     * CONFIG__DEFAULT__CATALOG__SEARCH__ELASTICSEARCH5_SERVER_HOSTNAME for catalog/search/elasticsearch5_server_hostname
      * CONFIG__DEFAULT__CATALOG__PRODUCTALERT_CRON__ERROR_EMAIL for catalog/productalert_cron/error_email
      * CONFIG__DEFAULT__PAYMENT__PAYFLOWPRO__USER for payment/payflowpro/user
      * CONFIG__DEFAULT__PAYMENT__PAYFLOWPRO__PWD for payment/payflowpro/pwd
@@ -301,6 +303,7 @@ return [
      * CONFIG__DEFAULT__PAYMENT__BRAINTREE__DESCRIPTOR_PHONE for payment/braintree/descriptor_phone
      * CONFIG__DEFAULT__PAYMENT__BRAINTREE__DESCRIPTOR_URL for payment/braintree/descriptor_url
      * CONFIG__DEFAULT__PAYMENT__BRAINTREE_PAYPAL__MERCHANT_NAME_OVERRIDE for payment/braintree_paypal/merchant_name_override
+     * CONFIG__DEFAULT__SALES_EMAIL__ORDER__COPY_TO for sales_email/order/copy_to
      * CONFIG__DEFAULT__CONTACT__EMAIL__RECIPIENT_EMAIL for contact/email/recipient_email
      * CONFIG__DEFAULT__TRANS_EMAIL__IDENT_CUSTOM1__EMAIL for trans_email/ident_custom1/email
      * CONFIG__DEFAULT__TRANS_EMAIL__IDENT_CUSTOM1__NAME for trans_email/ident_custom1/name
@@ -321,6 +324,12 @@ return [
      * CONFIG__DEFAULT__PAYPAL__FETCH_REPORTS__FTP_PATH for paypal/fetch_reports/ftp_path
      * CONFIG__DEFAULT__PAYPAL__GENERAL__MERCHANT_COUNTRY for paypal/general/merchant_country
      * CONFIG__DEFAULT__PAYPAL__GENERAL__BUSINESS_ACCOUNT for paypal/general/business_account
+     * CONFIG__DEFAULT__ANALYTICS__URL__SIGNUP for analytics/url/signup
+     * CONFIG__DEFAULT__ANALYTICS__URL__UPDATE for analytics/url/update
+     * CONFIG__DEFAULT__ANALYTICS__URL__BI_ESSENTIALS for analytics/url/bi_essentials
+     * CONFIG__DEFAULT__ANALYTICS__URL__OTP for analytics/url/otp
+     * CONFIG__DEFAULT__ANALYTICS__URL__REPORT for analytics/url/report
+     * CONFIG__DEFAULT__ANALYTICS__URL__NOTIFY_DATA_CHANGED for analytics/url/notify_data_changed
      * CONFIG__DEFAULT__CARRIERS__DHL__ACCOUNT for carriers/dhl/account
      * CONFIG__DEFAULT__CARRIERS__DHL__GATEWAY_URL for carriers/dhl/gateway_url
      * CONFIG__DEFAULT__CARRIERS__DHL__ID for carriers/dhl/id
@@ -343,12 +352,6 @@ return [
      * CONFIG__DEFAULT__CARRIERS__USPS__GATEWAY_SECURE_URL for carriers/usps/gateway_secure_url
      * CONFIG__DEFAULT__CARRIERS__USPS__USERID for carriers/usps/userid
      * CONFIG__DEFAULT__CARRIERS__USPS__PASSWORD for carriers/usps/password
-     * CONFIG__DEFAULT__ANALYTICS__URL__SIGNUP for analytics/url/signup
-     * CONFIG__DEFAULT__ANALYTICS__URL__UPDATE for analytics/url/update
-     * CONFIG__DEFAULT__ANALYTICS__URL__BI_ESSENTIALS for analytics/url/bi_essentials
-     * CONFIG__DEFAULT__ANALYTICS__URL__OTP for analytics/url/otp
-     * CONFIG__DEFAULT__ANALYTICS__URL__REPORT for analytics/url/report
-     * CONFIG__DEFAULT__ANALYTICS__URL__NOTIFY_DATA_CHANGED for analytics/url/notify_data_changed
      * CONFIG__DEFAULT__NEWRELICREPORTING__GENERAL__API_URL for newrelicreporting/general/api_url
      * CONFIG__DEFAULT__NEWRELICREPORTING__GENERAL__INSIGHTS_API_URL for newrelicreporting/general/insights_api_url
      * CONFIG__DEFAULT__FRAUD_PROTECTION__SIGNIFYD__API_URL for fraud_protection/signifyd/api_url
@@ -443,6 +446,8 @@ Disallow: /*SID=
             'dev' => [
                 'debug' => [
                     'profiler' => '0',
+                    'template_hints_storefront_show_with_parameter' => '0',
+                    'template_hints_parameter_value' => 'magento',
                     'template_hints_storefront' => '0',
                     'template_hints_admin' => '0',
                     'template_hints_blocks' => '0',
@@ -514,17 +519,29 @@ Disallow: /*SID=
                         'design_theme_folder' => 'theme',
                         'site_favicons' => 'favicon',
                         'site_logos' => 'logo',
+                        'email_folder' => 'email',
                         'wysiwyg_image_folder' => 'wysiwyg',
                         'tmp_images_folder' => 'tmp',
+                        'catalog_product_images' => 'media/catalog/product/cache/',
                         'catalog_images_folder' => 'catalog',
                         'product_custom_options_fodler' => 'custom_options',
-                        'email_folder' => 'email',
                         'dhl_folder' => 'dhl',
                         'captcha_folder' => 'captcha',
                     ],
                 ],
                 'currency' => [
                     'installed' => 'AZN,AZM,AFN,ALL,DZD,AOA,ARS,AMD,AWG,AUD,BSD,BHD,BDT,BBD,BYR,BZD,BMD,BTN,BOB,BAM,BWP,BRL,GBP,BND,BGN,BUK,BIF,KHR,CAD,CVE,CZK,KYD,CLP,CNY,COP,KMF,CDF,CRC,HRK,CUP,DKK,DJF,DOP,XCD,EGP,SVC,GQE,ERN,EEK,ETB,EUR,FKP,FJD,GMD,GEK,GEL,GHS,GIP,GTQ,GNF,GYD,HTG,HNL,HKD,HUF,ISK,INR,IDR,IRR,IQD,ILS,JMD,JPY,JOD,KZT,KES,KWD,KGS,LAK,LVL,LBP,LSL,LRD,LYD,LTL,MOP,MKD,MGA,MWK,MYR,MVR,LSM,MRO,MUR,MXN,MDL,MNT,MAD,MZN,MMK,NAD,NPR,ANG,TRL,TRY,NZD,NIC,NGN,KPW,NOK,OMR,PKR,PAB,PGK,PYG,PEN,PHP,PLN,QAR,RHD,RON,ROL,RUB,RWF,SHP,STD,SAR,RSD,SCR,SLL,SGD,SKK,SBD,SOS,ZAR,KRW,LKR,SDG,SRD,SZL,SEK,CHF,SYP,TWD,TJS,TZS,THB,TOP,TTD,TND,TMM,USD,UGX,UAH,AED,UYU,UZS,VUV,VEB,VEF,VND,CHE,CHW,XOF,XPF,WST,YER,ZMK,ZWD',
+                ],
+                'emails' => [
+                    'forgot_email_template' => 'system_emails_forgot_email_template',
+                    'forgot_email_identity' => 'general',
+                ],
+                'dashboard' => [
+                    'enable_charts' => '1',
+                ],
+                'upload_configuration' => [
+                    'max_width' => '1920',
+                    'max_height' => '1200',
                 ],
                 'adminnotification' => [
                     'feed_url' => 'notifications.magentocommerce.com/magento2/community/notifications.rss',
@@ -534,15 +551,17 @@ Disallow: /*SID=
                     'frequency' => '1',
                     'last_update' => '0',
                 ],
-                'emails' => [
-                    'forgot_email_template' => 'system_emails_forgot_email_template',
-                    'forgot_email_identity' => 'general',
-                ],
-                'dashboard' => [
-                    'enable_charts' => '1',
+                'backup' => [
+                    'functionality_enabled' => '0',
                 ],
                 'smtp' => [
                     'disable' => '0',
+                ],
+                'mysqlmq' => [
+                    'retry_inprogress_after' => '1440',
+                    'new_messages_lifetime' => '10080',
+                    'successful_messages_lifetime' => '10080',
+                    'failed_messages_lifetime' => '10080',
                 ],
                 'full_page_cache' => [
                     'varnish5' => [
@@ -564,6 +583,13 @@ Disallow: /*SID=
                         'grace_period' => '300',
                     ],
                 ],
+                'release_notification' => [
+                    'content_url' => 'magento.com/release_notifications',
+                    'use_https' => '1',
+                ],
+                'bulk' => [
+                    'lifetime' => '60',
+                ],
                 'cron' => [
                     'index' => [
                         'schedule_generate_every' => '1',
@@ -582,6 +608,15 @@ Disallow: /*SID=
                         'history_success_lifetime' => '10080',
                         'history_failure_lifetime' => '10080',
                         'use_separate_process' => '0',
+                    ],
+                    'consumers' => [
+                        'schedule_generate_every' => '15',
+                        'schedule_ahead_for' => '20',
+                        'schedule_lifetime' => '15',
+                        'history_cleanup_every' => '10',
+                        'history_success_lifetime' => '60',
+                        'history_failure_lifetime' => '600',
+                        'use_separate_process' => '1',
                     ],
                     'ddg_automation' => [
                         'schedule_generate_every' => '1',
@@ -620,6 +655,9 @@ Disallow: /*SID=
                     'javascript' => '1',
                     'local_storage' => '0',
                 ],
+                'seo' => [
+                    'use_rewrites' => '0',
+                ],
                 'default' => [
                     'cms_home_page' => 'flugsau-home-page',
                     'cms_no_route' => 'no-route-2',
@@ -627,8 +665,8 @@ Disallow: /*SID=
                     'no_route' => 'cms/noroute/index',
                     'show_cms_breadcrumbs' => '1',
                 ],
-                'seo' => [
-                    'use_rewrites' => '0',
+                'default_layouts' => [
+                    'default_cms_layout' => '1column',
                 ],
                 'cookie' => [
                     'cookie_lifetime' => '3600',
@@ -721,6 +759,8 @@ Disallow: /*SID=
                         'html' => 'html',
                         'phtml' => 'phtml',
                         'shtml' => 'shtml',
+                        'phpt' => 'phpt',
+                        'pht' => 'pht',
                     ],
                     'public_files_valid_paths' => [
                         'protected' => [
@@ -749,15 +789,16 @@ Disallow: /*SID=
                 ],
                 'validator_data' => [
                     'input_types' => [
+                        'price' => 'price',
+                        'media_image' => 'media_image',
+                        'gallery' => 'gallery',
                         'text' => 'text',
                         'textarea' => 'textarea',
+                        'texteditor' => 'texteditor',
                         'date' => 'date',
                         'boolean' => 'boolean',
                         'multiselect' => 'multiselect',
                         'select' => 'select',
-                        'price' => 'price',
-                        'media_image' => 'media_image',
-                        'gallery' => 'gallery',
                         'swatch_visual' => 'swatch_visual',
                         'swatch_text' => 'swatch_text',
                         'weee' => 'weee',
@@ -793,13 +834,11 @@ Disallow: /*SID=
                     'base' => 'CHF',
                     'default' => 'CHF',
                 ],
-                'yahoofinance' => [
-                    'timeout' => '100',
-                ],
                 'fixerio' => [
                     'timeout' => '100',
+                    'api_key' => NULL,
                 ],
-                'webservicex' => [
+                'currencyconverterapi' => [
                     'timeout' => '100',
                 ],
                 'import' => [
@@ -807,10 +846,37 @@ Disallow: /*SID=
                     'error_email_identity' => 'general',
                     'error_email_template' => 'currency_import_error_email_template',
                 ],
+                'yahoofinance' => [
+                    'timeout' => '100',
+                ],
+                'webservicex' => [
+                    'timeout' => '100',
+                ],
             ],
-            'cms' => [
-                'wysiwyg' => [
-                    'enabled' => 'hidden',
+            'catalog_price_decimal' => [
+                'general' => [
+                    'price_precision' => '2',
+                    'enable' => '1',
+                    'can_show_decimal' => '1',
+                ],
+            ],
+            'msp_securitysuite_recaptcha' => [
+                'backend' => [
+                    'enabled' => '0',
+                    'size' => 'normal',
+                    'theme' => 'light',
+                ],
+                'frontend' => [
+                    'enabled' => '0',
+                    'size' => 'normal',
+                    'type' => 'standard',
+                    'position' => 'inline',
+                    'theme' => 'light',
+                    'lang' => NULL,
+                    'enabled_login' => '1',
+                    'enabled_forgot' => '1',
+                    'enabled_contact' => '1',
+                    'enabled_create' => '1',
                 ],
             ],
             'customer' => [
@@ -925,17 +991,17 @@ Disallow: /*SID=
                     'always_for' => [
                         'user_create' => '1',
                         'user_forgotpassword' => '1',
+                        'contact_us' => '1',
                         'guest_checkout' => '1',
                         'register_during_checkout' => '1',
-                        'contact_us' => '1',
                     ],
                 ],
             ],
-            'catalog_price_decimal' => [
-                'general' => [
-                    'price_precision' => '2',
-                    'enable' => '1',
-                    'can_show_decimal' => '1',
+            'cms' => [
+                'wysiwyg' => [
+                    'enabled' => 'hidden',
+                    'editor' => 'mage/adminhtml/wysiwyg/tiny_mce/tinymce4Adapter',
+                    'editor_version' => 'mage/adminhtml/wysiwyg/tiny_mce/tinymce4Adapter',
                 ],
             ],
             'catalog' => [
@@ -998,6 +1064,20 @@ Disallow: /*SID=
                     'content_disposition' => 'inline',
                     'disable_guest_checkout' => '1',
                 ],
+                'search' => [
+                    'engine' => 'mysql',
+                    'min_query_length' => '1',
+                    'max_query_length' => '128',
+                    'max_count_cacheable_search_terms' => '100',
+                    'autocomplete_limit' => '8',
+                    'enable_eav_indexer' => '1',
+                    'search_suggestion_enabled' => '1',
+                    'search_suggestion_count' => '2',
+                    'search_suggestion_count_results_enabled' => '0',
+                    'search_recommendations_enabled' => '1',
+                    'search_recommendations_count' => '5',
+                    'search_recommendations_count_results_enabled' => '0',
+                ],
                 'layered_navigation' => [
                     'price_range_calculation' => 'auto',
                     'price_range_step' => '100',
@@ -1024,12 +1104,6 @@ Disallow: /*SID=
                 ],
                 'review' => [
                     'allow_guest' => '1',
-                ],
-                'search' => [
-                    'engine' => 'mysql',
-                    'min_query_length' => '1',
-                    'max_query_length' => '128',
-                    'max_count_cacheable_search_terms' => '100',
                 ],
                 'category' => [
                     'root_id' => '2',
@@ -1299,6 +1373,7 @@ Disallow: /*SID=
                     'debug' => '0',
                     'sort_order' => NULL,
                     'specificcountry' => NULL,
+                    'countrycreditcard' => '[]',
                     'verify_3dsecure' => '0',
                     'threshold_amount' => NULL,
                     'verify_all_countries' => '0',
@@ -1385,8 +1460,96 @@ Disallow: /*SID=
                 'wps_express' => [
                     'active' => '0',
                 ],
+                'amazon_payments' => [
+                    'simplepath' => [
+                        'publickey' => '-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3CVsGfEvTJdAOdlK8jTy
+XmtgpjmECyTxVknbquHdYk9Her0N/P31RUTCoB1LskdSsZulqsOj0AGm5txKmyeN
+/a0/PYgHPbJxTkAGMgwlg3+MisEI4qzTxEofHbU6maipKRFSDyiJ/5hE6Md6Ljci
+yKSwWDcfgA8N55+pn/7qtz7xprliuIwZ9q2kkeVvW+9kdmbKfWwDLvnNKtXdSGs2
+jDjQHRltJbEK5mxvM+aalDyCHekPwePQjDIoC/USbVed9KCvfUj41SFRXSqykrOS
+SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
+7QIDAQAB
+-----END PUBLIC KEY-----',
+                        'privatekey' => '0:2:GNAj76k4fKlQKjL1qDVWKIcjX9DA0Jsw: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',
+                    ],
+                ],
+                'amazon_payment' => [
+                    'merchant_id' => NULL,
+                    'access_key' => NULL,
+                    'secret_key' => NULL,
+                    'client_id' => NULL,
+                    'client_secret' => NULL,
+                    'credentials_json' => NULL,
+                    'payment_region' => NULL,
+                    'sandbox' => '0',
+                    'active' => '0',
+                    'lwa_enabled' => '0',
+                    'payment_action' => 'authorize',
+                    'authorization_mode' => 'synchronous',
+                    'update_mechanism' => 'polling',
+                    'button_display_language' => NULL,
+                    'button_color' => 'Gold',
+                    'button_size' => 'medium',
+                    'amazon_login_in_popup' => '1',
+                    'pwa_pp_button_is_visible' => '1',
+                    'minicart_button_is_visible' => '1',
+                    'storename' => NULL,
+                    'logging' => '1',
+                    'allowed_ips' => NULL,
+                ],
+            ],
+            'oauth' => [
+                'cleanup' => [
+                    'cleanup_probability' => '100',
+                    'expiration_period' => '120',
+                ],
+                'consumer' => [
+                    'expiration_period' => '300',
+                    'post_maxredirects' => '0',
+                    'post_timeout' => '5',
+                ],
+                'authentication_lock' => [
+                    'max_failures_count' => '6',
+                    'timeout' => '1800',
+                ],
+                'access_token_lifetime' => [
+                    'customer' => '1',
+                    'admin' => '4',
+                ],
+            ],
+            'export' => [
+                'customer_page_size' => [
+                    'customer' => '10000',
+                    'address' => '5000',
+                ],
+            ],
+            'cataloginventory' => [
+                'options' => [
+                    'can_subtract' => '1',
+                    'can_back_in_stock' => '1',
+                    'show_out_of_stock' => '0',
+                    'stock_threshold_qty' => '0',
+                    'display_product_stock_status' => '1',
+                ],
+                'item_options' => [
+                    'manage_stock' => '1',
+                    'backorders' => '0',
+                    'max_sale_qty' => '10000',
+                    'min_sale_qty' => '1',
+                    'min_qty' => '0',
+                    'notify_stock_qty' => '1',
+                    'enable_qty_increments' => '0',
+                    'qty_increments' => '1',
+                ],
             ],
             'sales' => [
+                'msrp' => [
+                    'enabled' => '0',
+                    'display_price_type' => '1',
+                    'explanation_message' => 'Our price is lower than the manufacturer\'s "minimum advertised price." As a result, we cannot show you the price in catalog or the product page. <br /><br /> You have no obligation to purchase the product once you know the price. You can simply remove the item from your cart.',
+                    'explanation_message_whats_this' => 'Our price is lower than the manufacturer\'s "minimum advertised price." As a result, we cannot show you the price in catalog or the product page. <br /><br /> You have no obligation to purchase the product once you know the price. You can simply remove the item from your cart.',
+                ],
                 'totals_sort' => [
                     'discount' => '20',
                     'grand_total' => '100',
@@ -1406,12 +1569,6 @@ Disallow: /*SID=
                     'items_per_page' => '20',
                     'delete_pending_after' => '480',
                 ],
-                'msrp' => [
-                    'enabled' => '0',
-                    'display_price_type' => '1',
-                    'explanation_message' => 'Our price is lower than the manufacturer\'s "minimum advertised price." As a result, we cannot show you the price in catalog or the product page. <br /><br /> You have no obligation to purchase the product once you know the price. You can simply remove the item from your cart.',
-                    'explanation_message_whats_this' => 'Our price is lower than the manufacturer\'s "minimum advertised price." As a result, we cannot show you the price in catalog or the product page. <br /><br /> You have no obligation to purchase the product once you know the price. You can simply remove the item from your cart.',
-                ],
                 'gift_messages' => [
                     'allow_items' => '0',
                     'allow_order' => '0',
@@ -1424,6 +1581,7 @@ Disallow: /*SID=
             'sales_email' => [
                 'general' => [
                     'async_sending' => '0',
+                    'sending_limit' => '50',
                 ],
                 'order' => [
                     'enabled' => '1',
@@ -1431,7 +1589,6 @@ Disallow: /*SID=
                     'guest_template' => 'sales_email_order_guest_template',
                     'identity' => 'sales',
                     'copy_method' => 'copy',
-                    'copy_to' => 'info@flugsau.ch',
                 ],
                 'order_comment' => [
                     'enabled' => '1',
@@ -1482,6 +1639,14 @@ Disallow: /*SID=
                     'identity' => 'sales',
                     'copy_method' => 'bcc',
                 ],
+                'temando_pickup' => [
+                    'enabled' => '1',
+                    'ready_template' => 'sales_email_temando_pickup_ready_template',
+                    'collected_template' => 'sales_email_temando_pickup_collected_template',
+                    'canceled_template' => 'sales_email_temando_pickup_canceled_template',
+                    'identity' => 'sales',
+                    'copy_method' => 'bcc',
+                ],
             ],
             'sales_pdf' => [
                 'invoice' => [
@@ -1497,31 +1662,6 @@ Disallow: /*SID=
             'dashboard' => [
                 'use_aggregated_data' => '0',
             ],
-            'export' => [
-                'customer_page_size' => [
-                    'customer' => '10000',
-                    'address' => '5000',
-                ],
-            ],
-            'cataloginventory' => [
-                'options' => [
-                    'can_subtract' => '1',
-                    'can_back_in_stock' => '1',
-                    'show_out_of_stock' => '0',
-                    'stock_threshold_qty' => '0',
-                    'display_product_stock_status' => '1',
-                ],
-                'item_options' => [
-                    'manage_stock' => '1',
-                    'backorders' => '0',
-                    'max_sale_qty' => '10000',
-                    'min_sale_qty' => '1',
-                    'min_qty' => '0',
-                    'notify_stock_qty' => '1',
-                    'enable_qty_increments' => '0',
-                    'qty_increments' => '1',
-                ],
-            ],
             'checkout' => [
                 'options' => [
                     'onepage_checkout_enabled' => '1',
@@ -1532,6 +1672,7 @@ Disallow: /*SID=
                     'delete_quote_after' => '30',
                     'redirect_to_cart' => '0',
                     'number_items_to_display_pager' => '20',
+                    'crosssell_enabled' => '1',
                     'configurable_product_image' => 'parent',
                     'grouped_product_image' => 'itself',
                 ],
@@ -1550,17 +1691,36 @@ Disallow: /*SID=
                 ],
                 'klarna_kp_design' => [
                     'color_details' => NULL,
+                    'color_border' => NULL,
+                    'color_border_selected' => NULL,
+                    'color_text' => NULL,
+                    'color_radius_border' => NULL,
                     'color_button' => NULL,
                     'color_button_text' => NULL,
                     'color_checkbox' => NULL,
                     'color_checkbox_checkmark' => NULL,
                     'color_header' => NULL,
                     'color_link' => NULL,
-                    'color_border' => NULL,
-                    'color_border_selected' => NULL,
-                    'color_text' => NULL,
                     'color_text_secondary' => NULL,
-                    'color_radius_border' => NULL,
+                ],
+            ],
+            'msp_securitysuite_twofactorauth' => [
+                'general' => [
+                    'enabled' => '0',
+                    'force_providers' => NULL,
+                ],
+                'google' => [
+                    'allow_trusted_devices' => '1',
+                ],
+                'authy' => [
+                    'allow_trusted_devices' => '1',
+                    'onetouch_message' => 'Login request to your Magento Admin',
+                ],
+                'u2fkey' => [
+                    'allow_trusted_devices' => '1',
+                ],
+                'duo' => [
+                    'application_key' => 'aaWMJkfqdYKyH80EDFxThX6p8OlxIvZTlZoal7mP8A0k5ZUkmuEfQPoRde6UWe8r',
                 ],
             ],
             'contact' => [
@@ -1596,23 +1756,13 @@ Disallow: /*SID=
                     'active' => '0',
                 ],
             ],
-            'oauth' => [
-                'cleanup' => [
-                    'cleanup_probability' => '100',
-                    'expiration_period' => '120',
+            'analytics' => [
+                'integration_name' => 'Magento Analytics user',
+                'general' => [
+                    'collection_time' => '02,00,00',
                 ],
-                'consumer' => [
-                    'expiration_period' => '300',
-                    'post_maxredirects' => '0',
-                    'post_timeout' => '5',
-                ],
-                'authentication_lock' => [
-                    'max_failures_count' => '6',
-                    'timeout' => '1800',
-                ],
-                'access_token_lifetime' => [
-                    'customer' => '1',
-                    'admin' => '4',
+                'subscription' => [
+                    'enabled' => '1',
                 ],
             ],
             'carriers' => [
@@ -1825,6 +1975,7 @@ Disallow: /*SID=
                     'conversion_color' => 'FFFFFF',
                     'conversion_value_type' => '1',
                     'conversion_value' => '0',
+                    'send_currency' => '0',
                     'languages' => [
                         'ar' => 'ar',
                         'bg' => 'bg',
@@ -1917,9 +2068,16 @@ Disallow: /*SID=
                     'lazyload_padding' => '200',
                     'lazyload_enabled' => '0',
                 ],
+                'tag' => [
+                    'robots' => 'INDEX,FOLLOW',
+                ],
+                'search' => [
+                    'robots' => 'NOINDEX,FOLLOW',
+                ],
                 'author' => [
                     'enabled' => '0',
                     'page_enabled' => '1',
+                    'robots' => 'NOINDEX,FOLLOW',
                 ],
                 'sidebar' => [
                     'search' => [
@@ -1972,6 +2130,9 @@ Disallow: /*SID=
                     'search_route' => 'search',
                     'rss_route' => 'rss',
                 ],
+                'seo' => [
+                    'use_canonical_meta_tag_for' => 'all',
+                ],
                 'social' => [
                     'add_this_enabled' => '1',
                     'add_this_pubid' => 'ra-4def63cd3cf37569',
@@ -1984,13 +2145,18 @@ Disallow: /*SID=
                     'max_depth' => '0',
                 ],
             ],
-            'analytics' => [
-                'integration_name' => 'Magento Analytics user',
-                'general' => [
-                    'collection_time' => '02,00,00',
+            'shipping' => [
+                'origin' => [
+                    'country_id' => 'CH',
+                    'postcode' => '6388',
+                    'region_id' => '118',
+                    'city' => 'Grafenort',
+                    'street_line1' => NULL,
+                    'street_line2' => NULL,
                 ],
-                'subscription' => [
-                    'enabled' => '1',
+                'shipping_policy' => [
+                    'enable_shipping_policy' => '0',
+                    'shipping_policy_content' => NULL,
                 ],
             ],
             'multishipping' => [
@@ -2065,17 +2231,17 @@ Disallow: /*SID=
                         'user_forgotpassword' => [
                             'label' => 'Forgot password',
                         ],
-                        'guest_checkout' => [
-                            'label' => 'Check Out as Guest',
-                        ],
-                        'register_during_checkout' => [
-                            'label' => 'Register during Checkout',
-                        ],
                         'contact_us' => [
                             'label' => 'Contact Us',
                         ],
                         'user_edit' => [
                             'label' => 'Change password',
+                        ],
+                        'guest_checkout' => [
+                            'label' => 'Check Out as Guest',
+                        ],
+                        'register_during_checkout' => [
+                            'label' => 'Register during Checkout',
                         ],
                     ],
                 ],
@@ -2111,20 +2277,6 @@ Disallow: /*SID=
                     'cms-page' => [
                         'generator' => 'Magento\\Framework\\DataObject',
                     ],
-                ],
-            ],
-            'shipping' => [
-                'origin' => [
-                    'country_id' => 'CH',
-                    'postcode' => '6388',
-                    'region_id' => '118',
-                    'city' => 'Grafenort',
-                    'street_line1' => NULL,
-                    'street_line2' => NULL,
-                ],
-                'shipping_policy' => [
-                    'enable_shipping_policy' => '0',
-                    'shipping_policy_content' => NULL,
                 ],
             ],
             'wishlist' => [
@@ -2256,10 +2408,10 @@ Disallow: /*SID=
                 ],
                 'vertex_settings' => [
                     'enable_vertex' => '0',
-                    'trustedId' => NULL,
                     'invoice_order' => 'invoice_created',
                     'api_url' => 'https://mgcsconnect.vertexsmb.com/vertex-ws/services/CalculateTax60',
                     'address_api_url' => 'https://mgcsconnect.vertexsmb.com/vertex-ws/services/LookupTaxAreas60',
+                    'trustedId' => NULL,
                     'show_manual_button' => '0',
                     'show_taxrequest_popup' => '1',
                     'allow_cart_request' => '1',
@@ -3737,124 +3889,6 @@ Disallow: /*SID=
                 ],
             ],
         ],
-        'websites' => [
-            'admin' => [
-                'catalog_price_decimal' => [
-                    'general' => [
-                        'enable' => '0',
-                    ],
-                ],
-                'web' => [
-                    'routers' => [
-                        'frontend' => [
-                            'disabled' => 'true',
-                        ],
-                    ],
-                    'default' => [
-                        'no_route' => 'admin/noroute/index',
-                    ],
-                ],
-            ],
-            'base' => [
-                'design' => [
-                    'theme' => [
-                        'theme_id' => 'frontend/Smartwave/port_child',
-                    ],
-                    'pagination' => [
-                        'pagination_frame_skip' => NULL,
-                        'anchor_text_for_previous' => NULL,
-                        'anchor_text_for_next' => NULL,
-                    ],
-                    'head' => [
-                        'title_prefix' => NULL,
-                        'title_suffix' => NULL,
-                        'default_description' => NULL,
-                        'default_keywords' => NULL,
-                        'includes' => NULL,
-                    ],
-                    'header' => [
-                        'logo_width' => NULL,
-                        'logo_height' => NULL,
-                        'logo_alt' => NULL,
-                        'welcome' => NULL,
-                        'logo_src' => 'websites/1/Flugsau_Blau_Logo.png',
-                    ],
-                    'footer' => [
-                        'copyright' => 'Copyright © 2017 Flugsau GmbH All rights reserved.',
-                        'absolute_footer' => NULL,
-                    ],
-                    'search_engine_robots' => [
-                        'custom_instructions' => NULL,
-                    ],
-                    'watermark' => [
-                        'image_size' => NULL,
-                        'image_imageOpacity' => NULL,
-                        'small_image_size' => NULL,
-                        'small_image_imageOpacity' => NULL,
-                        'thumbnail_size' => NULL,
-                        'thumbnail_imageOpacity' => NULL,
-                        'swatch_image_size' => NULL,
-                        'swatch_image_imageOpacity' => NULL,
-                    ],
-                    'email' => [
-                        'logo_alt' => NULL,
-                        'logo_width' => NULL,
-                        'logo_height' => NULL,
-                        'logo' => 'websites/1/flugsau_gruen_1.png',
-                    ],
-                ],
-                'payment' => [
-                    'paypal_express_bml' => [
-                        'sort_order' => NULL,
-                    ],
-                    'paypal_express' => [
-                        'in_context' => '0',
-                        'specificcountry' => NULL,
-                    ],
-                    'paypal_billing_agreement' => [
-                        'specificcountry' => NULL,
-                    ],
-                    'banktransfer' => [
-                        'instructions' => 'Bankverbindung
-Raiffeisen Region Stans
-BC-Nr.: 81223
-
-SWIFT: RAIFCH22
-IBAN: CH72 8122 3000 0072 2095 1
-
-für Lieferungen aus Deutschland:
-UID Nr: CHE-116.135.646',
-                    ],
-                ],
-                'carriers' => [
-                    'tablerate' => [
-                        'import' => '1532523472,tablerates.csv,text/csv,/Applications/MAMP/tmp/php/phpWoO5iq,0,101',
-                    ],
-                    'dhl' => [
-                        'doc_methods' => NULL,
-                    ],
-                    'temando' => [
-                        'collectionpoints_countries' => NULL,
-                    ],
-                ],
-                'web' => [
-                    'seo' => [
-                        'use_rewrites' => '1',
-                    ],
-                    'secure' => [
-                        'use_in_frontend' => NULL,
-                        'use_in_adminhtml' => NULL,
-                    ],
-                ],
-                'currency' => [
-                    'options' => [
-                        'base' => 'CHF',
-                        'default' => 'CHF',
-                        'allow' => 'CHF',
-                    ],
-                ],
-            ],
-        ],
         'stores' => [
             'admin' => [
                 'design' => [
@@ -3998,6 +4032,124 @@ UID Nr: CHE-116.135.646',
                     ],
                     'banktransfer' => [
                         'title' => 'Banküberweisung',
+                    ],
+                ],
+            ],
+        ],
+        'websites' => [
+            'admin' => [
+                'web' => [
+                    'routers' => [
+                        'frontend' => [
+                            'disabled' => 'true',
+                        ],
+                    ],
+                    'default' => [
+                        'no_route' => 'admin/noroute/index',
+                    ],
+                ],
+                'catalog_price_decimal' => [
+                    'general' => [
+                        'enable' => '0',
+                    ],
+                ],
+            ],
+            'base' => [
+                'design' => [
+                    'theme' => [
+                        'theme_id' => 'frontend/Smartwave/port_child',
+                    ],
+                    'pagination' => [
+                        'pagination_frame_skip' => NULL,
+                        'anchor_text_for_previous' => NULL,
+                        'anchor_text_for_next' => NULL,
+                    ],
+                    'head' => [
+                        'title_prefix' => NULL,
+                        'title_suffix' => NULL,
+                        'default_description' => NULL,
+                        'default_keywords' => NULL,
+                        'includes' => NULL,
+                    ],
+                    'header' => [
+                        'logo_width' => NULL,
+                        'logo_height' => NULL,
+                        'logo_alt' => NULL,
+                        'welcome' => NULL,
+                        'logo_src' => 'websites/1/Flugsau_Blau_Logo.png',
+                    ],
+                    'footer' => [
+                        'copyright' => 'Copyright © 2017 Flugsau GmbH All rights reserved.',
+                        'absolute_footer' => NULL,
+                    ],
+                    'search_engine_robots' => [
+                        'custom_instructions' => NULL,
+                    ],
+                    'watermark' => [
+                        'image_size' => NULL,
+                        'image_imageOpacity' => NULL,
+                        'small_image_size' => NULL,
+                        'small_image_imageOpacity' => NULL,
+                        'thumbnail_size' => NULL,
+                        'thumbnail_imageOpacity' => NULL,
+                        'swatch_image_size' => NULL,
+                        'swatch_image_imageOpacity' => NULL,
+                    ],
+                    'email' => [
+                        'logo_alt' => NULL,
+                        'logo_width' => NULL,
+                        'logo_height' => NULL,
+                        'logo' => 'websites/1/flugsau_gruen_1.png',
+                    ],
+                ],
+                'payment' => [
+                    'paypal_express_bml' => [
+                        'sort_order' => NULL,
+                    ],
+                    'paypal_express' => [
+                        'in_context' => '0',
+                        'specificcountry' => NULL,
+                    ],
+                    'paypal_billing_agreement' => [
+                        'specificcountry' => NULL,
+                    ],
+                    'banktransfer' => [
+                        'instructions' => 'Bankverbindung
+Raiffeisen Region Stans
+BC-Nr.: 81223
+
+SWIFT: RAIFCH22
+IBAN: CH72 8122 3000 0072 2095 1
+
+für Lieferungen aus Deutschland:
+UID Nr: CHE-116.135.646',
+                    ],
+                ],
+                'carriers' => [
+                    'tablerate' => [
+                        'import' => '1532523472,tablerates.csv,text/csv,/Applications/MAMP/tmp/php/phpWoO5iq,0,101',
+                    ],
+                    'dhl' => [
+                        'doc_methods' => NULL,
+                    ],
+                    'temando' => [
+                        'collectionpoints_countries' => NULL,
+                    ],
+                ],
+                'web' => [
+                    'seo' => [
+                        'use_rewrites' => '1',
+                    ],
+                    'secure' => [
+                        'use_in_frontend' => NULL,
+                        'use_in_adminhtml' => NULL,
+                    ],
+                ],
+                'currency' => [
+                    'options' => [
+                        'base' => 'CHF',
+                        'default' => 'CHF',
+                        'allow' => 'CHF',
                     ],
                 ],
             ],
