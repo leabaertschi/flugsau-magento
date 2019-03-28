@@ -312,6 +312,10 @@ return [
      * CONFIG__DEFAULT__PAYMENT__AUTHORIZENET_DIRECTPOST__CGI_URL for payment/authorizenet_directpost/cgi_url
      * CONFIG__DEFAULT__PAYMENT__AUTHORIZENET_DIRECTPOST__CGI_URL_TD for payment/authorizenet_directpost/cgi_url_td
      * CONFIG__DEFAULT__PAYMENT__CHECKMO__MAILING_ADDRESS for payment/checkmo/mailing_address
+     * CONFIG__DEFAULT__PAYMENT__AUTHORIZENET_ACCEPTJS__EMAIL_CUSTOMER for payment/authorizenet_acceptjs/email_customer
+     * CONFIG__DEFAULT__PAYMENT__AUTHORIZENET_ACCEPTJS__LOGIN for payment/authorizenet_acceptjs/login
+     * CONFIG__DEFAULT__PAYMENT__AUTHORIZENET_ACCEPTJS__TRANS_KEY for payment/authorizenet_acceptjs/trans_key
+     * CONFIG__DEFAULT__PAYMENT__AUTHORIZENET_ACCEPTJS__TRANS_MD5 for payment/authorizenet_acceptjs/trans_md5
      * CONFIG__DEFAULT__PAYMENT__BRAINTREE__PRIVATE_KEY for payment/braintree/private_key
      * CONFIG__DEFAULT__PAYMENT__BRAINTREE__MERCHANT_ID for payment/braintree/merchant_id
      * CONFIG__DEFAULT__PAYMENT__BRAINTREE__MERCHANT_ACCOUNT_ID for payment/braintree/merchant_account_id
@@ -429,6 +433,7 @@ Disallow: /*SID=
                 ],
                 'footer' => [
                     'copyright' => 'Copyright © 2013-2017 Magento, Inc. All rights reserved.',
+                    'report_bugs' => '1',
                     'absolute_footer' => NULL,
                 ],
                 'watermark' => [
@@ -554,8 +559,10 @@ Disallow: /*SID=
                     'enable_charts' => '1',
                 ],
                 'upload_configuration' => [
+                    'enable_resize' => '1',
                     'max_width' => '1920',
                     'max_height' => '1200',
+                    'jpeg_quality' => '80',
                 ],
                 'adminnotification' => [
                     'feed_url' => 'notifications.magentocommerce.com/magento2/community/notifications.rss',
@@ -1001,6 +1008,8 @@ Disallow: /*SID=
                     'shown_to_logged_in_user' => [
                         'contact_us' => '1',
                         'user_edit' => '1',
+                        'product_sendtofriend_form' => '1',
+                        'share_wishlist_form' => '1',
                     ],
                     'always_for' => [
                         'user_create' => '1',
@@ -1044,6 +1053,7 @@ Disallow: /*SID=
                     'flat_catalog_category' => '0',
                     'default_sort_by' => 'position',
                     'parse_url_directives' => '1',
+                    'remember_pagination' => '0',
                     'swatches_per_product' => '16',
                     'show_swatches_in_product_list' => '1',
                     'list_allow_all' => '1',
@@ -1069,15 +1079,6 @@ Disallow: /*SID=
                     'time_format' => '12h',
                     'forbidden_extensions' => 'php,exe',
                 ],
-                'downloadable' => [
-                    'downloads_number' => '0',
-                    'order_item_status' => '9',
-                    'samples_title' => 'Samples',
-                    'links_title' => 'Links',
-                    'links_target_new_window' => '1',
-                    'content_disposition' => 'inline',
-                    'disable_guest_checkout' => '1',
-                ],
                 'search' => [
                     'engine' => 'mysql',
                     'min_query_length' => '1',
@@ -1091,6 +1092,20 @@ Disallow: /*SID=
                     'search_recommendations_enabled' => '1',
                     'search_recommendations_count' => '5',
                     'search_recommendations_count_results_enabled' => '0',
+                    'elasticsearch6_server_hostname' => 'localhost',
+                    'elasticsearch6_server_port' => '9200',
+                    'elasticsearch6_index_prefix' => 'magento2',
+                    'elasticsearch6_enable_auth' => '0',
+                    'elasticsearch6_server_timeout' => '15',
+                ],
+                'downloadable' => [
+                    'downloads_number' => '0',
+                    'order_item_status' => '9',
+                    'samples_title' => 'Samples',
+                    'links_title' => 'Links',
+                    'links_target_new_window' => '1',
+                    'content_disposition' => 'inline',
+                    'disable_guest_checkout' => '1',
                 ],
                 'layered_navigation' => [
                     'price_range_calculation' => 'auto',
@@ -1117,6 +1132,7 @@ Disallow: /*SID=
                     'video_auto_restart' => '0',
                 ],
                 'review' => [
+                    'active' => '1',
                     'allow_guest' => '1',
                 ],
                 'category' => [
@@ -1134,6 +1150,7 @@ Disallow: /*SID=
                     'model' => 'Magento\\Payment\\Model\\Method\\Free',
                     'order_status' => 'pending',
                     'title' => 'No Payment Information Required',
+                    'payment_action' => 'authorize',
                     'allowspecific' => '0',
                     'sort_order' => '1',
                     'group' => 'offline',
@@ -1223,6 +1240,7 @@ Disallow: /*SID=
                     'instant_purchase' => [
                         'tokenFormat' => '\\Magento\\Paypal\\Model\\InstantPurchase\\Payflow\\Pro\\TokenFormatter',
                     ],
+                    'group' => 'paypal',
                 ],
                 'paypal_billing_agreement' => [
                     'active' => '1',
@@ -1285,6 +1303,7 @@ Disallow: /*SID=
                     'order_status' => 'processing',
                     'payment_action' => 'authorize',
                     'title' => 'Credit Card Direct Post (Authorize.net)',
+                    'signature_key' => NULL,
                     'allowspecific' => '0',
                     'currency' => 'USD',
                     'create_order_before' => '1',
@@ -1293,6 +1312,8 @@ Disallow: /*SID=
                     'place_order_url' => 'authorizenet/directpost_payment/place',
                     'cgi_url_test_mode' => 'https://test.authorize.net/gateway/transact.dll',
                     'cgi_url_td_test_mode' => 'https://apitest.authorize.net/xml/v1/request.api',
+                    'paymentInfoKeys' => 'x_card_type,x_account_number,x_avs_code,x_auth_code,x_response_reason_text,x_cvv2_resp_code',
+                    'group' => 'authorizenet',
                     'useccv' => '0',
                     'specificcountry' => NULL,
                     'min_order_total' => NULL,
@@ -1350,6 +1371,38 @@ Disallow: /*SID=
                     'max_order_total' => NULL,
                     'sort_order' => NULL,
                 ],
+                'authorizenet_acceptjs' => [
+                    'active' => '0',
+                    'cctypes' => 'AE,VI,MC,DI,JCB,DN',
+                    'debug' => '0',
+                    'can_use_checkout' => '1',
+                    'can_use_internal' => '1',
+                    'can_capture_partial' => '0',
+                    'can_authorize' => '1',
+                    'can_refund' => '1',
+                    'can_capture' => '1',
+                    'can_void' => '1',
+                    'can_accept_payment' => '1',
+                    'can_deny_payment' => '1',
+                    'can_cancel' => '1',
+                    'can_review_payment' => '1',
+                    'can_edit' => '1',
+                    'can_fetch_transaction_info' => '1',
+                    'can_fetch_transaction_information' => '1',
+                    'model' => 'AuthorizenetAcceptjsFacade',
+                    'order_status' => 'processing',
+                    'payment_action' => 'authorize',
+                    'title' => 'Credit Card (Authorize.Net)',
+                    'cvv_enabled' => '1',
+                    'public_client_key' => NULL,
+                    'trans_signature_key' => NULL,
+                    'allowspecific' => '0',
+                    'currency' => 'USD',
+                    'environment' => 'production',
+                    'privateInfoKeys' => 'authCode,avsResultCode,cvvResultCode,cavvResultCode',
+                    'paymentInfoKeys' => 'accountType,ccLast4,authCode,avsResultCode,cvvResultCode,cavvResultCode',
+                    'transactionSyncKeys' => 'transactionStatus,responseCode,responseReasonCode,authCode,AVSResponse,cardCodeResponse,CAVVResponse',
+                ],
                 'braintree' => [
                     'model' => 'BraintreeFacade',
                     'title' => 'Credit Card (Braintree)',
@@ -1383,6 +1436,7 @@ Disallow: /*SID=
                     'paymentInfoKeys' => 'cc_type,cc_number,avsPostalCodeResponseCode,avsStreetAddressResponseCode,cvvResponseCode,processorAuthorizationCode,processorResponseCode,processorResponseText,liabilityShifted,liabilityShiftPossible,riskDataId,riskDataDecision',
                     'avs_ems_adapter' => 'Magento\\Braintree\\Model\\AvsEmsCodeMapper',
                     'cvv_ems_adapter' => 'Magento\\Braintree\\Model\\CvvEmsCodeMapper',
+                    'group' => 'braintree',
                     'fraudprotection' => '0',
                     'debug' => '0',
                     'sort_order' => NULL,
@@ -1418,6 +1472,7 @@ Disallow: /*SID=
                     'privateInfoKeys' => 'processorResponseCode,processorResponseText,paymentId',
                     'paymentInfoKeys' => 'processorResponseCode,processorResponseText,paymentId,payerEmail',
                     'supported_locales' => 'en_US,en_GB,en_AU,da_DK,fr_FR,fr_CA,de_DE,zh_HK,it_IT,nl_NL,no_NO,pl_PL,es_ES,sv_SE,tr_TR,pt_BR,ja_JP,id_ID,ko_KR,pt_PT,ru_RU,th_TH,zh_CN,zh_TW',
+                    'group' => 'braintree',
                     'sort_order' => NULL,
                     'specificcountry' => NULL,
                     'debug' => '0',
@@ -1431,6 +1486,7 @@ Disallow: /*SID=
                         'tokenFormat' => 'Magento\\Braintree\\Model\\InstantPurchase\\CreditCard\\TokenFormatter',
                         'additionalInformation' => 'Magento\\Braintree\\Model\\InstantPurchase\\PaymentAdditionalInformationProvider',
                     ],
+                    'group' => 'braintree',
                     'active' => '0',
                 ],
                 'braintree_paypal_vault' => [
@@ -1441,6 +1497,7 @@ Disallow: /*SID=
                         'tokenFormat' => 'Magento\\Braintree\\Model\\InstantPurchase\\PayPal\\TokenFormatter',
                         'additionalInformation' => 'Magento\\Braintree\\Model\\InstantPurchase\\PaymentAdditionalInformationProvider',
                     ],
+                    'group' => 'braintree',
                     'active' => '0',
                 ],
                 'klarna_kp' => [
@@ -1576,7 +1633,11 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                 'reorder' => [
                     'allow' => '1',
                 ],
+                'zerograndtotal_creditmemo' => [
+                    'allow_zero_grandtotal' => '1',
+                ],
                 'minimum_order' => [
+                    'include_discount_amount' => '1',
                     'tax_including' => '1',
                 ],
                 'orders' => [
@@ -1631,6 +1692,8 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                     'guest_template' => 'sales_email_shipment_guest_template',
                     'identity' => 'sales',
                     'copy_method' => 'bcc',
+                    'cancel_template' => 'sales_email_shipment_cancel_template',
+                    'cancel_guest_template' => 'sales_email_shipment_cancel_guest_template',
                 ],
                 'shipment_comment' => [
                     'enabled' => '1',
@@ -1749,6 +1812,30 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
             'paypal' => [
                 'style' => [
                     'logo' => NULL,
+                    'checkout_page_button_customize' => '0',
+                    'checkout_page_button_label' => 'paypal',
+                    'checkout_page_button_layout' => 'vertical',
+                    'checkout_page_button_size' => 'responsive',
+                    'checkout_page_button_shape' => 'rect',
+                    'checkout_page_button_color' => 'gold',
+                    'product_page_button_customize' => '0',
+                    'product_page_button_label' => 'buynow',
+                    'product_page_button_layout' => 'horizontal',
+                    'product_page_button_size' => 'responsive',
+                    'product_page_button_shape' => 'pill',
+                    'product_page_button_color' => 'gold',
+                    'cart_page_button_customize' => '0',
+                    'cart_page_button_label' => 'paypal',
+                    'cart_page_button_layout' => 'vertical',
+                    'cart_page_button_size' => 'responsive',
+                    'cart_page_button_shape' => 'rect',
+                    'cart_page_button_color' => 'gold',
+                    'mini_cart_page_button_customize' => '0',
+                    'mini_cart_page_button_label' => 'paypal',
+                    'mini_cart_page_button_layout' => 'vertical',
+                    'mini_cart_page_button_size' => 'responsive',
+                    'mini_cart_page_button_shape' => 'rect',
+                    'mini_cart_page_button_color' => 'gold',
                     'page_style' => NULL,
                     'paypal_hdrimg' => 'http://185.48.228.39/flugsau/pub/static/frontend/Smartwave/port_child/de_CH/images/logo.png',
                     'paypal_hdrbackcolor' => NULL,
@@ -1967,6 +2054,9 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                 ],
             ],
             'newsletter' => [
+                'general' => [
+                    'active' => '1',
+                ],
                 'subscription' => [
                     'allow_guest_subscribe' => '1',
                     'confirm' => '0',
@@ -2193,15 +2283,6 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                     'format' => '1',
                 ],
             ],
-            'klarna' => [
-                'api' => [
-                    'merchant_id' => NULL,
-                    'shared_secret' => NULL,
-                    'api_version' => 'kp_eu',
-                    'test_mode' => '1',
-                    'debug' => '1',
-                ],
-            ],
             'persistent' => [
                 'options' => [
                     'enabled' => '0',
@@ -2210,21 +2291,6 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                     'remember_default' => '1',
                     'logout_clear' => '1',
                     'shopping_cart' => '1',
-                ],
-            ],
-            'reports' => [
-                'dashboard' => [
-                    'ytd_start' => '1,1',
-                    'mtd_start' => '1',
-                ],
-                'options' => [
-                    'enabled' => '1',
-                    'product_view_enabled' => '1',
-                    'product_send_enabled' => '1',
-                    'product_compare_enabled' => '1',
-                    'product_to_cart_enabled' => '1',
-                    'product_to_wishlist_enabled' => '1',
-                    'wishlist_share_enabled' => '1',
                 ],
             ],
             'captcha' => [
@@ -2251,6 +2317,12 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                         'user_edit' => [
                             'label' => 'Change password',
                         ],
+                        'product_sendtofriend_form' => [
+                            'label' => 'Send To Friend Form',
+                        ],
+                        'share_wishlist_form' => [
+                            'label' => 'Share Wishlist Form',
+                        ],
                         'guest_checkout' => [
                             'label' => 'Check Out as Guest',
                         ],
@@ -2270,6 +2342,21 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                     ],
                 ],
             ],
+            'reports' => [
+                'dashboard' => [
+                    'ytd_start' => '1,1',
+                    'mtd_start' => '1',
+                ],
+                'options' => [
+                    'enabled' => '1',
+                    'product_view_enabled' => '1',
+                    'product_send_enabled' => '1',
+                    'product_compare_enabled' => '1',
+                    'product_to_cart_enabled' => '1',
+                    'product_to_wishlist_enabled' => '1',
+                    'wishlist_share_enabled' => '1',
+                ],
+            ],
             'sendfriend' => [
                 'email' => [
                     'enabled' => '1',
@@ -2278,6 +2365,15 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                     'max_recipients' => '5',
                     'max_per_hour' => '5',
                     'check_by' => '0',
+                ],
+            ],
+            'klarna' => [
+                'api' => [
+                    'merchant_id' => NULL,
+                    'shared_secret' => NULL,
+                    'api_version' => 'kp_eu',
+                    'test_mode' => '1',
+                    'debug' => '1',
                 ],
             ],
             'url_rewrite' => [
@@ -2296,6 +2392,7 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
             'wishlist' => [
                 'general' => [
                     'active' => '1',
+                    'show_in_sidebar' => '1',
                 ],
                 'email' => [
                     'email_identity' => 'general',
@@ -2422,15 +2519,28 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                 ],
                 'vertex_settings' => [
                     'enable_vertex' => '0',
+                    'use_for_calculation' => '1',
                     'invoice_order' => 'invoice_created',
                     'api_url' => 'https://mgcsconnect.vertexsmb.com/vertex-ws/services/CalculateTax60',
                     'address_api_url' => 'https://mgcsconnect.vertexsmb.com/vertex-ws/services/LookupTaxAreas60',
+                    'country_sort_by_region' => '{"North America":["MX","US","CA"],"Asia Pacific":["AU","BN","CC","KH","CN","PF","IN","HK","ID","JP","MY","MN","NC","NZ","PK","PH","SG","KR","LK","TW","TH","VN","FJ","PG","BD","BT","CX","CK","HM","KI","LA","NR","NP","NC","NU","PN","KP","WS","MM","SB","TK","TO","TV","VU","WF"],"Central\\/South America":["AR","BL","BS","BR","CL","CO","CR","DO","GT","PA","PE","TT","UY","VE","AG","BB","BZ","BO","DM","EC","SV","GD","GY","HN","JM","NI","PY","AI","AW","BM","VG","KY","CU","FK","GF","HT","MS","MF","AN","SH","KN","LC","VC","GS","SR","TC"],"EMEA":["AL","AM","AT","AZ","BY","BE","BA","BG","HR","CD","CG","CI","CY","CZ","DK","EG","EE","FI","FR","GE","DE","GR","GW","HU","IS","IE","IL","IT","JO","KG","KZ","KE","LV","LB","LT","LU","MK","MT","NA","MD","ME","MA","NL","NG","NO","PL","PS","PT","RO","RU","SA","RS","SK","ST","SI","TL","ZA","ES","SZ","SE","CH","LI","TR","UA","AE","GB","UZ","ZM","MU","SN","UG","ZW","AF","AX","DZ","AD","AO","BH","BJ","BW","BV","IO","BF","BI","CM","CV","CF","TD","KM","DJ","ER","ET","TF","GA","GM","GI","GL","GN","IR","IQ","KW","LS","LR","LY","MG","MW","MV","ML","MR","YT","MZ","NA","NE","OM","PW","QA","RW","PM","SM","SC","SL","SO","SD","SJ","SY","TJ","TZ","TG","TN","TM","EH","VA","YE"],"Others":["AQ","GQ","FO","GH"]}',
+                    'allowed_countries' => 'US,CA',
                     'trustedId' => NULL,
                     'show_manual_button' => '0',
                     'show_taxrequest_popup' => '1',
                     'allow_cart_request' => '1',
                     'calculation_function' => 'CalculateTax60',
                     'valadtion_function' => 'LookupTaxAreas60',
+                ],
+                'vertex_delivery_terms' => [
+                    'default_term' => 'SUP',
+                ],
+                'vertex_logging' => [
+                    'enable_logging' => '0',
+                    'enable_rotation' => '0',
+                    'rotation_action' => 'delete',
+                    'entry_lifetime' => '7',
+                    'rotation_frequency' => 'W',
                 ],
             ],
             'webapi' => [
@@ -2609,6 +2719,7 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                     'cart_url' => NULL,
                     'login_url' => NULL,
                     'allow_non_subscribers' => '1',
+                    'expire_time' => '24',
                 ],
                 'tracking' => [
                     'roi_enabled' => '0',
@@ -2654,6 +2765,7 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                     'catalog_type' => '0',
                 ],
                 'customer_addressbook' => [
+                    'show_preferences' => '0',
                     'can_change' => '0',
                     'show_books' => '0',
                     'can_show_fields' => '0',
@@ -2897,8 +3009,6 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                     'ratio_width' => NULL,
                     'ratio_height' => NULL,
                     'tab_style' => NULL,
-                    'custom_cms_tabs' => NULL,
-                    'custom_attr_tabs' => NULL,
                     'aspect_ratio' => '0',
                     'enable_addtocart_sticky' => '0',
                     'move_tab' => '0',
@@ -4137,6 +4247,12 @@ IBAN: CH72 8122 3000 0072 2095 1
 
 für Lieferungen aus Deutschland:
 UID Nr: CHE-116.135.646',
+                    ],
+                    'authorizenet_acceptjs' => [
+                        'cctypes' => 'AE,VI,MC,DI,JCB,DN',
+                        'order_status' => 'processing',
+                        'payment_action' => 'authorize',
+                        'currency' => 'USD',
                     ],
                 ],
                 'carriers' => [
