@@ -1937,7 +1937,7 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                 'tablerate' => [
                     'active' => '1',
                     'sallowspecific' => '0',
-                    'condition_name' => 'package_weight',
+                    'condition_name' => 'package_value_with_discount',
                     'include_virtual_price' => '1',
                     'model' => 'Magento\\OfflineShipping\\Model\\Carrier\\Tablerate',
                     'name' => 'Table Rate',
