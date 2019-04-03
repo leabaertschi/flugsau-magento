@@ -2449,6 +2449,11 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                                 'cron_expr' => '0 0 * * *',
                             ],
                         ],
+                        'vertex_log_rotation' => [
+                            'schedule' => [
+                                'cron_expr' => '0 0 * * 1',
+                            ],
+                        ],
                     ],
                 ],
             ],
@@ -4260,6 +4265,38 @@ UID Nr: CHE-116.135.646',
                     ],
                     'checkmo' => [
                         'title' => 'Invoice',
+                    ],
+                ],
+                'carriers' => [
+                    'tablerate' => [
+                        'condition_name' => 'package_weight',
+                        'include_virtual_price' => '0',
+                    ],
+                    'dhl' => [
+                        'doc_methods' => NULL,
+                        'specificcountry' => NULL,
+                    ],
+                    'temando' => [
+                        'collectionpoints_countries' => NULL,
+                        'specificcountry' => NULL,
+                    ],
+                    'flatrate' => [
+                        'specificcountry' => NULL,
+                    ],
+                    'freeshipping' => [
+                        'specificcountry' => NULL,
+                    ],
+                    'ups' => [
+                        'allowed_methods' => NULL,
+                        'specificcountry' => NULL,
+                    ],
+                    'usps' => [
+                        'allowed_methods' => NULL,
+                        'specificcountry' => NULL,
+                    ],
+                    'fedex' => [
+                        'allowed_methods' => NULL,
+                        'specificcountry' => NULL,
                     ],
                 ],
                 'web' => [
