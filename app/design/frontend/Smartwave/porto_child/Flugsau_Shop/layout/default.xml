@@ -20,5 +20,6 @@
                 <block class="Flugsau\Shop\Block\StoreInformation" name="footer_contact_information" template="html/footer_contact.phtml" />
             </referenceBlock>
         </referenceContainer>
+        <referenceBlock name="layer.catalog.leftnav" remove="true" />
     </body>
 </page>
