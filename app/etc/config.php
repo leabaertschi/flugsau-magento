@@ -4037,7 +4037,7 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                 ],
                 'carriers' => [
                     'tablerate' => [
-                        'title' => 'Post/DHL',
+                        'title' => 'Post',
                         'name' => 'By Weight',
                     ],
                 ],
@@ -4105,7 +4105,7 @@ UID Nr: CHE-116.135.646',
             'default' => [
                 'carriers' => [
                     'tablerate' => [
-                        'title' => 'Post/DHL',
+                        'title' => 'Post',
                         'name' => 'Nach Gewicht',
                         'specificerrmsg' => 'Diese Versandart ist nicht verfügbar. Bitte kontaktiere uns.',
                     ],
