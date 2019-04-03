@@ -3009,8 +3009,6 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                     'ratio_width' => NULL,
                     'ratio_height' => NULL,
                     'tab_style' => NULL,
-                    'custom_cms_tabs' => 'a:0:{}',
-                    'custom_attr_tabs' => 'a:0:{}',
                     'aspect_ratio' => '0',
                     'enable_addtocart_sticky' => '0',
                     'move_tab' => '0',
@@ -4262,17 +4260,6 @@ UID Nr: CHE-116.135.646',
                     ],
                     'checkmo' => [
                         'title' => 'Invoice',
-                    ],
-                ],
-                'carriers' => [
-                    'tablerate' => [
-                        'import' => '1532523472,tablerates.csv,text/csv,/Applications/MAMP/tmp/php/phpWoO5iq,0,101',
-                    ],
-                    'dhl' => [
-                        'doc_methods' => NULL,
-                    ],
-                    'temando' => [
-                        'collectionpoints_countries' => NULL,
                     ],
                 ],
                 'web' => [
