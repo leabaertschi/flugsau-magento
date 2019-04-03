@@ -1321,13 +1321,13 @@ Disallow: /*SID=
                     'sort_order' => NULL,
                 ],
                 'checkmo' => [
-                    'active' => '0',
+                    'active' => '1',
                     'model' => 'Magento\\OfflinePayments\\Model\\Checkmo',
                     'order_status' => 'pending',
                     'title' => 'Check / Money order',
-                    'allowspecific' => '0',
+                    'allowspecific' => '1',
                     'group' => 'offline',
-                    'specificcountry' => NULL,
+                    'specificcountry' => 'CH',
                     'payable_to' => NULL,
                     'min_order_total' => NULL,
                     'max_order_total' => NULL,
@@ -3009,6 +3009,8 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                     'ratio_width' => NULL,
                     'ratio_height' => NULL,
                     'tab_style' => NULL,
+                    'custom_cms_tabs' => 'a:0:{}',
+                    'custom_attr_tabs' => 'a:0:{}',
                     'aspect_ratio' => '0',
                     'enable_addtocart_sticky' => '0',
                     'move_tab' => '0',
@@ -4155,7 +4157,10 @@ UID Nr: CHE-116.135.646',
                         'title' => 'Rechnung',
                     ],
                     'banktransfer' => [
-                        'title' => 'Banküberweisung',
+                        'title' => 'Vorauskasse',
+                    ],
+                    'checkmo' => [
+                        'title' => 'Rechnung',
                     ],
                 ],
             ],
@@ -4247,12 +4252,16 @@ IBAN: CH72 8122 3000 0072 2095 1
 
 für Lieferungen aus Deutschland:
 UID Nr: CHE-116.135.646',
+                        'title' => 'Prepayment',
                     ],
                     'authorizenet_acceptjs' => [
                         'cctypes' => 'AE,VI,MC,DI,JCB,DN',
                         'order_status' => 'processing',
                         'payment_action' => 'authorize',
                         'currency' => 'USD',
+                    ],
+                    'checkmo' => [
+                        'title' => 'Invoice',
                     ],
                 ],
                 'carriers' => [
