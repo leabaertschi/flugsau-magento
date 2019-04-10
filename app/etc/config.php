@@ -3018,7 +3018,7 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                     'ratio_width' => NULL,
                     'ratio_height' => NULL,
                     'tab_style' => NULL,
-                    'aspect_ratio' => '0',
+                    'aspect_ratio' => '1',
                     'enable_addtocart_sticky' => '0',
                     'move_tab' => '0',
                     'move_upsell_full' => '0',
