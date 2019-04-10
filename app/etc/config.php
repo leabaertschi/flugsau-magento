@@ -322,6 +322,7 @@ return [
      * CONFIG__DEFAULT__PAYMENT__BRAINTREE__DESCRIPTOR_PHONE for payment/braintree/descriptor_phone
      * CONFIG__DEFAULT__PAYMENT__BRAINTREE__DESCRIPTOR_URL for payment/braintree/descriptor_url
      * CONFIG__DEFAULT__PAYMENT__BRAINTREE_PAYPAL__MERCHANT_NAME_OVERRIDE for payment/braintree_paypal/merchant_name_override
+     * CONFIG__DEFAULT__CHECKOUT__PAYMENT_FAILED__COPY_TO for checkout/payment_failed/copy_to
      * CONFIG__DEFAULT__CONTACT__EMAIL__RECIPIENT_EMAIL for contact/email/recipient_email
      * CONFIG__DEFAULT__TRANS_EMAIL__IDENT_CUSTOM1__EMAIL for trans_email/ident_custom1/email
      * CONFIG__DEFAULT__TRANS_EMAIL__IDENT_CUSTOM1__NAME for trans_email/ident_custom1/name
@@ -1744,6 +1745,8 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                     'onepage_checkout_enabled' => '1',
                     'guest_checkout' => '1',
                     'max_items_display_count' => '10',
+                    'display_billing_address_on' => '0',
+                    'enable_agreements' => '1',
                 ],
                 'cart' => [
                     'delete_quote_after' => '30',
@@ -1765,6 +1768,7 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                     'identity' => 'general',
                     'receiver' => 'general',
                     'template' => 'checkout_payment_failed_template',
+                    'copy_method' => 'bcc',
                 ],
                 'klarna_kp_design' => [
                     'color_details' => NULL,

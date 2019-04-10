@@ -444,5 +444,27 @@ button.action.primary {
     }
 }
 
+.checkout-payment-method {
+    input[type="radio"], input[type="checkbox"] {
+        margin: 0 5px 0 0;
+        top: 0;
+    }
+
+    .checkout-agreements {
+        margin-top: 10px;
+        padding: 10px;
+        border: 1px solid #ff5501;
+
+        .checkout-agreement {
+            display: flex;
+            align-items: baseline;
+
+            .action {
+                text-align: left;
+            }
+        }
+    }
+}
+
 @import "_large.less";
 @import "_mobile.less";
