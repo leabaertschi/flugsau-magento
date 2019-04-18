@@ -243,8 +243,7 @@ button.action.primary {
                     overflow: hidden;
 
                     img {
-                        min-width: 100%;
-                        min-height: 100%;
+                        object-fit: contain;
                     }
                 }
 
@@ -464,6 +463,21 @@ button.action.primary {
             }
         }
     }
+}
+
+.post-holder {
+    .post-content-container {
+        display: flex;
+    }
+
+    .post-ftimg-hld {
+        width: 120px;
+        margin-right: 20px;
+    }
+}
+
+.post-list .post-content .post-read-more {
+    float: none;
 }
 
 @import "_large.less";

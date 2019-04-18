@@ -16,14 +16,21 @@ class UpgradeData implements UpgradeDataInterface
     protected $_pageFactory;
 
     /**
+     * @var \Magento\Cms\Model\BlockFactory
+     */
+    protected $_blockFactory;
+
+    /**
      * Construct
      *
      * @param \Magento\Cms\Model\PageFactory $pageFactory
      */
     public function __construct(
-        \Magento\Cms\Model\PageFactory $pageFactory
+        \Magento\Cms\Model\PageFactory $pageFactory,
+        \Magento\Cms\Model\BlockFactory $blockFactory
     ) {
         $this->_pageFactory = $pageFactory;
+        $this->_blockFactory = $blockFactory;
     }
 
     /**
@@ -948,6 +955,61 @@ HTML;
                     ->setStores([1])
                     ->setContent($returns_de)
                     ->save();
+        }
+
+
+        if (version_compare($context->getVersion(), '1.0.3') < 0) {
+            $menu_before = <<<HTML
+<ul>
+    <li class="ui-menu-item level0">
+        <a href="{{store url=''}}" class="level-top"><span>Home</span></a>
+    </li>
+    <li class="ui-menu-item level0">
+        <a href="{{store url='news'}}" class="level-top"><span>News</span></a>
+    </li>
+</ul>
+HTML;
+
+            $customMenuBeforeBlock = $this->_blockFactory->create();
+            $customMenuBeforeBlock->setIdentifier('custom_menu_before')
+                ->setTitle('Custom Menu Before')
+                ->setIsActive(true)
+                ->setContent($menu_before)
+                ->setStores([0])
+                ->save();
+
+            $menu_after_de = <<<HTML
+<ul>
+    <li class="ui-menu-item level0">
+        <a href="{{store url='contact'}}" class="level-top"><span>Kontakt</span></a>
+    </li>
+</ul>
+HTML;
+
+            $customMenuAfterBlockDe = $this->_blockFactory->create();
+            $customMenuAfterBlockDe->setIdentifier('custom_menu_after')
+                ->setTitle('Custom Menu After')
+                ->setIsActive(true)
+                ->setStores([1])
+                ->setContent($menu_after_de)
+                ->save();
+
+
+            $menu_after_en = <<<HTML
+<ul>
+    <li class="ui-menu-item level0">
+        <a href="{{store url='contact'}}" class="level-top"><span>Contact</span></a>
+    </li>
+</ul>
+HTML;
+
+            $customMenuAfterBlockEn = $this->_blockFactory->create();
+            $customMenuAfterBlockEn->setIdentifier('custom_menu_after')
+                ->setTitle('Custom Menu After')
+                ->setIsActive(true)
+                ->setStores([2])
+                ->setContent($menu_after_en)
+                ->save();
         }
 
         $setup->endSetup();

@@ -2144,7 +2144,7 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                     'enabled' => '1',
                 ],
                 'index_page' => [
-                    'title' => 'Blog',
+                    'title' => 'News',
                     'display_mode' => '0>',
                     'meta_keywords' => NULL,
                     'meta_description' => NULL,
@@ -2159,7 +2159,7 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                         'number_of_products' => '5',
                     ],
                     'comments' => [
-                        'type' => 'facebook',
+                        'type' => '0',
                         'number_of_comments' => '4',
                         'number_of_replies' => '5',
                         'guest_comments' => '1',
@@ -2189,17 +2189,17 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                 ],
                 'sidebar' => [
                     'search' => [
-                        'enabled' => '1',
+                        'enabled' => '0',
                         'sort_order' => '10',
                     ],
                     'categories' => [
-                        'enabled' => '1',
+                        'enabled' => '0',
                         'show_posts_count' => '1',
                         'sort_order' => '20',
                         'max_depth' => '2',
                     ],
                     'recent_posts' => [
-                        'enabled' => '1',
+                        'enabled' => '0',
                         'posts_per_page' => '5',
                         'sort_order' => '30',
                     ],
@@ -2209,11 +2209,11 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                         'sort_order' => '35',
                     ],
                     'archive' => [
-                        'enabled' => '1',
+                        'enabled' => '0',
                         'sort_order' => '40',
                     ],
                     'tag_claud' => [
-                        'enabled' => '1',
+                        'enabled' => '0',
                         'sort_order' => '45',
                     ],
                     'rss_feed' => [
@@ -2228,7 +2228,7 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                     'number_of_related_posts' => '5',
                 ],
                 'permalink' => [
-                    'route' => 'blog',
+                    'route' => 'news',
                     'type' => 'default',
                     'post_route' => 'post',
                     'category_route' => 'category',
@@ -2242,7 +2242,7 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                     'use_canonical_meta_tag_for' => 'all',
                 ],
                 'social' => [
-                    'add_this_enabled' => '1',
+                    'add_this_enabled' => '0',
                     'add_this_pubid' => 'ra-4def63cd3cf37569',
                     'add_this_language' => 'en',
                 ],
@@ -2906,8 +2906,8 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                     'max_level' => '2',
                 ],
                 'custom_links' => [
-                    'staticblock_before' => 'porto_custom_menu_before',
-                    'staticblock_after' => 'NULL',
+                    'staticblock_before' => 'custom_menu_before',
+                    'staticblock_after' => 'custom_menu_after',
                 ],
                 'cat_labels' => [
                     'label1' => 'New',
