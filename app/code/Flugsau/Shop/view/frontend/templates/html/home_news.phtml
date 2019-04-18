@@ -5,15 +5,22 @@
 <?php if ($posts->count()): ?>
 <div class="home-news-wrapper">
     <div class="home-news">
-        <h3><?php echo $block->escapeHtml($block->getTitle()) ?></h3>
+        <h3><a href="<?php echo $this->getUrl('news') ?>"><?php echo $block->escapeHtml($block->getTitle()) ?></a></h3>
         <div class="home-news-entries">
             <?php foreach($posts as $post): ?>
             <div class="home-news-entry">
                 <div class="home-news-entry-img"><img src="<?php echo $post->getFeaturedImage() ?>" /></div>
                 <div class="home-news-entry-content-wrapper">
-                    <div class="home-news-entry-title"><?php echo $block->escapeHtml($post->getTitle()) ?></div>
+                    <div class="home-news-entry-title">
+                        <a href="<?php echo $post->getPostUrl() ?>">
+                            <?php echo $block->escapeHtml($post->getTitle()) ?>
+                        </a>
+                    </div>
                     <div class="home-news-entry-date"><?php echo $post->getPublishDate('d.m.Y') ?></div>
                     <div class="home-news-entry-content"><?php echo $block->getShorContent($post) ?></div>
+                    <a href="<?php echo $post->getPostUrl() ?>">
+                        <?php echo __('Read more &#187;') ?>
+                    </a>
                 </div>
             </div>
             <?php endforeach; ?>
