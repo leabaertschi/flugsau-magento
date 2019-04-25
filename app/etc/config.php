@@ -1665,6 +1665,7 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                     'guest_template' => 'sales_email_order_guest_template',
                     'identity' => 'sales',
                     'copy_method' => 'copy',
+                    'copy_to' => 'info@flugsau.ch'
                 ],
                 'order_comment' => [
                     'enabled' => '1',
@@ -2463,7 +2464,7 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
             ],
             'tax' => [
                 'classes' => [
-                    'shipping_tax_class' => '0',
+                    'shipping_tax_class' => '2',
                     'default_product_tax_class' => '2',
                     'default_customer_tax_class' => '3',
                     'default_customer_code' => 'General',
@@ -2480,7 +2481,7 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                     'discount_tax' => '0',
                     'based_on' => 'shipping',
                     'price_includes_tax' => '0',
-                    'shipping_includes_tax' => '0',
+                    'shipping_includes_tax' => '1',
                     'apply_tax_on' => '0',
                     'cross_border_trade_enabled' => '0',
                 ],
