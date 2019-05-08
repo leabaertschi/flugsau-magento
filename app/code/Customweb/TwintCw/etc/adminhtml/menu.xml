@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+    	<add id="Customweb_TwintCw::transactions" title="TWINT Transactions" module="Customweb_TwintCw" sortOrder="10" parent="Customweb_Base::sales_customweb" action="twintcw/transaction" resource="Customweb_TwintCw::transaction" />
+
+        <add id="Customweb_TwintCw::config" title="TWINT" module="Customweb_TwintCw" sortOrder="100" parent="Customweb_Base::config" action="twintcw/config" resource="Customweb_TwintCw::config"/>
+    </menu>
+</config>

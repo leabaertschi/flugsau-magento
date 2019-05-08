@@ -1,0 +1,111 @@
+.twintcw-payment-information-block {
+	margin: 0 0 3rem;
+}
+
+.twintcw-transaction-payment-information-block {
+	margin: 3rem 0;
+	background-color: #f1f1f1;
+	padding: 1rem;
+}
+
+.twintcw-transaction-information .tooltip,
+.twintcw-payment-information-block .tooltip {
+	float: right;
+}
+
+@media (min-width: 768px) {
+	.twintcw-transaction-information,
+	.twintcw-transaction-captures {
+		float: left;
+		width: calc( (100%) * .5 - 30px );
+	}
+	
+	.twintcw-transaction-history,
+	.twintcw-transaction-refunds {
+		float: right;
+		width: calc( (100%) * .5 - 30px );
+	}
+}
+
+.twintcw_form .admin__field .note,
+.twintcw_form .admin__field div.mage-error {
+	clear: both;
+	padding: 5px 0;
+	margin-left: calc( (100%) * .33333333 + 30px );	
+}
+.twintcw_form .admin__field .note {
+	font-size: 12px;
+	color: #303030;
+}
+.twintcw_form .admin__field div.mage-error,
+.twintcw_form td.value div.mage-error {
+	font-size: 12px;
+	color: #e02b27;
+}
+
+.twintcw_form .html-field {
+	line-height: 3.2rem;
+}
+
+.twintcw_form .multi-control:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.twintcw_form .multi-control > div > div {
+	width: auto;
+	float: left;
+	margin-right: 5px;
+	margin-top: 0;
+}
+
+
+/*** CHECKOUT ***/
+
+.twintcw_form .card-number .multi-control > div > div {
+	width: 100%;
+	float: none;
+	margin: 0;
+}
+
+.twintcw_form .card-brand-image-color.brand-is-deselected {
+	display:none;
+}
+
+.twintcw_form .card-brand-image-grey.brand-is-selected {
+	display:none;
+}
+
+.twintcw_form .card-brand-image-selection {
+	margin-top: 5px;
+}
+
+.twintcw_form .card-brand-image-selection img {
+	width:auto;
+	height: 20px;
+	margin-right: 3px;
+	vertical-align: middle;
+}
+
+.twintcw_form .invalid-card-number,
+.twintcw_form .invalid-cvc-number {
+	border-color: #ed8380;
+	background-image: url(../images/invalid.png) !important;
+	background-position: right 5px center;
+	background-repeat: no-repeat !important;
+}
+
+.twintcw_form .valid-card-number,
+.twintcw_form .valid-cvc-number {
+	background-image: url(../images/valid.png) !important;
+	background-position: right 5px center;
+	background-repeat: no-repeat !important;
+}
+
+.twintcw_form .alias select {
+	width: 100%;
+}
+
+.twintcw_form .alias select option:empty {
+	display: block;
+}

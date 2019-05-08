@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<section id="twintcw" type="text" sortOrder="800" showInDefault="1" showInWebsite="1" showInStore="1">
+			<label>TwintCw</label>
+			<tab>sales</tab>
+			<resource>Customweb_TwintCw::config_twintcw</resource>
+			<group id="information" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="0" translate="label">
+				<label><![CDATA[Information]]></label>
+				<field id="version" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="0" translate="label" type="label">
+					<label><![CDATA[Version]]></label>
+				</field>
+				<field id="more" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" type="label">
+					<frontend_model>Customweb\TwintCw\Block\Backend\System\Config\Information\More</frontend_model>
+				</field>
+			</group>
+			<group id="shop" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+				<label><![CDATA[Shop]]></label>
+				<field id="alias_management" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="0" translate="label" type="select">
+					<label><![CDATA[Customer Alias Management]]></label>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+					<comment><![CDATA[You can allow the customers to manage/delete their aliases in the their account.]]></comment>
+				</field>
+				<field id="await_notification" showInDefault="1" showInStore="0" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label><![CDATA[Await Notification]]></label>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+					<comment><![CDATA[In some cases it may take a few seconds until the transaction is successfully authorized. When this option is enabled, the notification is awaited.]]></comment>
+				</field>
+				
+			</group>
+			<group id="general" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20" translate="label">
+				<label><![CDATA[General]]></label>
+				<field id="operation_mode" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="0" translate="label comment" type="select">
+					<label><![CDATA[Operation Mode]]></label>
+					<comment><![CDATA[Used to toggle test / live mode. The switching from
+							test
+							to live mode will change the used settings from test to live
+							settings.
+						]]></comment>
+					<source_model>Customweb\TwintCw\Model\Config\Source\OperationMode</source_model>
+				</field>
+				<field id="merchant_uuid" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label comment" type="text">
+					<label><![CDATA[System ID]]></label>
+					<comment><![CDATA[The system id found in the
+							TWINT backend under Sales Outlets /
+							System ID.
+						]]></comment>
+				</field>
+				<field id="certificate_string" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20" translate="label comment" type="textarea">
+					<label><![CDATA[Certificate]]></label>
+					<comment><![CDATA[Here you can specify which certificate which will be
+							used to encrypt the communication. The certificate can be found in
+							the TWINT backend under Settings /
+							Order certificate from SwissSign. The file must be converted to a
+							PEM file (see manual) and the content of the file copied into this
+							field.
+						]]></comment>
+				</field>
+				<field id="certificate_passphrase" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="30" translate="label comment" type="text">
+					<label><![CDATA[Certificate Passphrase]]></label>
+					<comment><![CDATA[Here you can set the passphrase for the certificate. The
+							passphrase can be retrieved from the
+							____paymenServiceProviderName____ backend up to five days after the
+							certificate was created. If this period has run out a new
+							certificate must be generated.
+						]]></comment>
+				</field>
+				<field id="test_merchant_uuid" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="40" translate="label comment" type="text">
+					<label><![CDATA[System ID (Test)]]></label>
+					<comment><![CDATA[The system id found in the
+							TWINT backend under Sales Outlets /
+							System ID.
+						]]></comment>
+				</field>
+				<field id="test_certificate_string" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="50" translate="label comment" type="textarea">
+					<label><![CDATA[Certificate (Test)]]></label>
+					<comment><![CDATA[Here you can specify which certificate which will be
+							used to encrypt the communication in test mode. The certificate can
+							be found in the TWINT backend under
+							Settings / Order certificate from SwissSign. The file must be
+							converted to a PEM file (see manual) and the content of the file
+							copied into this field.
+						]]></comment>
+				</field>
+				<field id="test_certificate_passphrase" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="60" translate="label comment" type="text">
+					<label><![CDATA[Certificate Passphrase (Test)]]></label>
+					<comment><![CDATA[Here you can set the passphrase for the test
+							certificate. The passphrase can be retrieved from the
+							____paymenServiceProviderName____ backend up to five days after the
+							certificate was created. If this period has run out a new
+							certificate must be generated.
+						]]></comment>
+				</field>
+				<field id="order_id_schema" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="70" translate="label comment" type="text">
+					<label><![CDATA[Order Schema]]></label>
+					<comment><![CDATA[Here you can modify what the order number looks like.
+							The placeholder {id} will be replaced with the internal order number
+							(e.g. 'MyShop-{id}'))
+						]]></comment>
+				</field>
+				<field id="poll_timeout_server" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="80" translate="label comment" type="text">
+					<label><![CDATA[Server Polling Timeout]]></label>
+					<comment><![CDATA[The shop polls the transaction status until the
+							transaction is successful. The polling
+							timeout indicates the number
+							of minutes the polling is executed
+							before the transaction is
+							cancelled.
+						]]></comment>
+				</field>
+			</group>
+			<group id="logging" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="30" translate="label">
+				<label><![CDATA[Logging]]></label>
+				<field id="level" showInDefault="1" showInStore="0" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label><![CDATA[Level]]></label>
+					<source_model>Customweb\TwintCw\Model\Config\Source\LoggingLevel</source_model>
+					<comment><![CDATA[Messages of this or a higher level will be logged.]]></comment>
+				</field>
+			</group>
+		</section>
+		<section id="payment">
+			<group id="twintcw_twint" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+				<label>TWINT Twint</label>
+				<field id="model"/>
+				<field id="active" showInDefault="1" showInStore="0" showInWebsite="1" sortOrder="0" translate="label" type="select">
+					<label><![CDATA[Enabled]]></label>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="title" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+					<label><![CDATA[Title]]></label>
+				</field>
+				<field id="description" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20" translate="label" type="textarea">
+					<label><![CDATA[Description]]></label>
+				</field>
+				<field id="show_image" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="30" translate="label" type="select">
+					<label><![CDATA[Show Image]]></label>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="show_payment_id" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="40" translate="label" type="select">
+					<label><![CDATA[Show Payment Id]]></label>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+					<comment><![CDATA[Show the payment id in the order information]]></comment> 
+				</field>
+				<field id="currency" showInDefault="1" showInStore="0" showInWebsite="1" sortOrder="50" translate="label" type="multiselect">
+					<label><![CDATA[Allowed Currencies]]></label>
+					<source_model>Customweb\TwintCw\Model\Config\Source\Twint\Currency</source_model>
+					<can_be_empty>1</can_be_empty>
+				</field>
+				<field id="base_currency" showInDefault="1" showInStore="0" showInWebsite="1" sortOrder="60" translate="label" type="select">
+					<label><![CDATA[Use Base Currency]]></label>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+					<comment><![CDATA[Send amounts to TWINT in store's base currency.]]></comment>
+				</field>
+				<field id="allowspecific" showInDefault="1" showInStore="0" showInWebsite="1" sortOrder="70" translate="label" type="allowspecific">
+					<label><![CDATA[Payment from Applicable Countries]]></label>
+					<source_model>Magento\Payment\Model\Config\Source\Allspecificcountries</source_model>
+				</field>
+				<field id="specificcountry" showInDefault="1" showInStore="0" showInWebsite="1" sortOrder="80" translate="label" type="multiselect">
+					<label><![CDATA[Payment from Specific Countries]]></label>
+					<source_model>Customweb\TwintCw\Model\Config\Source\Twint\Country</source_model>
+					<can_be_empty>1</can_be_empty>
+				</field>
+				<field id="min_order_total" showInDefault="1" showInStore="0" showInWebsite="1" sortOrder="90" translate="label" type="text">
+					<label><![CDATA[Minimum Order Total]]></label>
+				</field>
+				<field id="max_order_total" showInDefault="1" showInStore="0" showInWebsite="1" sortOrder="100" translate="label" type="text">
+					<label><![CDATA[Maximum Order Total]]></label>
+				</field>
+				<field id="sort_order" showInDefault="1" showInStore="0" showInWebsite="1" sortOrder="120" translate="label" type="text">
+					<label><![CDATA[Sort Order]]></label>
+					<frontend_class>validate-number</frontend_class>
+				</field>
+				<field id="settlement" showInDefault="1" showInStore="0" showInWebsite="1" sortOrder="130" translate="label" type="select">
+					<label><![CDATA[Invoice Settlement]]></label>
+					<source_model>Customweb\TwintCw\Model\Config\Source\Settlement</source_model>
+					<comment><![CDATA[Choose settlement after order in case you want an invoice to be created with your oder. The state of the invoice will set according to your capture status.]]></comment>
+				</field>
+				<field id="invoice_email" showInDefault="1" showInStore="0" showInWebsite="1" sortOrder="140" translate="label" type="select">
+					<label><![CDATA[Send Invoice Email]]></label>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+					<comment><![CDATA[Send the invoice email automatically after invoice creation.]]></comment>
+					<depends>
+						<field id="settlement">direct</field>
+					</depends>
+				</field>
+			<field id="capturing" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="150" translate="label comment" type="select">
+					<label><![CDATA[Capturing method]]></label>
+					<comment><![CDATA[Should the authorized amount be transferred directly
+									(direct) or should it be captured manually (deferred)?
+								]]></comment>
+					<source_model>Customweb\TwintCw\Model\Config\Source\Capturing</source_model>
+				</field>
+				<field id="authorizationMethod" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="160" translate="label comment" type="select">
+					<label><![CDATA[Authorization Method]]></label>
+					<comment><![CDATA[Select the authorization method to use for processing this payment method.]]></comment>
+					<source_model>Customweb\TwintCw\Model\Config\Source\Authorizationmethod</source_model>
+				</field>
+			</group>
+		</section>
+	</system>
+</config>

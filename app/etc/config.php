@@ -4,29 +4,31 @@ return [
         'Magento_Store' => 1,
         'Magento_Directory' => 1,
         'Magento_Theme' => 1,
+        'Customweb_Base' => 1,
+        'Magento_Variable' => 1,
         'Magento_Backend' => 1,
         'Flugsau_Shop' => 1,
-        'Magento_Variable' => 1,
         'Magento_Eav' => 1,
         'Magento_AdminNotification' => 1,
+        'Magento_Indexer' => 1,
         'Lillik_PriceDecimal' => 1,
         'MSP_ReCaptcha' => 1,
         'Magento_Config' => 1,
         'Magefan_Community' => 1,
-        'Magento_Indexer' => 1,
         'Magento_Customer' => 1,
+        'Magento_Cms' => 1,
         'Magento_AdvancedPricingImportExport' => 1,
         'Magento_Search' => 1,
         'Magento_Amqp' => 1,
         'Magento_Security' => 1,
         'Magento_User' => 1,
         'Magento_Authorization' => 1,
-        'Magento_Cms' => 1,
+        'Magento_Catalog' => 1,
         'Magento_Quote' => 1,
         'Magento_Rule' => 1,
         'Magento_Backup' => 1,
         'Magento_SalesSequence' => 1,
-        'Magento_Catalog' => 1,
+        'Magento_Bundle' => 1,
         'Magento_GraphQl' => 1,
         'Magento_BundleImportExport' => 1,
         'Magento_CacheInvalidate' => 1,
@@ -58,19 +60,19 @@ return [
         'Magento_Cookie' => 1,
         'Magento_Email' => 1,
         'Magento_CurrencySymbol' => 1,
-        'Magento_Paypal' => 1,
+        'Customweb_TwintCw' => 1,
         'Magento_Analytics' => 1,
         'Magento_CustomerGraphQl' => 1,
         'Magento_CustomerImportExport' => 1,
         'Magento_Deploy' => 1,
         'Magento_Developer' => 1,
         'Magento_Dhl' => 1,
-        'Amazon_Core' => 0,
+        'Magento_Paypal' => 1,
         'Magento_DirectoryGraphQl' => 1,
         'Magento_Downloadable' => 1,
         'Magento_DownloadableGraphQl' => 1,
         'Magento_ImportExport' => 1,
-        'Magento_Authorizenet' => 1,
+        'Amazon_Core' => 0,
         'Magento_BundleGraphQl' => 1,
         'Magento_AdvancedSearch' => 1,
         'Magento_Elasticsearch' => 1,
@@ -87,7 +89,7 @@ return [
         'Magento_GroupedCatalogInventory' => 1,
         'Magento_GroupedProductGraphQl' => 1,
         'Magento_DownloadableImportExport' => 1,
-        'Magefan_Blog' => 1,
+        'Magento_Authorizenet' => 1,
         'Magento_InstantPurchase' => 1,
         'Magento_CatalogAnalytics' => 1,
         'Magento_Inventory' => 0,
@@ -175,7 +177,7 @@ return [
         'Magento_InventoryShippingAdminUi' => 0,
         'Magento_Signifyd' => 1,
         'Magento_Sitemap' => 1,
-        'Klarna_Ordermanagement' => 1,
+        'Magefan_Blog' => 1,
         'Magento_ConfigurableProductGraphQl' => 1,
         'Magento_Webapi' => 1,
         'Magento_SwaggerWebapi' => 1,
@@ -186,7 +188,7 @@ return [
         'Magento_Tax' => 1,
         'Magento_TaxGraphQl' => 1,
         'Magento_TaxImportExport' => 1,
-        'Magento_CheckoutAgreements' => 1,
+        'Klarna_Ordermanagement' => 1,
         'Magento_ThemeGraphQl' => 1,
         'Magento_Tinymce3' => 1,
         'Magento_Translation' => 1,
@@ -196,7 +198,7 @@ return [
         'Magento_CatalogUrlRewriteGraphQl' => 1,
         'Magento_AsynchronousOperations' => 1,
         'Magento_Usps' => 1,
-        'Magento_Bundle' => 1,
+        'Magento_CheckoutAgreements' => 1,
         'Klarna_Kp' => 1,
         'Magento_Version' => 1,
         'Magento_Swagger' => 1,
@@ -322,6 +324,7 @@ return [
      * CONFIG__DEFAULT__PAYMENT__BRAINTREE__DESCRIPTOR_PHONE for payment/braintree/descriptor_phone
      * CONFIG__DEFAULT__PAYMENT__BRAINTREE__DESCRIPTOR_URL for payment/braintree/descriptor_url
      * CONFIG__DEFAULT__PAYMENT__BRAINTREE_PAYPAL__MERCHANT_NAME_OVERRIDE for payment/braintree_paypal/merchant_name_override
+     * CONFIG__DEFAULT__SALES_EMAIL__ORDER__COPY_TO for sales_email/order/copy_to
      * CONFIG__DEFAULT__CHECKOUT__PAYMENT_FAILED__COPY_TO for checkout/payment_failed/copy_to
      * CONFIG__DEFAULT__CONTACT__EMAIL__RECIPIENT_EMAIL for contact/email/recipient_email
      * CONFIG__DEFAULT__TRANS_EMAIL__IDENT_CUSTOM1__EMAIL for trans_email/ident_custom1/email
@@ -334,15 +337,6 @@ return [
      * CONFIG__DEFAULT__TRANS_EMAIL__IDENT_SALES__NAME for trans_email/ident_sales/name
      * CONFIG__DEFAULT__TRANS_EMAIL__IDENT_SUPPORT__EMAIL for trans_email/ident_support/email
      * CONFIG__DEFAULT__TRANS_EMAIL__IDENT_SUPPORT__NAME for trans_email/ident_support/name
-     * CONFIG__DEFAULT__PAYPAL__WPP__API_PASSWORD for paypal/wpp/api_password
-     * CONFIG__DEFAULT__PAYPAL__WPP__API_SIGNATURE for paypal/wpp/api_signature
-     * CONFIG__DEFAULT__PAYPAL__WPP__API_USERNAME for paypal/wpp/api_username
-     * CONFIG__DEFAULT__PAYPAL__FETCH_REPORTS__FTP_LOGIN for paypal/fetch_reports/ftp_login
-     * CONFIG__DEFAULT__PAYPAL__FETCH_REPORTS__FTP_PASSWORD for paypal/fetch_reports/ftp_password
-     * CONFIG__DEFAULT__PAYPAL__FETCH_REPORTS__FTP_IP for paypal/fetch_reports/ftp_ip
-     * CONFIG__DEFAULT__PAYPAL__FETCH_REPORTS__FTP_PATH for paypal/fetch_reports/ftp_path
-     * CONFIG__DEFAULT__PAYPAL__GENERAL__MERCHANT_COUNTRY for paypal/general/merchant_country
-     * CONFIG__DEFAULT__PAYPAL__GENERAL__BUSINESS_ACCOUNT for paypal/general/business_account
      * CONFIG__DEFAULT__ANALYTICS__URL__SIGNUP for analytics/url/signup
      * CONFIG__DEFAULT__ANALYTICS__URL__UPDATE for analytics/url/update
      * CONFIG__DEFAULT__ANALYTICS__URL__BI_ESSENTIALS for analytics/url/bi_essentials
@@ -371,6 +365,15 @@ return [
      * CONFIG__DEFAULT__CARRIERS__USPS__GATEWAY_SECURE_URL for carriers/usps/gateway_secure_url
      * CONFIG__DEFAULT__CARRIERS__USPS__USERID for carriers/usps/userid
      * CONFIG__DEFAULT__CARRIERS__USPS__PASSWORD for carriers/usps/password
+     * CONFIG__DEFAULT__PAYPAL__WPP__API_PASSWORD for paypal/wpp/api_password
+     * CONFIG__DEFAULT__PAYPAL__WPP__API_SIGNATURE for paypal/wpp/api_signature
+     * CONFIG__DEFAULT__PAYPAL__WPP__API_USERNAME for paypal/wpp/api_username
+     * CONFIG__DEFAULT__PAYPAL__FETCH_REPORTS__FTP_LOGIN for paypal/fetch_reports/ftp_login
+     * CONFIG__DEFAULT__PAYPAL__FETCH_REPORTS__FTP_PASSWORD for paypal/fetch_reports/ftp_password
+     * CONFIG__DEFAULT__PAYPAL__FETCH_REPORTS__FTP_IP for paypal/fetch_reports/ftp_ip
+     * CONFIG__DEFAULT__PAYPAL__FETCH_REPORTS__FTP_PATH for paypal/fetch_reports/ftp_path
+     * CONFIG__DEFAULT__PAYPAL__GENERAL__MERCHANT_COUNTRY for paypal/general/merchant_country
+     * CONFIG__DEFAULT__PAYPAL__GENERAL__BUSINESS_ACCOUNT for paypal/general/business_account
      * CONFIG__DEFAULT__NEWRELICREPORTING__GENERAL__API_URL for newrelicreporting/general/api_url
      * CONFIG__DEFAULT__NEWRELICREPORTING__GENERAL__INSIGHTS_API_URL for newrelicreporting/general/insights_api_url
      * CONFIG__DEFAULT__FRAUD_PROTECTION__SIGNIFYD__API_URL for fraud_protection/signifyd/api_url
@@ -1166,6 +1169,26 @@ Disallow: /*SID=
                     'debug' => '1',
                     'model' => 'Magento\\Vault\\Model\\VaultPaymentInterface',
                 ],
+                'twintcw_twint' => [
+                    'model' => 'Customweb\\TwintCw\\Model\\Payment\\Method\\Twint',
+                    'payment_action' => 'initialize',
+                    'group' => 'twintcw',
+                    'title' => 'Twint',
+                    'description' => 'Pay with Twint',
+                    'show_image' => '1',
+                    'show_payment_id' => '1',
+                    'base_currency' => '0',
+                    'allowspecific' => '1',
+                    'settlement' => 'direct',
+                    'invoice_email' => '1',
+                    'capturing' => 'direct',
+                    'authorizationMethod' => 'PaymentPage',
+                    'currency' => 'CHF',
+                    'specificcountry' => 'CH',
+                    'min_order_total' => NULL,
+                    'max_order_total' => NULL,
+                    'sort_order' => '1',
+                ],
                 'paypal_express' => [
                     'model' => 'Magento\\Paypal\\Model\\Express',
                     'title' => 'PayPal',
@@ -1183,7 +1206,7 @@ Disallow: /*SID=
                     'skip_order_review_step' => '1',
                     'active' => '1',
                     'in_context' => '0',
-                    'sort_order' => NULL,
+                    'sort_order' => 4,
                     'allowspecific' => '0',
                     'transfer_shipping_options' => '0',
                     'require_billing_address' => '0',
@@ -1332,7 +1355,7 @@ Disallow: /*SID=
                     'payable_to' => NULL,
                     'min_order_total' => NULL,
                     'max_order_total' => NULL,
-                    'sort_order' => NULL,
+                    'sort_order' => 2,
                 ],
                 'purchaseorder' => [
                     'active' => '0',
@@ -1357,7 +1380,7 @@ Disallow: /*SID=
                     'instructions' => NULL,
                     'min_order_total' => NULL,
                     'max_order_total' => NULL,
-                    'sort_order' => NULL,
+                    'sort_order' => 3,
                 ],
                 'cashondelivery' => [
                     'active' => '0',
@@ -1814,52 +1837,21 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                     'email_template' => 'contact_email_email_template',
                 ],
             ],
-            'paypal' => [
-                'style' => [
-                    'logo' => NULL,
-                    'checkout_page_button_customize' => '0',
-                    'checkout_page_button_label' => 'paypal',
-                    'checkout_page_button_layout' => 'vertical',
-                    'checkout_page_button_size' => 'responsive',
-                    'checkout_page_button_shape' => 'rect',
-                    'checkout_page_button_color' => 'gold',
-                    'product_page_button_customize' => '0',
-                    'product_page_button_label' => 'buynow',
-                    'product_page_button_layout' => 'horizontal',
-                    'product_page_button_size' => 'responsive',
-                    'product_page_button_shape' => 'pill',
-                    'product_page_button_color' => 'gold',
-                    'cart_page_button_customize' => '0',
-                    'cart_page_button_label' => 'paypal',
-                    'cart_page_button_layout' => 'vertical',
-                    'cart_page_button_size' => 'responsive',
-                    'cart_page_button_shape' => 'rect',
-                    'cart_page_button_color' => 'gold',
-                    'mini_cart_page_button_customize' => '0',
-                    'mini_cart_page_button_label' => 'paypal',
-                    'mini_cart_page_button_layout' => 'vertical',
-                    'mini_cart_page_button_size' => 'responsive',
-                    'mini_cart_page_button_shape' => 'rect',
-                    'mini_cart_page_button_color' => 'gold',
-                    'page_style' => NULL,
-                    'paypal_hdrimg' => 'http://185.48.228.39/flugsau/pub/static/frontend/Smartwave/port_child/de_CH/images/logo.png',
-                    'paypal_hdrbackcolor' => NULL,
-                    'paypal_hdrbordercolor' => NULL,
-                    'paypal_payflowcolor' => NULL,
+            'twintcw' => [
+                'information' => [
+                    'version' => '4.0.62',
                 ],
-                'wpp' => [
-                    'button_flavor' => 'dynamic',
-                    'api_authentication' => '0',
-                    'use_proxy' => '0',
+                'shop' => [
+                    'alias_management' => '0',
+                    'await_notification' => '1',
+                    'external_checkout_account_creation' => 'force_selection',
                 ],
-                'wpuk' => [
-                    'user' => NULL,
-                    'pwd' => NULL,
+                'logging' => [
+                    'level' => 'error',
                 ],
-                'fetch_reports' => [
-                    'schedule' => '1',
-                    'time' => '00,00,00',
-                    'active' => '0',
+                'general' => [
+                    'order_id_schema' => '{id}',
+                    'poll_timeout_server' => '30'
                 ],
             ],
             'analytics' => [
@@ -2032,6 +2024,55 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                     'specificcountry' => NULL,
                     'showmethod' => '0',
                     'sort_order' => NULL,
+                ],
+            ],
+            'paypal' => [
+                'style' => [
+                    'logo' => NULL,
+                    'checkout_page_button_customize' => '0',
+                    'checkout_page_button_label' => 'paypal',
+                    'checkout_page_button_layout' => 'vertical',
+                    'checkout_page_button_size' => 'responsive',
+                    'checkout_page_button_shape' => 'rect',
+                    'checkout_page_button_color' => 'gold',
+                    'product_page_button_customize' => '0',
+                    'product_page_button_label' => 'buynow',
+                    'product_page_button_layout' => 'horizontal',
+                    'product_page_button_size' => 'responsive',
+                    'product_page_button_shape' => 'pill',
+                    'product_page_button_color' => 'gold',
+                    'cart_page_button_customize' => '0',
+                    'cart_page_button_label' => 'paypal',
+                    'cart_page_button_layout' => 'vertical',
+                    'cart_page_button_size' => 'responsive',
+                    'cart_page_button_shape' => 'rect',
+                    'cart_page_button_color' => 'gold',
+                    'mini_cart_page_button_customize' => '0',
+                    'mini_cart_page_button_label' => 'paypal',
+                    'mini_cart_page_button_layout' => 'vertical',
+                    'mini_cart_page_button_size' => 'responsive',
+                    'mini_cart_page_button_shape' => 'rect',
+                    'mini_cart_page_button_color' => 'gold',
+                    'page_style' => NULL,
+                    'paypal_hdrimg' => 'http://185.48.228.39/flugsau/pub/static/frontend/Smartwave/port_child/de_CH/images/logo.png',
+                    'paypal_hdrbackcolor' => NULL,
+                    'paypal_hdrbordercolor' => NULL,
+                    'paypal_payflowcolor' => NULL,
+                    'disable_funding_options' => NULL,
+                ],
+                'wpp' => [
+                    'button_flavor' => 'dynamic',
+                    'api_authentication' => '0',
+                    'use_proxy' => '0',
+                ],
+                'wpuk' => [
+                    'user' => NULL,
+                    'pwd' => NULL,
+                ],
+                'fetch_reports' => [
+                    'schedule' => '1',
+                    'time' => '00,00,00',
+                    'active' => '0',
                 ],
             ],
             'import' => [
@@ -4151,6 +4192,9 @@ UID Nr: CHE-116.135.646',
                     ],
                     'banktransfer' => [
                         'title' => 'Vorauskasse',
+                    ],
+                    'twintcw_twint' => [
+                        'description' => 'Mit Twint bezahlen',
                     ],
                     'checkmo' => [
                         'title' => 'Rechnung',
