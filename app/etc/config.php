@@ -4333,10 +4333,6 @@ UID Nr: CHE-116.135.646',
                     'seo' => [
                         'use_rewrites' => '1',
                     ],
-                    'secure' => [
-                        'use_in_frontend' => NULL,
-                        'use_in_adminhtml' => NULL,
-                    ],
                 ],
                 'currency' => [
                     'options' => [
