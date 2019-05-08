@@ -4329,6 +4329,11 @@ UID Nr: CHE-116.135.646',
                         'specificcountry' => NULL,
                     ],
                 ],
+                'customer' => [
+                    'captcha' => [
+                        'forms' => 'user_create,user_login,user_forgotpassword,contact_us,user_edit,product_sendtofriend_form,share_wishlist_form,guest_checkout,register_during_checkout',
+                    ],
+                ],
                 'web' => [
                     'seo' => [
                         'use_rewrites' => '1',
