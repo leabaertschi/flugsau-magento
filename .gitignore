@@ -57,6 +57,8 @@ atlassian*
 !/pub/media/wysiwyg/.htaccess
 /pub/media/tmp/*
 !/pub/media/tmp/.htaccess
+/pub/media/mageplaza
+!/pub/media/mageplaza/.htaccess
 /pub/media/captcha/*
 /pub/media/magefan_blog/*
 /pub/static/*
