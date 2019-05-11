@@ -211,6 +211,7 @@ return [
         'Magento_WishlistAnalytics' => 1,
         'Magento_WishlistGraphQl' => 1,
         'Mageplaza_Core' => 1,
+        'Mageplaza_BannerSlider' => 1,
         'Mageplaza_LayeredNavigation' => 1,
         'Smartwave_Core' => 1,
         'Smartwave_Filterproducts' => 1,
@@ -2920,6 +2921,32 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                     'notice_type' => 'announcement,new_update,marketing',
                 ],
             ],
+            'mpbannerslider' => [
+                'module' => [
+                    'type' => '1',
+                    'active' => '1',
+                    'product_key' => 'G3KO47PCN57ZZU50MQK06U8S985V65TB1IABWYZK',
+                    'email' => 'baernerin@gmail.com',
+                    'name' => 'Lea Bärtschi',
+                    'create' => '1',
+                    'subscribe' => '0',
+                ],
+                'general' => [
+                    'enabled' => '1',
+                ],
+                'mpbannerslider_design' => [
+                    'responsive' => '0',
+                    'autoWidth' => '0',
+                    'autoHeight' => '0',
+                    'loop' => '1',
+                    'nav' => '0',
+                    'dots' => '1',
+                    'lazyLoad' => '0',
+                    'autoplay' => '1',
+                    'autoplayTimeout' => '5000',
+                    'item_slider' => '[]',
+                ],
+            ],
             'layered_navigation' => [
                 'general' => [
                     'enable' => '0',
@@ -3960,6 +3987,14 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                     'main_bgcolor' => NULL,
                     'main_bg_image' => NULL,
                     'main_custom_style' => NULL,
+                ],
+            ],
+            'free' => [
+                'module' => [
+                    'email' => 'baernerin@gmail.com',
+                    'name' => 'Lea Bärtschi',
+                    'create' => '1',
+                    'subscribe' => '0',
                 ],
             ],
             'connector_sync_settings' => [

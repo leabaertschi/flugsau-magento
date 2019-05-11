@@ -13,7 +13,8 @@
         "magefan/module-blog": "2.8.9",
         "mageplaza/magento-2-german-language-pack": "dev-master",
         "staempfli/magento2-language-de-ch": "dev-magento-2.3-compatibility",
-        "lillik/magento2-price-decimal": "^1.0"
+        "lillik/magento2-price-decimal": "^1.0",
+        "mageplaza/module-banner-slider": "^2.0"
     },
     "require-dev": {
         "phpunit/phpunit": "~6.2.0",
