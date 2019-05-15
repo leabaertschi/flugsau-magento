@@ -86,53 +86,10 @@
     }
 
     .home-cover {
-        width: 100%;
-        @bannerHeight: 730px;
-
-        .owl-carousel .owl-item {
-            height: @bannerHeight;
-        }
-
-        // .owl-carousel .owl-item img {
-        //     width: auto;
-        //     max-width: 100%;
-        //     height: 730px;
-        // }
-
         .product-banner {
-            background-color: lighten(@contrastColor, 40%);
-            width: 100%;
-            height: @bannerHeight;
-            padding: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        
-            .product-banner-image {
-                margin-right: 20px;
-                width: 30%;   
-            }
-
-            .product-image-container {
-                background: none;
-                min-width: unset;
-            }
-
             .product-banner-name {
                 font-size: 40px;
                 margin-bottom: 20px;
-            }
-
-            .product-banner-link {
-                .button {
-                    background-color: @contrastColor;
-                    color: @white;
-
-                    &:hover {
-                        background-color: @buttonHoverBorderColor !important;
-                        border-color: @buttonHoverBorderColor;
-                    }
-                }
             }
         }
     }
