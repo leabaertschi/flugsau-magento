@@ -48,9 +48,7 @@ class BannerTemplate extends \Mageplaza\BannerSlider\Model\Config\Source\Templat
         $templates = [
             self::PRODUCT => [
                 'tpl' => <<<HTML
-<div class="banner-product">
-    {{block class="Magento\Catalog\Block\Product\View" product_id="124" template="Flugsau_Shop::html/product_banner.phtml"}}
-</div>
+{{block class="Flugsau\Shop\Block\ProductBanner" product_id="124" template="Flugsau_Shop::html/product_banner.phtml"}}
 HTML
             ,
                 'var' => '{{imgName}}'

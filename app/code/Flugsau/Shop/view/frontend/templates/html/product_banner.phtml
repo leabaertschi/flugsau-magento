@@ -3,7 +3,9 @@
     $product = $block->getProduct();
 ?>
 <div class="product-banner">
-    <div class="product-banner-image"><?= $block->getImage($product, 'product_page_main_image')->toHtml() ?></div>
+    <div class="product-banner-image">
+        <img src="<?= $block->getImageUrl($product) ?>" alt="<?= $product->getName() ?>" />
+    </div>
     <div>
         <div class="product-banner-name"><?= $product->getName() ?></div>
         <div class="product-banner-link"><a class="button" href="<?= $block->getProductUrl($product) ?>"><?= __('to the product') ?></a></div>
