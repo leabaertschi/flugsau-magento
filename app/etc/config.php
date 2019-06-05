@@ -408,27 +408,6 @@ return [
                     'default_keywords' => NULL,
                     'includes' => NULL,
                 ],
-                'search_engine_robots' => [
-                    'default_robots' => 'INDEX,FOLLOW',
-                    'default_custom_instructions' => '
-User-agent: *
-Disallow: /index.php/
-Disallow: /*?
-Disallow: /checkout/
-Disallow: /app/
-Disallow: /lib/
-Disallow: /*.php$
-Disallow: /pkginfo/
-Disallow: /report/
-Disallow: /var/
-Disallow: /catalog/
-Disallow: /customer/
-Disallow: /sendfriend/
-Disallow: /review/
-Disallow: /*SID=
-                    ',
-                    'custom_instructions' => NULL,
-                ],
                 'header' => [
                     'welcome' => 'Default welcome msg!',
                     'logo_width' => NULL,
@@ -2458,12 +2437,12 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                     'image_include' => 'all',
                 ],
                 'generate' => [
-                    'enabled' => '0',
+                    'enabled' => '1',
                     'error_email_template' => 'sitemap_generate_error_email_template',
                     'error_email_identity' => 'general',
                 ],
                 'search_engines' => [
-                    'submission_robots' => '0',
+                    'submission_robots' => '1',
                 ],
                 'file' => [
                     'valid_paths' => [

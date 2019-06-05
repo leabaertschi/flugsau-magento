@@ -10,7 +10,10 @@ atlassian*
 /robots.txt
 /pub/robots.txt
 /sitemap
-/sitemap.xml
+/sitemap_de.xml
+/sitemap_en.xml
+/blog_sitemap_de.xml
+/blog_sitemap_en.xml
 /pub/sitemap
 /pub/sitemap.xml
 /.idea
