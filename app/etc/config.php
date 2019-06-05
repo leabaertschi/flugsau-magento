@@ -1852,7 +1852,7 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                 ],
                 'general' => [
                     'order_id_schema' => '{id}',
-                    'poll_timeout_server' => '30'
+                    'poll_timeout_server' => '30',
                 ],
             ],
             'analytics' => [
