@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "da88c09d30403942fe753717a6a8c8e2",
+    "content-hash": "ab0863ca99f016535efc8578f797059d",
     "packages": [
         {
             "name": "amzn/amazon-pay-and-login-magento-2-module",
@@ -10253,16 +10253,16 @@
         },
         {
             "name": "mageplaza/module-core",
-            "version": "1.4.4",
+            "version": "1.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mageplaza/module-core.git",
-                "reference": "8d50d27c1b06718c7c9e7bfb38848126e3e43ac0"
+                "reference": "881b4e59ea1684e5a3b22d618a2cb843d941ddaf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mageplaza/module-core/zipball/8d50d27c1b06718c7c9e7bfb38848126e3e43ac0",
-                "reference": "8d50d27c1b06718c7c9e7bfb38848126e3e43ac0",
+                "url": "https://api.github.com/repos/mageplaza/module-core/zipball/881b4e59ea1684e5a3b22d618a2cb843d941ddaf",
+                "reference": "881b4e59ea1684e5a3b22d618a2cb843d941ddaf",
                 "shasum": ""
             },
             "type": "magento2-module",
@@ -10287,7 +10287,7 @@
                 }
             ],
             "description": "Mageplaza Core for Magento 2",
-            "time": "2019-05-24T11:15:09+00:00"
+            "time": "2019-05-06T00:57:34+00:00"
         },
         {
             "name": "monolog/monolog",
