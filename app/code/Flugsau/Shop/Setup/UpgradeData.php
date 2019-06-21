@@ -21,16 +21,25 @@ class UpgradeData implements UpgradeDataInterface
     protected $_blockFactory;
 
     /**
+     * @var \Magento\Eav\Setup\EavSetupFactory
+     */
+    protected $_eavSetupFactory;
+
+    /**
      * Construct
      *
      * @param \Magento\Cms\Model\PageFactory $pageFactory
+     * @param \Magento\Cms\Model\BlockFactory $blockFactory
+     * @param \Magento\Eav\Setup\EavSetupFactory $eavSetupFactory
      */
     public function __construct(
         \Magento\Cms\Model\PageFactory $pageFactory,
-        \Magento\Cms\Model\BlockFactory $blockFactory
+        \Magento\Cms\Model\BlockFactory $blockFactory,
+        \Magento\Eav\Setup\EavSetupFactory $eavSetupFactory
     ) {
         $this->_pageFactory = $pageFactory;
         $this->_blockFactory = $blockFactory;
+        $this->_eavSetupFactory = $eavSetupFactory;
     }
 
     /**
@@ -1010,6 +1019,62 @@ HTML;
                 ->setStores([2])
                 ->setContent($menu_after_en)
                 ->save();
+        }
+
+
+        if (version_compare($context->getVersion(), '1.0.4') < 0) {
+            $eavSetup = $this->_eavSetupFactory->create(['setup' => $setup]);
+            $eavSetup->addAttribute(
+                \Magento\Catalog\Model\Product::ENTITY,
+                'delivery_time_from',
+                [
+                    'group' => 'General',
+                    'type' => 'int',
+                    'backend' => '',
+                    'frontend' => '',
+                    'label' => 'Lieferzeit von',
+                    'input' => 'text',
+                    'frontend_class' => 'validate-digits',
+                    'source' => '',
+                    'global' => \Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface::SCOPE_GLOBAL,
+                    'visible' => true,
+                    'required' => false,
+                    'user_defined' => true,
+                    'default' => '',
+                    'searchable' => false,
+                    'filterable' => false,
+                    'comparable' => false,
+                    'visible_on_front' => true,
+                    'used_in_product_listing' => false,
+                    'unique' => true,
+                    'apply_to' => ''
+                ]);
+
+            $eavSetup->addAttribute(
+                \Magento\Catalog\Model\Product::ENTITY,
+                'delivery_time_to',
+                [
+                    'group' => 'General',
+                    'type' => 'int',
+                    'backend' => '',
+                    'frontend' => '',
+                    'label' => 'Lieferzeit bis',
+                    'input' => 'text',
+                    'frontend_class' => 'validate-digits',
+                    'source' => '',
+                    'global' => \Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface::SCOPE_GLOBAL,
+                    'visible' => true,
+                    'required' => false,
+                    'user_defined' => true,
+                    'default' => '',
+                    'searchable' => false,
+                    'filterable' => false,
+                    'comparable' => false,
+                    'visible_on_front' => true,
+                    'used_in_product_listing' => false,
+                    'unique' => true,
+                    'apply_to' => ''
+                ]);
         }
 
         $setup->endSetup();
