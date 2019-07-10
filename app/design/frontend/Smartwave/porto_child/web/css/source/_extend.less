@@ -304,12 +304,15 @@ button.action.primary {
     .home-news {
 
         h3 {
-            font-family: @fontOpenSans;
-            font-weight: 600;
-            text-transform: uppercase;
-            color: @headerColor;
             margin: 0;
             padding: 20px 0;
+            
+            a {
+                font-family: @fontOpenSans;
+                font-weight: 600;
+                text-transform: uppercase;
+                color: @headerColor;
+            }
         }
 
         .home-news-entries {
@@ -342,7 +345,7 @@ button.action.primary {
                     background-color: @white;
                 }
 
-                .home-news-entry-title {
+                .home-news-entry-title a {
                     font-family: @fontOpenSans;
                     font-size: 24px;
                     color: @headerColor;
