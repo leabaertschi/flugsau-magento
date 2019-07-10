@@ -897,7 +897,7 @@ return [
                     'scope' => '1',
                 ],
                 'create_account' => [
-                    'confirm' => '0',
+                    'confirm' => '1',
                     'default_group' => '1',
                     'tax_calculation_address_type' => 'billing',
                     'email_identity' => 'general',
