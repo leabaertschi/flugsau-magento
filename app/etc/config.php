@@ -219,6 +219,7 @@ return [
         'MSP_TwoFactorAuth' => 1,
         'Magefan_Community' => 1,
         'Magefan_Blog' => 1,
+        'Magefan_WysiwygAdvanced' => 1,
         'Mageplaza_Core' => 1,
         'Mageplaza_BannerSlider' => 1,
         'Mageplaza_LayeredNavigation' => 1,
