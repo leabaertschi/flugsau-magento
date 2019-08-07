@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1467641712c5ff028bdc89e577c35550",
+    "content-hash": "dc16bb7ad1efcc22750e7ac9419c9dd7",
     "packages": [
         {
             "name": "amzn/amazon-pay-and-login-magento-2-module",
@@ -293,6 +293,48 @@
                 "validation"
             ],
             "time": "2019-05-28T15:27:37+00:00"
+        },
+        {
+            "name": "boldcommerce/magento2-ordercomments",
+            "version": "1.6.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/boldcommerce/magento2-ordercomments.git",
+                "reference": "7a4bde1479ac708e320b99cd1671c8a1f145dfaa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/boldcommerce/magento2-ordercomments/zipball/7a4bde1479ac708e320b99cd1671c8a1f145dfaa",
+                "reference": "7a4bde1479ac708e320b99cd1671c8a1f145dfaa",
+                "shasum": ""
+            },
+            "require": {
+                "php": "~7.0.0|~7.1.0|~7.2.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Bold\\OrderComment\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bold Commerce BV",
+                    "email": "info@boldcommerce.nl"
+                }
+            ],
+            "description": "Magento 2 Module to add  a comment field above the place order button in the checkout",
+            "keywords": [
+                "magento2"
+            ],
+            "time": "2019-04-03T08:23:32+00:00"
         },
         {
             "name": "braintree/braintree_php",

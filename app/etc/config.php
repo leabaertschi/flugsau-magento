@@ -206,6 +206,7 @@ return [
         'Amazon_Core' => 0,
         'Amazon_Login' => 0,
         'Amazon_Payment' => 0,
+        'Bold_OrderComment' => 1,
         'Customweb_Base' => 1,
         'Customweb_TwintCw' => 1,
         'Dotdigitalgroup_Email' => 1,
@@ -1663,6 +1664,10 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                 'instant_purchase' => [
                     'active' => '1',
                     'button_text' => 'Instant Purchase',
+                ],
+                'ordercomments' => [
+                    'show_in_account' => '1',
+                    'collapse_state' => '2',
                 ],
             ],
             'sales_email' => [
