@@ -826,7 +826,6 @@ return [
                 'store_information' => [
                     'name' => 'Flugsau GmbH',
                     'phone' => '+41 41 637 09 39',
-                    'hours' => 'Di, Mi, Fr, Sa: 10:00 - 12:00, 13:00 - 17:00',
                     'country_id' => 'CH',
                     'region_id' => 'OW',
                     'postcode' => '6388',
@@ -4092,9 +4091,6 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                 'general' => [
                     'locale' => [
                         'code' => 'en_US',
-                    ],
-                    'store_information' => [
-                        'hours' => 'Tue, We, Fr, Sa: 10:00 - 12:00, 13:00 - 17:00',
                     ],
                 ],
                 'carriers' => [
