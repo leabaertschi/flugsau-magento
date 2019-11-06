@@ -140,7 +140,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     public function getCategoryProductIds($current_category) {
         $category_products = $current_category->getProductCollection()
             ->addAttributeToSelect('*')
-            ->addAttributeToFilter('is_saleable', 1, 'left')
+            ->addAttributeToFilter('is_saleable', array('eq' => 1), 'left')
             ->addAttributeToSort('position','asc');
         $cat_prod_ids = $category_products->getAllIds();
         
