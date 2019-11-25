@@ -3081,6 +3081,12 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                     'enable_addtocart_sticky' => '0',
                     'move_tab' => '0',
                     'move_upsell_full' => '0',
+                    'custom_cms_tabs' => [
+
+                    ],
+                    'custom_attr_tabs' => [
+
+                    ],
                 ],
                 'product_label' => [
                     'new_label' => '1',
