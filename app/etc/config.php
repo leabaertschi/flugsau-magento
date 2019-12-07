@@ -1625,7 +1625,7 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                 'options' => [
                     'can_subtract' => '1',
                     'can_back_in_stock' => '1',
-                    'show_out_of_stock' => '0',
+                    'show_out_of_stock' => '1',
                     'stock_threshold_qty' => '0',
                     'display_product_stock_status' => '1',
                 ],
