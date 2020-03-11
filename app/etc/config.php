@@ -1783,7 +1783,7 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                     'template' => 'sales_email_order_template',
                     'guest_template' => 'sales_email_order_guest_template',
                     'identity' => 'sales',
-                    'copy_method' => 'copy',
+                    'copy_method' => 'bcc',
                 ],
                 'order_comment' => [
                     'enabled' => '1',
