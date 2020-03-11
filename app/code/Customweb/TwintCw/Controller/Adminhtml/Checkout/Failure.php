@@ -28,8 +28,18 @@ class Failure extends \Customweb\TwintCw\Controller\Adminhtml\Checkout
 {
 	public function execute()
 	{
-		$transaction = $this->getTransaction($this->getRequest()->getParam('cstrxid'));
-		$this->messageManager->addErrorMessage($transaction->getLastErrorMessage());
-		return $this->resultRedirectFactory->create()->setPath('sales/order_create/reorder', ['order_id' => $transaction->getOrderId()]);
+		$sameSiteFix = $this->getRequest()->getParam('s');
+		if (empty($sameSiteFix)) {
+			header_remove('Set-Cookie');
+			return $this->resultRedirectFactory->create()->setPath('twintcw/checkout/failure', [
+				'cstrxid' => $this->getRequest()->getParam('cstrxid'),
+				'secret' => $this->getRequest()->getParam('secret'),
+				's' => 1
+			]);
+		} else {
+			$transaction = $this->getTransaction($this->getRequest()->getParam('cstrxid'), $this->getRequest()->getParam('secret'));
+			$this->messageManager->addErrorMessage($transaction->getLastErrorMessage());
+			return $this->resultRedirectFactory->create()->setPath('sales/order_create/reorder', ['order_id' => $transaction->getOrderId()]);
+		}
 	}
 }

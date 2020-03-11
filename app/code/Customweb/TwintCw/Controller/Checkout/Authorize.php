@@ -35,6 +35,8 @@ class Authorize extends \Customweb\TwintCw\Controller\Checkout
 	 * @param \Magento\Framework\App\Action\Context $context
 	 * @param \Magento\Framework\View\Result\PageFactory $resultPageFactory
 	 * @param \Magento\Checkout\Model\Session $checkoutSession
+	 * @param \Magento\Customer\Model\Session $customerSession
+	 * @param \Magento\Sales\Api\OrderRepositoryInterface $orderRepository
 	 * @param \Magento\Quote\Api\CartRepositoryInterface $quoteRepository
 	 * @param \Customweb\TwintCw\Model\Authorization\TransactionFactory $transactionFactory
 	 * @param \Customweb\TwintCw\Model\Authorization\Method\Factory $authorizationMethodFactory
@@ -44,12 +46,14 @@ class Authorize extends \Customweb\TwintCw\Controller\Checkout
 			\Magento\Framework\App\Action\Context $context,
 			\Magento\Framework\View\Result\PageFactory $resultPageFactory,
 			\Magento\Checkout\Model\Session $checkoutSession,
+			\Magento\Customer\Model\Session $customerSession,
+			\Magento\Sales\Api\OrderRepositoryInterface $orderRepository,
 			\Magento\Quote\Api\CartRepositoryInterface $quoteRepository,
 			\Customweb\TwintCw\Model\Authorization\TransactionFactory $transactionFactory,
 			\Customweb\TwintCw\Model\Authorization\Method\Factory $authorizationMethodFactory,
 			\Magento\Framework\Controller\Result\JsonFactory $resultJsonFactory
 	) {
-		parent::__construct($context, $resultPageFactory, $checkoutSession, $quoteRepository, $transactionFactory, $authorizationMethodFactory);
+		parent::__construct($context, $resultPageFactory, $checkoutSession, $customerSession, $orderRepository, $quoteRepository, $transactionFactory, $authorizationMethodFactory);
 		$this->_resultJsonFactory = $resultJsonFactory;
 	}
 

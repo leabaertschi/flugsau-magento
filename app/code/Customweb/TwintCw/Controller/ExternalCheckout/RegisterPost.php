@@ -19,13 +19,18 @@
  *
  * @category	Customweb
  * @package		Customweb_TwintCw
- * 
+ *
  */
 
 namespace Customweb\TwintCw\Controller\ExternalCheckout;
 
 class RegisterPost extends \Customweb\TwintCw\Controller\ExternalCheckout
 {
+	/**
+	 * @var \Magento\Quote\Api\CartRepositoryInterface
+	 */
+	protected $_quoteRepository;
+
 	/**
 	 * @var \Magento\Customer\Model\Session
 	 */
@@ -49,6 +54,7 @@ class RegisterPost extends \Customweb\TwintCw\Controller\ExternalCheckout
 	/**
 	 * @param \Magento\Framework\App\Action\Context $context
 	 * @param \Magento\Checkout\Model\Session $checkoutSession
+	 * @param \Magento\Quote\Api\CartRepositoryInterface $quoteRepository
 	 * @param \Magento\Customer\Model\Session $customerSession
 	 * @param \Magento\Framework\Data\Form\FormKey\Validator $formKeyValidator
 	 * @param \Magento\Customer\Api\AccountManagementInterface $customerAccountManagement
@@ -58,6 +64,7 @@ class RegisterPost extends \Customweb\TwintCw\Controller\ExternalCheckout
 	public function __construct(
 			\Magento\Framework\App\Action\Context $context,
 			\Magento\Checkout\Model\Session $checkoutSession,
+			\Magento\Quote\Api\CartRepositoryInterface $quoteRepository,
 			\Magento\Customer\Model\Session $customerSession,
 			\Magento\Framework\Data\Form\FormKey\Validator $formKeyValidator,
 			\Magento\Customer\Api\AccountManagementInterface $customerAccountManagement,
@@ -65,6 +72,7 @@ class RegisterPost extends \Customweb\TwintCw\Controller\ExternalCheckout
 			\Customweb\TwintCw\Helper\ExternalCheckout $helper
 	) {
 		parent::__construct($context, $checkoutSession, $contextFactory);
+		$this->_quoteRepository = $quoteRepository;
 		$this->_customerSession = $customerSession;
 		$this->_formKeyValidator = $formKeyValidator;
 		$this->_customerAccountManagement = $customerAccountManagement;
@@ -109,7 +117,9 @@ class RegisterPost extends \Customweb\TwintCw\Controller\ExternalCheckout
 				}
 			}
 
-			$this->getQuote()->collectTotals()->save();
+			$quote = $this->getQuote();
+			$quote->collectTotals();
+			$this->_quoteRepository->save($quote);
 
 			$this->getContext()->updateQuote($this->getQuote())->save();
 

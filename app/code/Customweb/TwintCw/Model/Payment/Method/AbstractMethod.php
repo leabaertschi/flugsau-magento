@@ -26,6 +26,11 @@ namespace Customweb\TwintCw\Model\Payment\Method;
 class AbstractMethod extends \Magento\Payment\Model\Method\AbstractMethod implements \Customweb_Payment_Authorization_IPaymentMethod
 {
 	/**
+	 * @var \Magento\Quote\Api\CartRepositoryInterface
+	 */
+	protected $_quoteRepository;
+
+	/**
 	 *
 	 * @var \Magento\Checkout\Model\Session
 	 */
@@ -47,6 +52,11 @@ class AbstractMethod extends \Magento\Payment\Model\Method\AbstractMethod implem
 	 * @var \Magento\Framework\Encryption\EncryptorInterface
 	 */
 	protected $_encryptor;
+
+	/**
+	 * @var \Magento\Framework\Pricing\PriceCurrencyInterface
+	 */
+	protected $_priceCurrency;
 
 	/**
 	 *
@@ -122,10 +132,12 @@ class AbstractMethod extends \Magento\Payment\Model\Method\AbstractMethod implem
 	 * @param \Magento\Payment\Model\Method\Logger $logger
 	 * @param \Magento\Framework\Model\ResourceModel\AbstractResource $resource
 	 * @param \Magento\Framework\Data\Collection\AbstractDb $resourceCollection
+	 * @param \Magento\Quote\Api\CartRepositoryInterface $quoteRepository
 	 * @param \Magento\Checkout\Model\Session $checkoutSession
 	 * @param \Magento\Framework\App\RequestInterface $request
 	 * @param \Magento\Framework\DB\TransactionFactory $dbTransactionFactory
 	 * @param \Magento\Framework\Encryption\EncryptorInterface $encryptor
+	 * @param \Magento\Framework\Pricing\PriceCurrencyInterface $priceCurrency
 	 * @param \Customweb\TwintCw\Model\Authorization\Method\Factory $authorizationMethodFactory
 	 * @param \Customweb\TwintCw\Model\Configuration $configuration
 	 * @param \Customweb\TwintCw\Model\DependencyContainer $container
@@ -142,10 +154,12 @@ class AbstractMethod extends \Magento\Payment\Model\Method\AbstractMethod implem
 			\Magento\Payment\Helper\Data $paymentData,
 			\Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig,
 			\Magento\Payment\Model\Method\Logger $logger,
+			\Magento\Quote\Api\CartRepositoryInterface $quoteRepository,
 			\Magento\Checkout\Model\Session $checkoutSession,
 			\Magento\Framework\App\RequestInterface $request,
 			\Magento\Framework\DB\TransactionFactory $dbTransactionFactory,
 			\Magento\Framework\Encryption\EncryptorInterface $encryptor,
+			\Magento\Framework\Pricing\PriceCurrencyInterface $priceCurrency,
 			\Customweb\TwintCw\Model\Authorization\Method\Factory $authorizationMethodFactory,
 			\Customweb\TwintCw\Model\Configuration $configuration,
 			\Customweb\TwintCw\Model\DependencyContainer $container,
@@ -158,10 +172,12 @@ class AbstractMethod extends \Magento\Payment\Model\Method\AbstractMethod implem
 	) {
 		parent::__construct($context, $registry, $extensionFactory, $customAttributeFactory, $paymentData, $scopeConfig, $logger, $resource,
 				$resourceCollection, $data);
+		$this->_quoteRepository = $quoteRepository;
 		$this->_checkoutSession = $checkoutSession;
 		$this->_request = $request;
 		$this->_dbTransactionFactory = $dbTransactionFactory;
 		$this->_encryptor = $encryptor;
+		$this->_priceCurrency = $priceCurrency;
 		$this->_authorizationMethodFactory = $authorizationMethodFactory;
 		$this->_configuration = $configuration;
 		$this->_container = $container;
@@ -240,9 +256,6 @@ class AbstractMethod extends \Magento\Payment\Model\Method\AbstractMethod implem
 	public function getOrderPlaceRedirectUrl()
 	{
 		$quote = $this->_checkoutSession->getQuote();
-		$quote->setIsActive(true);
-		$quote->setReservedOrderId(null);
-		$quote->save();
 
 		$transactionId = null;
 		$transaction = $this->_registry->registry('twintcw_transaction');
@@ -271,6 +284,7 @@ class AbstractMethod extends \Magento\Payment\Model\Method\AbstractMethod implem
 				$context = $this->getAuthorizationMethodFactory()->getContextFactory()->createQuote($this, $quote);
 				$adapter = $this->getAuthorizationMethodFactory()->create($context);
 				$adapter->preValidate();
+				$isAvailable = $context->getOrderContext()->isValid();
 			}
 			catch (\Exception $e) {
 				$isAvailable = false;
@@ -284,10 +298,10 @@ class AbstractMethod extends \Magento\Payment\Model\Method\AbstractMethod implem
 	{
 		
 		$arguments = null;
-		return \Customweb_Licensing_TwintCw_License::run('4k7sjng9fcv26h00', $this, $arguments);
+		return \Customweb_Licensing_TwintCw_License::run('nh2lg17qdjqieefj', $this, $arguments);
 	}
 
-	final public function call_huh24ami73p331hi() {
+	final public function call_3vne7pddk9e93hh2() {
 		$arguments = func_get_args();
 		$method = $arguments[0];
 		$call = $arguments[1];
@@ -310,7 +324,7 @@ class AbstractMethod extends \Magento\Payment\Model\Method\AbstractMethod implem
 	 * Set initial order status to pending payment.
 	 *
 	 * @param string $paymentAction
-	 * @param \Magento\Framework\Object $stateObject
+	 * @param \Magento\Framework\DataObject $stateObject
 	 * @return \Customweb\TwintCw\Model\Payment\Method\AbstractMethod
 	 */
 	public function initialize($paymentAction, $stateObject)
@@ -383,10 +397,13 @@ class AbstractMethod extends \Magento\Payment\Model\Method\AbstractMethod implem
 				if (count($items) <= 0) {
 					$items = $transaction->getTransactionObject()->getUncapturedLineItems();
 				}
-				$items = \Customweb_Util_Invoice::getItemsByReductionAmount($items, $amount, $transaction->getCurrency());
+
+				$items = \Customweb_Util_Invoice::getItemsByReductionAmount($items, $this->convertCaptureAmount($amount, $payment->getOrder(), $invoice), $transaction->getCurrency());
 				$this->captureItems($transaction, $items);
 				$payment->setShouldCloseParentTransaction(!$isNoClose);
 				$payment->setIsTransactionPending(false);
+			} else {
+				throw new \Magento\Framework\Exception\LocalizedException(__('The transaction cannot be loaded.'));
 			}
 		} catch (\Exception $e) {
 			if ($e instanceof \Magento\Framework\Exception\LocalizedException) {
@@ -399,6 +416,16 @@ class AbstractMethod extends \Magento\Payment\Model\Method\AbstractMethod implem
 
 
 		return $this;
+	}
+
+	private function convertCaptureAmount($amount, \Magento\Sales\Model\Order $order, $invoice) {
+		if ($invoice instanceof \Magento\Sales\Model\Order\Invoice) {
+			$amount = $this->_priceCurrency->round($amount * $invoice->getBaseToOrderRate());
+			return \min($amount, $invoice->getGrandTotal());
+		} else {
+			$amount = $this->_priceCurrency->round($amount * $order->getBaseToOrderRate());
+			return \min($amount, $order->getGrandTotal());
+		}
 	}
 
 	/**
@@ -418,6 +445,8 @@ class AbstractMethod extends \Magento\Payment\Model\Method\AbstractMethod implem
 			if ($transaction->getId()) {
 				if ($transaction->getTransactionObject()->isRefundPossible()) {
 					try {
+						$amount = $this->convertRefundAmount($amount, $payment->getOrder(), $payment->getCreditmemo());
+
 						$refundAdapter = $this->_container->getBean('Customweb_Payment_BackendOperation_Adapter_Service_IRefund');
 						$compareAmount = \Customweb_Util_Currency::compareAmount($amount, $transaction->getAuthorizationAmount(),
 								$transaction->getCurrency());
@@ -468,6 +497,8 @@ class AbstractMethod extends \Magento\Payment\Model\Method\AbstractMethod implem
 				else {
 					throw new \Magento\Framework\Exception\LocalizedException(__('The transaction cannot be refunded online.'));
 				}
+			} else {
+				throw new \Magento\Framework\Exception\LocalizedException(__('The transaction cannot be loaded.'));
 			}
 		} catch (\Exception $e) {
 			if ($e instanceof \Magento\Framework\Exception\LocalizedException) {
@@ -480,6 +511,16 @@ class AbstractMethod extends \Magento\Payment\Model\Method\AbstractMethod implem
 
 
 		return $this;
+	}
+
+	private function convertRefundAmount($amount, \Magento\Sales\Model\Order $order, $creditmemo) {
+		if ($creditmemo instanceof \Magento\Sales\Model\Order\Creditmemo) {
+			$amount = $this->_priceCurrency->round($amount * $creditmemo->getBaseToOrderRate());
+			return \min($amount, $creditmemo->getGrandTotal());
+		} else {
+			$amount = $this->_priceCurrency->round($amount * $order->getBaseToOrderRate());
+			return \min($amount, $order->getGrandTotal());
+		}
 	}
 
 	/**
@@ -510,6 +551,8 @@ class AbstractMethod extends \Magento\Payment\Model\Method\AbstractMethod implem
 				else {
 					throw new \Magento\Framework\Exception\LocalizedException(__('The transaction cannot be cancelled online.'));
 				}
+			} else {
+				throw new \Magento\Framework\Exception\LocalizedException(__('The transaction cannot be loaded.'));
 			}
 		} catch (\Exception $e) {
 			if ($e instanceof \Magento\Framework\Exception\LocalizedException) {
@@ -531,6 +574,8 @@ class AbstractMethod extends \Magento\Payment\Model\Method\AbstractMethod implem
 			if ($transaction->getTransactionObject()->isCapturePossible()) {
 				$this->captureItems($transaction, $transaction->getTransactionObject()->getUncapturedLineItems());
 			}
+		} else {
+			throw new \Magento\Framework\Exception\LocalizedException(__('The transaction cannot be loaded.'));
 		}
 		return true;
 	}
@@ -545,6 +590,8 @@ class AbstractMethod extends \Magento\Payment\Model\Method\AbstractMethod implem
 			elseif ($transaction->getTransactionObject()->isCaptured()) {
 				// TODO: If transaction is captured, we need to issue a refund.
 			}
+		} else {
+			throw new \Magento\Framework\Exception\LocalizedException(__('The transaction cannot be loaded.'));
 		}
 		return true;
 	}

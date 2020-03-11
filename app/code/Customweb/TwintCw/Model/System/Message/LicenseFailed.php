@@ -45,10 +45,10 @@ class LicenseFailed implements \Magento\Framework\Notification\MessageInterface
     {
 		
 		$arguments = null;
-		return \Customweb_Licensing_TwintCw_License::run('r1qpmcni5tnmsfi5', $this, $arguments);
+		return \Customweb_Licensing_TwintCw_License::run('rlk8vr7b01iln85o', $this, $arguments);
 	}
 
-	final public function call_ptqqrtdurffh977e() {
+	final public function call_b2o9t4gdpcrttr3i() {
 		$arguments = func_get_args();
 		$method = $arguments[0];
 		$call = $arguments[1];
@@ -72,10 +72,10 @@ class LicenseFailed implements \Magento\Framework\Notification\MessageInterface
     {
 		
 		$arguments = null;
-		return \Customweb_Licensing_TwintCw_License::run('p9v206ehmld4r7fr', $this, $arguments);
+		return \Customweb_Licensing_TwintCw_License::run('mc8lfmussscptqqe', $this, $arguments);
 	}
 
-	final public function call_p5kega6tq70m0ba8() {
+	final public function call_ot2sokdlr3ms4o41() {
 		$arguments = func_get_args();
 		$method = $arguments[0];
 		$call = $arguments[1];

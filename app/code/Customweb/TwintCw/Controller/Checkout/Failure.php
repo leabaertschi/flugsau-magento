@@ -19,7 +19,7 @@
  *
  * @category	Customweb
  * @package		Customweb_TwintCw
- * 
+ *
  */
 
 namespace Customweb\TwintCw\Controller\Checkout;
@@ -28,7 +28,22 @@ class Failure extends \Customweb\TwintCw\Controller\Checkout
 {
 	public function execute()
 	{
-		$transaction = $this->getTransaction($this->getRequest()->getParam('cstrxid'));
-		return $this->handleFailure($transaction, $transaction->getLastErrorMessage());
+		$sameSiteFix = $this->getRequest()->getParam('s');
+		if (empty($sameSiteFix)) {
+			header_remove('Set-Cookie');
+			return $this->resultRedirectFactory->create()->setPath('twintcw/checkout/failure', [
+				'cstrxid' => $this->getRequest()->getParam('cstrxid'),
+				'secret' => $this->getRequest()->getParam('secret'),
+				's' => 1,
+				'_secure' => true
+			]);
+		} else {
+			try {
+				$transaction = $this->getTransaction($this->getRequest()->getParam('cstrxid'), $this->getRequest()->getParam('secret'));
+				return $this->handleFailure($transaction, $transaction->getLastErrorMessage());
+			} catch (\Magento\Framework\Exception\NoSuchEntityException $e) {
+				return $this->resultRedirectFactory->create()->setPath('checkout/cart');
+			}
+		}
 	}
 }

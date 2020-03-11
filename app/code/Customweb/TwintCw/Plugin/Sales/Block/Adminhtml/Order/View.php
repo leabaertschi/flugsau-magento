@@ -19,7 +19,7 @@
  *
  * @category	Customweb
  * @package		Customweb_TwintCw
- * 
+ *
  */
 
 namespace Customweb\TwintCw\Plugin\Sales\Block\Adminhtml\Order;
@@ -56,13 +56,11 @@ class View
     			&& $subject->getOrder()->getPayment() instanceof \Magento\Sales\Model\Order\Payment
 	    		&& $subject->getOrder()->getPayment()->getMethodInstance() instanceof \Customweb\TwintCw\Model\Payment\Method\AbstractMethod) {
 	    	$transaction = $this->_transactionFactory->create()->loadByOrderId($subject->getOrderId());
-	    	if (!$transaction->getId()) {
-	    		throw new \Exception('The transaction has not been found.');
+	    	if ($transaction->getId()) {
+	    		return $subject->getUrl('twintcw/transaction/reviewPayment', ['action' => $action, 'transaction_id' => $transaction->getId()]);
 	    	}
-		    return $subject->getUrl('twintcw/transaction/reviewPayment', ['action' => $action, 'transaction_id' => $transaction->getId()]);
-    	} else {
-    		return $proceed($action);
     	}
+    	return $proceed($action);
     }
 
     public function beforeGetOrder(\Magento\Sales\Block\Adminhtml\Order\View $subject)

@@ -105,11 +105,11 @@ class Customweb_Core_Charset_UTF8 extends Customweb_Core_Charset {
 			$max = strlen($text);
 			$buf = "";
 			for($i = 0; $i < $max; $i ++) {
-				$c1 = $text{$i};
+				$c1 = $text[$i];
 				if ($c1 >= "\xc0") { // Should be converted to UTF8, if it's not UTF8 already
-					$c2 = $i + 1 >= $max ? "\x00" : $text{$i + 1};
-					$c3 = $i + 2 >= $max ? "\x00" : $text{$i + 2};
-					$c4 = $i + 3 >= $max ? "\x00" : $text{$i + 3};
+					$c2 = $i + 1 >= $max ? "\x00" : $text[$i + 1];
+					$c3 = $i + 2 >= $max ? "\x00" : $text[$i + 2];
+					$c4 = $i + 3 >= $max ? "\x00" : $text[$i + 3];
 					if ($c1 >= "\xc0" & $c1 <= "\xdf") { // looks like 2 bytes UTF8
 						if ($c2 >= "\x80" && $c2 <= "\xbf") { // yeah, almost sure it's UTF8 already
 							$buf .= $c1 . $c2;
@@ -168,7 +168,7 @@ class Customweb_Core_Charset_UTF8 extends Customweb_Core_Charset {
 	 * @return number
 	 */
 	public static function getUnicode($c){
-		$h = ord($c{0});
+		$h = ord($c[0]);
 		if ($h <= 0x7F) {
 			return $h;
 		}
@@ -176,13 +176,13 @@ class Customweb_Core_Charset_UTF8 extends Customweb_Core_Charset {
 			throw new Exception("Invalid char. Unable to convert to unicode.");
 		}
 		else if ($h <= 0xDF) {
-			return ($h & 0x1F) << 6 | (ord($c{1}) & 0x3F);
+			return ($h & 0x1F) << 6 | (ord($c[1]) & 0x3F);
 		}
 		else if ($h <= 0xEF) {
-			return ($h & 0x0F) << 12 | (ord($c{1}) & 0x3F) << 6 | (ord($c{2}) & 0x3F);
+			return ($h & 0x0F) << 12 | (ord($c[1]) & 0x3F) << 6 | (ord($c[2]) & 0x3F);
 		}
 		else if ($h <= 0xF4) {
-			return ($h & 0x0F) << 18 | (ord($c{1}) & 0x3F) << 12 | (ord($c{2}) & 0x3F) << 6 | (ord($c{3}) & 0x3F);
+			return ($h & 0x0F) << 18 | (ord($c[1]) & 0x3F) << 12 | (ord($c[2]) & 0x3F) << 6 | (ord($c[3]) & 0x3F);
 		}
 		else {
 			throw new Exception("Invalid char. Unable to convert to unicode.");
@@ -220,7 +220,7 @@ class Customweb_Core_Charset_UTF8 extends Customweb_Core_Charset {
 			$pos = 0;
 			$length = 0;
 			while ($pos <= strlen($string)) {
-				$bytes = self::getCharLength($string{pos});
+				$bytes = self::getCharLength($string[$pos]);
 				$length++;
 				$pos += $bytes;
 			}
@@ -317,6 +317,9 @@ class Customweb_Core_Charset_UTF8 extends Customweb_Core_Charset {
 
 
 	public function toArray($string) {
+		if(empty($string)){
+			return array();
+		}
 		if (is_array($string)) {
 			return $string;
 		}

@@ -29,7 +29,11 @@
  * @deprecated
  */
 abstract class Customweb_Payment_Authorization_OrderContext_AbstractDeprecated implements Customweb_Payment_Authorization_IOrderContext {
-
+	
+	public function isAjaxReloadRequired() {
+		return false;
+	}
+	
 	public function getBillingAddress() {
 		$address = new Customweb_Payment_Authorization_OrderContext_Address_Default();
 		$address->setCity($this->getBillingCity())

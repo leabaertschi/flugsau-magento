@@ -19,7 +19,7 @@
  *
  * @category	Customweb
  * @package		Customweb_TwintCw
- * 
+ *
  */
 
 namespace Customweb\TwintCw\Controller\Adminhtml;
@@ -53,15 +53,21 @@ abstract class Checkout extends \Magento\Sales\Controller\Adminhtml\Order\Create
 
 	/**
 	 * @param int $transactionId
+	 * @param string $hashSecret
 	 * @return \Customweb\TwintCw\Model\Authorization\Transaction
 	 * @throws \Exception
 	 */
-	protected function getTransaction($transactionId)
+	protected function getTransaction($transactionId, $hashSecret)
 	{
 		$transaction = $this->_transactionFactory->create()->load($transactionId);
 		if (!$transaction->getId()) {
-			throw new \Exception('The transaction has not been found.');
+			throw new \Magento\Framework\Exception\NoSuchEntityException();
 		}
+
+		if (!$transaction->isValidHash($hashSecret)) {
+			throw new \Magento\Framework\Exception\NoSuchEntityException();
+		}
+
 		return $transaction;
 	}
 }

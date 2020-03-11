@@ -19,7 +19,7 @@
  *
  * @category	Customweb
  * @package		Customweb_TwintCw
- * 
+ *
  */
 
 namespace Customweb\TwintCw\Block\Customer;
@@ -81,7 +81,7 @@ class Aliases extends \Magento\Framework\View\Element\Template
     }
 
     /**
-     * @return bool|\Customweb\TwintCw\ResourceModel\Authorization\Transaction\Collection
+     * @return bool|\Customweb\TwintCw\Model\ResourceModel\Authorization\Transaction\Collection
      */
     public function getAliases()
     {

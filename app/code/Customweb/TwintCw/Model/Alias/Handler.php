@@ -19,7 +19,7 @@
  *
  * @category	Customweb
  * @package		Customweb_TwintCw
- * 
+ *
  */
 
 namespace Customweb\TwintCw\Model\Alias;
@@ -108,7 +108,7 @@ class Handler
 	 * Deactivates the alias. It is not selected anymore by getAliasTransactions().
 	 *
 	 * @param \Customweb\TwintCw\Model\Authorization\Transaction $transaction
-	 * @throws Exception
+	 * @throws \Exception
 	 */
 	public function deactivateAlias(\Customweb\TwintCw\Model\Authorization\Transaction $transaction)
 	{

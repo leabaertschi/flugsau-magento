@@ -88,7 +88,9 @@ class UpgradeSchema implements UpgradeSchemaInterface {
 				$oldTableName = $this->getSequenceName('twintcw_transaction', $storeId);
 				if ($installer->getConnection()->isTableExists($oldTableName)) {
 					$newTableName = $this->getSequenceName('twintcw_trx', $storeId);
-					$installer->getConnection()->renameTable($oldTableName, $newTableName);
+					if ($oldTableName != $newTableName) {
+						$installer->getConnection()->renameTable($oldTableName, $newTableName);
+					}
 				}
 			}
 		}

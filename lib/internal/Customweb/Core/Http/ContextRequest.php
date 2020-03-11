@@ -76,7 +76,7 @@ class Customweb_Core_Http_ContextRequest implements Customweb_Core_Http_IRequest
 				self::$path = $path;
 			}
 		}
-		
+
 		return self::$path;
 	}
 
@@ -111,9 +111,9 @@ class Customweb_Core_Http_ContextRequest implements Customweb_Core_Http_IRequest
 
 	public function getRemoteAddress(){
 		if (self::$remoteIpAddress === null) {
-			self::$remoteIpAddress = self::getClientIPAddress();
+			self::$remoteIpAddress = self::getClientIp();
 		}
-		
+
 		return self::$remoteIpAddress;
 	}
 
@@ -121,7 +121,7 @@ class Customweb_Core_Http_ContextRequest implements Customweb_Core_Http_IRequest
 		if (self::$url === null) {
 			self::$url = $this->getBaseUrl() . $_SERVER['REQUEST_URI'];
 		}
-		
+
 		return self::$url;
 	}
 
@@ -129,7 +129,7 @@ class Customweb_Core_Http_ContextRequest implements Customweb_Core_Http_IRequest
 		if (self::$baseUrl === null) {
 			$protocol = strtolower($this->getProtocol());
 			$port = $this->getPort();
-			if (($protocol === "http" && $port == "80") || ($protocol === "https" && $port == "443")) {
+			if (($protocol === "http" && ($port == "80" || $port == '443')) || ($protocol === "https" && ($port == "80" || $port == "443"))) {
 				$port = "";
 			}
 			else {
@@ -137,7 +137,7 @@ class Customweb_Core_Http_ContextRequest implements Customweb_Core_Http_IRequest
 			}
 			self::$baseUrl = $protocol . "://" . $this->getHost() . $port;
 		}
-		
+
 		return self::$baseUrl;
 	}
 
@@ -162,7 +162,7 @@ class Customweb_Core_Http_ContextRequest implements Customweb_Core_Http_IRequest
 	}
 
 	public function getPort(){
-		if(isset($_SERVER['HTTP_X_FORWARDED_PORT'])) {
+		if (isset($_SERVER['HTTP_X_FORWARDED_PORT'])) {
 			return intval($_SERVER['HTTP_X_FORWARDED_PORT']);
 		}
 		return intval($_SERVER["SERVER_PORT"]);
@@ -243,16 +243,94 @@ class Customweb_Core_Http_ContextRequest implements Customweb_Core_Http_IRequest
 				}
 			}
 		}
-		
+
 		// Remove port number from host
 		$host = preg_replace('/:\d+$/', '', $host);
-		
+
 		return trim($host);
+	}
+
+	/**
+	 * Returns either ipv4 or ipv6 address. If neither can be identified an exception is thrown.
+	 *
+	 * Ideally should not be called directly, instead $request->getRemoteAddress() should be used.
+	 *
+	 * @throws Exception
+	 * @return string
+	 */
+	public static function getClientIp(){
+		$ip = self::getClientIpV4();
+		if (empty($ip)) {
+			$ip = self::getClientIpV6();
+		}
+		if (empty($ip)) {
+			throw new Exception("Unable to retrieve client IP address.");
+		}
+		return $ip;
+	}
+
+	/**
+	 * Returns the current ipv4 address or null if cannot be identified.
+	 *
+	 * @throws Exception
+	 * @return string|NULL
+	 */
+	public static function getClientIpV4(){
+		foreach (array(
+			'HTTP_CLIENT_IP',
+			'HTTP_X_FORWARDED_FOR',
+			'HTTP_X_FORWARDED',
+			'HTTP_X_CLUSTER_CLIENT_IP',
+			'HTTP_FORWARDED_FOR',
+			'HTTP_FORWARDED',
+			'REMOTE_ADDR'
+		) as $key) {
+			if (array_key_exists($key, $_SERVER) === true) {
+				foreach (explode(',', $_SERVER[$key]) as $ip) {
+					$ip = trim($ip);
+
+					if (preg_match('/[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}/', $ip)) {
+						return $ip;
+					}
+				}
+			}
+		}
+		return null;
+	}
+
+	/**
+	 * Returns the current ipv6 address or null if cannot be identified.
+	 *
+	 * @throws Exception
+	 * @return string|NULL
+	 */
+	public static function getClientIpV6(){
+		foreach (array(
+			'HTTP_CLIENT_IP',
+			'HTTP_X_FORWARDED_FOR',
+			'HTTP_X_FORWARDED',
+			'HTTP_X_CLUSTER_CLIENT_IP',
+			'HTTP_FORWARDED_FOR',
+			'HTTP_FORWARDED',
+			'REMOTE_ADDR'
+		) as $key) {
+			if (array_key_exists($key, $_SERVER) === true) {
+				foreach (explode(',', $_SERVER[$key]) as $ip) {
+					$ip = trim($ip);
+
+					if (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6)) {
+						return $ip;
+					}
+				}
+			}
+		}
+		return null;
 	}
 
 	/**
 	 * This method should never be called directly. The method is public due to legacy implementation for Customweb_Core_Util_System.
 	 *
+	 * @deprecated Use ContextRequest::getClientIp(), or $request->getRemoteAddress()
 	 * @throws Exception
 	 * @return string
 	 */
@@ -264,19 +342,19 @@ class Customweb_Core_Http_ContextRequest implements Customweb_Core_Http_IRequest
 			'HTTP_X_CLUSTER_CLIENT_IP',
 			'HTTP_FORWARDED_FOR',
 			'HTTP_FORWARDED',
-			'REMOTE_ADDR' 
+			'REMOTE_ADDR'
 		) as $key) {
 			if (array_key_exists($key, $_SERVER) === true) {
 				foreach (explode(',', $_SERVER[$key]) as $ip) {
 					$ip = trim($ip);
-					
+
 					if (preg_match('/[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}/', $ip)) {
 						return $ip;
 					}
 				}
 			}
 		}
-		throw new Exception("Unable to retrieve the client IP address.");
+		throw new Exception("Unable to retrieve the client IPv4 address.");
 	}
 
 	/**
@@ -284,6 +362,7 @@ class Customweb_Core_Http_ContextRequest implements Customweb_Core_Http_IRequest
 	 *
 	 * The method returns the client address. It can be either v6 or v4.
 	 *
+	 * @deprecated Use ContextRequest::getClientIPV6() to force v6, or ContextRequest::getClientIp() to get any ip, or use $request->getRemoteAddress()
 	 * @throws Exception
 	 * @return string
 	 */
@@ -295,18 +374,18 @@ class Customweb_Core_Http_ContextRequest implements Customweb_Core_Http_IRequest
 			'HTTP_X_CLUSTER_CLIENT_IP',
 			'HTTP_FORWARDED_FOR',
 			'HTTP_FORWARDED',
-			'REMOTE_ADDR' 
+			'REMOTE_ADDR'
 		) as $key) {
 			if (array_key_exists($key, $_SERVER) === true) {
 				foreach (explode(',', $_SERVER[$key]) as $ip) {
 					$ip = trim($ip);
-					
+
 					if (filter_var($ip, FILTER_VALIDATE_IP)) {
 						return $ip;
 					}
 				}
 			}
 		}
-		throw new Exception("Unable to retrieve the client IP address.");
+		throw new Exception("Unable to retrieve the client IPv6 address.");
 	}
 }

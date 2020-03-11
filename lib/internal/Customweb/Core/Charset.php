@@ -406,7 +406,7 @@ abstract class Customweb_Core_Charset {
 	 * - CONVERSION_BEHAVIOR_REMOVE: The char is removed.
 	 * - CONVERSION_BEHAVIOR_REPLACE: The char is replaced by a best fit or removed when no replacement exists.
 	 * 
-	 * @param bit $behavior
+	 * @param  $behavior
 	 * @return void
 	 */
 	public static function setConversionBehavior($behavior) {

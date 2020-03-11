@@ -27,11 +27,11 @@
 class Customweb_Twint_BackendOperation_Form_About extends Customweb_Payment_BackendOperation_Form_AbstractAbout {
 	
 	protected function getVersion() {
-		return '4.0.62';	
+		return '4.0.105';	
 	}
 	
 	protected function getReleaseDate() {
-		return 'Thu, 25 Apr 2019 09:34:40 +0200';
+		return 'Mon, 17 Feb 2020 08:48:53 +0100';
 	}
 	
 	protected function getOrderNumber() {

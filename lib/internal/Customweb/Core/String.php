@@ -65,7 +65,7 @@ final class Customweb_Core_String implements Iterator, ArrayAccess, Countable {
 	/**
 	 * Pointer on the current index.
 	 *
-	 * @var length
+	 * @var int
 	 */
 	private $index = 0;
 

@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
   * You are allowed to use this API in your web application.
  *
@@ -80,10 +80,11 @@ final class Customweb_Core_Util_Rand {
 	 * @return integer
 	 */
 	private static function generateSeed(){
-	
+
 		if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
 			if (function_exists('mcrypt_create_iv') && function_exists('class_alias')) {
-		   		return current(unpack("L", mcrypt_create_iv(16)));
+				$in = @mcrypt_create_iv(16);
+		   		return current(unpack("L", $in));
 			}
 			if (function_exists('openssl_random_pseudo_bytes') && version_compare(PHP_VERSION, '5.3.4', '>=')) {
 				return current(unpack("L", openssl_random_pseudo_bytes(16)));
@@ -113,26 +114,26 @@ final class Customweb_Core_Util_Rand {
 				return current(unpack("L", mcrypt_create_iv(16, MCRYPT_DEV_URANDOM)));
 			}
 		}
-		
+
 		// save old session data
 		$old_session_id = session_id();
 		$old_use_cookies = ini_get('session.use_cookies');
 		$old_session_cache_limiter = session_cache_limiter();
-			
+
 		// In some environments the session_save_path is not working. Hence we can't use it.
 		$session_save_path = session_save_path();
 		if (@file_exists($session_save_path) && @is_writable($session_save_path)) {
-		
+
 			$_OLD_SESSION = isset($_SESSION) ? $_SESSION : false;
 			if ($old_session_id != '') {
 				session_write_close();
 			}
-		
+
 			session_id(1);
 			ini_set('session.use_cookies', 0);
 			session_cache_limiter('');
 			session_start();
-		
+
 			$seed = $_SESSION['seed'] = pack('H*',
 					sha1(
 							microtime(true) . serialize($_SERVER) . serialize($_POST) . serialize($_GET) . serialize($_COOKIE) . serialize($GLOBALS) .
@@ -141,9 +142,9 @@ final class Customweb_Core_Util_Rand {
 				$_SESSION['count'] = 0;
 			}
 			$_SESSION['count']++;
-		
+
 			session_write_close();
-		
+
 			// restore old session data
 			if ($old_session_id != '') {
 				session_id($old_session_id);
@@ -163,7 +164,7 @@ final class Customweb_Core_Util_Rand {
 			return current(unpack("L", $seed));
 		}
 		else {
-			
+
 			$seed = $_SESSION['seed'] = pack('H*',
 					sha1(
 							microtime(true) . serialize($_SERVER) . serialize($_POST) . serialize($_GET) . serialize($_COOKIE) . serialize($GLOBALS) .
@@ -171,6 +172,6 @@ final class Customweb_Core_Util_Rand {
 			return current(unpack("L", $seed));
 		}
 	}
-		
+
 
 }

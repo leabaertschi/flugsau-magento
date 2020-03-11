@@ -28,7 +28,7 @@ class Customweb_Core_Reflection_Class extends ReflectionClass {
 	/**
 	 * Gets all method recursive the inheritance tree along.
 	 * 
-	 * @param string[optional] $filter  <p>
+	 * @param string $filter  <p>
 	 * Any combination of ReflectionMethod::IS_STATIC,
 	 * ReflectionMethod::IS_PUBLIC,
 	 * ReflectionMethod::IS_PROTECTED,
@@ -54,7 +54,7 @@ class Customweb_Core_Reflection_Class extends ReflectionClass {
 	/**
 	 * Gets all properties recursive the inheritance tree along.
 	 * 
-	 * @param string[optional] $filter  <p>
+	 * @param string $filter  <p>
 	 * Any combination of ReflectionMethod::IS_STATIC,
 	 * ReflectionMethod::IS_PUBLIC,
 	 * ReflectionMethod::IS_PROTECTED,

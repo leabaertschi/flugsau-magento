@@ -19,7 +19,7 @@
  *
  * @category	Customweb
  * @package		Customweb_TwintCw
- * 
+ *
  */
 
 namespace Customweb\TwintCw\Block\Adminhtml\Checkout\Payment;
@@ -27,7 +27,7 @@ namespace Customweb\TwintCw\Block\Adminhtml\Checkout\Payment;
 class Form extends \Magento\Backend\Block\Widget
 {
 	/**
-	 * @var \Customweb\TwintCw\Model\Renderer\AdminhtmlForm
+	 * @var \Customweb\TwintCw\Model\Renderer\CheckoutForm
 	 */
 	protected $_formRenderer;
 

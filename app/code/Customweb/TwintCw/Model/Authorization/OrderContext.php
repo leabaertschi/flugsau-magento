@@ -146,6 +146,10 @@ class OrderContext implements \Customweb_Payment_Authorization_IOrderContext
 			throw new \Exception("Unsupported type for argument 'order'.");
 		}
 	}
+	
+	public function isAjaxReloadRequired(){
+		return false;
+	}
 
 	/**
 	 * @return \Magento\Payment\Helper\Data
@@ -174,6 +178,17 @@ class OrderContext implements \Customweb_Payment_Authorization_IOrderContext
 	 * @return boolean
 	 */
 	public function isValid() {
+		$onlyVirtualProducts = true; 
+		foreach($this->getInvoiceItems() as $item){
+			if($item->isShippingRequired()){
+				$onlyVirtualProducts = false;
+				break;
+			}
+		}
+		if($onlyVirtualProducts){
+			//If there is only virtual products the address is entered while the payment methods are displayed
+			return true;
+		}
 		if ($this->getBillingAddress()->getCountryIsoCode() == null
 			|| $this->getBillingAddress()->getFirstName() == null
 			|| $this->getBillingAddress()->getLastName() == null

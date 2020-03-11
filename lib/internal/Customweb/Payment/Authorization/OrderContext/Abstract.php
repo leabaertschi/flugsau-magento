@@ -40,6 +40,10 @@ abstract class Customweb_Payment_Authorization_OrderContext_Abstract implements 
 			$this->shippingAddress = $this->billingAddress;
 		}
 	}
+	
+	public function isAjaxReloadRequired() {
+		return false;
+	}
 
 	public function getShippingAddress(){
 		return $this->shippingAddress;

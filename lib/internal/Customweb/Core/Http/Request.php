@@ -121,6 +121,8 @@ final class Customweb_Core_Http_Request extends Customweb_Core_Http_AbstractMess
 				$this->parseStatusLine($input->getStatusLine());
 				$this->setRemoteAddress($input->getRemoteAddress());
 				$this->setPort($input->getPort());
+				$this->setUrl($input->getUrl());
+				$this->setProtocol($input->getProtocol());
 			}
 			else {
 				parent::__construct((string)$input);
@@ -247,6 +249,7 @@ final class Customweb_Core_Http_Request extends Customweb_Core_Http_AbstractMess
 	 * @return Customweb_Core_Http_Request
 	 */
 	public function setProtocol($protocol) {
+		$protocol = strtolower($protocol);
 		if ($protocol != 'http' && $protocol != 'https') {
 			throw new Exception("You can either use HTTP or HTTPS in the URL. Other protocols are not supported.");
 		}

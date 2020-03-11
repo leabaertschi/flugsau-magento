@@ -248,7 +248,10 @@ abstract class Customweb_Core_Charset_TableBasedCharset extends Customweb_Core_C
 	}
 	
 	public function toArray($string) {
-		if (is_array($string)) {
+		if(empty($string)){
+			return array();
+		}
+		else if (is_array($string)) {
 			return $string;
 		}
 		else {

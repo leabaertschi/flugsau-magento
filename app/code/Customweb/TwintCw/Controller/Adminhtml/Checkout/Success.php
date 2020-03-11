@@ -19,7 +19,7 @@
  *
  * @category	Customweb
  * @package		Customweb_TwintCw
- * 
+ *
  */
 
 namespace Customweb\TwintCw\Controller\Adminhtml\Checkout;
@@ -55,14 +55,25 @@ class Success extends \Customweb\TwintCw\Controller\Adminhtml\Checkout
 
 	public function execute()
 	{
-		$transactionId = $this->getRequest()->getParam('cstrxid');
-		try {
-			$this->_notification->waitForNotification($transactionId, 'There has been no notification from the payment provider.');
-			$this->messageManager->addSuccess(__('You created the order.'));
-			return $this->resultRedirectFactory->create()->setPath('sales/order/view', ['order_id' => $this->getTransaction($transactionId)->getOrderId()]);
-		} catch (\Exception $e) {
-			$this->messageManager->addError($e->getMessage());
-			return $this->resultRedirectFactory->create()->setPath('sales/order_create/reorder', ['order_id' => $this->getTransaction($transactionId)->getOrderId()]);
+		$sameSiteFix = $this->getRequest()->getParam('s');
+		if (empty($sameSiteFix)) {
+			header_remove('Set-Cookie');
+			return $this->resultRedirectFactory->create()->setPath('twintcw/checkout/success', [
+				'cstrxid' => $this->getRequest()->getParam('cstrxid'),
+				'secret' => $this->getRequest()->getParam('secret'),
+				's' => 1
+			]);
+		} else {
+			$transactionId = $this->getRequest()->getParam('cstrxid');
+			$hashSecret = $this->getRequest()->getParam('secret');
+			try {
+				$this->_notification->waitForNotification($transactionId, 'There has been no notification from the payment provider.');
+				$this->messageManager->addSuccessMessage(__('You created the order.'));
+				return $this->resultRedirectFactory->create()->setPath('sales/order/view', ['order_id' => $this->getTransaction($transactionId, $hashSecret)->getOrderId()]);
+			} catch (\Exception $e) {
+				$this->messageManager->addErrorMessage($e->getMessage());
+				return $this->resultRedirectFactory->create()->setPath('sales/order_create/reorder', ['order_id' => $this->getTransaction($transactionId, $hashSecret)->getOrderId()]);
+			}
 		}
 	}
 }

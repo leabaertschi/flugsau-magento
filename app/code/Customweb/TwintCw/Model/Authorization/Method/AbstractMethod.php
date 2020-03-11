@@ -38,6 +38,11 @@ abstract class AbstractMethod
      */
     protected $_coreRegistry;
 
+    /**
+     * @var \Magento\Sales\Api\OrderRepositoryInterface
+     */
+    protected $_orderRepository;
+
 	/**
 	 * @var \Magento\Sales\Model\Order\Email\Sender\OrderSender
 	 */
@@ -96,6 +101,7 @@ abstract class AbstractMethod
 	/**
 	 * @param \Psr\Log\LoggerInterface $logger
 	 * @param \Magento\Framework\Registry $coreRegistry
+	 * @param \Magento\Sales\Api\OrderRepositoryInterface $orderRepository
 	 * @param \Magento\Sales\Model\Order\Email\Sender\OrderSender $orderSender
 	 * @param \Magento\Sales\Model\Order\Email\Sender\InvoiceSender $invoiceSender
 	 * @param \Magento\Checkout\Model\Session $checkoutSession
@@ -110,6 +116,7 @@ abstract class AbstractMethod
 	public function __construct(
 			\Psr\Log\LoggerInterface $logger,
 			\Magento\Framework\Registry $coreRegistry,
+			\Magento\Sales\Api\OrderRepositoryInterface $orderRepository,
 			\Magento\Sales\Model\Order\Email\Sender\OrderSender $orderSender,
 			\Magento\Sales\Model\Order\Email\Sender\InvoiceSender $invoiceSender,
 			\Magento\Checkout\Model\Session $checkoutSession,
@@ -125,6 +132,7 @@ abstract class AbstractMethod
 	) {
 		$this->_logger = $logger;
 		$this->_coreRegistry = $coreRegistry;
+		$this->_orderRepository = $orderRepository;
 		$this->_orderSender = $orderSender;
 		$this->_invoiceSender = $invoiceSender;
 		$this->_checkoutSession= $checkoutSession;
@@ -174,10 +182,10 @@ abstract class AbstractMethod
 		$arguments = array(
 			'transaction' => $transaction,
  		);
-		return \Customweb_Licensing_TwintCw_License::run('qsrge9m2qmhvsg2q', $this, $arguments);
+		return \Customweb_Licensing_TwintCw_License::run('sen1nnork9bbj4qk', $this, $arguments);
 	}
 
-	final public function call_jdc0t6ta5kv1hgn2() {
+	final public function call_u1vb5jeasi3khj7v() {
 		$arguments = func_get_args();
 		$method = $arguments[0];
 		$call = $arguments[1];
@@ -210,10 +218,10 @@ abstract class AbstractMethod
 	{
 		
 		$arguments = null;
-		return \Customweb_Licensing_TwintCw_License::run('te2965718fiphbce', $this, $arguments);
+		return \Customweb_Licensing_TwintCw_License::run('hk5a98rc52mm5s2l', $this, $arguments);
 	}
 
-	final public function call_9vci7qc213sdsk7n() {
+	final public function call_rdu8i9rqarfmpr8u() {
 		$arguments = func_get_args();
 		$method = $arguments[0];
 		$call = $arguments[1];
@@ -414,5 +422,9 @@ abstract class AbstractMethod
 
 	private function getLogger() {
 		return $this->_logger;
+	}
+
+	public function getOrderRepository(){
+		return $this->_orderRepository;
 	}
 }

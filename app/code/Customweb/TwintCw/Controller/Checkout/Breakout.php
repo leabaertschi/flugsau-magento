@@ -19,7 +19,7 @@
  *
  * @category	Customweb
  * @package		Customweb_TwintCw
- * 
+ *
  */
 
 namespace Customweb\TwintCw\Controller\Checkout;
@@ -28,14 +28,18 @@ class Breakout extends \Customweb\TwintCw\Controller\Checkout
 {
 	public function execute()
 	{
-		/* @var $transaction \Customweb\TwintCw\Model\Authorization\Transaction */
-		$transaction = $this->getTransaction($this->getRequest()->getParam('cstrxid'));
+		try {
+			/* @var $transaction \Customweb\TwintCw\Model\Authorization\Transaction */
+			$transaction = $this->getTransaction($this->getRequest()->getParam('cstrxid'), $this->getRequest()->getParam('secret'));
 
-		/* @var $resultPage \Magento\Framework\View\Result\Page */
-		$resultPage = $this->_resultPageFactory->create();
-		$resultPage->getLayout()
-			->getBlock('customweb_twintcwcheckout_breakout')
-			->setTransaction($transaction);
-		return $resultPage;
+			/* @var $resultPage \Magento\Framework\View\Result\Page */
+			$resultPage = $this->_resultPageFactory->create();
+			$resultPage->getLayout()
+				->getBlock('customweb_twintcwcheckout_breakout')
+				->setTransaction($transaction);
+			return $resultPage;
+		} catch (\Magento\Framework\Exception\NoSuchEntityException $e) {
+			return $this->resultRedirectFactory->create()->setPath('checkout/cart');
+		}
 	}
 }

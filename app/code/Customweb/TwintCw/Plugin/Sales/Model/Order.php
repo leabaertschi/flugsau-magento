@@ -19,7 +19,7 @@
  *
  * @category	Customweb
  * @package		Customweb_TwintCw
- * 
+ *
  */
 
 namespace Customweb\TwintCw\Plugin\Sales\Model;
@@ -58,10 +58,9 @@ class Order
 			&& $this->_coreRegistry->registry('twintcw_order_view')) {
 	    	/* @var $transaction \Customweb\TwintCw\Model\Authorization\Transaction */
 	    	$transaction = $this->_transactionFactory->create()->loadByOrderId($subject->getId());
-	    	if (!$transaction->getId()) {
-	    		throw new \Exception('The transaction has not been found.');
+	    	if ($transaction->getId()) {
+	    		return $transaction->getTransactionObject()->getUpdateExecutionDate() !== null;
 	    	}
-	    	return $transaction->getTransactionObject()->getUpdateExecutionDate() !== null;
 	    }
 	    
 	    return $result;

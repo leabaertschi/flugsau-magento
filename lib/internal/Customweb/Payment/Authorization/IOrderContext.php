@@ -26,6 +26,12 @@
  *
  */
 interface Customweb_Payment_Authorization_IOrderContext {
+	/**
+	 * This method indicates if a javascript object must be reloaded before submission due to page reloads or similar.
+	 * 
+	 * @return boolean
+	 */
+	public function isAjaxReloadRequired();
 	
 	/**
 	 * The checkout id identifies a checkout session. The checkout id is

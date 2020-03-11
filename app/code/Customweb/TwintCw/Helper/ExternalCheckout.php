@@ -19,7 +19,7 @@
  *
  * @category	Customweb
  * @package		Customweb_TwintCw
- * 
+ *
  */
 
 namespace Customweb\TwintCw\Helper;
@@ -67,6 +67,11 @@ class ExternalCheckout extends \Magento\Framework\App\Helper\AbstractHelper
 	protected $_quoteManagement;
 
 	/**
+	 * @var \Magento\Quote\Api\CartRepositoryInterface
+	 */
+	protected $_quoteRepository;
+
+	/**
 	 * @var \Magento\Checkout\Model\Session
 	 */
 	protected $_checkoutSession;
@@ -86,6 +91,7 @@ class ExternalCheckout extends \Magento\Framework\App\Helper\AbstractHelper
 	 * @param \Magento\Framework\Api\DataObjectHelper $dataObjectHelper
 	 * @param \Magento\Framework\DataObject\Copy $objectCopyService
 	 * @param \Magento\Quote\Model\QuoteManagement $quoteManagement
+	 * @param \Magento\Quote\Api\CartRepositoryInterface $quoteRepository
 	 * @param \Magento\Checkout\Model\Session $checkoutSession
 	 * @param \Magento\Customer\Model\Session $customerSession
 	 */
@@ -99,6 +105,7 @@ class ExternalCheckout extends \Magento\Framework\App\Helper\AbstractHelper
 			\Magento\Framework\Api\DataObjectHelper $dataObjectHelper,
 			\Magento\Framework\DataObject\Copy $objectCopyService,
 			\Magento\Quote\Model\QuoteManagement $quoteManagement,
+			\Magento\Quote\Api\CartRepositoryInterface $quoteRepository,
 			\Magento\Checkout\Model\Session $checkoutSession,
 			\Magento\Customer\Model\Session $customerSession
 	) {
@@ -111,6 +118,7 @@ class ExternalCheckout extends \Magento\Framework\App\Helper\AbstractHelper
 		$this->_dataObjectHelper = $dataObjectHelper;
 		$this->_objectCopyService = $objectCopyService;
 		$this->_quoteManagement = $quoteManagement;
+		$this->_quoteRepository = $quoteRepository;
 		$this->_checkoutSession = $checkoutSession;
 		$this->_customerSession = $customerSession;
 	}
@@ -194,7 +202,9 @@ class ExternalCheckout extends \Magento\Framework\App\Helper\AbstractHelper
 	 */
 	public function saveOrder(\Customweb\TwintCw\Model\ExternalCheckout\Context $context)
 	{
-		$context->getQuote()->collectTotals()->save();
+		$quote = $context->getQuote();
+		$quote->collectTotals();
+		$this->_quoteRepository->save($quote);
 
 		$isNewCustomer = false;
 		switch ($context->getRegisterMethod()) {

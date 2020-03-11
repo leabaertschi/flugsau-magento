@@ -19,13 +19,18 @@
  *
  * @category	Customweb
  * @package		Customweb_TwintCw
- * 
+ *
  */
 
 namespace Customweb\TwintCw\Controller\ExternalCheckout;
 
 class GuestPost extends \Customweb\TwintCw\Controller\ExternalCheckout
 {
+	/**
+	 * @var \Magento\Quote\Api\CartRepositoryInterface
+	 */
+	protected $_quoteRepository;
+
 	/**
 	 * @var \Magento\Customer\Model\Session
 	 */
@@ -44,6 +49,7 @@ class GuestPost extends \Customweb\TwintCw\Controller\ExternalCheckout
 	/**
 	 * @param \Magento\Framework\App\Action\Context $context
 	 * @param \Magento\Checkout\Model\Session $checkoutSession
+	 * @param \Magento\Quote\Api\CartRepositoryInterface $quoteRepository
 	 * @param \Magento\Customer\Model\Session $customerSession
 	 * @param \Magento\Framework\Data\Form\FormKey\Validator $formKeyValidator
 	 * @param \Customweb\TwintCw\Helper\ExternalCheckout $helper
@@ -52,12 +58,14 @@ class GuestPost extends \Customweb\TwintCw\Controller\ExternalCheckout
 	public function __construct(
 			\Magento\Framework\App\Action\Context $context,
 			\Magento\Checkout\Model\Session $checkoutSession,
+			\Magento\Quote\Api\CartRepositoryInterface $quoteRepository,
 			\Magento\Customer\Model\Session $customerSession,
 			\Magento\Framework\Data\Form\FormKey\Validator $formKeyValidator,
 			\Customweb\TwintCw\Model\ExternalCheckout\ContextFactory $contextFactory,
 			\Customweb\TwintCw\Helper\ExternalCheckout $helper
 	) {
 		parent::__construct($context, $checkoutSession, $contextFactory);
+		$this->_quoteRepository = $quoteRepository;
 		$this->_customerSession = $customerSession;
 		$this->_formKeyValidator = $formKeyValidator;
 		$this->_helper = $helper;
@@ -90,7 +98,9 @@ class GuestPost extends \Customweb\TwintCw\Controller\ExternalCheckout
 				return $this->resultRedirectFactory->create()->setPath('*/*/login');
 			}
 
-			$this->getQuote()->collectTotals()->save();
+			$quote = $this->getQuote();
+			$quote->collectTotals();
+			$this->_quoteRepository->save($quote);
 
 			$this->getContext()->updateQuote($this->getQuote())->save();
 

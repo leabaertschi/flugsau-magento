@@ -55,6 +55,9 @@ use Magento\Customer\Model\Customer;
  */
 class Transaction extends \Magento\Framework\Model\AbstractModel implements \Magento\Sales\Model\EntityInterface, TransactionInterface
 {
+
+	const HASH_SEPARATOR = ':';
+
 	/**
 	 * Event prefix
 	 *
@@ -75,6 +78,11 @@ class Transaction extends \Magento\Framework\Model\AbstractModel implements \Mag
 	 * @var string
 	 */
 	protected $_entityType = 'twicw_trx';
+
+	/**
+	 * @var \Magento\Sales\Api\OrderRepositoryInterface
+	 */
+	protected $_orderRepository;
 
 	/**
 	 * @var \Magento\Sales\Model\OrderFactory
@@ -100,6 +108,11 @@ class Transaction extends \Magento\Framework\Model\AbstractModel implements \Mag
 	 * @var \Magento\Store\Model\StoreManagerInterface
 	 */
 	protected $_storeManager;
+
+	/**
+	 * @var \Magento\Framework\Encryption\EncryptorInterface
+	 */
+	protected $_encryptor;
 
 	/**
 	 * @var \Customweb\TwintCw\Model\DependencyContainer
@@ -159,26 +172,30 @@ class Transaction extends \Magento\Framework\Model\AbstractModel implements \Mag
 	/**
 	 * @param \Magento\Framework\Model\Context $context
 	 * @param \Magento\Framework\Registry $registry
+	 * @param \Magento\Sales\Api\OrderRepositoryInterface $orderRepository
 	 * @param \Magento\Sales\Model\OrderFactory $orderFactory
 	 * @param \Magento\Sales\Model\Order\PaymentFactory $orderPaymentFactory
 	 * @param \Magento\Quote\Model\QuoteFactory $quoteFactory
 	 * @param \Magento\Customer\Model\CustomerFactory $customerFactory
 	 * @param \Magento\Store\Model\StoreManagerInterface $storeManager
+	 * @param \Magento\Framework\Encryption\EncryptorInterface $encryptor
 	 * @param \Customweb\TwintCw\Model\DependencyContainer $container
 	 * @param \Customweb\TwintCw\Model\Authorization\Method\Factory $authorizationMethodFactory
 	 * @param \Customweb\TwintCw\Model\Alias\Handler $aliasHandler
 	 * @param \Magento\Framework\Model\ResourceModel\AbstractResource $resource
-	 * @param \Magento\Framework\Data\Collection\Db $resourceCollection
+	 * @param \Magento\Framework\Data\Collection\AbstractDb $resourceCollection
 	 * @param array $data
 	 */
 	public function __construct(
 			\Magento\Framework\Model\Context $context,
 			\Magento\Framework\Registry $registry,
+			\Magento\Sales\Api\OrderRepositoryInterface $orderRepository,
 			\Magento\Sales\Model\OrderFactory $orderFactory,
 			\Magento\Sales\Model\Order\PaymentFactory $orderPaymentFactory,
 			\Magento\Quote\Model\QuoteFactory $quoteFactory,
 			\Magento\Customer\Model\CustomerFactory $customerFactory,
 			\Magento\Store\Model\StoreManagerInterface $storeManager,
+			\Magento\Framework\Encryption\EncryptorInterface $encryptor,
 			\Customweb\TwintCw\Model\DependencyContainer $container,
 			\Customweb\TwintCw\Model\Authorization\Method\Factory $authorizationMethodFactory,
 			\Customweb\TwintCw\Model\Alias\Handler $aliasHandler,
@@ -187,12 +204,13 @@ class Transaction extends \Magento\Framework\Model\AbstractModel implements \Mag
 			array $data = []
 	) {
 		parent::__construct($context, $registry, $resource, $resourceCollection, $data);
-
+		$this->_orderRepository = $orderRepository;
 		$this->_orderFactory = $orderFactory;
 		$this->_orderPaymentFactory = $orderPaymentFactory;
 		$this->_quoteFactory = $quoteFactory;
 		$this->_customerFactory = $customerFactory;
 		$this->_storeManager = $storeManager;
+		$this->_encryptor = $encryptor;
 		$this->_container = $container;
 		$this->_authorizationMethodFactory = $authorizationMethodFactory;
 		$this->_aliasHandler = $aliasHandler;
@@ -611,6 +629,23 @@ class Transaction extends \Magento\Framework\Model\AbstractModel implements \Mag
 		}
 	}
 
+	public function getHashSecret() {
+		$timestamp = \time();
+		return \dechex($timestamp) . self::HASH_SEPARATOR . $this->_encryptor->hash($this->getEntityId() . $timestamp);
+	}
+
+	public function isValidHash($input, $validity = 500) {
+		$timestamp = \hexdec(\substr($input, 0, \strpos($input, self::HASH_SEPARATOR)));
+		$hash = \substr($input, \strpos($input, self::HASH_SEPARATOR) + 1);
+		if (!$this->_encryptor->isValidHash($this->getEntityId() . $timestamp, $hash)) {
+			return false;
+		}
+		if (\time() > $timestamp + $validity) {
+			return false;
+		}
+		return true;
+	}
+
 	/**
 	 * Checks if the transaction must be authorized.
 	 *
@@ -693,7 +728,7 @@ class Transaction extends \Magento\Framework\Model\AbstractModel implements \Mag
 		} else {
 			$this->getOrderPayment()->accept();
 		}
-		$this->getOrder()->save();
+		$this->_orderRepository->save($this->getOrder());
 	}
 
 	/**

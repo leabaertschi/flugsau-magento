@@ -19,7 +19,7 @@
  *
  * @category	Customweb
  * @package		Customweb_TwintCw
- * 
+ *
  */
 
 namespace Customweb\TwintCw\Controller\Checkout;
@@ -28,17 +28,21 @@ class Widget extends \Customweb\TwintCw\Controller\Checkout
 {
 	public function execute()
 	{
-		$context = $this->_authorizationMethodFactory->getContextFactory()->createTransaction();
-		/* @var $authorizationMethodAdapter \Customweb\TwintCw\Model\Authorization\Method\Widget */
-		$authorizationAdapter = $this->_authorizationMethodFactory->create($context);
+		try {
+			$context = $this->_authorizationMethodFactory->getContextFactory()->createTransaction();
+			/* @var $authorizationMethodAdapter \Customweb\TwintCw\Model\Authorization\Method\Widget */
+			$authorizationAdapter = $this->_authorizationMethodFactory->create($context);
 
-		/* @var $resultPage \Magento\Framework\View\Result\Page */
-		$resultPage = $this->_resultPageFactory->create();
-		$resultPage->getLayout()
-			->getBlock('customweb_twintcwcheckout_widget')
-			->setTransaction($context->getTransaction())
-			->setAuthorizationAdapter($authorizationAdapter);
-		$resultPage->getLayout()->initMessages();
-		return $resultPage;
+			/* @var $resultPage \Magento\Framework\View\Result\Page */
+			$resultPage = $this->_resultPageFactory->create();
+			$resultPage->getLayout()
+				->getBlock('customweb_twintcwcheckout_widget')
+				->setTransaction($context->getTransaction())
+				->setAuthorizationAdapter($authorizationAdapter);
+			$resultPage->getLayout()->initMessages();
+			return $resultPage;
+		} catch (\Magento\Framework\Exception\NoSuchEntityException $e) {
+			return $this->resultRedirectFactory->create()->setPath('checkout/cart');
+		}
 	}
 }

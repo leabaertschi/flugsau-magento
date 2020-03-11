@@ -19,7 +19,7 @@
  *
  * @category	Customweb
  * @package		Customweb_TwintCw
- * 
+ *
  */
 
 namespace Customweb\TwintCw\Controller\Adminhtml\Transaction;
@@ -35,12 +35,12 @@ class ReviewPayment extends \Customweb\TwintCw\Controller\Adminhtml\Transaction
 			switch ($action) {
 				case 'accept':
 					$transaction->getOrderPayment()->accept();
-					$transaction->getOrder()->save();
+					$this->_orderRepository->save($transaction->getOrder());
 					$message = __('The payment has been accepted.');
 					break;
 				case 'deny':
 					$transaction->getOrderPayment()->deny();
-					$transaction->getOrder()->save();
+					$this->_orderRepository->save($transaction->getOrder());
 					$message = __('The payment has been denied.');
 					break;
 				case 'update':

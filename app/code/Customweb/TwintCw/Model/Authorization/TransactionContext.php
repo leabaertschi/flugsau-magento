@@ -210,7 +210,8 @@ class TransactionContext implements
 	public function getCustomParameters()
 	{
 		return [
-			'cstrxid' => $this->getTransactionId()
+			'cstrxid' => $this->getTransactionId(),
+			'secret' => $this->getTransaction()->getHashSecret()
 		];
 	}
 

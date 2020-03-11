@@ -30,7 +30,7 @@ interface Customweb_Core_Stream_IOutput {
 	/**
 	 * Closes the stream for further write operations.
 	 * 
-	 * @throws Customweb_Stream_IOException
+	 * @throws Customweb_Core_Stream_IOException
 	 * @return void
 	 */
 	public function close();
@@ -46,7 +46,7 @@ interface Customweb_Core_Stream_IOutput {
 	 * Write data to the stream. 
 	 * 
 	 * @param string $data
-	 * @throws Customweb_Stream_IOException
+	 * @throws Customweb_Core_Stream_IOException
 	 */
 	public function write($data);
 	
@@ -54,14 +54,14 @@ interface Customweb_Core_Stream_IOutput {
 	 * Writes the given input stream to the output stream.
 	 * 
 	 * @param Customweb_Core_Stream_IInput $inputStream
-	 * @throws Customweb_Stream_IOException
+	 * @throws Customweb_Core_Stream_IOException
 	 */
 	public function writeStream(Customweb_Core_Stream_IInput $inputStream);
 
 	/**
 	 * Writes any data in the buffer.
 	 * 
-	 * @throws Customweb_Stream_IOException
+	 * @throws Customweb_Core_Stream_IOException
 	 */
 	public function flush();
 

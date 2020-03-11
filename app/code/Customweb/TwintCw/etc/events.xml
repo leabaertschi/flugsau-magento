@@ -27,6 +27,10 @@
     		<observer name="customweb_twintcw_cancel_payment" instance="Customweb\TwintCw\Observer\CancelPayment" />
     </event>
     
+    <event name="controller_action_predispatch_checkout_index_index">
+    		<observer name="customweb_twintcw_cancel_payment_amasty" instance="Customweb\TwintCw\Observer\CancelPayment" />
+    </event>
+    
     <event name="store_add">
         <observer name="customweb_twintcw_sequence" instance="Customweb\TwintCw\Observer\SequenceCreatorObserver" />
     </event>

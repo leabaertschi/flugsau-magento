@@ -2614,7 +2614,7 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
             ],
             'twintcw' => [
                 'information' => [
-                    'version' => '4.0.62',
+                    'version' => '4.0.105',
                 ],
                 'shop' => [
                     'alias_management' => '0',

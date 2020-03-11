@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
   * You are allowed to use this API in your web application.
  *
@@ -25,21 +25,21 @@
  * @author Thomas Hunziker / Simon Schurter
  */
 class Customweb_Payment_Alias_Handler {
-	
+
 	/**
 	 * @var Customweb_Database_Entity_IManager
 	 */
 	private $manager = null;
-	
+
 	private $transactionClassName = null;
-	
+
 	/**
 	 * @var Customweb_DependencyInjection_IContainer
 	 */
 	private $container = null;
-	
+
 	/**
-	 * 
+	 *
 	 * @Inject({'Customweb_Database_Entity_IManager', 'Customweb_DependencyInjection_IContainer', 'databaseTransactionClassName'})
 	 */
 	public function __construct(Customweb_Database_Entity_IManager $manager, Customweb_DependencyInjection_IContainer $container, $transactionClassName) {
@@ -47,28 +47,28 @@ class Customweb_Payment_Alias_Handler {
 		$this->transactionClassName = $transactionClassName;
 		$this->container = $container;
 	}
-	
+
 	/**
 	 * Fetches a list of transaction which can be used as alias transactions for the given order context.
-	 * 
+	 *
 	 * @param Customweb_Payment_Authorization_IOrderContext $orderContext
 	 * @return Customweb_Payment_Entity_AbstractTransaction[]
 	 */
 	public function getAliasTransactions(Customweb_Payment_Authorization_IOrderContext $orderContext) {
 		$customerId = $orderContext->getCustomerId();
-		if (empty($customerId) === null) {
+		if (empty($customerId)) {
 			return array();
 		}
-		
+
 		$transactions = $this->manager->search(
-			$this->transactionClassName, 
-			'customerId = >customerId AND paymentMachineName = >paymentMethodName AND aliasActive = "y" AND aliasForDisplay IS NOT NULL AND aliasForDisplay != ""', 
+			$this->transactionClassName,
+			'customerId = >customerId AND paymentMachineName = >paymentMethodName AND aliasActive = "y" AND aliasForDisplay IS NOT NULL AND aliasForDisplay != ""',
 			'createdOn DESC', array(
 				'>customerId' => $customerId,
 				'>paymentMethodName' => $orderContext->getPaymentMethod()->getPaymentMethodName(),
 			)
 		);
-		
+
 		$result = array();
 		foreach ($transactions as $transaction) {
 			/* @var $transaction Customweb_Payment_Entity_AbstractTransaction */
@@ -76,7 +76,7 @@ class Customweb_Payment_Alias_Handler {
 				$result[$transaction->getAliasForDisplay()] = $transaction;
 			}
 		}
-		
+
 		return $result;
 	}
 
@@ -93,7 +93,7 @@ class Customweb_Payment_Alias_Handler {
 			throw new Exception("Transaction must be of type Customweb_Payment_Entity_AbstractTransaction");
 		}
 		$this->deactivateAlias($transactionId);
-	
+
 		if ($this->container->hasBean('Customweb_Payment_Alias_IRemoveAdapter')) {
 			$removeAdapter = $this->container->getBean('Customweb_Payment_Alias_IRemoveAdapter');
 			if (!($removeAdapter instanceof Customweb_Payment_Alias_IRemoveAdapter)) {
@@ -118,6 +118,6 @@ class Customweb_Payment_Alias_Handler {
 		$transaction->setAliasActive(false);
 		$this->manager->persist($transaction);
 	}
-	
-	
+
+
 }

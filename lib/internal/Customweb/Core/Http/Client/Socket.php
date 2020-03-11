@@ -177,7 +177,7 @@ class Customweb_Core_Http_Client_Socket extends Customweb_Core_Http_Client_Abstr
 	 *
 	 * We need this method because neither fread nor stream_get_contents does respect timeouts.
 	 *
-	 * @param socket $socket The socket from which should be read.
+	 * @param resource $socket The socket from which should be read.
 	 * @param int $maxNumberOfBytes the number of bytes to read.
 	 * @return string the read string.
 	 */
@@ -213,7 +213,7 @@ class Customweb_Core_Http_Client_Socket extends Customweb_Core_Http_Client_Abstr
 	 * This method reads a single line in blocking fashion from the socket. However
 	 * the method does respect the timeout configured.
 	 *
-	 * @param socket $socket The socket from which should be read.
+	 * @param resource $socket The socket from which should be read.
 	 * @param int $maxNumberOfBytes the number of bytes to read.
 	 * @return string the read string.
 	 */
@@ -275,7 +275,7 @@ class Customweb_Core_Http_Client_Socket extends Customweb_Core_Http_Client_Abstr
 	 *
 	 * @param Customweb_Core_Http_IRequest $request
 	 * @throws Customweb_Core_Http_Client_ConnectionException
-	 * @return stream
+	 * @return resource
 	 */
 	protected final function sendInternal(Customweb_Core_Http_IRequest $request){
 		$request = new Customweb_Core_Http_Request($request);
@@ -319,7 +319,7 @@ class Customweb_Core_Http_Client_Socket extends Customweb_Core_Http_Client_Abstr
 	 * This method creates a stream socket to the server.
 	 *
 	 * @throws Customweb_Core_Http_Client_ConnectionException
-	 * @return stream resource
+	 * @return resource
 	 */
 	protected function createSocketStream(Customweb_Core_Http_Request $request){
 		if ($request->isSecureConnection()) {

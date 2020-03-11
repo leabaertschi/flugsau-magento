@@ -19,12 +19,11 @@
  *
  * @category	Customweb
  * @package		Customweb_TwintCw
- * 
+ *
  */
 
 namespace Customweb\TwintCw\Plugin\Sales\Controller\Adminhtml\Order\Invoice;
 
-use Magento\Framework\Registry;
 class View
 {
 	/**
@@ -68,7 +67,7 @@ class View
 	}
 
 	/**
-	 * @param Magento\Sales\Controller\Adminhtml\Order\Invoice\View $subject
+	 * @param \Magento\Sales\Controller\Adminhtml\Order\Invoice\View $subject
 	 * @param \Magento\Framework\Controller\ResultInterface $result
 	 */
 	public function afterExecute(\Magento\Sales\Controller\Adminhtml\Order\Invoice\View $subject, $result)
@@ -111,7 +110,7 @@ class View
 		if (!$transaction->getTransactionObject()->isPartialCapturePossible()) {
 			return false;
 		}
-		if ($invoice->getOrder()->getPayment()->isCaptureFinal($invoice->getGrandTotal())) {
+		if ($invoice->getOrder()->getPayment()->isCaptureFinal($invoice->getBaseGrandTotal())) {
 			return false;
 		}
 		return true;

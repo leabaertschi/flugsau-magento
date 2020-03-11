@@ -38,8 +38,6 @@ define([
 	Form,
 	fullScreenLoader
 ) {
-	'use strict';
-
 	/**
 	 * Abstract Authorization Method Class
 	 * 

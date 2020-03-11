@@ -47,7 +47,7 @@ class Customweb_Twint_TwintService extends Customweb_Twint_Stubs_Ch_Twint_Servic
 		
 		$header = new Customweb_Twint_Stubs_Ch_Twint_Service_Header_Types_V2_RequestHeaderElement();
 		$header->setClientSoftwareName(Customweb_Twint_Stubs_Ch_Twint_Service_Base_Types_V2_Token50Type::_()->set("Customweb"));
-		$header->setClientSoftwareVersion(Customweb_Twint_Stubs_Ch_Twint_Service_Base_Types_V2_Token50Type::_()->set("4.0.62"));
+		$header->setClientSoftwareVersion(Customweb_Twint_Stubs_Ch_Twint_Service_Base_Types_V2_Token50Type::_()->set("4.0.105"));
 		$header->setMessageId(
 				Customweb_Twint_Stubs_Ch_Twint_Service_Base_Types_V2_UuidType::_()->set(Customweb_Core_Util_Rand::getUuid()));
 		

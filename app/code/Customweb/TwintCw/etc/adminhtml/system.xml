@@ -173,7 +173,7 @@
 				<field id="settlement" showInDefault="1" showInStore="0" showInWebsite="1" sortOrder="130" translate="label" type="select">
 					<label><![CDATA[Invoice Settlement]]></label>
 					<source_model>Customweb\TwintCw\Model\Config\Source\Settlement</source_model>
-					<comment><![CDATA[Choose settlement after order in case you want an invoice to be created with your oder. The state of the invoice will set according to your capture status.]]></comment>
+					<comment><![CDATA[Choose settlement after order in case you want an invoice to be created with your oder. The state of the invoice will set according to your capture status. For captured payments, an invoice is always created.]]></comment>
 				</field>
 				<field id="invoice_email" showInDefault="1" showInStore="0" showInWebsite="1" sortOrder="140" translate="label" type="select">
 					<label><![CDATA[Send Invoice Email]]></label>

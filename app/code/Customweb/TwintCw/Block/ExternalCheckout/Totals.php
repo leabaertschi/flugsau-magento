@@ -19,7 +19,7 @@
  *
  * @category	Customweb
  * @package		Customweb_TwintCw
- * 
+ *
  */
 
 namespace Customweb\TwintCw\Block\ExternalCheckout;
@@ -32,7 +32,7 @@ class Totals extends AbstractExternalCheckout
 	protected $_salesConfig;
 
 	/**
-	 * @var LayoutProcessorInterface[]
+	 * @var \Magento\Checkout\Block\Checkout\LayoutProcessorInterface[]
 	 */
 	protected $layoutProcessors;
 
@@ -106,7 +106,7 @@ class Totals extends AbstractExternalCheckout
 
 	/**
 	 * @param string $code
-	 * @return BlockInterface
+	 * @return \Magento\Framework\View\Element\BlockInterface
 	 */
 	protected function _getTotalRenderer($code)
 	{

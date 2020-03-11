@@ -26,17 +26,26 @@ namespace Customweb\TwintCw\Model\BackendOperation;
 
 class CaptureAdapter implements \Customweb_Payment_BackendOperation_Adapter_Shop_ICapture
 {
+
+	/**
+	 * @var \Magento\Sales\Api\OrderRepositoryInterface
+	 */
+	protected $_orderRepository;
+
 	/**
 	 * @var \Customweb\TwintCw\Model\Authorization\TransactionFactory
 	 */
 	protected $_transactionFactory;
 
 	/**
+	 * @param \Magento\Sales\Api\OrderRepositoryInterface $orderRepository
 	 * @param \Customweb\TwintCw\Model\Authorization\TransactionFactory $transactionFactory
 	 */
 	public function __construct(
+			\Magento\Sales\Api\OrderRepositoryInterface $orderRepository,
 			\Customweb\TwintCw\Model\Authorization\TransactionFactory $transactionFactory
 	) {
+		$this->_orderRepository = $orderRepository;
 		$this->_transactionFactory = $transactionFactory;
 	}
 
@@ -69,7 +78,7 @@ class CaptureAdapter implements \Customweb_Payment_BackendOperation_Adapter_Shop
 			$transactionEntity->getOrderPayment()->registerCaptureNotification($amount, true);
 			$order = $transactionEntity->getOrderPayment()->getOrder();
 			$order->addRelatedObject($transactionEntity->getOrderPayment());
-			$order->save();
+			$this->_orderRepository->save($order);
 		}
 	}
 }

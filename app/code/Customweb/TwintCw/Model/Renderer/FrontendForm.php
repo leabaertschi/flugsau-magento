@@ -19,7 +19,7 @@
  *
  * @category	Customweb
  * @package		Customweb_TwintCw
- * 
+ *
  */
 
 namespace Customweb\TwintCw\Model\Renderer;
@@ -85,7 +85,7 @@ class FrontendForm extends AbstractForm
 	}
 
 	/**
-	 * @param Customweb_Form_IElement $element
+	 * @param \Customweb_Form_IElement $element
 	 * @return string
 	 */
 	protected function renderElementDescription(\Customweb_Form_IElement $element)
@@ -109,7 +109,7 @@ class FrontendForm extends AbstractForm
 		if($this->getNamespacePrefix() !== null){
 			$postfix = $this->getNamespacePrefix().$postfix;
 		}
-				
+
 		$output = '<div class="' . $this->getButtonTypeClass($button) . '">';
 		$output .= '<button type="submit" name="button[' . $button->getMachineName() . ']" title="' . $button->getTitle() . '" class="action ' . $this->getButtonTypeClass($button) . '" id="' . $button->getId() . '" ';
 		if(!$button->isJSValidationExecuted()){
@@ -117,9 +117,9 @@ class FrontendForm extends AbstractForm
 		}
 		else {
 			$output .='onclick="cwValidationRequired'.$postfix.' = true; return true;"';
-		}				
-				
-				
+		}
+
+
 		$output	.=	'>';
 		$output .= '<span>' . $button->getTitle() . '</span>';
 		$output .= '</button>';
@@ -128,7 +128,7 @@ class FrontendForm extends AbstractForm
 	}
 
 	/**
-	 * @param Customweb_Form_IButton $button
+	 * @param \Customweb_Form_IButton $button
 	 * @return string
 	 */
 	protected function getButtonTypeClass(\Customweb_Form_IButton $button)

@@ -19,7 +19,7 @@
  *
  * @category	Customweb
  * @package		Customweb_TwintCw
- * 
+ *
  */
 
 namespace Customweb\TwintCw\Model\Renderer\Adminhtml;
@@ -164,7 +164,7 @@ class BackendForm extends \Customweb\TwintCw\Model\Renderer\AbstractForm
 	}
 
 	/**
-	 * @param Customweb_Form_IElement $element
+	 * @param \Customweb_Form_IElement $element
 	 * @return string
 	 */
 	protected function renderElementScopeControl(\Customweb_Form_IElement $element)
@@ -300,7 +300,7 @@ class BackendForm extends \Customweb\TwintCw\Model\Renderer\AbstractForm
 		}
 		return $visible;
 	}
-	
+
 	/**
 	 * @param \Customweb_Form_IElement $element
 	 * @return bool

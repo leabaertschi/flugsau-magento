@@ -19,7 +19,7 @@
  *
  * @category	Customweb
  * @package		Customweb_TwintCw
- * 
+ *
  */
 
 namespace Customweb\TwintCw\Controller\Adminhtml;
@@ -42,6 +42,11 @@ abstract class Transaction extends \Magento\Backend\App\Action
 	protected $_resultLayoutFactory;
 
 	/**
+	 * @var \Magento\Sales\Api\OrderRepositoryInterface
+	 */
+	protected $_orderRepository;
+
+	/**
 	 * @var \Customweb\TwintCw\Model\Authorization\TransactionFactory
 	 */
 	protected $_transactionFactory;
@@ -51,6 +56,7 @@ abstract class Transaction extends \Magento\Backend\App\Action
 	 * @param \Magento\Framework\Registry $coreRegistry
 	 * @param \Magento\Framework\View\Result\PageFactory $resultPageFactory
 	 * @param \Magento\Framework\View\Result\LayoutFactory $resultLayoutFactory
+	 * @param \Magento\Sales\Api\OrderRepositoryInterface $orderRepository
 	 * @param \Customweb\TwintCw\Model\Authorization\TransactionFactory $transactionFactory
 	 */
 	public function __construct(
@@ -58,12 +64,14 @@ abstract class Transaction extends \Magento\Backend\App\Action
 			\Magento\Framework\Registry $coreRegistry,
 			\Magento\Framework\View\Result\PageFactory $resultPageFactory,
 			\Magento\Framework\View\Result\LayoutFactory $resultLayoutFactory,
+			\Magento\Sales\Api\OrderRepositoryInterface $orderRepository,
 			\Customweb\TwintCw\Model\Authorization\TransactionFactory $transactionFactory
 	) {
 		parent::__construct($context);
 		$this->_coreRegistry = $coreRegistry;
 		$this->_resultPageFactory = $resultPageFactory;
 		$this->_resultLayoutFactory = $resultLayoutFactory;
+		$this->_orderRepository = $orderRepository;
 		$this->_transactionFactory = $transactionFactory;
 	}
 

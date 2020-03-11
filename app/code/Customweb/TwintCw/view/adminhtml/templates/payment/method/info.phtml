@@ -23,6 +23,8 @@
  */
 
 /* @var $block \Customweb\TwintCw\Block\Payment\Method\Info */
+
+$transaction = $block->getTransaction();
 ?>
 
 <?php if ($block->isShowMethodImage()) : ?>
@@ -31,14 +33,14 @@
 	</div>
 <?php endif; ?>
 <?php echo $block->escapeHtml($block->getMethod()->getTitle()) ?>
-<?php if ($block->getTransaction()) : ?>
+<?php if ($transaction) : ?>
 	<div class="admin__page-section-item-content twintcw-payment-information-block">
 		<table class="data-table admin__table-secondary">
 			<tr>
 				<th><?php echo __('Transaction Id')?></th>
-				<td><a href="<?php echo $block->getTransactionViewUrl() ?>"><span><?php echo $block->getTransaction()->getId() ?></span></a></td>
+				<td><a href="<?php echo $block->getTransactionViewUrl() ?>"><span><?php echo $transaction->getId() ?></span></a></td>
 			</tr>
-			<?php foreach($block->getTransaction()->getTransactionObject()->getTransactionLabels() as $label) : ?>
+			<?php foreach($transaction->getTransactionObject()->getTransactionLabels() as $label) : ?>
 			<tr>
 				<th>
 					<?php echo $block->escapeHtml($label['label']) ?>
@@ -53,7 +55,7 @@
 	</div>
 
 	<?php
-	$historyItems = $block->getTransaction()->getTransactionObject()->getHistoryItems();
+	$historyItems = $transaction->getTransactionObject()->getHistoryItems();
 	if (!empty($historyItems)) : ?>
 	<div class="edit-order-comments twintcw-payment-history-block">
 		<?php foreach(array_reverse($historyItems) as $historyItem) : ?>
@@ -70,10 +72,10 @@
 	</div>
 	<?php endif; ?>
 
-	<?php if ($block->getTransaction()->getTransactionObject()->getPaymentInformation() != null) : ?>
+	<?php if ($transaction->getTransactionObject()->getPaymentInformation() != null) : ?>
 		<div class="twintcw-transaction-payment-information-block">
 			<h4><?php echo __('Payment Information') ?></h4>
-			<?php echo $block->getTransaction()->getTransactionObject()->getPaymentInformation() ?>
+			<?php echo $transaction->getTransactionObject()->getPaymentInformation() ?>
 		</div>
 	<?php endif; ?>
 <?php endif; ?>

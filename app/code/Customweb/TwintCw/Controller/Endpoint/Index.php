@@ -57,6 +57,7 @@ class Index extends \Customweb\TwintCw\Controller\Endpoint implements CsrfAwareA
 
 	public function execute()
 	{
+		header_remove('Set-Cookie');
 		$packages = array(
 			0 => 'Customweb_Twint',
  			1 => 'Customweb_Payment_Authorization',

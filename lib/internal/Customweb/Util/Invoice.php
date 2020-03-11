@@ -97,7 +97,7 @@ final class Customweb_Util_Invoice {
 			}
 			$result[] = new Customweb_Payment_Authorization_DefaultInvoiceItem($lineItem->getSku(), $lineItem->getName(), $lineItem->getTaxRate(),
 					Customweb_Util_Currency::roundAmount($amount, $currencyCode), $lineItem->getQuantity(), $type, 
-					$lineItem->getOriginalSku());
+					$lineItem->getOriginalSku(), $lineItem->isShippingRequired());
 		}
 		
 		$realSum = self::getTotalAmountIncludingTax($result);
@@ -142,7 +142,7 @@ final class Customweb_Util_Invoice {
 			/* @var $item Customweb_Payment_Authorization_IInvoiceItem */
 			$newAmount = Customweb_Util_Currency::roundAmount($item->getAmountIncludingTax() * $factor, $currencyCode);
 			$newItem = new Customweb_Payment_Authorization_DefaultInvoiceItem($item->getSku(), $item->getName(), $item->getTaxRate(), $newAmount, 
-					$item->getQuantity(), $item->getType(), $item->getOriginalSku());
+					$item->getQuantity(), $item->getType(), $item->getOriginalSku(), $item->isShippingRequired());
 			$newItems[] = $newItem;
 			$itemCopy[] = $item;
 			if ($item->getType() == Customweb_Payment_Authorization_DefaultInvoiceItem::TYPE_DISCOUNT) {
@@ -186,7 +186,7 @@ final class Customweb_Util_Invoice {
 
 		if($change){
 			$items[$index] = new Customweb_Payment_Authorization_DefaultInvoiceItem($currentItem->getSku(), $currentItem->getName(), $currentItem->getTaxRate(), $newAmount,
-					$currentItem->getQuantity(), $currentItem->getType(), $currentItem->getOriginalSku());
+					$currentItem->getQuantity(), $currentItem->getType(), $currentItem->getOriginalSku(), $currentItem->isShippingRequired());
 			$newRemainder = $remainder-$delta;
 		}
 		else{
@@ -231,7 +231,7 @@ final class Customweb_Util_Invoice {
 			$skus[$sku] = 1;
 			
 			$newLineItems[] = new Customweb_Payment_Authorization_DefaultInvoiceItem($sku, $item->getName(), $item->getTaxRate(), 
-					$item->getAmountIncludingTax(), $item->getQuantity(), $item->getType(), $item->getOriginalSku());
+					$item->getAmountIncludingTax(), $item->getQuantity(), $item->getType(), $item->getOriginalSku(), $item->isShippingRequired());
 		}
 		
 		return $newLineItems;
@@ -261,7 +261,7 @@ final class Customweb_Util_Invoice {
 				$newAmount = $item->getAmountIncludingTax() - $deltaItem->getAmountIncludingTax();
 				$newQuantity = $item->getQuantity() - $deltaItem->getQuantity();
 				$resultingLineItems[] = new Customweb_Payment_Authorization_DefaultInvoiceItem($item->getSku(), $item->getName(), 
-						$deltaItem->getTaxRate(), $newAmount, $newQuantity, $item->getType(), $item->getOriginalSku());
+						$deltaItem->getTaxRate(), $newAmount, $newQuantity, $item->getType(), $item->getOriginalSku(), $item->isShippingRequired());
 				unset($deltaKeys[$identifier]);
 			}
 			else {
@@ -302,7 +302,7 @@ final class Customweb_Util_Invoice {
 				$newQuantity = $item->getQuantity() - $deltaItem->getQuantity();
 				if ($newAmount > 0) {
 					$resultingLineItems[] = new Customweb_Payment_Authorization_DefaultInvoiceItem($item->getSku(), $item->getName(), 
-							$deltaItem->getTaxRate(), $newAmount, $newQuantity, $item->getType(), $item->getOriginalSku());
+							$deltaItem->getTaxRate(), $newAmount, $newQuantity, $item->getType(), $item->getOriginalSku(), $item->isShippingRequired());
 				}
 				unset($deltaKeys[$identifier]);
 			}
@@ -338,7 +338,7 @@ final class Customweb_Util_Invoice {
 				$newAmount = $item->getAmountIncludingTax() + $deltaItem->getAmountIncludingTax();
 				$newQuantity = $item->getQuantity() + $deltaItem->getQuantity();
 				$resultingLineItems[] = new Customweb_Payment_Authorization_DefaultInvoiceItem($item->getSku(), $item->getName(), 
-						$deltaItem->getTaxRate(), $newAmount, $newQuantity, $item->getType(), $item->getOriginalSku());
+						$deltaItem->getTaxRate(), $newAmount, $newQuantity, $item->getType(), $item->getOriginalSku(), $item->isShippingRequired());
 				unset($deltaKeys[$identifier]);
 			}
 			else {

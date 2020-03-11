@@ -111,16 +111,17 @@ class InvoiceItem extends \Magento\Framework\App\Helper\AbstractHelper
 			}
 
 			$orderItemId = $item->getOrderItem() != null ? $item->getOrderItem()->getId() : $item->getId();
+			$taxRate = $item->getOrderItem() != null ? $item->getOrderItem()->getTaxPercent() : $item->getTaxPercent();
 
 			$invoiceItem = new \Customweb_Payment_Authorization_DefaultInvoiceItem(
 					(string)$item->getSku().'_'.$orderItemId,
 					(string)$item->getName(),
-					(double)$item->getTaxPercent(),
+					(double)$taxRate,
 					(double)($useBaseCurrency ? $item->getBaseRowTotalInclTax() : $item->getRowTotalInclTax()),
 					(double)($item->getQty() ? $item->getQty() : $item->getQtyOrdered()),
 					\Customweb_Payment_Authorization_IInvoiceItem::TYPE_PRODUCT,
 					(string)$item->getSku(),
-					$item->getProductType() != \Magento\Catalog\Model\Product\Type::TYPE_VIRTUAL
+					!$item->getIsVirtual()
 			);
 			$invoiceItems[] = $invoiceItem;
 		}

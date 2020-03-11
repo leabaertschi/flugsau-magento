@@ -19,7 +19,7 @@
  *
  * @category	Customweb
  * @package		Customweb_TwintCw
- * 
+ *
  */
 
 namespace Customweb\TwintCw\Controller\Customer;
@@ -34,7 +34,7 @@ class Aliases extends \Magento\Framework\App\Action\Action
 	protected $_scopeConfig;
 
     /**
-     * @var PageFactory
+     * @var \Magento\Framework\View\Result\PageFactory
      */
     protected $_resultPageFactory;
 

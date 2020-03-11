@@ -31,6 +31,11 @@ use Customweb\TwintCw\Model\Payment\Method\AbstractMethod;
 class CancelPayment implements ObserverInterface
 {
 	/**
+	 * @var \Magento\Sales\Api\OrderRepositoryInterface
+	 */
+	protected $_orderRepository;
+
+	/**
      * @var \Magento\Checkout\Model\Session
      */
 	protected $_checkoutSession;
@@ -41,13 +46,16 @@ class CancelPayment implements ObserverInterface
 	protected $_transactionFactory;
 
 	/**
+	 * @param \Magento\Sales\Api\OrderRepositoryInterface $orderRepository
 	 * @param \Magento\Checkout\Model\Session $checkoutSession
 	 * @param \Customweb\TwintCw\Model\Authorization\TransactionFactory $transactionFactory
 	 */
 	public function __construct(
+			\Magento\Sales\Api\OrderRepositoryInterface $orderRepository,
 			\Magento\Checkout\Model\Session $checkoutSession,
 			\Customweb\TwintCw\Model\Authorization\TransactionFactory $transactionFactory
 	) {
+		$this->_orderRepository = $orderRepository;
 		$this->_checkoutSession = $checkoutSession;
 		$this->_transactionFactory = $transactionFactory;
 	}
@@ -58,7 +66,8 @@ class CancelPayment implements ObserverInterface
 		if ($order instanceof Order && $order->getId()) {
 			if ($order->getState() === Order::STATE_PENDING_PAYMENT) {
 				if ($order->getPayment() instanceof AbstractMethod) {
-					$order->registerCancellation('')->save();
+					$order->registerCancellation('');
+					$this->_orderRepository->save($order);
 					$this->_checkoutSession->restoreQuote();
 				}
 			}

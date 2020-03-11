@@ -19,7 +19,7 @@
  *
  * @category	Customweb
  * @package		Customweb_TwintCw
- * 
+ *
  */
 
 namespace Customweb\TwintCw\Block\Adminhtml\Checkout;
@@ -51,6 +51,12 @@ class Payment extends \Magento\Backend\Block\Widget\Form\Container
 	protected $_transactionFactory;
 
 	/**
+	 *
+	 * @var \Customweb\TwintCw\Model\Configuration
+	 */
+	protected $_configuration;
+
+	/**
 	 * @var \Customweb\TwintCw\Model\Authorization\Transaction
 	 */
 	protected $transaction;
@@ -60,6 +66,7 @@ class Payment extends \Magento\Backend\Block\Widget\Form\Container
 	 * @param \Magento\Framework\Registry $registry
 	 * @param \Magento\Sales\Model\OrderFactory $orderFactory
 	 * @param \Customweb\TwintCw\Model\Authorization\TransactionFactory $transactionFactory
+	 * @param \Customweb\TwintCw\Model\Configuration $configuration
 	 * @param array $data
 	 */
 	public function __construct(
@@ -67,11 +74,13 @@ class Payment extends \Magento\Backend\Block\Widget\Form\Container
 			\Magento\Framework\Registry $registry,
 			\Magento\Sales\Model\OrderFactory $orderFactory,
 			\Customweb\TwintCw\Model\Authorization\TransactionFactory $transactionFactory,
+			\Customweb\TwintCw\Model\Configuration $configuration,
 			array $data = []
 	) {
 		$this->_coreRegistry = $registry;
 		$this->_orderFactory = $orderFactory;
 		$this->_transactionFactory = $transactionFactory;
+		$this->_configuration = $configuration;
 		parent::__construct($context, $data);
 	}
 
@@ -104,6 +113,8 @@ class Payment extends \Magento\Backend\Block\Widget\Form\Container
 				'id' => 'twintcw-payment-cancel-button'
 			]
 		);
+
+		$this->_configuration->setStore($this->getTransaction()->getStore());
 	}
 
 	/**

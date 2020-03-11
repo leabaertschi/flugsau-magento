@@ -80,13 +80,16 @@ define([
 
 			this.preload();
 			
+			this.preventFormReload = false;
 			methodList.subscribe($.proxy(function(methods){
+				if (this.preventFormReload) return;
 				if (methods) {
 					this.getForm();
 				}
 			}, this));
 			
 			quote.paymentMethod.subscribe($.proxy(function(method){
+				if (this.preventFormReload) return;
 				if (method && method.method == this.getCode()) {
 					this.getForm();
 				}
@@ -107,6 +110,7 @@ define([
 			}
 
 			Form.validate(this.item.method, function() {
+				self.preventFormReload = true;
 				self.onValidateSuccess(data, event);
 			}, function() {
 				self.onValidateFailure();
@@ -166,6 +170,7 @@ define([
                 placeOrder
                     .fail(
                         function () {
+                        	self.preventFormReload = false;
                             self.isPlaceOrderActionAllowed(true);
                         }
                     ).done(

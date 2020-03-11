@@ -18,13 +18,12 @@ class Customweb_Twint_Endpoint_Process extends Customweb_Payment_Endpoint_Contro
 	 * @return Customweb_Core_Http_Response
 	 */
 	public function poll(Customweb_Core_Http_IRequest $request){
-		
 		$transactionIdMap = $this->getTransactionId($request);
-		$transaction =  $this->getTransactionHandler()->findTransactionByTransactionExternalId($transactionIdMap['id']);
-		for($i= 0; $i<5; $i++){
+		$transaction = $this->getTransactionHandler()->findTransactionByTransactionExternalId($transactionIdMap['id']);
+		for ($i = 0; $i < 5; $i++) {
 			try {
 				$this->getTransactionHandler()->beginTransaction();
-				$transaction =  $this->getTransactionHandler()->findTransactionByTransactionExternalId($transactionIdMap['id'], false);
+				$transaction = $this->getTransactionHandler()->findTransactionByTransactionExternalId($transactionIdMap['id'], false);
 				if ($transaction->isAuthorized()) {
 					$state = 'COMPLETE';
 					$this->getTransactionHandler()->rollbackTransaction();
@@ -36,7 +35,7 @@ class Customweb_Twint_Endpoint_Process extends Customweb_Payment_Endpoint_Contro
 					return $this->getJsonResponse($state, $transaction->getFailedUrl());
 				}
 				$url = $this->process($request, $transaction);
-				$this->getTransactionHandler()->persistTransactionObject($transaction);		
+				$this->getTransactionHandler()->persistTransactionObject($transaction);
 				$this->getTransactionHandler()->commitTransaction();
 				switch ($url) {
 					case $transaction->getSuccessUrl():
@@ -51,7 +50,7 @@ class Customweb_Twint_Endpoint_Process extends Customweb_Payment_Endpoint_Contro
 			}
 			catch (Customweb_Payment_Exception_OptimisticLockingException $lockingException) {
 				$this->getTransactionHandler()->rollbackTransaction();
-				if($i == 4){
+				if ($i == 4) {
 					throw $lockingException;
 				}
 				sleep(1);
@@ -60,7 +59,6 @@ class Customweb_Twint_Endpoint_Process extends Customweb_Payment_Endpoint_Contro
 		return $this->getJsonResponse('UNKNOWN', "");
 	}
 
-	
 	/**
 	 * @Action("continue")
 	 *
@@ -76,7 +74,7 @@ class Customweb_Twint_Endpoint_Process extends Customweb_Payment_Endpoint_Contro
 							Customweb_I18n_Translation::__('An attempt to process the transaction was made with an incorrect hash.')));
 			return Customweb_Core_Http_Response::redirect($transaction->getFailedUrl());
 		}
-		
+
 		$url = $this->process($request, $transaction);
 		switch ($url) {
 			case $transaction->getSuccessUrl():
@@ -88,7 +86,7 @@ class Customweb_Twint_Endpoint_Process extends Customweb_Payment_Endpoint_Contro
 				$url = $transaction->getFailedUrl();
 				break;
 		}
-		
+
 		return Customweb_Core_Http_Response::redirect($url);
 	}
 
@@ -100,22 +98,30 @@ class Customweb_Twint_Endpoint_Process extends Customweb_Payment_Endpoint_Contro
 	 * @return Customweb_Core_Http_Response
 	 */
 	public function template(Customweb_Core_Http_IRequest $request, Customweb_Twint_Authorization_Transaction $transaction){
-		$response = $this->getPaymentMethod($transaction)->sendStartOrderRequest($transaction, array());
+		$response = null;
+		try {
+			$response = $this->getPaymentMethod($transaction)->sendStartOrderRequest($transaction, array());
+		}
+		catch (Exception $e) {
+			$transaction->setAuthorizationFailed($e->getMessage());
+			return Customweb_Core_Http_Response::redirect($transaction->getFailedUrl());
+		}
 		
 		$orderId = $response->getOrderUUID();
 		if (empty($orderId)) {
 			$transaction->setAuthorizationFailed(Customweb_I18n_Translation::__("The order could not be started: The order id is missing."));
 			return Customweb_Core_Http_Response::redirect($transaction->getFailedUrl());
 		}
-		
+
 		$transaction->setPaymentId($orderId->get());
-		
+
 		try {
 			$templateRenderer = new Customweb_Twint_Method_Template_Token($this->getContainer(), $response, $transaction);
 			return Customweb_Core_Http_Response::_($templateRenderer->renderTemplate());
 		}
 		catch (Exception $exc) {
-			Customweb_Twint_Util::cancelOrder(new Customweb_Twint_Container($this->getContainer()), $transaction->getPaymentId());
+			Customweb_Twint_Util::cancelOrder(new Customweb_Twint_Container($this->getContainer()),
+					$transaction->getPaymentId());
 			$transaction->setAuthorizationFailed($exc->getMessage());
 			$transaction->addErrorMessage(
 					new Customweb_Payment_Authorization_ErrorMessage(
@@ -143,16 +149,15 @@ class Customweb_Twint_Endpoint_Process extends Customweb_Payment_Endpoint_Contro
 	 */
 	public function cancel(Customweb_Core_Http_IRequest $request){
 		$transactionIdMap = $this->getTransactionId($request);
-		$transaction =  $this->getTransactionHandler()->findTransactionByTransactionExternalId($transactionIdMap['id']);
+		$transaction = $this->getTransactionHandler()->findTransactionByTransactionExternalId($transactionIdMap['id']);
 		$parameters = $request->getParameters();
 		if (!$this->isHashCorrect($transaction, $parameters)) {
-			throw new Exception(
-							Customweb_I18n_Translation::__('An attempt to cancel the transaction was made with an incorrect hash.')->toString());
-		}		
-		for($i= 0; $i<5; $i++){
+			throw new Exception(Customweb_I18n_Translation::__('An attempt to cancel the transaction was made with an incorrect hash.')->toString());
+		}
+		for ($i = 0; $i < 5; $i++) {
 			try {
 				$this->getTransactionHandler()->beginTransaction();
-				$transaction =  $this->getTransactionHandler()->findTransactionByTransactionExternalId($transactionIdMap['id'], false);
+				$transaction = $this->getTransactionHandler()->findTransactionByTransactionExternalId($transactionIdMap['id'], false);
 				if ($transaction->isAuthorized()) {
 					$this->getTransactionHandler()->rollbackTransaction();
 					return Customweb_Core_Http_Response::redirect($transaction->getSuccessUrl());
@@ -188,7 +193,7 @@ class Customweb_Twint_Endpoint_Process extends Customweb_Payment_Endpoint_Contro
 			}
 			catch (Customweb_Payment_Exception_OptimisticLockingException $lockingException) {
 				$this->getTransactionHandler()->rollbackTransaction();
-				if($i == 4){
+				if ($i == 4) {
 					throw $lockingException;
 				}
 				sleep(1);
@@ -231,7 +236,7 @@ class Customweb_Twint_Endpoint_Process extends Customweb_Payment_Endpoint_Contro
 		else {
 			$url = "";
 		}
-		
+
 		return $url;
 	}
 
