@@ -63,6 +63,7 @@ return [
         'Magento_Contact' => 1,
         'Magento_Cookie' => 1,
         'Magento_Cron' => 1,
+        'Magento_Csp' => 0,
         'Magento_CurrencySymbol' => 1,
         'Magento_Captcha' => 1,
         'Magento_Integration' => 1,
@@ -81,6 +82,7 @@ return [
         'Magento_CatalogCustomerGraphQl' => 1,
         'Magento_AdvancedSearch' => 1,
         'Magento_Elasticsearch' => 1,
+        'Magento_Elasticsearch7' => 1,
         'Magento_Email' => 1,
         'Magento_EncryptionKey' => 1,
         'Magento_Fedex' => 1,
@@ -256,7 +258,7 @@ return [
         'Smartwave_Megamenu' => 1,
         'Smartwave_Porto' => 1,
         'Smartwave_Socialfeeds' => 1,
-        'Temando_Shipping' => 1,
+        'Temando_ShippingRemover' => 1,
         'Vertex_Tax' => 1,
         'Vertex_AddressValidation' => 1,
         'Yotpo_Yotpo' => 1,
@@ -2623,7 +2625,7 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                 ],
                 'logging' => [
                     'level' => 'error',
-                ]
+                ],
             ],
             'connector_api_credentials' => [
                 'api' => [
