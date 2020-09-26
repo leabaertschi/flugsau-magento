@@ -921,8 +921,8 @@ Disallow: /*SID=',
                     ],
                 ],
                 'region' => [
-                    'display_all' => '1',
-                    'state_required' => 'AT,BR,CA,CH,EE,ES,FI,HR,LT,LV,RO,US',
+                    'display_all' => '0',
+                    'state_required' => '',
                 ],
                 'store_information' => [
                     'hours' => 'Mo, Di, Fr, Sa: 10:00 - 12:00, 13:00 - 17:00',
