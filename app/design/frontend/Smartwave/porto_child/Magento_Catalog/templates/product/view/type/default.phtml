@@ -12,17 +12,13 @@
 
 <?php if ($block->displayProductStockStatus()): ?>
     <?php if ($_product->isAvailable()): ?>
-        <div class="stock available" title="<?= /* @escapeNotVerified */ __('Availability') ?>">
-            <span><?= /* @escapeNotVerified */ __('In stock') ?></span>
-        </div>
+        <div class="stock available" title="<?= /* @escapeNotVerified */ __('Availability') ?>"></div>
         <?php if ($_product->getCustomAttribute('delivery_time_from') && $_product->getCustomAttribute('delivery_time_to')): ?>
-            <div>
+            <div class="stock delivery">
                 <?= __('Delivery time') ?>:&nbsp;<?= $_product->getCustomAttribute('delivery_time_from')->getValue() ?>&nbsp;-&nbsp;<?= $_product->getCustomAttribute('delivery_time_to')->getValue() ?>&nbsp;<?= __('days') ?>
             </div>
         <?php endif; ?>
     <?php else: ?>
-        <div class="stock unavailable" title="<?= /* @escapeNotVerified */ __('Availability') ?>">
-            <span><?= /* @escapeNotVerified */ __('Out of stock') ?></span>
-        </div>
+        <div class="stock unavailable" title="<?= /* @escapeNotVerified */ __('Availability') ?>"></div>
     <?php endif; ?>
 <?php endif; ?>

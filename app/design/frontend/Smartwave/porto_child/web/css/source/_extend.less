@@ -466,6 +466,30 @@ button.action.primary {
     &:extend(.button.hover);
 }
 
+.stock.available {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    float: right;
+    background-color: green;
+
+    + div {
+        clear: both;
+    }
+}
+
+.stock.unavailable {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    float: right;
+    background-color: red;
+
+    + div {
+        clear: both;
+    }
+}
+
 .pages .action.next,
 .pages .action.previous {
     background-color: #fff !important;
