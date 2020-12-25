@@ -396,34 +396,23 @@ return [
      * CONFIG__DEFAULT__ADOBE_IMS__INTEGRATION__API_KEY for adobe_ims/integration/api_key
      * CONFIG__DEFAULT__ADOBE_IMS__INTEGRATION__PRIVATE_KEY for adobe_ims/integration/private_key
      * CONFIG__DEFAULT__CURRENCY__IMPORT__ERROR_EMAIL for currency/import/error_email
-     * CONFIG__DEFAULT__CATALOG__SEARCH__ELASTICSEARCH_SERVER_HOSTNAME for catalog/search/elasticsearch_server_hostname
      * CONFIG__DEFAULT__CATALOG__SEARCH__ELASTICSEARCH5_SERVER_HOSTNAME for catalog/search/elasticsearch5_server_hostname
      * CONFIG__DEFAULT__CATALOG__SEARCH__ELASTICSEARCH6_SERVER_HOSTNAME for catalog/search/elasticsearch6_server_hostname
+     * CONFIG__DEFAULT__CATALOG__SEARCH__ELASTICSEARCH7_SERVER_HOSTNAME for catalog/search/elasticsearch7_server_hostname
      * CONFIG__DEFAULT__CATALOG__PRODUCTALERT_CRON__ERROR_EMAIL for catalog/productalert_cron/error_email
+     * CONFIG__DEFAULT__CATALOG__PRODUCT_VIDEO__YOUTUBE_API_KEY for catalog/product_video/youtube_api_key
+     * CONFIG__DEFAULT__CATALOGINVENTORY__SOURCE_SELECTION_DISTANCE_BASED_GOOGLE__API_KEY for cataloginventory/source_selection_distance_based_google/api_key
      * CONFIG__DEFAULT__PAYMENT__CHECKMO__MAILING_ADDRESS for payment/checkmo/mailing_address
-     * CONFIG__DEFAULT__PAYMENT__AUTHORIZENET_DIRECTPOST__EMAIL_CUSTOMER for payment/authorizenet_directpost/email_customer
-     * CONFIG__DEFAULT__PAYMENT__AUTHORIZENET_DIRECTPOST__LOGIN for payment/authorizenet_directpost/login
-     * CONFIG__DEFAULT__PAYMENT__AUTHORIZENET_DIRECTPOST__MERCHANT_EMAIL for payment/authorizenet_directpost/merchant_email
-     * CONFIG__DEFAULT__PAYMENT__AUTHORIZENET_DIRECTPOST__TRANS_KEY for payment/authorizenet_directpost/trans_key
-     * CONFIG__DEFAULT__PAYMENT__AUTHORIZENET_DIRECTPOST__TRANS_MD5 for payment/authorizenet_directpost/trans_md5
-     * CONFIG__DEFAULT__PAYMENT__AUTHORIZENET_DIRECTPOST__CGI_URL for payment/authorizenet_directpost/cgi_url
-     * CONFIG__DEFAULT__PAYMENT__AUTHORIZENET_DIRECTPOST__CGI_URL_TD for payment/authorizenet_directpost/cgi_url_td
      * CONFIG__DEFAULT__PAYMENT__PAYFLOWPRO__USER for payment/payflowpro/user
      * CONFIG__DEFAULT__PAYMENT__PAYFLOWPRO__PWD for payment/payflowpro/pwd
      * CONFIG__DEFAULT__PAYMENT__PAYFLOW_LINK__PWD for payment/payflow_link/pwd
      * CONFIG__DEFAULT__PAYMENT__PAYFLOW_ADVANCED__USER for payment/payflow_advanced/user
      * CONFIG__DEFAULT__PAYMENT__PAYFLOW_ADVANCED__PWD for payment/payflow_advanced/pwd
-     * CONFIG__DEFAULT__PAYMENT__AUTHORIZENET_ACCEPTJS__EMAIL_CUSTOMER for payment/authorizenet_acceptjs/email_customer
-     * CONFIG__DEFAULT__PAYMENT__AUTHORIZENET_ACCEPTJS__LOGIN for payment/authorizenet_acceptjs/login
-     * CONFIG__DEFAULT__PAYMENT__AUTHORIZENET_ACCEPTJS__TRANS_KEY for payment/authorizenet_acceptjs/trans_key
-     * CONFIG__DEFAULT__PAYMENT__AUTHORIZENET_ACCEPTJS__TRANS_MD5 for payment/authorizenet_acceptjs/trans_md5
+     * CONFIG__DEFAULT__PAYMENT__BRAINTREE__PUBLIC_KEY for payment/braintree/public_key
      * CONFIG__DEFAULT__PAYMENT__BRAINTREE__PRIVATE_KEY for payment/braintree/private_key
      * CONFIG__DEFAULT__PAYMENT__BRAINTREE__MERCHANT_ID for payment/braintree/merchant_id
      * CONFIG__DEFAULT__PAYMENT__BRAINTREE__MERCHANT_ACCOUNT_ID for payment/braintree/merchant_account_id
-     * CONFIG__DEFAULT__PAYMENT__BRAINTREE__DESCRIPTOR_PHONE for payment/braintree/descriptor_phone
-     * CONFIG__DEFAULT__PAYMENT__BRAINTREE__DESCRIPTOR_URL for payment/braintree/descriptor_url
      * CONFIG__DEFAULT__PAYMENT__BRAINTREE_PAYPAL__MERCHANT_NAME_OVERRIDE for payment/braintree_paypal/merchant_name_override
-     * CONFIG__DEFAULT__SALES_EMAIL__ORDER__COPY_TO for sales_email/order/copy_to
      * CONFIG__DEFAULT__CHECKOUT__PAYMENT_FAILED__COPY_TO for checkout/payment_failed/copy_to
      * CONFIG__DEFAULT__CONTACT__EMAIL__RECIPIENT_EMAIL for contact/email/recipient_email
      * CONFIG__DEFAULT__CARRIERS__DHL__ACCOUNT for carriers/dhl/account
@@ -475,9 +464,21 @@ return [
      * CONFIG__DEFAULT__PAYPAL__FETCH_REPORTS__FTP_PATH for paypal/fetch_reports/ftp_path
      * CONFIG__DEFAULT__PAYPAL__GENERAL__MERCHANT_COUNTRY for paypal/general/merchant_country
      * CONFIG__DEFAULT__PAYPAL__GENERAL__BUSINESS_ACCOUNT for paypal/general/business_account
-     * CONFIG__DEFAULT__FRAUD_PROTECTION__SIGNIFYD__API_URL for fraud_protection/signifyd/api_url
-     * CONFIG__DEFAULT__FRAUD_PROTECTION__SIGNIFYD__API_KEY for fraud_protection/signifyd/api_key
+     * CONFIG__DEFAULT__RECAPTCHA_FRONTEND__TYPE_RECAPTCHA__PUBLIC_KEY for recaptcha_frontend/type_recaptcha/public_key
+     * CONFIG__DEFAULT__RECAPTCHA_FRONTEND__TYPE_RECAPTCHA__PRIVATE_KEY for recaptcha_frontend/type_recaptcha/private_key
+     * CONFIG__DEFAULT__RECAPTCHA_FRONTEND__TYPE_INVISIBLE__PUBLIC_KEY for recaptcha_frontend/type_invisible/public_key
+     * CONFIG__DEFAULT__RECAPTCHA_FRONTEND__TYPE_INVISIBLE__PRIVATE_KEY for recaptcha_frontend/type_invisible/private_key
+     * CONFIG__DEFAULT__RECAPTCHA_FRONTEND__TYPE_RECAPTCHA_V3__PUBLIC_KEY for recaptcha_frontend/type_recaptcha_v3/public_key
+     * CONFIG__DEFAULT__RECAPTCHA_FRONTEND__TYPE_RECAPTCHA_V3__PRIVATE_KEY for recaptcha_frontend/type_recaptcha_v3/private_key
+     * CONFIG__DEFAULT__RECAPTCHA_BACKEND__TYPE_RECAPTCHA__PUBLIC_KEY for recaptcha_backend/type_recaptcha/public_key
+     * CONFIG__DEFAULT__RECAPTCHA_BACKEND__TYPE_RECAPTCHA__PRIVATE_KEY for recaptcha_backend/type_recaptcha/private_key
+     * CONFIG__DEFAULT__RECAPTCHA_BACKEND__TYPE_INVISIBLE__PUBLIC_KEY for recaptcha_backend/type_invisible/public_key
+     * CONFIG__DEFAULT__RECAPTCHA_BACKEND__TYPE_INVISIBLE__PRIVATE_KEY for recaptcha_backend/type_invisible/private_key
+     * CONFIG__DEFAULT__RECAPTCHA_BACKEND__TYPE_RECAPTCHA_V3__PUBLIC_KEY for recaptcha_backend/type_recaptcha_v3/public_key
+     * CONFIG__DEFAULT__RECAPTCHA_BACKEND__TYPE_RECAPTCHA_V3__PRIVATE_KEY for recaptcha_backend/type_recaptcha_v3/private_key
      * CONFIG__DEFAULT__SITEMAP__GENERATE__ERROR_EMAIL for sitemap/generate/error_email
+     * CONFIG__DEFAULT__KLARNA__API__MERCHANT_ID for klarna/api/merchant_id
+     * CONFIG__DEFAULT__KLARNA__API__SHARED_SECRET for klarna/api/shared_secret
      */
     'system' => [
         'default' => [
@@ -513,7 +514,7 @@ return [
                 ],
                 'captcha' => [
                     'type' => 'default',
-                    'enable' => '1',
+                    'enable' => '0',
                     'font' => 'linlibertine',
                     'mode' => 'after_fail',
                     'forms' => 'backend_forgotpassword,backend_login',
@@ -714,8 +715,8 @@ Disallow: /*SID=',
                         'catalog_product_images' => 'media/catalog/product/cache/',
                         'catalog_images_folder' => 'catalog',
                         'product_custom_options_fodler' => 'custom_options',
-                        'captcha_folder' => 'captcha',
                         'dhl_folder' => 'dhl',
+                        'captcha_folder' => 'captcha',
                     ],
                 ],
                 'currency' => [
@@ -1149,7 +1150,7 @@ Disallow: /*SID=',
                         'share_wishlist_form' => '1',
                     ],
                     'type' => 'default',
-                    'enable' => '1',
+                    'enable' => '0',
                     'font' => 'linlibertine',
                     'mode' => 'after_fail',
                     'forms' => 'user_forgotpassword,user_login',
@@ -2458,6 +2459,62 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                     'remember_default' => '1',
                     'logout_clear' => '1',
                     'shopping_cart' => '1',
+                ],
+            ],
+            'recaptcha_frontend' => [
+                'type_for' => [
+                    'contact' => 'recaptcha_v3',
+                    'customer_login' => null,
+                    'customer_forgot_password' => 'recaptcha_v3',
+                    'customer_create' => 'recaptcha_v3',
+                    'newsletter' => 'recaptcha_v3',
+                    'paypal_payflowpro' => null,
+                    'product_review' => 'recaptcha_v3',
+                    'sendfriend' => 'recaptcha_v3',
+                ],
+                'type_recaptcha' => [
+                    'size' => 'normal',
+                    'theme' => 'light',
+                    'lang' => null,
+                    'validation_failure_message' => 'reCAPTCHA verification failed',
+                ],
+                'type_invisible' => [
+                    'position' => 'inline',
+                    'theme' => 'light',
+                    'lang' => null,
+                    'validation_failure_message' => 'reCAPTCHA verification failed',
+                ],
+                'type_recaptcha_v3' => [
+                    'score_threshold' => '0.5',
+                    'position' => 'inline',
+                    'theme' => 'light',
+                    'lang' => null,
+                    'validation_failure_message' => 'You cannot proceed with such operation, your reCAPTCHA reputation is too low.',
+                ],
+            ],
+            'recaptcha_backend' => [
+                'type_for' => [
+                    'user_login' => null,
+                    'user_forgot_password' => 'recaptcha_v3',
+                ],
+                'type_recaptcha' => [
+                    'size' => 'normal',
+                    'theme' => 'light',
+                    'lang' => null,
+                    'validation_failure_message' => 'reCAPTCHA verification failed',
+                ],
+                'type_invisible' => [
+                    'position' => 'inline',
+                    'theme' => 'light',
+                    'lang' => null,
+                    'validation_failure_message' => 'reCAPTCHA verification failed',
+                ],
+                'type_recaptcha_v3' => [
+                    'score_threshold' => '0.5',
+                    'position' => 'inline',
+                    'theme' => 'light',
+                    'lang' => null,
+                    'validation_failure_message' => 'You cannot proceed with such operation, your reCAPTCHA reputation is too low.',
                 ],
             ],
             'url_rewrite' => [
