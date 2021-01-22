@@ -2464,7 +2464,7 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                     'conversion_img_src' => 'https://www.googleadservices.com/pagead/conversion/%s/?label=%s&guid=ON&script=0',
                 ],
                 'analytics' => [
-                    'active' => '0',
+                    'active' => '1',
                 ],
                 'optimizer' => [
                     'active' => '0',
