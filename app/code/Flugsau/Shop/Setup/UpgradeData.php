@@ -1077,6 +1077,19 @@ HTML;
                 ]);
         }
 
+        if (version_compare($context->getVersion(), '1.0.5') < 0) {
+            $newPage = $this->_pageFactory->create()->load(
+                'webcams',
+                'identifier'
+            );
+            if ($newPage->getId()) {
+                $newPage->setContent(
+                    '{{block class="Magento\Framework\View\Element\Template" template="Flugsau_Shop::html/static_pages/webcams.phtml"}}'
+                );
+                $newPage->save();
+            }
+        }
+
         $setup->endSetup();
     }
 }
