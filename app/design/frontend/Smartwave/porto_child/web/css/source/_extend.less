@@ -52,17 +52,19 @@ a:hover {
 
 button.action.primary {
     font-family: @fontOswald;
-    color: @color;
-    background-color: transparent;
+    color: @white !important;
+    background-color: @contrastColor !important;
     border-color: @contrastColor !important;
     transition: background-color;
 
     &:hover {
-        &:extend(.button.hover);
+        background-color: @buttonHoverBorderColor !important;
+        border-color: @buttonHoverBorderColor !important;
     }
 
     &:focus {
-        &:extend(.button.hover);
+        background-color: @buttonHoverBorderColor !important;
+        border-color: @buttonHoverBorderColor !important;
     }
 }
 
@@ -592,6 +594,10 @@ button.action.primary {
 
 .post-list .post-content .post-read-more {
     float: none;
+}
+
+.field-tooltip .label {
+    display: none;
 }
 
 @import "_large.less";
