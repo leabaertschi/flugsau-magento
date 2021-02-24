@@ -2192,7 +2192,7 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                     'enabled' => '1',
                 ],
                 'email' => [
-                    'sender_email_identity' => 'custom2',
+                    'sender_email_identity' => 'general',
                     'email_template' => 'contact_email_email_template',
                 ],
             ],
