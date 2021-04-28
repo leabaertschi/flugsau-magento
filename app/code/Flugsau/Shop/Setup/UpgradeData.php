@@ -390,163 +390,6 @@ HTML;
                     ->setContent($prices_en)
                     ->save();
 
-            $webcams = <<<HTML
-     <div class="this_frame_text">
-																	<br>
-																			<ul>
-	<li><a href="#stanserhorn">Stanserhorn</a></li>
-	<li><a href="#oberdorf">Oberdorf</a></li>
-	<li><a href="#wirzweli">Wirzweli</a></li>
-	<li><a href="#gummenalp">Gummenalp</a></li>
-	<li><a href="#haldigrat">Haldigrat</a></li>
-	<li><a href="#wolfenschiessen">Wolfenschiessen</a></li>
-	<li><a href="#brunni">Brunni</a></li>
-	<li><a href="#klewenalp">Klewenalp</a></li>
-</ul>
-
-<h3><a name="stanserhorn">Stanserhorn</a></h3>
-<p>
-	<a href="http://www.stanserhorn.ch/_webcam/pic.html" target="_blank">
-		<img src="http://meteo-nw.ch/stanserhorn/staho_flv.jpg?cache=1535204045" width="100%">
-	</a>
-</p>
-
-<h3><a name="oberdorf">Oberdorf</a></h3>
-<p>
-	<img src="http://www.boot-segel-luzern.ch/webcam/oberdorf_sued_upload.jpg?cache=1535204045" width="100%">
-</p>
-
-
-<h3><a name="wirzweli">Wirzweli</a></h3>
-<p>
-	<img alt="camerabergstation" src="http://www.wirzweli.ch/_data/webcam/camerabergstation.jpg?cache=1535204045" width="100%">
-</p>
-
-<h3><a name="gummenalp">Gummenalp</a></h3>
-<p>
-	<img alt="cameragummenalp" src="http://www.gummenalp.ch/livecam/gummenalp.jpg?cache=1535204045" width="100%">
-</p>
-
-<h3><a name="haldigrat">Haldigrat</a></h3>
-<h4>Blickrichtung Pilatus</h4>
-<p>
-	<a href="http://bill-online.net/haldigrat_west.jpg" target="_blank">
-		<img alt="haldigrat west" src="http://bill-online.net/haldigrat_west.jpg?cache=1535204045" width="100%">
-	</a>
-</p>
-<h4>Blickrichtung Brisen</h4>
-<p>
-	<a href="http://bill-online.net/haldigrat_ost.jpg" target="_blank">
-		<img alt="haldigrat ost" src="http://bill-online.net/haldigrat_ost.jpg?cache=1535204045" width="100%">
-	</a>
-</p>
-
-<h3><a name="wolfenschiessen">Wolfenschiessen</a></h3>
-
-<h4>Brändlen Süd</h4>
-<p>
-	<a target="_blank" href="http://cam.tep.ch/Bilder/Start-Sued-Zoom.jpg?cache=1535204045">
-	<img src="http://cam.tep.ch/Bilder/Start-Sued-Zoom.jpg?cache=1535204045" alt="BrÃ¤ndlen SÃ¼d" width="100%">
-	</a>
-</p>
-<p>
-	<a target="_blank" href="http://cam.tep.ch/Bilder/Start-Sued.jpg?cache=1535204045">
-	<img src="http://cam.tep.ch/Bilder/Start-Sued.jpg?cache=1535204045" alt="BrÃ¤ndlen SÃ¼d" width="100%">
-	</a>
-</p>
-
-<h4>Brändlen Nord</h4>
-<p>
-	<a target="_blank" href="http://cam.tep.ch/Bilder/Start-Nord.jpg?cache=1535204045">
-	<img src="http://cam.tep.ch/Bilder/Start-Nord.jpg?cache=1535204045" alt="BrÃ¤ndlen Nord" width="100%">
-	</a>
-</p>
-
-<h4>Bielen</h4>
-<p>
-	<a href="http://bielenbahn.ch/images/webcam/livebild.jpg?cache=1535204045" target="_blank">
-		<img src="http://bielenbahn.ch/images/webcam/livebild.jpg?cache=1535204045" alt="Bielen" width="100%">
-	</a>
-</p>
-
-<h4>Grafenort</h4>
-<p>
-	<a href="/webcam/grafenort/webcam.php?breite=1280&amp;cache=1535204045" target="_blank">
-		<i><img src="/webcam/grafenort/webcam.php?breite=640&amp;cache=1535204045"></i>
-	</a>
-	<a target="_blank" href="/webcam/grafenort/webcam.php?breite=1280&amp;cache=1535204045"><br> Klick auf das Bild für grosse Darstellung (1280x1024 Pixel) </a>
-</p>
-
-<p>
-Information für Webdesigner<br>Es steht natürlich jedem frei die Flugsau Webcam Bilder auf eigenen Homepages einzubinden. Es müssen die verweisten PHP Dateien eingebunden werden, nur so zeigt die Kamera ein aktuelles Bild im Sekundentakt. Zusätzlich kann dem PHP File die Grösse (Breite) vom Bild als Attribut angegeben werden. So lassen sich z.B. auch schnell ladende Thumbnails oder Mobile Versionen darstellen. Die Pixel Angabe kann im Bereich von 300-1280 frei gewählt werden.<br><br><br>Wir helfen dir aber gerne die PHP Datei richtig einzubinden und anzupassen.<br>Fragen beantworten wir gerne: <a href="javascript:linkTo_UnCryptMailto('nbjmup;jogpAgmvhtbv/di');">info[at]flugsau[dot]ch
-</a></p><a href="javascript:linkTo_UnCryptMailto('nbjmup;jogpAgmvhtbv/di');">
-
-</a><h3><a href="javascript:linkTo_UnCryptMailto('nbjmup;jogpAgmvhtbv/di');"></a><a name="brunni">Brunni</a></h3>
-<h4>Startplatz</h4>
-<p>
-	<a href="http://www.paragliding-brunni.ch/webcam/brunnihuette/webcam.php" target="_blank">
-		<img src="http://www.paragliding-brunni.ch/webcam/brunnihuette/webcam.php" width="100%">
-	</a>
-</p>
-
-<h4>Härzlisee &amp; Kräuterhütte (1860 MüM)</h4>
-<p>
-	<a href="http://www.brunni.ch/images/webcam/webcam05_gr.jpg?cache=1535204045" target="_blank">
-		<img src="http://www.brunni.ch/images/webcam/webcam05_gr.jpg?cache=1535204045" width="100%">
-	</a>
-</p>
-
-<h4>Bergstation Sessellift Brunnihütte (1860 MüM)</h4>
-<p>
-	<a href="http://www.brunni.ch/images/webcam/webcam03_gr.jpg?cache=1535204045" target="_blank">
-		<img src="http://www.brunni.ch/images/webcam/webcam03_gr.jpg?cache=1535204045" width="100%">
-	</a>
-</p>
-
-<h4>Familienrestaurant Ox (1050 MüM)</h4>
-<p>
-	<a href="http://www.brunni.ch/images/webcam/webcam02_gr.jpg?cache=1535204045" target="_blank">
-		<img src="http://www.brunni.ch/images/webcam/webcam02_gr.jpg?cache=1535204045" width="100%">
-	</a>
-</p>
-
-<h3><a name="klewenalp">Klewenalp</a></h3>
-<h4>Klewenalp, Richtung See</h4>
-<p>
-	<a href="http://en.swisswebcams.ch/webcam/zoom/1315931735-Klewenalp-%286375-Beckenried%29_Weather" target="_blank">
-		<img src="http://en.swisswebcams.ch/redirect?webcamid=1315931735&amp;cache=1535204045" alt="Klewenalp, Richtung See" width="100%">
-	</a>
-</p>
-
-<h4>Stockhütte, Richtung See</h4>
-<p>
-	<a href="http://en.swisswebcams.ch/webcam/zoom/1047641268-Emmetten-Stockh%C3%BCtte-Blick-auf-Vierwaldst%C3%A4ttersee-%286376-Emmetten%29_Weather" target="_blank">
-		<img src="https://images.webcams.travel/original/1047641268.jpg?cache=1535204045" alt="StockhÃ¼tte, Richtung See" width="100%">
-	</a>
-</p>
-
-<h4>Beckenried Dorf</h4>
-<p>
-	<a href="http://en.swisswebcams.ch/webcam/zoom/1292514093-Beckenried-Dorf-%286375-Beckenried%29_Weather" target="_blank">
-		<img src="https://images.webcams.travel/original/1292514093.jpg?cache=1535204045" alt="Beckenried Dorf" width="100%">
-	</a>
-</p>
-
-																			<br>
-
-		                            </div>
-HTML;
-
-            $page9 = $this->_pageFactory->create();
-            $page9->setTitle('Webcams')
-                    ->setContentHeading('Webcams')
-                    ->setIdentifier('webcams')
-                    ->setIsActive(true)
-                    ->setPageLayout('1column')
-                    ->setStores([0])
-                    ->setContent($webcams)
-                    ->save();
-
             $shipping_de = <<<HTML
   <p><span>Lieferungen in die Schweiz:</span></p>
 <p>Innerhalb der Schweiz versenden wir unsere Ware mit der Schweizer Post.<br><br>Packet bis 2kg: CH 11.-<br>Packet bis 10kg: CHF 14.-<br>Packet bis 30kg: CHF 27.-<br>Preise inklusive 8% MwSt</p>
@@ -1088,6 +931,43 @@ HTML;
                 );
                 $newPage->save();
             }
+        }
+
+        if (version_compare($context->getVersion(), '1.0.6') < 0) {
+            $de = $this->_blockFactory->create()
+                ->setStoreId(1)
+                ->load('custom_menu_after', 'identifier');
+            if ($de->getId()) {
+                $de->setContent(<<<HTML
+                    <li class="ui-menu-item level0">
+                        <a href="{{store url='about-us'}}" class="level-top"><span>&Uuml;ber uns</span></a>
+                    </li>
+                    <li class="ui-menu-item level0">
+                        <a href="{{store url='contact'}}" class="level-top"><span>Kontakt</span></a>
+                    </li>
+HTML                    
+                );
+                $de->setStores([1]);
+                $de->save();
+            }
+
+            $en = $this->_blockFactory->create()
+                ->setStoreId(2)
+                ->load('custom_menu_after', 'identifier');
+            if ($en->getId()) {
+                $en->setContent(<<<HTML
+                    <li class="ui-menu-item level0">
+                        <a href="{{store url='about-us'}}" class="level-top"><span>About us</span></a>
+                    </li>
+                    <li class="ui-menu-item level0">
+                        <a href="{{store url='contact'}}" class="level-top"><span>Contact</span></a>
+                    </li>
+HTML                    
+                );
+                $en->setStores([2]);
+                $en->save();
+            }
+
         }
 
         $setup->endSetup();
