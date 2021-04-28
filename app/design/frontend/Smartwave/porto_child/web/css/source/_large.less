@@ -120,14 +120,57 @@
 
             .home-teaser-video {
                 flex: 1;
+                margin-right: 70px;
             }
 
             .home-teaser-text {
-                font-size: 34px;
-                margin-left: 70px;
                 align-self: center;
                 width: 50%;
+                
+                h1 {
+                    font-size: 28px;
+                }
+
+                h2 {
+                    font-size: 26px;
+                    margin-top: 0px;
+                    margin-bottom: 30px;
+                }
+
+                p {
+                    font-size: 18px;
+                }
             }
+            .home-teaser-text-wide {
+                width: 100%;
+
+                p, strong, li {
+                    font-size: 16px;
+                }
+
+                ul {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+    .home-new-products-wrapper.widget {
+        padding: 70px @contentPadding;
+
+        h2 {
+            font-size: 26px;
+        }
+
+        .home-new-products {
+            margin: 0 auto;
+            width: 100%;
+            max-width: @contentMaxWidth;
+        }
+
+        .home-new-products-no-products {
+            font-family: @fontOpenSans;
+            font-size: 18px;
         }
     }
 
