@@ -9,7 +9,11 @@
     <body>
         <referenceContainer name="porto_header">
             <block class="Flugsau\Shop\Block\StoreInformation" name="contact_us" template="html/contactus.phtml" />
-
+            <block class="Magento\Framework\View\Element\Template" name="top.search" as="topSearch" template="Magento_Search::form.mini.phtml">
+                <arguments>
+                    <argument name="configProvider" xsi:type="object">Magento\Search\ViewModel\ConfigProvider</argument>
+                </arguments>
+            </block>
             <referenceBlock name="custom_block" remove="true" />
         </referenceContainer>
         <referenceContainer name="footer-container">

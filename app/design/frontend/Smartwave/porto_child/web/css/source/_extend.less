@@ -13,6 +13,10 @@
 @contentMaxWidth: 1170px;
 @contentPadding: 15px;
 
+#cookie-status {
+    display: none;
+}
+
 body {
     color: @color;
     font-family: @fontOswald;
@@ -48,6 +52,10 @@ a:hover {
     &:hover {
         &:extend(.button.hover);
     }
+}
+
+a.button {
+    padding: 0 17.4px;
 }
 
 button.action.primary {
