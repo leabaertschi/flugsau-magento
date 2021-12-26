@@ -62,6 +62,8 @@ atlassian*
 !/pub/media/sitemap/.htaccess
 /pub/static/*
 !/pub/static/.htaccess
+/pub/media/magefan_blog/*
+/pub/media/mageplaza/*
 
 /var/*
 !/var/.htaccess

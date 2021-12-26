@@ -10,7 +10,7 @@
     "require": {
         "magento/product-community-edition": "2.4.3",
         "magento/composer-dependency-version-audit-plugin": "~0.1",
-        "magefan/module-blog": "2.9.7",
+        "magefan/module-blog": "^2.10",
         "mageplaza/magento-2-german-language-pack": "dev-master",
         "staempfli/magento2-language-de-ch": "dev-magento-2.4-compatibility",
         "lillik/magento2-price-decimal": "^1.0",
@@ -66,7 +66,8 @@
     "repositories": [
         {
             "type": "composer",
-            "url": "https://repo.magento.com/"
+            "url": "https://repo.magento.com/",
+            "exclude": ["magefan/module-blog"]
         },
         {
             "type": "vcs",
