@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8037b80bffc46b0a406eaffe4190f974",
+    "content-hash": "e7bf6707ab74af37971e8f636fe8ab21",
     "packages": [
         {
             "name": "2tvenom/cborencode",
@@ -5158,18 +5158,16 @@
         },
         {
             "name": "magento/composer-root-update-plugin",
-            "version": "1.1.2",
+            "version": "2.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/composer-root-update-plugin/magento-composer-root-update-plugin-1.1.2.0.zip",
-                "shasum": "530c345bf02e17456d42e3c919fd0430649866d8"
+                "url": "https://repo.magento.com/archives/magento/composer-root-update-plugin/magento-composer-root-update-plugin-2.0.0.0.zip",
+                "shasum": "ed91cff1ef172e448c6a67507dacd96cd2d4f3e3"
             },
             "require": {
                 "composer-plugin-api": "^1.0 || ^2.0",
-                "composer/composer": "<=1.11 || >=2.0.0 <=2.1"
-            },
-            "suggest": {
-                "magento/framework": "Enables the Magento Composer Root Update Plugin's functionality for the Web Setup Wizard"
+                "composer/composer": "^1.0 || ^2.0",
+                "php": "~7.3.0||~7.4.0"
             },
             "type": "composer-plugin",
             "extra": {
@@ -5178,16 +5176,13 @@
             "autoload": {
                 "psr-4": {
                     "Magento\\ComposerRootUpdatePlugin\\": ""
-                },
-                "files": [
-                    "registration.php"
-                ]
+                }
             },
             "license": [
                 "OSL-3.0",
                 "AFL-3.0"
             ],
-            "description": "Plugin to look ahead for Magento project root changes when running composer update for new Magento versions"
+            "description": "Plugin to look ahead for Magento Open Source or Adobe Commerce project root changes when running composer update for new magento/product or magento/magento-cloud metapackage versions"
         },
         {
             "name": "magento/framework",
@@ -19335,13 +19330,13 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/allure-framework/allure-php-commons.git",
-                "reference": "13ef45d83ce4f5ef70499ff87ed0c3d1c192ab80"
+                "url": "https://github.com/allure-framework/allure-php-api.git",
+                "reference": "50507f482d490f114054f2281cca487db47fa2bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/allure-framework/allure-php-commons/zipball/13ef45d83ce4f5ef70499ff87ed0c3d1c192ab80",
-                "reference": "13ef45d83ce4f5ef70499ff87ed0c3d1c192ab80",
+                "url": "https://api.github.com/repos/allure-framework/allure-php-api/zipball/50507f482d490f114054f2281cca487db47fa2bd",
+                "reference": "50507f482d490f114054f2281cca487db47fa2bd",
                 "shasum": ""
             },
             "require": {
@@ -27832,13 +27827,13 @@
             "version": "1.0.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/php-fig/cache.git",
-                "reference": "d11b50ad223250cf17b86e38383413f5a6764bf8"
+                "url": "https://github.com/2tvenom/CBOREncode.git",
+                "reference": "42aedccb861d01fc0554782348cc08f8ebf22332"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/cache/zipball/d11b50ad223250cf17b86e38383413f5a6764bf8",
-                "reference": "d11b50ad223250cf17b86e38383413f5a6764bf8",
+                "url": "https://api.github.com/repos/2tvenom/CBOREncode/zipball/42aedccb861d01fc0554782348cc08f8ebf22332",
+                "reference": "42aedccb861d01fc0554782348cc08f8ebf22332",
                 "shasum": ""
             },
             "require": {
