@@ -15,11 +15,13 @@
  *
  * @category    Mageplaza
  * @package     Mageplaza_LayeredNavigation
- * @copyright   Copyright (c) 2017 Mageplaza (http://www.mageplaza.com/)
+ * @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
  * @license     https://www.mageplaza.com/LICENSE.txt
  */
+
 namespace Mageplaza\LayeredNavigation\Api\Search;
 
+use Magento\Framework\Api\AttributeInterface;
 use Magento\Framework\Api\Search\Document as SourceDocument;
 
 /**
@@ -28,14 +30,15 @@ use Magento\Framework\Api\Search\Document as SourceDocument;
  */
 class Document extends SourceDocument
 {
-	/**
-	 * Get Document field
-	 *
-	 * @param string $fieldName
-	 * @return \Magento\Framework\Api\AttributeInterface
-	 */
-	public function getField($fieldName)
-	{
-		return $this->getCustomAttribute($fieldName);
-	}
+    /**
+     * Get Document field
+     *
+     * @param string $fieldName
+     *
+     * @return AttributeInterface
+     */
+    public function getField($fieldName)
+    {
+        return $this->getCustomAttribute($fieldName);
+    }
 }

@@ -14,12 +14,15 @@
  *
  * @category    Mageplaza
  * @package     Mageplaza_LayeredNavigation
- * @copyright   Copyright (c) 2017 Mageplaza (http://www.mageplaza.com/)
+ * @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
  * @license     https://www.mageplaza.com/LICENSE.txt
  */
 
 var config = {
     paths: {
         mpLayer: 'Mageplaza_LayeredNavigation/js/view/layer'
+    },
+    shim: {
+        mpLayer: ['touchPunch']
     }
 };

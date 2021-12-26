@@ -15,7 +15,7 @@
  *
  * @category    Mageplaza
  * @package     Mageplaza_LayeredNavigation
- * @copyright   Copyright (c) 2017 Mageplaza (http://www.mageplaza.com/)
+ * @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
  * @license     https://www.mageplaza.com/LICENSE.txt
  */
 
@@ -32,73 +32,75 @@ use Magento\Framework\App\RequestInterface;
  */
 class FilterGroupBuilder extends SourceFilterGroupBuilder
 {
-	/** @var \Magento\Framework\App\RequestInterface */
-	protected $_request;
+    /** @var RequestInterface */
+    protected $_request;
 
-	/**
-	 * FilterGroupBuilder constructor.
-	 * @param \Magento\Framework\Api\ObjectFactory $objectFactory
-	 * @param \Magento\Framework\Api\FilterBuilder $filterBuilder
-	 * @param \Magento\Framework\App\RequestInterface $request
-	 */
-	public function __construct(
-		ObjectFactory $objectFactory,
-		FilterBuilder $filterBuilder,
-		RequestInterface $request
-	)
-	{
-		parent::__construct($objectFactory, $filterBuilder);
+    /**
+     * FilterGroupBuilder constructor.
+     *
+     * @param ObjectFactory $objectFactory
+     * @param FilterBuilder $filterBuilder
+     * @param RequestInterface $request
+     */
+    public function __construct(
+        ObjectFactory $objectFactory,
+        FilterBuilder $filterBuilder,
+        RequestInterface $request
+    ) {
+        $this->_request = $request;
 
-		$this->_request = $request;
-	}
+        parent::__construct($objectFactory, $filterBuilder);
+    }
 
-	/**
-	 * @return FilterGroupBuilder
-	 */
-	public function cloneObject()
-	{
-		$cloneObject = clone $this;
-		$cloneObject->setFilterBuilder(clone $this->_filterBuilder);
+    /**
+     * @return FilterGroupBuilder
+     */
+    public function cloneObject()
+    {
+        $cloneObject = clone $this;
+        $cloneObject->setFilterBuilder(clone $this->_filterBuilder);
 
-		return $cloneObject;
-	}
+        return $cloneObject;
+    }
 
-	/**
-	 * @param $filterBuilder
-	 */
-	public function setFilterBuilder($filterBuilder)
-	{
-		$this->_filterBuilder = $filterBuilder;
-	}
+    /**
+     * @param $filterBuilder
+     */
+    public function setFilterBuilder($filterBuilder)
+    {
+        $this->_filterBuilder = $filterBuilder;
+    }
 
-	/**
-	 * @param $attributeCode
-	 *
-	 * @return $this
-	 */
-	public function removeFilter($attributeCode)
-	{
-		if (isset($this->data[FilterGroup::FILTERS])) {
-			foreach ($this->data[FilterGroup::FILTERS] as $key => $filter) {
-				if ($filter->getField() == $attributeCode) {
-					if (($attributeCode == 'category_ids') && ($filter->getValue() == $this->_request->getParam('id'))) {
-						continue;
-					}
-					unset($this->data[FilterGroup::FILTERS][$key]);
-				}
-			}
-		}
+    /**
+     * @param $attributeCode
+     *
+     * @return $this
+     */
+    public function removeFilter($attributeCode)
+    {
+        if (isset($this->data[FilterGroup::FILTERS]) && is_array($this->data[FilterGroup::FILTERS])) {
+            foreach ($this->data[FilterGroup::FILTERS] as $key => $filter) {
+                if ($filter->getField() === $attributeCode) {
+                    if ($attributeCode === 'category_ids'
+                        && ($filter->getValue() === $this->_request->getParam('id'))
+                    ) {
+                        continue;
+                    }
+                    unset($this->data[FilterGroup::FILTERS][$key]);
+                }
+            }
+        }
 
-		return $this;
-	}
+        return $this;
+    }
 
-	/**
-	 * Return the Data type class name
-	 *
-	 * @return string
-	 */
-	protected function _getDataObjectType()
-	{
-		return 'Magento\Framework\Api\Search\FilterGroup';
-	}
+    /**
+     * Return the Data type class name
+     *
+     * @return string
+     */
+    protected function _getDataObjectType()
+    {
+        return FilterGroup::class;
+    }
 }

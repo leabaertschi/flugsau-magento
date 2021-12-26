@@ -15,10 +15,16 @@
  *
  * @category    Mageplaza
  * @package     Mageplaza_LayeredNavigation
- * @copyright   Copyright (c) 2017 Mageplaza (http://www.mageplaza.com/)
+ * @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
  * @license     https://www.mageplaza.com/LICENSE.txt
  */
+
 namespace Mageplaza\LayeredNavigation\Plugin\Model\Adapter;
+
+use Closure;
+use Magento\Framework\App\ProductMetadataInterface;
+use Magento\Framework\ObjectManagerInterface;
+use Mageplaza\LayeredNavigation\Helper\Data;
 
 /**
  * Class Preprocessor
@@ -26,35 +32,75 @@ namespace Mageplaza\LayeredNavigation\Plugin\Model\Adapter;
  */
 class Preprocessor
 {
-	/**
-	 * @type \Mageplaza\LayeredNavigation\Helper\Data
-	 */
-	protected $_moduleHelper;
+    /**
+     * @type Data
+     */
+    protected $_moduleHelper;
 
-	/**
-	 * @param \Mageplaza\LayeredNavigation\Helper\Data $moduleHelper
-	 */
-	public function __construct(
-		\Mageplaza\LayeredNavigation\Helper\Data $moduleHelper
-	)
-	{
-		$this->_moduleHelper   = $moduleHelper;
-	}
+    /**
+     * @type ObjectManagerInterface
+     */
+    protected $objectManager;
 
-	/**
-	 * @param \Magento\CatalogSearch\Model\Adapter\Mysql\Filter\Preprocessor $subject
-	 * @param \Closure $proceed
-	 * @param $filter
-	 * @param $isNegation
-	 * @param $query
-	 * @return string
-	 */
-	public function aroundProcess(\Magento\CatalogSearch\Model\Adapter\Mysql\Filter\Preprocessor $subject, \Closure $proceed, $filter, $isNegation, $query)
-	{
-		if ($this->_moduleHelper->isEnabled() && ($filter->getField() === 'category_ids')) {
-			return 'category_ids_index.category_id IN (' . $filter->getValue() . ')';
-		}
+    /**
+     * @var ProductMetadataInterface
+     */
+    protected $productMetadata;
 
-		return $proceed($filter, $isNegation, $query);
-	}
+    /**
+     * Preprocessor constructor.
+     *
+     * @param Data $moduleHelper
+     * @param ObjectManagerInterface $objectManager
+     * @param ProductMetadataInterface $productMetadata
+     */
+    public function __construct(
+        Data $moduleHelper,
+        ObjectManagerInterface $objectManager,
+        ProductMetadataInterface $productMetadata
+    ) {
+        $this->_moduleHelper   = $moduleHelper;
+        $this->objectManager   = $objectManager;
+        $this->productMetadata = $productMetadata;
+    }
+
+    /**
+     * @param \Magento\CatalogSearch\Model\Adapter\Mysql\Filter\Preprocessor $subject
+     * @param Closure $proceed
+     * @param $filter
+     * @param $isNegation
+     * @param $query
+     *
+     * @return string
+     */
+    public function aroundProcess(
+        \Magento\CatalogSearch\Model\Adapter\Mysql\Filter\Preprocessor $subject,
+        Closure $proceed,
+        $filter,
+        $isNegation,
+        $query
+    ) {
+        if ($this->_moduleHelper->isEnabled() && ($filter->getField() === 'category_ids')) {
+            $filterValue = implode(',', array_map([$this, 'validateCatIds'], explode(',', $filter->getValue())));
+
+            $version = $this->productMetadata->getVersion();
+            if (version_compare($version, '2.1.13', '>=') && version_compare($version, '2.1.15', '<=')) {
+                return 'category_products_index.category_id IN (' . $filterValue . ')';
+            }
+
+            return 'category_ids_index.category_id IN (' . $filterValue . ')';
+        }
+
+        return $proceed($filter, $isNegation, $query);
+    }
+
+    /**
+     * @param $catId
+     *
+     * @return int
+     */
+    protected function validateCatIds($catId)
+    {
+        return (int) $catId;
+    }
 }

@@ -15,73 +15,85 @@
  *
  * @category    Mageplaza
  * @package     Mageplaza_LayeredNavigation
- * @copyright   Copyright (c) 2017 Mageplaza (http://www.mageplaza.com/)
+ * @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
  * @license     https://www.mageplaza.com/LICENSE.txt
  */
 
 namespace Mageplaza\LayeredNavigation\Model\Search;
 
 use Magento\Framework\Api\ObjectFactory;
+use Magento\Framework\Api\Search\SearchCriteria;
 use Magento\Framework\Api\Search\SearchCriteriaBuilder as SourceSearchCriteriaBuilder;
 use Magento\Framework\Api\SortOrderBuilder;
+use Mageplaza\LayeredNavigation\Helper\Data as LayerHelper;
 
 /**
  * Builder for SearchCriteria Service Data Object
  */
 class SearchCriteriaBuilder extends SourceSearchCriteriaBuilder
 {
-	/**
-	 * @param ObjectFactory $objectFactory
-	 * @param FilterGroupBuilder $filterGroupBuilder
-	 * @param SortOrderBuilder $sortOrderBuilder
-	 */
-	public function __construct(
-		ObjectFactory $objectFactory,
-		FilterGroupBuilder $filterGroupBuilder,
-		SortOrderBuilder $sortOrderBuilder
-	)
-	{
-		parent::__construct($objectFactory, $filterGroupBuilder, $sortOrderBuilder);
-	}
+    /**
+     * @var LayerHelper as LayerHelper;
+     */
+    protected $helper;
 
-	/**
-	 * @param $attributeCode
-	 *
-	 * @return $this
-	 */
-	public function removeFilter($attributeCode)
-	{
-		$this->filterGroupBuilder->removeFilter($attributeCode);
+    /**
+     * SearchCriteriaBuilder constructor.
+     *
+     * @param LayerHelper $helper
+     * @param ObjectFactory $objectFactory
+     * @param FilterGroupBuilder $filterGroupBuilder
+     * @param SortOrderBuilder $sortOrderBuilder
+     */
+    public function __construct(
+        LayerHelper $helper,
+        ObjectFactory $objectFactory,
+        FilterGroupBuilder $filterGroupBuilder,
+        SortOrderBuilder $sortOrderBuilder
+    ) {
+        $this->helper = $helper;
 
-		return $this;
-	}
+        parent::__construct($objectFactory, $filterGroupBuilder, $sortOrderBuilder);
+    }
 
-	/**
-	 * @return SearchCriteriaBuilder
-	 */
-	public function cloneObject()
-	{
-		$cloneObject = clone $this;
-		$cloneObject->setFilterGroupBuilder($this->filterGroupBuilder->cloneObject());
+    /**
+     * @param $attributeCode
+     *
+     * @return $this
+     */
+    public function removeFilter($attributeCode)
+    {
+        $this->filterGroupBuilder->removeFilter($attributeCode);
 
-		return $cloneObject;
-	}
+        return $this;
+    }
 
-	/**
-	 * @param $filterGroupBuilder
-	 */
-	public function setFilterGroupBuilder($filterGroupBuilder)
-	{
-		$this->filterGroupBuilder = $filterGroupBuilder;
-	}
+    /**
+     * @return SearchCriteriaBuilder
+     */
+    public function cloneObject()
+    {
+        $cloneObject = clone $this;
+        $cloneObject->setFilterGroupBuilder($this->filterGroupBuilder->cloneObject());
 
-	/**
-	 * Return the Data type class name
-	 *
-	 * @return string
-	 */
-	protected function _getDataObjectType()
-	{
-		return 'Magento\Framework\Api\Search\SearchCriteria';
-	}
+        return $cloneObject;
+    }
+
+    /**
+     * @param $filterGroupBuilder
+     */
+    public function setFilterGroupBuilder($filterGroupBuilder)
+    {
+        $this->filterGroupBuilder = $filterGroupBuilder;
+    }
+
+    /**
+     * Return the Data type class name
+     *
+     * @return string
+     */
+    protected function _getDataObjectType()
+    {
+        return SearchCriteria::class;
+    }
 }

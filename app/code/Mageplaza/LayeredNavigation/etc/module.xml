@@ -1,5 +1,4 @@
-<?xml version="1.0"?>
-<!--
+<?xml version="1.0"?><!--
 /**
  * Mageplaza
  *
@@ -16,16 +15,16 @@
  *
  * @category    Mageplaza
  * @package     Mageplaza_LayeredNavigation
- * @copyright   Copyright (c) 2017 Mageplaza (http://www.mageplaza.com/)
+ * @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
  * @license     https://www.mageplaza.com/LICENSE.txt
  */
 -->
-
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
     <module name="Mageplaza_LayeredNavigation" setup_version="2.0.0">
         <sequence>
             <module name="Magento_Catalog"/>
             <module name="Magento_LayeredNavigation"/>
+            <module name="Mageplaza_AjaxLayer"/>
             <module name="Mageplaza_Core"/>
         </sequence>
     </module>

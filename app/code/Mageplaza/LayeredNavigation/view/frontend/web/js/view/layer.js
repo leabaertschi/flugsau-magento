@@ -14,13 +14,13 @@
  *
  * @category    Mageplaza
  * @package     Mageplaza_LayeredNavigation
- * @copyright   Copyright (c) 2017 Mageplaza (http://www.mageplaza.com/)
+ * @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
  * @license     https://www.mageplaza.com/LICENSE.txt
  */
 
 define([
     'jquery',
-    'Mageplaza_LayeredNavigation/js/action/submit-filter',
+    'Mageplaza_AjaxLayer/js/action/submit-filter',
     'Magento_Catalog/js/price-utils',
     'jquery/ui',
     'accordion',
@@ -38,9 +38,11 @@ define([
             collapsibleElement: '[data-role=ln_collapsible]',
             header: '[data-role=ln_title]',
             content: '[data-role=ln_content]',
+            isCustomerLoggedIn: false,
+            isAjax: true,
             params: [],
             active: [],
-            checkboxEl: 'input[type=checkbox]',
+            checkboxEl: 'input[type=checkbox], input[type=radio]',
             sliderElementPrefix: '#ln_slider_',
             sliderTextElementPrefix: '#ln_slider_text_'
         },
@@ -53,6 +55,8 @@ define([
             this.initProductListUrl();
             this.initObserve();
             this.initSlider();
+            this.initWishlistCompare();
+            this.selectedAttr();
         },
 
         initActiveItems: function () {
@@ -76,12 +80,15 @@ define([
         },
 
         initProductListUrl: function () {
-            var isProcessToolbar = false;
+            var isProcessToolbar = false,
+                isAjax = this.options.isAjax;
             $.mage.productListToolbarForm.prototype.changeUrl = function (paramName, paramValue, defaultValue) {
                 if (isProcessToolbar) {
                     return;
                 }
-                isProcessToolbar = true;
+                if (isAjax) {
+                    isProcessToolbar = true;
+                }
 
                 var urlPaths = this.options.url.split('?'),
                     baseUrl = urlPaths[0],
@@ -99,12 +106,45 @@ define([
                     delete paramData[paramName];
                 }
                 paramData = $.param(paramData);
-                submitFilterAction(baseUrl + (paramData.length ? '?' + paramData : ''));
+                if (isAjax) {
+                    submitFilterAction(baseUrl + (paramData.length ? '?' + paramData : ''));
+                } else location.href = baseUrl + (paramData.length ? '?' + paramData : '');
             }
         },
 
         initObserve: function () {
             var self = this;
+            var isAjax = this.options.isAjax;
+
+            // fix browser back, forward button
+            if (typeof window.history.replaceState === "function") {
+                window.history.replaceState({url: document.URL}, document.title);
+
+                setTimeout(function () {
+                    window.onpopstate = function (e) {
+                        if (e.state) {
+                            submitFilterAction(e.state.url, 1);
+                        }
+                    };
+                }, 0)
+            }
+
+            var pageElements = $('#layer-product-list').find('.pages a');
+            pageElements.each(function () {
+                var el = $(this),
+                    link = self.checkUrl(el.prop('href'));
+                if (!link) {
+                    return;
+                }
+
+                el.bind('click', function (e) {
+                    e.stopPropagation();
+                    e.preventDefault();
+                    if (isAjax) {
+                        submitFilterAction(link);
+                    } else location.href = link;
+                })
+            });
 
             var currentElements = this.element.find('.filter-current a, .filter-actions a');
             currentElements.each(function (index) {
@@ -115,9 +155,13 @@ define([
                 }
 
                 el.bind('click', function (e) {
-                    submitFilterAction(link);
                     e.stopPropagation();
                     e.preventDefault();
+                    if (isAjax) {
+                        submitFilterAction(link);
+                    } else {
+                        location.href = link;
+                    }
                 });
             });
 
@@ -133,19 +177,19 @@ define([
                     if (el.hasClass('swatch-option-link-layered')) {
                         self.selectSwatchOption(el);
                     } else {
-                        var checkboxEl = el.find(self.options.checkboxEl);
+                        var checkboxEl = el.siblings(self.options.checkboxEl);
                         checkboxEl.prop('checked', !checkboxEl.prop('checked'));
                     }
 
-                    self.ajaxSubmit(link);
                     e.stopPropagation();
                     e.preventDefault();
+                    self.ajaxSubmit(link);
                 });
 
-                var checkbox = el.find(self.options.checkboxEl);
+                var checkbox = el.siblings(self.options.checkboxEl);
                 checkbox.bind('click', function (e) {
-                    self.ajaxSubmit(link);
                     e.stopPropagation();
+                    self.ajaxSubmit(link);
                 });
             });
 
@@ -227,15 +271,66 @@ define([
         },
 
         ajaxSubmit: function (submitUrl) {
+            var isAjax = this.options.isAjax;
             this.element.find(this.options.mobileShopbyElement).trigger('click');
 
-            return submitFilterAction(submitUrl);
+            if (isAjax) {
+                return submitFilterAction(submitUrl);
+            }
+            location.href = submitUrl;
         },
 
         checkUrl: function (url) {
             var regex = /(http|https):\/\/(\w+:{0,1}\w*)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%!\-\/]))?/;
 
             return regex.test(url) ? url : null;
+        },
+
+        //Handling 'add to wishlist' & 'add to compare' event
+        initWishlistCompare: function () {
+            var isAjax = this.options.isAjax;
+            var isCustomerLoggedIn = this.options.isCustomerLoggedIn,
+                elClass = 'a.action.tocompare' + (isCustomerLoggedIn ? ',a.action.towishlist' : '');
+            $(elClass).each(function () {
+                var el = $(this);
+                $(el).bind('click', function (e) {
+                    var dataPost = $(el).data('post'),
+                        formKey = $('input[name="form_key"]').val();
+                    if (formKey) {
+                        dataPost.data.form_key = formKey;
+                    }
+
+                    var paramData = $.param(dataPost.data),
+                        url = dataPost.action + (paramData.length ? '?' + paramData : '');
+
+                    e.stopPropagation();
+                    e.preventDefault();
+
+                    if (isAjax && el.hasClass('towishlist')) {
+                        submitFilterAction(url, true);
+                    } else if (isAjax) {
+                        submitFilterAction(url);
+                    } else location.href = url;
+                });
+            })
+        },
+
+        //Selected attribute color after page load.
+        selectedAttr: function () {
+            var filterCurrent = $('.layered-filter-block-container .filter-current .items .item .filter-value');
+
+            filterCurrent.each(function(){
+                var el         = $(this),
+                    colorLabel = el.html(),
+                    colorAttr  = $('.filter-options .filter-options-item .color .swatch-option-link-layered .swatch-option');
+
+                colorAttr.each(function(){
+                    var elA = $(this);
+                    if(elA.attr('data-option-label') === colorLabel && !elA.hasClass('selected')){
+                        elA.addClass('selected');
+                    }
+                });
+            });
         }
     });
 

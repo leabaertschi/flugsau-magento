@@ -15,11 +15,17 @@
  *
  * @category    Mageplaza
  * @package     Mageplaza_LayeredNavigation
- * @copyright   Copyright (c) 2017 Mageplaza (http://www.mageplaza.com/)
+ * @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
  * @license     https://www.mageplaza.com/LICENSE.txt
  */
 
 namespace Mageplaza\LayeredNavigation\Plugin\Block\Swatches;
+
+use Magento\Catalog\Model\Layer\Filter\AbstractFilter;
+use Magento\Framework\UrlInterface;
+use Magento\Swatches\Block\LayeredNavigation\RenderLayered as SwatchesRenderLayered;
+use Magento\Theme\Block\Html\Pager;
+use Mageplaza\LayeredNavigation\Helper\Data;
 
 /**
  * Class RenderLayered
@@ -27,88 +33,86 @@ namespace Mageplaza\LayeredNavigation\Plugin\Block\Swatches;
  */
 class RenderLayered
 {
-	/** @var \Magento\Framework\UrlInterface */
-	protected $_url;
+    /** @var UrlInterface */
+    protected $_url;
 
-	/** @var \Magento\Theme\Block\Html\Pager */
-	protected $_htmlPagerBlock;
+    /** @var Pager */
+    protected $_htmlPagerBlock;
 
-	/** @var \Mageplaza\LayeredNavigation\Helper\Data */
-	protected $_moduleHelper;
+    /** @var Data */
+    protected $_moduleHelper;
 
-	/** @type \Magento\Catalog\Model\Layer\Filter\AbstractFilter */
-	protected $filter;
+    /** @type AbstractFilter */
+    protected $filter;
 
-	/**
-	 * RenderLayered constructor.
-	 *
-	 * @param \Magento\Framework\UrlInterface $url
-	 * @param \Magento\Theme\Block\Html\Pager $htmlPagerBlock
-	 * @param \Mageplaza\LayeredNavigation\Helper\Data $moduleHelper
-	 */
-	public function __construct(
-		\Magento\Framework\UrlInterface $url,
-		\Magento\Theme\Block\Html\Pager $htmlPagerBlock,
-		\Mageplaza\LayeredNavigation\Helper\Data $moduleHelper
-	)
-	{
-		$this->_url            = $url;
-		$this->_htmlPagerBlock = $htmlPagerBlock;
-		$this->_moduleHelper   = $moduleHelper;
-	}
+    /**
+     * RenderLayered constructor.
+     *
+     * @param UrlInterface $url
+     * @param Pager $htmlPagerBlock
+     * @param Data $moduleHelper
+     */
+    public function __construct(
+        UrlInterface $url,
+        Pager $htmlPagerBlock,
+        Data $moduleHelper
+    ) {
+        $this->_url            = $url;
+        $this->_htmlPagerBlock = $htmlPagerBlock;
+        $this->_moduleHelper   = $moduleHelper;
+    }
 
-	/**
-	 * @param \Magento\Swatches\Block\LayeredNavigation\RenderLayered $subject
-	 * @param \Magento\Catalog\Model\Layer\Filter\AbstractFilter $filter
-	 * @return array
-	 */
-	public function beforeSetSwatchFilter(\Magento\Swatches\Block\LayeredNavigation\RenderLayered $subject, \Magento\Catalog\Model\Layer\Filter\AbstractFilter $filter)
-	{
-		$this->filter = $filter;
+    /**
+     * @param SwatchesRenderLayered $subject
+     * @param AbstractFilter $filter
+     *
+     * @return array
+     */
+    public function beforeSetSwatchFilter(SwatchesRenderLayered $subject, AbstractFilter $filter)
+    {
+        $this->filter = $filter;
 
-		return [$filter];
-	}
+        return [$filter];
+    }
 
-	/**
-	 * @param \Magento\Swatches\Block\LayeredNavigation\RenderLayered $subject
-	 * @param $proceed
-	 * @param $attributeCode
-	 * @param $optionId
-	 *
-	 * @return string
-	 */
-	public function aroundBuildUrl(
-		\Magento\Swatches\Block\LayeredNavigation\RenderLayered $subject,
-		$proceed,
-		$attributeCode,
-		$optionId
-	)
-	{
-		if (!$this->_moduleHelper->isEnabled()) {
-			return $proceed($attributeCode, $optionId);
-		}
+    /**
+     * @param SwatchesRenderLayered $subject
+     * @param $proceed
+     * @param $attributeCode
+     * @param $optionId
+     *
+     * @return string
+     */
+    public function aroundBuildUrl(
+        SwatchesRenderLayered $subject,
+        $proceed,
+        $attributeCode,
+        $optionId
+    ) {
+        if (!$this->_moduleHelper->isEnabled()) {
+            return $proceed($attributeCode, $optionId);
+        }
 
-		$attHelper = $this->_moduleHelper->getFilterModel();
-		if ($attHelper->isMultiple($this->filter)) {
-			$value = $attHelper->getFilterValue($this->filter);
+        $attHelper = $this->_moduleHelper->getFilterModel();
+        if ($attHelper->isMultiple($this->filter)) {
+            $value = $attHelper->getFilterValue($this->filter);
+            if (in_array($optionId, $value, true)) {
+                $key = array_search($optionId, $value, true);
+                if ($key !== false) {
+                    unset($value[$key]);
+                }
+            } else {
+                $value[] = $optionId;
+            }
+        } else {
+            $value = [$optionId];
+        }
 
-			if (!in_array($optionId, $value)) {
-				$value[] = $optionId;
-			} else {
-				$key = array_search($optionId, $value);
-				if ($key !== false) {
-					unset($value[$key]);
-				}
-			}
-		} else {
-			$value = [$optionId];
-		}
+        //Sort param on Url
+        sort($value);
 
-		$query = !empty($value) ? [$attributeCode => implode(',', $value)] : '';
+        $query = !empty($value) ? [$attributeCode => implode(',', $value)] : '';
 
-		return $this->_url->getUrl(
-			'*/*/*',
-			['_current' => true, '_use_rewrite' => true, '_query' => $query]
-		);
-	}
+        return $this->_url->getUrl('*/*/*', ['_current' => true, '_use_rewrite' => true, '_query' => $query]);
+    }
 }

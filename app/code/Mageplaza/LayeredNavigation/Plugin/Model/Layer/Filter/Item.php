@@ -15,12 +15,16 @@
  *
  * @category    Mageplaza
  * @package     Mageplaza_LayeredNavigation
- * @copyright   Copyright (c) 2017 Mageplaza (http://www.mageplaza.com/)
+ * @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
  * @license     https://www.mageplaza.com/LICENSE.txt
  */
 
 namespace Mageplaza\LayeredNavigation\Plugin\Model\Layer\Filter;
 
+use Magento\Framework\App\RequestInterface;
+use Magento\Framework\Exception\LocalizedException;
+use Magento\Framework\UrlInterface;
+use Magento\Theme\Block\Html\Pager;
 use Mageplaza\LayeredNavigation\Helper\Data as LayerHelper;
 
 /**
@@ -29,106 +33,112 @@ use Mageplaza\LayeredNavigation\Helper\Data as LayerHelper;
  */
 class Item
 {
-	/** @var \Magento\Framework\UrlInterface */
-	protected $_url;
+    /** @var UrlInterface */
+    protected $_url;
 
-	/** @var \Magento\Theme\Block\Html\Pager */
-	protected $_htmlPagerBlock;
+    /** @var Pager */
+    protected $_htmlPagerBlock;
 
-	/** @var \Magento\Framework\App\RequestInterface */
-	protected $_request;
+    /** @var RequestInterface */
+    protected $_request;
 
-	/** @var \Mageplaza\LayeredNavigation\Helper\Data */
-	protected $_moduleHelper;
+    /** @var LayerHelper */
+    protected $_moduleHelper;
 
-	/**
-	 * Item constructor.
-	 *
-	 * @param \Magento\Framework\UrlInterface $url
-	 * @param \Magento\Theme\Block\Html\Pager $htmlPagerBlock
-	 * @param \Magento\Framework\App\RequestInterface $request
-	 * @param \Mageplaza\LayeredNavigation\Helper\Data $moduleHelper
-	 */
-	public function __construct(
-		\Magento\Framework\UrlInterface $url,
-		\Magento\Theme\Block\Html\Pager $htmlPagerBlock,
-		\Magento\Framework\App\RequestInterface $request,
-		LayerHelper $moduleHelper
-	)
-	{
-		$this->_url            = $url;
-		$this->_htmlPagerBlock = $htmlPagerBlock;
-		$this->_request        = $request;
-		$this->_moduleHelper   = $moduleHelper;
-	}
+    /**
+     * Item constructor.
+     *
+     * @param UrlInterface $url
+     * @param Pager $htmlPagerBlock
+     * @param RequestInterface $request
+     * @param LayerHelper $moduleHelper
+     */
+    public function __construct(
+        UrlInterface $url,
+        Pager $htmlPagerBlock,
+        RequestInterface $request,
+        LayerHelper $moduleHelper
+    ) {
+        $this->_url            = $url;
+        $this->_htmlPagerBlock = $htmlPagerBlock;
+        $this->_request        = $request;
+        $this->_moduleHelper   = $moduleHelper;
+    }
 
-	/**
-	 * @param \Magento\Catalog\Model\Layer\Filter\Item $item
-	 * @param $proceed
-	 * @return string
-	 * @throws \Magento\Framework\Exception\LocalizedException
-	 */
-	public function aroundGetUrl(\Magento\Catalog\Model\Layer\Filter\Item $item, $proceed)
-	{
-		if (!$this->_moduleHelper->isEnabled()) {
-			return $proceed();
-		}
+    /**
+     * @param \Magento\Catalog\Model\Layer\Filter\Item $item
+     * @param $proceed
+     *
+     * @return string
+     * @throws LocalizedException
+     */
+    public function aroundGetUrl(\Magento\Catalog\Model\Layer\Filter\Item $item, $proceed)
+    {
+        if (!$this->_moduleHelper->isEnabled()) {
+            return $proceed();
+        }
 
-		$value     = [];
-		$filter    = $item->getFilter();
-		$filterModel = $this->_moduleHelper->getFilterModel();
-		if ($filterModel->getIsSliderTypes($filter)) {
-			$value = ["from-to"];
-		} else if ($filterModel->isMultiple($filter)) {
-			$requestVar = $filter->getRequestVar();
-			if ($requestValue = $this->_request->getParam($requestVar)) {
-				$value = explode(',', $requestValue);
-			}
-			if (!in_array($item->getValue(), $value)) {
-				$value[] = $item->getValue();
-			}
-		}
+        $value       = [];
+        $filter      = $item->getFilter();
+        $filterModel = $this->_moduleHelper->getFilterModel();
+        if ($filterModel->isSliderTypes($filter) || $filter->getData('range_mode')) {
+            $value = ["from-to"];
+        } elseif ($filterModel->isMultiple($filter)) {
+            $requestVar = $filter->getRequestVar();
+            if ($requestValue = $this->_request->getParam($requestVar)) {
+                $value = explode(',', $requestValue);
+            }
+            if (!in_array($item->getValue(), $value, true)) {
+                $value[] = $item->getValue();
+            }
+        }
 
-		if (sizeof($value)) {
-			$query = [
-				$filter->getRequestVar()                 => implode(',', $value),
-				// exclude current page from urls
-				$this->_htmlPagerBlock->getPageVarName() => null,
-			];
+        //Sort param on Url
+        sort($value);
 
-			return $this->_url->getUrl('*/*/*', ['_current' => true, '_use_rewrite' => true, '_query' => $query]);
-		}
+        if (!empty($value)) {
+            $query = [
+                $filter->getRequestVar()                 => implode(',', $value),
+                // exclude current page from urls
+                $this->_htmlPagerBlock->getPageVarName() => null,
+            ];
 
-		return $proceed();
-	}
+            return $this->_url->getUrl('*/*/*', ['_current' => true, '_use_rewrite' => true, '_query' => $query]);
+        }
 
-	/**
-	 * @param \Magento\Catalog\Model\Layer\Filter\Item $item
-	 * @param $proceed
-	 * @return string
-	 * @throws \Magento\Framework\Exception\LocalizedException
-	 */
-	public function aroundGetRemoveUrl(\Magento\Catalog\Model\Layer\Filter\Item $item, $proceed)
-	{
-		if (!$this->_moduleHelper->isEnabled()) {
-			return $proceed();
-		}
+        return $proceed();
+    }
 
-		$value     = [];
-		$filter    = $item->getFilter();
-		$filterModel = $this->_moduleHelper->getFilterModel();
-		if (!$filterModel->getIsSliderTypes($filter)) {
-			$value = $filterModel->getFilterValue($filter);
-			if (in_array($item->getValue(), $value)) {
-				$value = array_diff($value, [$item->getValue()]);
-			}
-		}
+    /**
+     * @param \Magento\Catalog\Model\Layer\Filter\Item $item
+     * @param $proceed
+     *
+     * @return string
+     * @throws LocalizedException
+     */
+    public function aroundGetRemoveUrl(\Magento\Catalog\Model\Layer\Filter\Item $item, $proceed)
+    {
+        if (!$this->_moduleHelper->isEnabled()) {
+            return $proceed();
+        }
 
-		$params['_query']       = [$filter->getRequestVar() => count($value) ? implode(',', $value) : $filter->getResetValue()];
-		$params['_current']     = true;
-		$params['_use_rewrite'] = true;
-		$params['_escape']      = true;
+        $value       = [];
+        $filter      = $item->getFilter();
+        $filterModel = $this->_moduleHelper->getFilterModel();
+        if ($filterModel->isMultiple($filter)) {
+            $value = $filterModel->getFilterValue($filter);
+            if (in_array((string) $item->getValue(), $value, true)) {
+                $value = array_diff($value, [$item->getValue()]);
+            }
+        }
 
-		return $this->_url->getUrl('*/*/*', $params);
-	}
+        $params['_query']       = [
+            $filter->getRequestVar() => count($value) ? implode(',', $value) : $filter->getResetValue()
+        ];
+        $params['_current']     = true;
+        $params['_use_rewrite'] = true;
+        $params['_escape']      = true;
+
+        return $this->_url->getUrl('*/*/*', $params);
+    }
 }

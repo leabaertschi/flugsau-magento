@@ -15,14 +15,21 @@
  *
  * @category    Mageplaza
  * @package     Mageplaza_LayeredNavigation
- * @copyright   Copyright (c) 2017 Mageplaza (http://www.mageplaza.com/)
+ * @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
  * @license     https://www.mageplaza.com/LICENSE.txt
  */
 
 namespace Mageplaza\LayeredNavigation\Model\Layer\Filter;
 
+use Magento\Catalog\Model\Layer as LayerCatalog;
+use Magento\Catalog\Model\Layer\Filter\Item\DataBuilder;
+use Magento\Catalog\Model\Layer\Filter\ItemFactory;
 use Magento\CatalogSearch\Model\Layer\Filter\Attribute as AbstractFilter;
+use Magento\Framework\App\RequestInterface;
+use Magento\Framework\Filter\StripTags;
+use Magento\Store\Model\StoreManagerInterface;
 use Mageplaza\LayeredNavigation\Helper\Data as LayerHelper;
+use Mageplaza\LayeredNavigation\Model\ResourceModel\Fulltext\Collection;
 
 /**
  * Class Attribute
@@ -30,152 +37,152 @@ use Mageplaza\LayeredNavigation\Helper\Data as LayerHelper;
  */
 class Attribute extends AbstractFilter
 {
-	/** @var \Mageplaza\LayeredNavigation\Helper\Data */
-	protected $_moduleHelper;
+    /** @var LayerHelper */
+    protected $_moduleHelper;
 
-	/** @var bool Is Filterable Flag */
-	protected $_isFilter = true;
+    /** @var bool Is Filterable Flag */
+    protected $_isFilter = true;
 
-	/** @var \Magento\Framework\Filter\StripTags */
-	private $tagFilter;
+    /** @var StripTags */
+    private $tagFilter;
 
-	/**
-	 * @param \Magento\Catalog\Model\Layer\Filter\ItemFactory $filterItemFactory
-	 * @param \Magento\Store\Model\StoreManagerInterface $storeManager
-	 * @param \Magento\Catalog\Model\Layer $layer
-	 * @param \Magento\Catalog\Model\Layer\Filter\Item\DataBuilder $itemDataBuilder
-	 * @param \Magento\Framework\Filter\StripTags $tagFilter
-	 * @param \Mageplaza\LayeredNavigation\Helper\Data $moduleHelper
-	 * @param array $data
-	 */
-	public function __construct(
-		\Magento\Catalog\Model\Layer\Filter\ItemFactory $filterItemFactory,
-		\Magento\Store\Model\StoreManagerInterface $storeManager,
-		\Magento\Catalog\Model\Layer $layer,
-		\Magento\Catalog\Model\Layer\Filter\Item\DataBuilder $itemDataBuilder,
-		\Magento\Framework\Filter\StripTags $tagFilter,
-		LayerHelper $moduleHelper,
-		array $data = []
-	)
-	{
-		parent::__construct(
-			$filterItemFactory,
-			$storeManager,
-			$layer,
-			$itemDataBuilder,
-			$tagFilter,
-			$data
-		);
-		$this->tagFilter     = $tagFilter;
-		$this->_moduleHelper = $moduleHelper;
-	}
+    /**
+     * Attribute constructor.
+     *
+     * @param ItemFactory $filterItemFactory
+     * @param StoreManagerInterface $storeManager
+     * @param LayerCatalog $layer
+     * @param DataBuilder $itemDataBuilder
+     * @param StripTags $tagFilter
+     * @param LayerHelper $moduleHelper
+     * @param array $data
+     */
+    public function __construct(
+        ItemFactory $filterItemFactory,
+        StoreManagerInterface $storeManager,
+        LayerCatalog $layer,
+        DataBuilder $itemDataBuilder,
+        StripTags $tagFilter,
+        LayerHelper $moduleHelper,
+        array $data = []
+    ) {
+        $this->tagFilter     = $tagFilter;
+        $this->_moduleHelper = $moduleHelper;
 
-	/**
-	 * @inheritdoc
-	 */
-	public function apply(\Magento\Framework\App\RequestInterface $request)
-	{
-		if (!$this->_moduleHelper->isEnabled()) {
-			return parent::apply($request);
-		}
+        parent::__construct(
+            $filterItemFactory,
+            $storeManager,
+            $layer,
+            $itemDataBuilder,
+            $tagFilter,
+            $data
+        );
+    }
 
-		$attributeValue = $request->getParam($this->_requestVar);
-		if (empty($attributeValue)) {
-			$this->_isFilter = false;
+    /**
+     * @inheritdoc
+     */
+    public function apply(RequestInterface $request)
+    {
+        if (!$this->_moduleHelper->isEnabled()) {
+            return parent::apply($request);
+        }
 
-			return $this;
-		}
+        $attributeValue = $request->getParam($this->_requestVar);
+        if (empty($attributeValue)) {
+            $this->_isFilter = false;
 
-		$attributeValue = explode(',', $attributeValue);
+            return $this;
+        }
 
-		$attribute = $this->getAttributeModel();
-		/** @var \Magento\CatalogSearch\Model\ResourceModel\Fulltext\Collection $productCollection */
-		$productCollection = $this->getLayer()
-			->getProductCollection();
-		if (count($attributeValue) > 1) {
-			$productCollection->addFieldToFilter($attribute->getAttributeCode(), ['in' => $attributeValue]);
-		} else {
-			$productCollection->addFieldToFilter($attribute->getAttributeCode(), $attributeValue[0]);
-		}
+        $attributeValue = explode(',', $attributeValue);
 
-		$state = $this->getLayer()->getState();
-		foreach ($attributeValue as $value) {
-			$label = $this->getOptionText($value);
-			$state->addFilter($this->_createItem($label, $value));
-		}
+        $attribute = $this->getAttributeModel();
+        /** @var \Magento\CatalogSearch\Model\ResourceModel\Fulltext\Collection $productCollection */
+        $productCollection = $this->getLayer()
+            ->getProductCollection();
+        if (count($attributeValue) > 1) {
+            $productCollection->addFieldToFilter($attribute->getAttributeCode(), ['in' => $attributeValue]);
+        } else {
+            $productCollection->addFieldToFilter($attribute->getAttributeCode(), $attributeValue[0]);
+        }
 
-		return $this;
-	}
+        $state = $this->getLayer()->getState();
+        foreach ($attributeValue as $value) {
+            $label = $this->getOptionText($value);
+            $state->addFilter($this->_createItem($label, $value));
+        }
 
-	/**
-	 * @inheritdoc
-	 */
-	protected function _getItemsData()
-	{
-		if (!$this->_moduleHelper->isEnabled()) {
-			return parent::_getItemsData();
-		}
+        return $this;
+    }
 
-		$attribute = $this->getAttributeModel();
+    /**
+     * @inheritdoc
+     */
+    protected function _getItemsData()
+    {
+        if (!$this->_moduleHelper->isEnabled()) {
+            return parent::_getItemsData();
+        }
 
-		/** @var \Mageplaza\LayeredNavigation\Model\ResourceModel\Fulltext\Collection $productCollection */
-		$productCollection = $this->getLayer()->getProductCollection();
+        $attribute = $this->getAttributeModel();
 
-		if ($this->_isFilter) {
-			$productCollection = $productCollection->getCollectionClone()
-				->removeAttributeSearch($attribute->getAttributeCode());
-		}
+        /** @var Collection $productCollection */
+        $productCollection = $this->getLayer()->getProductCollection();
 
-		$optionsFacetedData = $productCollection->getFacetedData($attribute->getAttributeCode());
+        if ($this->_isFilter) {
+            $productCollection = $productCollection->getCollectionClone()
+                ->removeAttributeSearch($attribute->getAttributeCode());
+        }
 
-		if (count($optionsFacetedData) === 0
-			&& $this->getAttributeIsFilterable($attribute) !== static::ATTRIBUTE_OPTIONS_ONLY_WITH_RESULTS
-		) {
-			return $this->itemDataBuilder->build();
-		}
+        $optionsFacetedData = $productCollection->getFacetedData($attribute->getAttributeCode());
 
-		$productSize = $productCollection->getSize();
+        if (count($optionsFacetedData) === 0
+            && $this->getAttributeIsFilterable($attribute) !== static::ATTRIBUTE_OPTIONS_ONLY_WITH_RESULTS
+        ) {
+            return $this->itemDataBuilder->build();
+        }
 
-		$itemData   = [];
-		$checkCount = false;
+        $productSize = $productCollection->getSize();
+        $itemData    = [];
+        $checkCount  = false;
 
-		$options = $attribute->getFrontend()
-			->getSelectOptions();
-		foreach ($options as $option) {
-			if (empty($option['value'])) {
-				continue;
-			}
+        $options = $attribute->getFrontend()->getSelectOptions();
+        foreach ($options as $option) {
+            if (empty($option['value'])) {
+                continue;
+            }
 
-			$value = $option['value'];
+            $value = $option['value'];
 
-			$count = isset($optionsFacetedData[$value]['count'])
-				? (int)$optionsFacetedData[$value]['count']
-				: 0;
+            $count = isset($optionsFacetedData[$value]['count'])
+                ? (int) $optionsFacetedData[$value]['count']
+                : 0;
 
-			// Check filter type
-			if ($this->getAttributeIsFilterable($attribute) == static::ATTRIBUTE_OPTIONS_ONLY_WITH_RESULTS
-				&& (!$this->_moduleHelper->getFilterModel()->isOptionReducesResults($this, $count, $productSize))
-			) {
-				continue;
-			}
+            // Check filter type
+            if ($this->getAttributeIsFilterable($attribute) === static::ATTRIBUTE_OPTIONS_ONLY_WITH_RESULTS
+                && (!$this->_moduleHelper->getFilterModel()->isOptionReducesResults($this, $count, $productSize))
+            ) {
+                continue;
+            }
 
-			if ($count > 0) {
-				$checkCount = true;
-			}
+            if ($count > 0) {
+                $checkCount = true;
+            }
 
-			$itemData[] = [
-				'label' => $this->tagFilter->filter($option['label']),
-				'value' => $value,
-				'count' => $count
-			];
-		}
+            $itemData[] = [
+                'label' => $this->tagFilter->filter($option['label']),
+                'value' => $value,
+                'count' => $count
+            ];
+        }
 
-		if ($checkCount) {
-			foreach ($itemData as $item) {
-				$this->itemDataBuilder->addItemData($item['label'], $item['value'], $item['count']);
-			}
-		}
+        if ($checkCount) {
+            foreach ($itemData as $item) {
+                $this->itemDataBuilder->addItemData($item['label'], $item['value'], $item['count']);
+            }
+        }
 
-		return $this->itemDataBuilder->build();
-	}
+        return $this->itemDataBuilder->build();
+    }
 }

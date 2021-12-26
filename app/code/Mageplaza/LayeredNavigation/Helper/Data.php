@@ -15,82 +15,100 @@
  *
  * @category    Mageplaza
  * @package     Mageplaza_LayeredNavigation
- * @copyright   Copyright (c) 2017 Mageplaza (http://www.mageplaza.com/)
+ * @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
  * @license     https://www.mageplaza.com/LICENSE.txt
  */
 
 namespace Mageplaza\LayeredNavigation\Helper;
 
-use Mageplaza\Core\Helper\AbstractData;
+use Magento\Catalog\Model\Layer\Filter\FilterInterface;
+use Magento\Customer\Model\Session;
+use Magento\Framework\DataObject;
+use Magento\Framework\Exception\LocalizedException;
+use Magento\Framework\ObjectManagerInterface;
+use Magento\Store\Model\Store;
+use Mageplaza\LayeredNavigation\Model\Layer\Filter;
 
 /**
  * Class Data
  * @package Mageplaza\LayeredNavigation\Helper
  */
-class Data extends AbstractData
+class Data extends \Mageplaza\AjaxLayer\Helper\Data
 {
-	const FILTER_TYPE_SLIDER = 'slider';
-	const FILTER_TYPE_LIST = 'list';
+    const FILTER_TYPE_SLIDER = 'slider';
+    const FILTER_TYPE_LIST   = 'list';
 
-	/** @var \Mageplaza\LayeredNavigation\Model\Layer\Filter */
-	protected $filterModel;
+    /** @var Filter */
+    protected $filterModel;
 
-	/**
-	 * @param null $storeId
-	 *
-	 * @return mixed
-	 */
-	public function isEnabled($storeId = null)
-	{
-		return $this->getGeneralConfig('enable', $storeId) && $this->isModuleOutputEnabled();
-	}
+    /**
+     * @param $filters
+     *
+     * @return mixed
+     */
+    public function getLayerConfiguration($filters)
+    {
+        $filterParams = $this->_getRequest()->getParams();
+        foreach ($filterParams as $key => $param) {
+            $filterParams[$key] = htmlspecialchars($param);
+        }
 
-	/**
-	 * @param string $code
-	 * @param null $storeId
-	 * @return mixed
-	 */
-	public function getGeneralConfig($code = '', $storeId = null)
-	{
-		$code = ($code !== '') ? '/' . $code : '';
+        $config = new DataObject([
+            'active'             => array_keys($filterParams),
+            'params'             => $filterParams,
+            'isCustomerLoggedIn' => $this->objectManager->create(Session::class)->isLoggedIn(),
+            'isAjax'             => $this->ajaxEnabled()
+        ]);
 
-		return $this->getConfigValue('layered_navigation/general' . $code, $storeId);
-	}
+        $this->getFilterModel()->getLayerConfiguration($filters, $config);
 
-	/**
-	 * @param $filters
-	 * @return mixed
-	 */
-	public function getLayerConfiguration($filters)
-	{
-		$filterParams = $this->_getRequest()->getParams();
-		$config       = new \Magento\Framework\DataObject([
-			'active' => array_keys($filterParams),
-			'params' => $filterParams
-		]);
+        return self::jsonEncode($config->getData());
+    }
 
-		$this->getFilterModel()->getLayerConfiguration($filters, $config);
+    /**
+     * @return Filter
+     */
+    public function getFilterModel()
+    {
+        if (!$this->filterModel) {
+            $this->filterModel = $this->objectManager->create(Filter::class);
+        }
 
-		return $this->objectManager->get('Magento\Framework\Json\EncoderInterface')->encode($config->getData());
-	}
+        return $this->filterModel;
+    }
 
-	/**
-	 * @return \Mageplaza\LayeredNavigation\Model\Layer\Filter
-	 */
-	public function getFilterModel()
-	{
-		if (!$this->filterModel) {
-			$this->filterModel = $this->objectManager->create('Mageplaza\LayeredNavigation\Model\Layer\Filter');
-		}
+    /**
+     * @return ObjectManagerInterface
+     */
+    public function getObjectManager()
+    {
+        return $this->objectManager;
+    }
 
-		return $this->filterModel;
-	}
+    /**
+     * @param FilterInterface $filter
+     * @param null $storeId
+     *
+     * @return string
+     */
+    public function getTooltipContent($filter, $storeId = null)
+    {
+        try {
+            $store  = $this->storeManager->getStore($storeId);
+            $labels = $filter->getAttributeModel()->getData('tooltip_content');
+            if (isset($labels[$store->getId()])) {
+                if (empty($labels[$store->getId()])) {
+                    return $labels[Store::DEFAULT_STORE_ID];
+                }
 
-	/**
-	 * @return \Magento\Framework\ObjectManagerInterface
-	 */
-	public function getObjectManager()
-	{
-		return $this->objectManager;
-	}
+                return $labels[$store->getId()];
+            }
+
+            return '';
+        } catch (LocalizedException $e) {
+            $this->_logger->error($e);
+
+            return '';
+        }
+    }
 }
