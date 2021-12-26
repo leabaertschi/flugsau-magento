@@ -1,0 +1,946 @@
+sku,store_view_code,attribute_set_code,product_type,categories,product_websites,name,description,short_description,weight,product_online,tax_class_name,visibility,price,special_price,special_price_from_date,special_price_to_date,url_key,meta_title,meta_keywords,meta_description,created_at,updated_at,new_from_date,new_to_date,display_product_options_in,map_price,msrp_price,map_enabled,gift_message_available,custom_design,custom_design_from,custom_design_to,custom_layout_update,page_layout,product_options_container,msrp_display_actual_price_type,country_of_manufacture,additional_attributes,qty,out_of_stock_qty,use_config_min_qty,is_qty_decimal,allow_backorders,use_config_backorders,min_cart_qty,use_config_min_sale_qty,max_cart_qty,use_config_max_sale_qty,is_in_stock,notify_on_stock_below,use_config_notify_stock_qty,manage_stock,use_config_manage_stock,use_config_qty_increments,qty_increments,use_config_enable_qty_inc,enable_qty_increments,is_decimal_divided,website_id,deferred_stock_update,use_config_deferred_stock_update,related_skus,crosssell_skus,upsell_skus,hide_from_product_page,custom_options,bundle_price_type,bundle_sku_type,bundle_price_view,bundle_weight_type,bundle_values,associated_skus,base_image,thumbnail_image,small_image,additional_images
+FS0192,,Default,simple,Default Category/Produkte/Parts/Klettbänder,base,Klettband 20mm Flausch,"<p>Schwarz zum Aufn&auml;hen</p>
+<p></p>
+<p><strong><strong><strong>Anzahl 1 = 1 Meter</strong></strong></strong></p>",,0.01,1,Taxable Goods,"Katalog, Suche",1.764902507,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,klettverschluesse-klettband-flausch.png,klettverschluesse-klettband-flausch.png,klettverschluesse-klettband-flausch.png,
+FS0165,,Default,simple,"Default Category/Produkte/Parts/Austri Alpin,Default Category/Produkte/Parts/Karabiner / Ringe",base,Austri Alpin Materialkarabiner,<p>Kleiner Alukarabiner f&uuml;r Materialsicherungen. NICHT zum Klettern verwenden!</p>,,0.03,1,Taxable Goods,"Katalog, Suche",6.0367688022,,,,klettband-20mm-flausch-parts,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,austrialpin-austri-alpin-materialkarabiner.png,austrialpin-austri-alpin-materialkarabiner.png,austrialpin-austri-alpin-materialkarabiner.png,
+FP10A,,Default,simple,"Default Category/Produkte/Parts/Austri Alpin,Default Category/Produkte/Parts/Karabiner / Ringe",base,Austri Alpin POWERFLY Edelstahl Autolock,"<p>Gleitschirm Karabiner mit autolock Funktion</p>
+<p><span id=""plc_lt_zoneContent_pageplaceholder_pageplaceholder_lt_zoneContent_cmsdatalist_lstElem""><span>Gem&auml;ss Hersteller: max. gebrauchsdauer ist nach 1500 flugstunden oder 5 jahren erreicht </span></span></p>
+<p><strong>Masse:</strong></p>
+<p><strong><img src=""/picture/austrialpin/powerfly/sizes.ashx.jpg"" alt=""Masse"" height=""84"" width=""86"" /></strong></p>
+<p><strong>Festigkeiten:</strong></p>
+<p><span><span><img src=""/picture/austrialpin/test/forces.ashx.jpg"" alt=""Kr&auml;fte"" height=""36"" width=""204"" /></span></span></p>
+<p><strong>Material:</strong></p>
+<p>Inox, poliert</p>
+<p></p>",,0.14,1,Taxable Goods,"Katalog, Suche",26.9266963788,,,,,,,,,,,,,,,,,,,,,,,,,,989,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,austrialpin-austri-alpin-power-fly.png,austrialpin-austri-alpin-power-fly.png,austrialpin-austri-alpin-power-fly.png,
+FS0124,,Default,simple,"Default Category/Produkte/Parts/Austri Alpin,Default Category/Produkte/Parts/Karabiner / Ringe",base,Austri Alpin Stratus INOX,"<p>Der 25mm Autolock Karabiner f&uuml;r Gleitschirmfliegen in der starken inox Version.<br />Geeigenet f&uuml;r Solo und Tandem.</p>
+<p>Gem&auml;ss Hersteller: Die max. Gebrauchsdauer ist nach 1500 Flugstunden oder 5 Jahren erreicht.</p>
+<p><strong>Masse:</strong></p>
+<p><strong><img src=""/picture/austrialpin/stratus_inox/sizes.ashx.jpg"" alt=""Masse"" height=""84"" width=""86"" /></strong></p>
+<p><strong>Festikeiten:</strong></p>
+<p><strong><img src=""/picture/austrialpin/stratus_inox/forces.ashx.jpg"" alt=""Festigkeiten"" height=""36"" width=""204"" /></strong></p>
+<p><strong>Material:</strong></p>
+<div>inox poliert</div>",,0.13,1,Taxable Goods,"Katalog, Suche",28.7836545961,,,,austri-alpin-stratus-inox-parts,,,,,,,,,,,,,,,,,,,,,,993,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,austrialpin-austri-alpin-stratus-inox.png,austrialpin-austri-alpin-stratus-inox.png,austrialpin-austri-alpin-stratus-inox.png,
+FS0166,,Default,simple,"Default Category/Produkte/Parts/Austri Alpin,Default Category/Produkte/Parts/Karabiner / Ringe",base,Austri Alpin MICRO MAGIC,"<p><span id=""plc_lt_zoneContent_pageplaceholder_pageplaceholder_lt_zoneContent_cmsdatalist_lstElem""><span>Die einzigartige Form des Micro vereint eine gro&szlig;e Schnapper&ouml;ffnung mit hohen Festigkeiten. Dieser kleinste Schraubkarabiner wiegt nur 50g.</span></span> Mit Schraubsicherung, Alugewinde, magicLock. Wir verwenden diesen Karabiner auch als Gleitschirmkarabiner f&uuml;r Leichtausr&uuml;stungen.</p>
+<p><strong>Verschl&uuml;sse:</strong></p>
+<p><strong><img src=""/picture/austrialpin/micro_magic/Magic-Lock.aspx.jpg"" alt=""Verschl&uuml;sse"" height=""93"" width=""130"" /></strong></p>
+<p><strong>Masse:</strong></p>
+<p><strong><img src=""/picture/austrialpin/micro_magic/sizes.ashx.jpg"" alt=""Masse"" height=""84"" width=""86"" /></strong></p>
+<p><strong>Festigkeiten:</strong></p>
+<p><strong><img src=""/picture/austrialpin/micro_magic/forces.ashx.jpg"" alt=""Festigkeiten"" height=""36"" width=""204"" /></strong></p>
+<p><strong>Material:</strong></p>
+<div>aluminium eloxiert</div>",,0.06,1,Taxable Goods,"Katalog, Suche",13.9286908078,,,,austri-alpin-micro-magic-parts,,,,,,,,,,,,,,,,,,,,,,997,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,"name=Farbe,type=drop_down,required=1,price_type=fixed,sku=,option_title=grün,price=0|name=Farbe,type=drop_down,required=1,price_type=fixed,sku=,option_title=silber,price=0",,,,,,,austrialpin-austri-alpin-micro-magic.png,austrialpin-austri-alpin-micro-magic.png,austrialpin-austri-alpin-micro-magic.png,
+FS0193,,Default,simple,Default Category/Produkte/Parts/Klettbänder,base,Klettband 20mm Haken,"<p>Schwarz zum Aufn&auml;hen</p>
+<p></p>
+<p><strong><strong><strong>Anzahl 1 = 1 Meter</strong></strong></strong></p>",,0.01,1,Taxable Goods,"Katalog, Suche",1.764902507,,,,,,,,,,,,,,,,,,,,,,,,,,998,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,klettverschluesse-klettband-haken.png,klettverschluesse-klettband-haken.png,klettverschluesse-klettband-haken.png,
+FS0194,,Default,simple,Default Category/Produkte/Parts/Klettbänder,base,Klettband 25mm Flausch,"<p>Schwarz zum Aufn&auml;hen</p>
+<p></p>
+<p><strong><strong><strong>Anzahl 1 = 1 Meter</strong></strong></strong></p>",,0.01,1,Taxable Goods,"Katalog, Suche",1.9454038997,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,klettverschluesse-klettband-flausch.png,klettverschluesse-klettband-flausch.png,klettverschluesse-klettband-flausch.png,
+FS0195,,Default,simple,Default Category/Produkte/Parts/Klettbänder,base,Klettband 25mm Haken,"<p>Schwarz zum Aufn&auml;hen</p>
+<p></p>
+<p><strong><strong><strong>Anzahl 1 = 1 Meter</strong></strong></strong></p>",,0.01,1,Taxable Goods,"Katalog, Suche",1.9454038997,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,klettverschluesse-klettband-haken.png,klettverschluesse-klettband-haken.png,klettverschluesse-klettband-haken.png,
+FS0196,,Default,simple,Default Category/Produkte/Parts/Klettbänder,base,Klettband 38mm Flausch,"<p>Schwarz zum Aufn&auml;hen</p>
+<p></p>
+<p><strong><strong><strong>Anzahl 1 = 1 Meter</strong></strong></strong></p>",,0.02,1,Taxable Goods,"Katalog, Suche",3.1587743733,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,klettverschluesse-klettband-flausch.png,klettverschluesse-klettband-flausch.png,klettverschluesse-klettband-flausch.png,
+FS0197,,Default,simple,Default Category/Produkte/Parts/Klettbänder,base,Klettband 38mm Haken,"<p>Schwarz zum Aufn&auml;hen</p>
+<p></p>
+<p><strong><strong><strong>Anzahl 1 = 1 Meter</strong></strong></strong></p>",,0.02,1,Taxable Goods,"Katalog, Suche",3.1587743733,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,klettverschluesse-klettband-haken.png,klettverschluesse-klettband-haken.png,klettverschluesse-klettband-haken.png,
+FS0198,,Default,simple,Default Category/Produkte/Parts/Klettbänder,base,Klettband 50mm Flausch,"<p>Schwarz zum Aufn&auml;hen</p>
+<p></p>
+<p><strong><strong><strong>Anzahl 1 = 1 Meter</strong></strong></strong></p>",,0.03,1,Taxable Goods,"Katalog, Suche",3.8105849582,,,,,,,,,,,,,,,,,,,,,,,,,,993,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,klettverschluesse-klettband-flausch.png,klettverschluesse-klettband-flausch.png,klettverschluesse-klettband-flausch.png,
+FS0199,,Default,simple,Default Category/Produkte/Parts/Klettbänder,base,Klettband 50mm Haken,"<p>Schwarz zum Aufn&auml;hen</p>
+<p></p>
+<p><strong><strong><strong>Anzahl 1 = 1 Meter</strong></strong></strong></p>",,0.03,1,Taxable Goods,"Katalog, Suche",3.8105849582,,,,,,,,,,,,,,,,,,,,,,,,,,994,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,klettverschluesse-klettband-haken.png,klettverschluesse-klettband-haken.png,klettverschluesse-klettband-haken.png,
+FS0200,,Default,simple,Default Category/Produkte/Parts/Klettbänder,base,Klettband 100mm Flausch,"<p>Schwarz zum Aufn&auml;hen</p>
+<p></p>
+<p><strong><strong><strong>Anzahl 1 = 1 Meter</strong></strong></strong></p>",,0.05,1,Taxable Goods,"Katalog, Suche",7.2401114206,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,klettverschluesse-klettband-flausch.png,klettverschluesse-klettband-flausch.png,klettverschluesse-klettband-flausch.png,
+FS0201,,Default,simple,Default Category/Produkte/Parts/Klettbänder,base,Klettband 100mm Haken,"<p>Schwarz zum Aufn&auml;hen</p>
+<p></p>
+<p><strong><strong><strong>Anzahl 1 = 1 Meter</strong></strong></strong></p>",,0.05,1,Taxable Goods,"Katalog, Suche",7.2401114206,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,klettverschluesse-klettband-haken.png,klettverschluesse-klettband-haken.png,klettverschluesse-klettband-haken.png,
+FS0202,,Default,simple,Default Category/Produkte/Parts/Klettbänder,base,Klettband 25mm selbstklebend Haken,"<p>Schwarz zum Aufkleben</p>
+<p></p>
+<p><strong><strong><strong>Anzahl 1 = 1 Meter</strong></strong></strong></p>",,0.02,1,Taxable Goods,"Katalog, Suche",3.2490250696,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,klettverschluesse-klettband-haken.png,klettverschluesse-klettband-haken.png,klettverschluesse-klettband-haken.png,klettverschluesse-klettband-selbstkleben.png
+FS0203,,Default,simple,Default Category/Produkte/Parts/Klettbänder,base,Klettband 50mm selbstklebend Haken,"<p>Schwarz zum Aufkleben</p>
+<p></p>
+<p><strong><strong><strong>Anzahl 1 = 1 Meter</strong></strong></strong></p>",,0.04,1,Taxable Goods,"Katalog, Suche",8.8245125348,,,,,,,,,,,,,,,,,,,,,,,,,,998,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,klettverschluesse-klettband-haken.png,klettverschluesse-klettband-haken.png,klettverschluesse-klettband-haken.png,klettverschluesse-klettband-selbstkleben.png
+FS0204,,Default,simple,Default Category/Produkte/Parts/Klettbänder,base,Klettband 25mm Haken und Flausch,"<p>Schwarz oberseite Haken, unterseite Flausch</p>
+<p></p>
+<p><strong><strong><strong>Anzahl 1 = 1 Meter</strong></strong></strong></p>",,0.03,1,Taxable Goods,"Katalog, Suche",5.3849582173,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,klettverschluesse-klettband-25mm-haken-und-flausch.png,klettverschluesse-klettband-25mm-haken-und-flausch.png,klettverschluesse-klettband-25mm-haken-und-flausch.png,
+FS0167,,Default,simple,Default Category/Produkte/Parts/Austri Alpin,base,Austri Alpin Tanga  18mm,<p>Karabiner Fixierung f&uuml;r Gleitschirm Leichtgurtzeuge</p>,,0.01,1,Taxable Goods,"Katalog, Suche",2.3212479109,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,austrialpin-austri-alpin-tanga--18mm.png,austrialpin-austri-alpin-tanga--18mm.png,austrialpin-austri-alpin-tanga--18mm.png,
+FS0207,,Default,simple,Default Category/Produkte/Parts/Austri Alpin,base,Austri Alpin Tanga  14mm,<p>Karabiner Fixierung f&uuml;r Gleitschirm Leichtgurtzeuge</p>,,0.01,1,Taxable Goods,"Katalog, Suche",2.3212479109,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,austrialpin-austri-alpin-tanga--14mm.png,austrialpin-austri-alpin-tanga--14mm.png,austrialpin-austri-alpin-tanga--14mm.png,
+FC45KVF,,Default,simple,"Default Category/Produkte/Parts/Schnallen zweiteilig,Default Category/Produkte/Parts/Austri Alpin",base,Austri Alpin Cobra® Original verstellbar -45mm,"<p>Der Sicherheitsverschluss der Cobra&reg; ist patentiert und gew&auml;hrleistet sicherste Anwendung. Die Cobras lassen sich weder einseitig noch unter Last &ouml;ffnen. <br />Alle Standardgr&ouml;&szlig;en sind miteinander kompatibel. In Verbindung mit dem passenden Gurt halten die Cobras garantiert 18kN im Ring. <br /><br />Alle COBRAs sind neben den Standardfinishes <br />*schwarz ktl, poliert und hartbeschichtet auch <br /> *pulverbeschichtet in den Farben orange, white, wolf grey, elephant grey, foliage green, desert sand, tan und coyote brown sowie <br />*eloxiert in den Farben matte black, red, azure, purple, light green, yellow, pink und brown erh&auml;ltlich.</p>
+<p><span><span><span>&nbsp;</span></span></span></p>
+<p>Das aktuelle Cobra-Compendium samt den Farbmustern ist als Download verf&uuml;gbar: http://downloads.austrialpin.at/cobra.pdf</p>
+<p><strong>Gewicht:</strong></p>
+<p><strong><img src=""/picture/austrialpin/cobra_frame/weight_63g.jpg"" alt=""63g"" width=""44"" height=""62"" /></strong></p>
+<p><strong>Gurtbreite:</strong></p>
+<p><strong><img src=""/picture/austrialpin/cobra_frame/beltWidth_45mm.ashx.jpg"" alt=""Gurtbreite"" width=""129"" height=""36"" /></strong></p>
+<p><strong>Festigkeiten:</strong></p>
+<p><strong><img src=""/picture/austrialpin/cobra_frame/powerrope.ashx.jpg"" alt=""rope"" width=""110"" height=""58"" />&nbsp; <img src=""/picture/austrialpin/cobra_frame/ropeforceRing.ashx.jpg"" alt=""ring"" width=""87"" height=""56"" /></strong></p>
+<p><strong>Materialien:</strong></p>
+<p><span id=""plc_lt_zoneContent_pageplaceholder_pageplaceholder_lt_zoneContent_cmsdatalist_lstElem""><span id=""plc_lt_zoneContent_pageplaceholder_pageplaceholder_lt_zoneContent_cmsdatalist_lstElem""><span>aluminium ktl<br /> messing</span></span><br /></span></p>
+<p><strong>Eigenschaften:</strong></p>
+<div>standard-clips</div>
+<div>einseitig verstellbar</div>",,0.07,1,Taxable Goods,"Katalog, Suche",20.7984735376,,,,,,,,,,,,,,,,,,,,,,,,,,998,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,austrialpin-austri-alpin-cobra-verstellbar--45mm.png,austrialpin-austri-alpin-cobra-verstellbar--45mm.png,austrialpin-austri-alpin-cobra-verstellbar--45mm.png,
+FC25KVF,,Default,simple,"Default Category/Produkte/Parts/Schnallen zweiteilig,Default Category/Produkte/Parts/Austri Alpin",base,Austri Alpin Cobra® Original verstellbar -25mm,"<p>Der Sicherheitsverschluss der Cobra&reg; ist patentiert und gew&auml;hrleistet sicherste Anwendung. Die Cobras lassen sich weder einseitig noch unter Last &ouml;ffnen. <br />Alle Standardgr&ouml;&szlig;en sind miteinander kompatibel. In Verbindung mit dem passenden Gurt halten die Cobras garantiert 18kN im Ring.</p>
+<p><span><span><span>&nbsp;</span></span></span></p>
+<p>Das aktuelle cobra-compendium als download: http://downloads.austrialpin.at/cobra.pdf</p>
+<p><strong>Gurtbreite:</strong></p>
+<p><strong><img src=""/picture/austrialpin/cobra_frame/beltWidth_25mm.ashx.jpg"" alt=""Gurtbreite"" height=""36"" width=""129"" /> </strong>bis <img src=""/picture/austrialpin/cobra_frame/beltWidth_28mm.ashx.jpg"" alt=""Gurtbreite"" height=""36"" width=""129"" /></p>
+<p><strong>Festigkeiten:</strong></p>
+<p><strong><img src=""/picture/austrialpin/cobra_frame/powerrope.ashx.jpg"" alt=""rope"" height=""58"" width=""110"" />&nbsp; <img src=""/picture/austrialpin/cobra_frame/ropeforceRing.ashx.jpg"" alt=""ring"" height=""56"" width=""87"" /></strong></p>
+<p><strong>Materialen:</strong></p>
+<p><span id=""plc_lt_zoneContent_pageplaceholder_pageplaceholder_lt_zoneContent_cmsdatalist_lstElem""><span id=""plc_lt_zoneContent_pageplaceholder_pageplaceholder_lt_zoneContent_cmsdatalist_lstElem""><span>aluminium ktl<br /> messing</span></span><br /></span></p>
+<p><strong>Eigenschaften:</strong></p>
+<div>standard-clips</div>
+<div>einseitig verstellbar</div>",,0.06,1,Taxable Goods,"Katalog, Suche",20.2414261838,,,,,,,,,,,,,,,,,,,,,,,,,,994,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,austrialpin-austri-alpin-cobra-verstellbar-25-28mm.png,austrialpin-austri-alpin-cobra-verstellbar-25-28mm.png,austrialpin-austri-alpin-cobra-verstellbar-25-28mm.png,
+FS0210,,Default,simple,Default Category/Produkte/Parts/Austri Alpin,base,Austri Alpin rückfädelschnalle -45mm,"<p><span id=""plc_lt_zoneContent_pageplaceholder_pageplaceholder_lt_zoneContent_cmsdatalist_lstElem""><span>asymmetrische r&uuml;ckf&auml;delschnalle </span></span></p>
+<p><strong>Gurtbreite:</strong></p>
+<p><strong><img src=""/picture/austrialpin/cobra_frame/beltWidth_45mm.ashx.jpg"" alt=""Gurtbreite"" height=""36"" width=""129"" /></strong></p>
+<p><strong>Material:</strong></p>
+<p><span id=""plc_lt_zoneContent_pageplaceholder_pageplaceholder_lt_zoneContent_cmsdatalist_lstElem"">aluminium pulverbeschichtet</span></p>",,0.02,1,Taxable Goods,"Katalog, Suche",3.6200557103,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,austrialpin-austri-alpin-ruckfadelschnalle--45mm.png,austrialpin-austri-alpin-ruckfadelschnalle--45mm.png,austrialpin-austri-alpin-ruckfadelschnalle--45mm.png,
+FS0211,,Default,simple,Default Category/Produkte/Parts/Austri Alpin,base,Austri Alpin rückfädelschnalle -25mm,"<p><span id=""plc_lt_zoneContent_pageplaceholder_pageplaceholder_lt_zoneContent_cmsdatalist_lstElem""><span>asymmetrische r&uuml;ckf&auml;delschnalle </span></span></p>
+<p><strong>Gurtbreite:</strong></p>
+<p><strong><img src=""/picture/austrialpin/cobra_frame/beltWidth_25mm.ashx.jpg"" alt=""Gurtbreite"" height=""36"" width=""129"" /></strong></p>
+<p><strong>Material:</strong></p>
+<p><span id=""plc_lt_zoneContent_pageplaceholder_pageplaceholder_lt_zoneContent_cmsdatalist_lstElem"">aluminium pulverbeschichtet</span></p>",,0.02,1,Taxable Goods,"Katalog, Suche",3.1587743733,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,austrialpin-austri-alpin-ruckfadelschnalle--25mm.png,austrialpin-austri-alpin-ruckfadelschnalle--25mm.png,austrialpin-austri-alpin-ruckfadelschnalle--25mm.png,
+FS0212,,Default,simple,Default Category/Produkte/Parts/Austri Alpin,base,Austri Alpin slidebloc -20mm edelstahl,"<p><span id=""plc_lt_zoneContent_pageplaceholder_pageplaceholder_lt_zoneContent_cmsdatalist_lstElem""><span>edelstahlschnalle mit beweglichem mittelsteg aus inox. <br /></span></span></p>
+<p><strong>Gurtbreite:</strong></p>
+<p><strong><img src=""/picture/austrialpin/cobra_frame/beltWidth_20mm.ashx.jpg"" alt=""Gurtbreite"" height=""36"" width=""129"" /></strong></p>
+<p><strong>Material:</strong></p>
+<p><span id=""plc_lt_zoneContent_pageplaceholder_pageplaceholder_lt_zoneContent_cmsdatalist_lstElem"">ktl beschichtet<br /> inox</span></p>",,0.02,1,Taxable Goods,"Katalog, Suche",4.7331476323,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,austrialpin-austri-alpin-slidebloc--20mm-edelstahl.png,austrialpin-austri-alpin-slidebloc--20mm-edelstahl.png,austrialpin-austri-alpin-slidebloc--20mm-edelstahl.png,
+FS0213,,Default,simple,Default Category/Produkte/Parts/Austri Alpin,base,Austri Alpin slidebloc -28mm edelstahl,"<p><span id=""plc_lt_zoneContent_pageplaceholder_pageplaceholder_lt_zoneContent_cmsdatalist_lstElem""><span>edelstahlschnalle mit beweglichem mittelsteg aus inox</span></span></p>
+<p><strong>Gurtbreite:</strong></p>
+<p><strong><img src=""/picture/austrialpin/cobra_frame/beltWidth_28mm.ashx.jpg"" alt=""Gurtbreite"" height=""36"" width=""129"" /></strong></p>
+<p><strong>Material:</strong></p>
+<p><span id=""plc_lt_zoneContent_pageplaceholder_pageplaceholder_lt_zoneContent_cmsdatalist_lstElem""><span id=""plc_lt_zoneContent_pageplaceholder_pageplaceholder_lt_zoneContent_cmsdatalist_lstElem"">ktl beschichtet</span><br /> inox</span></p>",,0.04,1,Taxable Goods,"Katalog, Suche",4.9236768802,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,austrialpin-austri-alpin-slidebloc--28mm-edelstahl.png,austrialpin-austri-alpin-slidebloc--28mm-edelstahl.png,austrialpin-austri-alpin-slidebloc--28mm-edelstahl.png,
+FM20KVF,,Default,simple,"Default Category/Produkte/Parts/Schnallen zweiteilig,Default Category/Produkte/Parts/Austri Alpin",base,Austri Alpin Cobra® FM -20mm,"<p><span id=""plc_lt_zoneContent_pageplaceholder_pageplaceholder_lt_zoneContent_cmsdatalist_lstElem""><span>Designed als super Leichtgewicht ist die neue Cobra FM besonders gut als technisches Stilelement in Taschen und G&uuml;rteln geeignet. Funktionalit&auml;t und Gewicht machen sie aber auch f&uuml;r den sportlichen Einsatz zum perfekten Kandidaten. In allen Farben und Fix/Verstellbar-Variationen verf&uuml;gbar </span></span></p>
+<p>**NICHT ALS SICHERHEITSRELEVANTES TRAGENDES ELEMENT VERWENDBAR**</p>
+<p><strong>Gewicht:</strong></p>
+<p><strong><img src=""/picture/austrialpin/cobra_frame/weight.ashx.jpg"" alt=""Gewicht"" height=""62"" width=""44"" /></strong></p>
+<p><strong>Gurtbreite:</strong></p>
+<p><strong><img src=""/picture/austrialpin/cobra_frame/beltWidth_20mm.ashx.jpg"" alt=""Gurtbreite"" height=""36"" width=""129"" /></strong></p>
+<p><strong>Material:</strong></p>
+<p><span id=""plc_lt_zoneContent_pageplaceholder_pageplaceholder_lt_zoneContent_cmsdatalist_lstElem"">aluminium ktl</span></p>",,0.02,1,Taxable Goods,"Katalog, Suche",14.6703509749,,,,,,,,,,,,,,,,,,,,,,,,,,995,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,austrialpin-austri-alpin-cobra-fm--20mm.png,austrialpin-austri-alpin-cobra-fm--20mm.png,austrialpin-austri-alpin-cobra-fm--20mm.png,
+FS0215,,Default,simple,"Default Category/Produkte/Parts/Schnallen zweiteilig,Default Category/Produkte/Parts/Austri Alpin",base,Austri Alpin COBRA FM -25mm,"<p><span id=""plc_lt_zoneContent_pageplaceholder_pageplaceholder_lt_zoneContent_cmsdatalist_lstElem""><span>Designed als super Leichtgewicht ist die neue Cobra FM besonders gut als technisches Stilelement in Taschen und G&uuml;rteln geeignet. Funktionalit&auml;t und Gewicht machen sie aber auch f&uuml;r den sportlichen Einsatz zum perfekten Kandidaten. In allen Farben und Fix/Verstellbar-Variationen verf&uuml;gbar </span></span></p>
+<p>**NICHT ALS SICHERHEITSRELEVANTES TRAGENDES ELEMENT VERWENDBAR**</p>
+<p><strong>Gewicht:</strong></p>
+<p><strong><img src=""/picture/austrialpin/cobra_frame/weight.ashx.jpg"" alt=""Gewicht"" height=""62"" width=""44"" /></strong></p>
+<p><strong>Gurtbreite:</strong></p>
+<p><strong><img src=""/picture/austrialpin/cobra_frame/beltWidth_25mm.ashx.jpg"" alt=""Gurtbreite"" height=""36"" width=""129"" /></strong></p>
+<p><strong>Material:</strong></p>
+<p><span id=""plc_lt_zoneContent_pageplaceholder_pageplaceholder_lt_zoneContent_cmsdatalist_lstElem"">aluminium ktl</span></p>",,0.02,1,Taxable Goods,"Katalog, Suche",14.0189415042,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,austrialpin-austri-alpin-cobra-fm--25mm.png,austrialpin-austri-alpin-cobra-fm--25mm.png,austrialpin-austri-alpin-cobra-fm--25mm.png,
+FS0216,,Default,simple,Default Category/Produkte/Parts/Austri Alpin,base,Austri Alpin COBRA Frames -45mm,"<p>deluxe aluschnalle mit beweglichem mittelsteg aus inox</p>
+<p><strong>Gurtbreite:</strong></p>
+<p><strong><img src=""/picture/austrialpin/cobra_frame/beltWidth_45mm.ashx.jpg"" alt=""Gurtbreite"" height=""36"" width=""129"" /></strong></p>
+<p><strong>Festigkeiten:</strong></p>
+<p><strong><img src=""/picture/austrialpin/cobra_frame/powerrope.ashx.jpg"" alt=""rope"" height=""58"" width=""110"" />&nbsp; <img src=""/picture/austrialpin/cobra_frame/ropeforceRing.ashx.jpg"" alt=""ring"" height=""56"" width=""87"" /></strong></p>",,0.04,1,Taxable Goods,"Katalog, Suche",11.652367688,,,,,,,,,,,,,,,,,,,,,,,,,,998,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,austrialpin-austri-alpin-cobra-frames--45mm.png,austrialpin-austri-alpin-cobra-frames--45mm.png,austrialpin-austri-alpin-cobra-frames--45mm.png,
+FS0217,,Default,simple,Default Category/Produkte/Parts/Austri Alpin,base,Austri Alpin COBRA Frames STRETCH -45mm,"<p>deluxe aluschnalle mit beweglichem mittelsteg aus inox</p>
+<p><strong>Gurtbreite:</strong></p>
+<p><strong><img src=""/picture/austrialpin/cobra_frame/beltWidth_45mm.ashx.jpg"" alt=""Gurtbreite"" height=""36"" width=""129"" /></strong></p>
+<p><strong>Festigkeiten:</strong></p>
+<p><strong><img src=""/picture/austrialpin/cobra_frame/powerrope.ashx.jpg"" alt=""rope"" height=""58"" width=""110"" />&nbsp; <img src=""/picture/austrialpin/cobra_frame/ropeforceRing.ashx.jpg"" alt=""ring"" height=""56"" width=""87"" /></strong></p>",,0.04,1,Taxable Goods,"Katalog, Suche",11.652367688,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,austrialpin-austri-alpin-cobra-frames-stretch--45mm.png,austrialpin-austri-alpin-cobra-frames-stretch--45mm.png,austrialpin-austri-alpin-cobra-frames-stretch--45mm.png,
+FS0218,,Default,simple,Default Category/Produkte/Parts/Austri Alpin,base,Austri Alpin slidebloc -45mm edelstahl,"<p><span id=""plc_lt_zoneContent_pageplaceholder_pageplaceholder_lt_zoneContent_cmsdatalist_lstElem""><span>edelstahlschnalle mit beweglichem mittelsteg aus inox</span></span></p>
+<p><strong>Gurtbreite:</strong></p>
+<p><strong><img src=""/picture/austrialpin/cobra_frame/beltWidth_45mm.ashx.jpg"" alt=""Gurtbreite"" height=""36"" width=""129"" /></strong></p>
+<p><strong>Material:</strong></p>
+<p><span id=""plc_lt_zoneContent_pageplaceholder_pageplaceholder_lt_zoneContent_cmsdatalist_lstElem""><span id=""plc_lt_zoneContent_pageplaceholder_pageplaceholder_lt_zoneContent_cmsdatalist_lstElem"">ktl beschichtet</span><br /> inox</span></p>",,0.05,1,Taxable Goods,"Katalog, Suche",5.4752089137,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,austrialpin-austri-alpin-slidebloc--45mm-edelstahl.png,austrialpin-austri-alpin-slidebloc--45mm-edelstahl.png,austrialpin-austri-alpin-slidebloc--45mm-edelstahl.png,
+FS0219,,Default,simple,Default Category/Produkte/Parts/Austri Alpin,base,Austri Alpin COBRA Frames -28mm,"<p>deluxe aluschnalle mit beweglichem mittelsteg aus inox</p>
+<p><strong>Gurtbreite:</strong></p>
+<p><strong><img src=""/picture/austrialpin/cobra_frame/beltWidth_28mm.ashx.jpg"" alt=""Gurtbreite"" height=""36"" width=""129"" /></strong></p>
+<p><strong>Festigkeiten:</strong></p>
+<p><strong><img src=""/picture/austrialpin/cobra_frame/powerrope.ashx.jpg"" alt=""rope"" height=""58"" width=""110"" />&nbsp; <img src=""/picture/austrialpin/cobra_frame/ropeforceRing.ashx.jpg"" alt=""ring"" height=""56"" width=""87"" /></strong></p>",,0.03,1,Taxable Goods,"Katalog, Suche",9.5665738162,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,austrialpin-austri-alpin-cobra-frames--28mm.png,austrialpin-austri-alpin-cobra-frames--28mm.png,austrialpin-austri-alpin-cobra-frames--28mm.png,
+FS0220,,Default,simple,Default Category/Produkte/Parts/Austri Alpin,base,Austri Alpin Mini-steering pulley,"<p>durch eine gezielte materialauswahl gew&auml;hrleisten die austrialpin rollen sehr gute gleiteigenschaften und einen langandauerndern, pr&auml;zisen lauf.</p>
+<p>der rollenhalter ist aus polierten aluminium, die rolle aus messing, alles in allem superleicht - nur 7,0g!</p>
+<p><strong>Masse:</strong></p>
+<table>
+<tbody>
+<tr>
+<td>
+<table cellpadding=""0"" cellspacing=""0"">
+<tbody>
+<tr>
+<td>l&auml;nge:</td>
+<td style=""padding-left: 2px;"">29 mm</td>
+</tr>
+<tr>
+<td>empf. durchmesser:</td>
+<td style=""padding-left: 2px;"">slot 9 mm</td>
+</tr>
+<tr>
+<td>gewicht:</td>
+<td style=""padding-left: 2px;"">7 g</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td style=""padding-right: 20px; padding-left: 40px;"" valign=""top""></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Materialien:</strong></p>
+<div>alu mit messingrolle</div>
+<div>poliert</div>",,0.01,1,Taxable Goods,"Katalog, Suche",4.7331476323,,,,,,,,,,,,,,,,,,,,,,,,,,996,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,austrialpin-mini-steering-pulley.jpg,austrialpin-mini-steering-pulley.jpg,austrialpin-mini-steering-pulley.jpg,
+FS0221,,Default,simple,Default Category/Produkte/Parts/Schnallen zweiteilig,base,Stubai Click  -28mm   13kN,<p>&Auml;lteres Modell wird nicht mehr Hergestellt (solange Vorrat)</p>,,0.05,1,Taxable Goods,"Katalog, Suche",5.104178273,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,schnallen-stubai_click.jpg,schnallen-stubai_click.jpg,schnallen-stubai_click.jpg,
+FS0222,,Default,simple,Default Category/Produkte/Parts/Schnallen / Gurtzubehör,base,Klappschnalle 20mm,<p>schwarz</p>,,0.01,1,Taxable Goods,"Katalog, Suche",2.3212479109,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,schnallen-klappschnalle--20mm.png,schnallen-klappschnalle--20mm.png,schnallen-klappschnalle--20mm.png,schnallen-klappschnalle--20mm-2.png
+FS0226,,Default,simple,Default Category/Produkte/Parts/Gurten / Gummibänder,base,Gurte 20mm PAD schwarz,"<p>Feingewobene Polyamid Gurten f&uuml;r Rucksacktr&auml;ger und andere nicht Statische Verwendungen.</p>
+<p>H&auml;lt in allen Verstellm&ouml;glichkeiten ( Kunststoff ) sehr gut. Reduziert das Durchrutschen.</p>
+<p><br /><strong><strong><strong>Anzahl 1 = 1 Meter</strong></strong></strong></p>",,0.01,1,Taxable Goods,"Katalog, Suche",1.9454038997,,,,,,,,,,,,,,,,,,,,,,,,,,985,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,gurten-gurte-pad-schwarz.png,gurten-gurte-pad-schwarz.png,gurten-gurte-pad-schwarz.png,
+FS0227,,Default,simple,Default Category/Produkte/Parts/Gurten / Gummibänder,base,Gurte 25mm PAD schwarz,"<p>Feingewobene Polyamid Gurten f&uuml;r Rucksacktr&auml;ger und andere nicht Statische Verwendungen.</p>
+<p>H&auml;lt in allen Verstellm&ouml;glichkeiten ( Kunststoff ) sehr gut. Reduziert das Durchrutschen.</p>
+<p><br /><strong><strong><strong>Anzahl 1 = 1 Meter</strong></strong></strong></p>",,0.01,1,Taxable Goods,"Katalog, Suche",2.3212479109,,,,,,,,,,,,,,,,,,,,,,,,,,995,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,gurten-gurte-pad-schwarz.png,gurten-gurte-pad-schwarz.png,gurten-gurte-pad-schwarz.png,
+FS0228,,Default,simple,Default Category/Produkte/Parts/Gurten / Gummibänder,base,Gurte 40mm PAD schwarz,"<p>Feingewobene Polyamid Gurten f&uuml;r Rucksacktr&auml;ger und andere nicht Statische Verwendungen.</p>
+<p>H&auml;lt in allen Verstellm&ouml;glichkeiten ( Kunststoff ) sehr gut. Reduziert das Durchrutschen.</p>
+<p><br /><strong><strong><strong>Anzahl 1 = 1 Meter</strong></strong></strong></p>",,0.01,1,Taxable Goods,"Katalog, Suche",3.2490250696,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,gurten-gurte-pad-schwarz.png,gurten-gurte-pad-schwarz.png,gurten-gurte-pad-schwarz.png,
+FS0229,,Default,simple,Default Category/Produkte/Parts/Gurten / Gummibänder,base,Gurte 10mm PES diverse,"<p>PES Polyester schwarz. Geeignet als Abschluss bei Anzurrdetails um den Halt zu verbessern oder farblich zu markieren.</p>
+<p><strong>Gewicht:</strong></p>
+<p>10g pro Laufmeter</p>
+<p><strong><strong><strong>Anzahl 1 = 1 Meter</strong></strong></strong></p>",,0.01,1,Taxable Goods,"Katalog, Suche",1.2033426184,,,,,,,,,,,,,,,,,,,,,,,,,,988,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,"name=Farbe,type=drop_down,required=1,price_type=fixed,sku=,option_title=orange,price=0|name=Farbe,type=drop_down,required=1,price_type=fixed,sku=,option_title=neon orange,price=0|name=Farbe,type=drop_down,required=1,price_type=fixed,sku=,option_title=neon gelb,price=0|name=Farbe,type=drop_down,required=1,price_type=fixed,sku=,option_title=neon grün,price=0|name=Farbe,type=drop_down,required=1,price_type=fixed,sku=,option_title=grau,price=0|name=Farbe,type=drop_down,required=1,price_type=fixed,sku=,option_title=schwarz,price=0",,,,,,,gurten-gurte-10mm-pes-diverse.png,gurten-gurte-10mm-pes-diverse.png,gurten-gurte-10mm-pes-diverse.png,gurten-gurten-pes-farben.png
+FS0230,,Default,simple,Default Category/Produkte/Parts/Gurten / Gummibänder,base,Gurte 15mm PAD schwarz,"<p>Feingewobene Polyamid Gurten f&uuml;r Rucksacktr&auml;ger und andere nicht Statische Verwendungen.</p>
+<p>H&auml;lt in allen Verstellm&ouml;glichkeiten ( Kunststoff ) sehr gut. Reduziert das Durchrutschen.<br /><br /></p>
+<p><strong><strong><strong>Anzahl 1 = 1 Meter</strong></strong></strong></p>",,0.01,1,Taxable Goods,"Katalog, Suche",1.5743732591,,,,,,,,,,,,,,,,,,,,,,,,,,970,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,gurten-gurte-pad-schwarz.png,gurten-gurte-pad-schwarz.png,gurten-gurte-pad-schwarz.png,
+FS0248,,Default,simple,Default Category/Produkte/Parts/Spezialteile,base,Rucksackhandle,"<p>Komfortabler ovaler Tragegriff zum Aufn&auml;hen f&uuml;r Taschen, Rucks&auml;cke etc. Aus griffigem Elastomer und 10mm Gurtbband.<br /><br /><strong>Material:</strong></p>
+<p>Elastomer/Gurtband</p>
+<p><strong>Abmessungen:</strong></p>
+<p>- Griffdurchmesser: Breite 15mm, H&ouml;he 8mm<br />- Griffl&auml;nge: 90mm<br />- Bandbreite: 10mm<br />- Gurtbandl&auml;nge: 95mm<br />- Gesamtl&auml;nge: ca. 290mm</p>
+<p><strong>Farbe:</strong></p>
+<p>schwarz</p>
+<p><strong>Gewicht:</strong></p>
+<p>ca. 9g</p>",,0,1,Taxable Goods,"Katalog, Suche",5.1067855153,,,,,,,,,,,,,,,,,,,,,,,,,,995,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,duraflex-duraflex_minithermopress_handle.jpg,duraflex-duraflex_minithermopress_handle.jpg,duraflex-duraflex_minithermopress_handle.jpg,
+FS0071,,Default,simple,Default Category/Produkte/Parts/Spezialteile,base,Leichtbau GoPro Tripod Stativ Adapter,"<div class=""tab_content"" id=""product_description"">
+<div id=""tab-description"" class=""tab-content"">
+<p><strong>CNC Aluminium Tripod Stativ Adapter Mount f&uuml;r GoPro Hero in Schwarz</strong></p>
+<p>Robuster Stativadapter aus CNC gefr&auml;stem, ultrastabilen und leichten 6061 T6 Aluminium in schwarz. Dieser Adapter ist um ein vielfaches stabiler und leichter als das Plastik GoPro Originalteil.</p>
+<p>Sowohl die Gegenmutter f&uuml;r die GoPro R&auml;ndelschraube wie auch das handels&uuml;bliche 1/4""-20tpi Kameragewinde sind bereits integriert.</p>
+Mit dem Leichtbau Stativ Adapter kann die GoPro oder Actionpro (u.&auml;.) auf einem Standard Fotogewinde, z.B Dreibeinstativ, Fotostange, usw. einfach befestigt werden.</div>
+</div>",,0.03,1,Taxable Goods,"Katalog, Suche",13.4632980501,,,,leichtbau-gopro-tripod-stativ-adapter-parts,,,,,,,,,,,,,,,,,,,,,,94,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,gopro-tripod1.png,gopro-tripod1.png,gopro-tripod1.png,
+FS0249,,Default,simple,Default Category/Produkte/Parts/Karabiner / Ringe,base,"Karabinerhaken ""Hundeschnalle""","<p>Eisen vernickelt, mit Wirbel.</p>",,0.03,1,Taxable Goods,"Katalog, Suche",4.1783064067,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,div-karabinerhaken_rund.jpg,div-karabinerhaken_rund.jpg,div-karabinerhaken_rund.jpg,
+FS0250,,Default,simple,Default Category/Produkte/Parts/Kordel / Kordelzubehör,base,Kordel Endabschluss,"<p>F&uuml;r Kordel 3mm</p>
+<p><strong>Beschreibung: </strong></p>
+<p>Um zwei 3mm Kordeln eingf&auml;delt werden. </p>
+<p>Bestehend aus zwei Teilen, diese werden mit der Kordel in den Konus gepresst.</p>",,0,1,Taxable Goods,"Katalog, Suche",1.3927688022,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,duraflex-Duraflex_Zip_Clip.jpg,duraflex-Duraflex_Zip_Clip.jpg,duraflex-Duraflex_Zip_Clip.jpg,
+FS0251,,Default,simple,Default Category/Produkte/Parts/Kordel / Kordelzubehör,base,Speedy Endabschluss,"<p>Endabschluss f&uuml;r Gummikordel 5mm</p>
+<p><strong>Abmessungen:</strong></p>
+<p>17x6mm</p>",,0,1,Taxable Goods,"Katalog, Suche",0.9284791086,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,helentex-a310.jpg,helentex-a310.jpg,helentex-a310.jpg,
+FS0252,,Default,simple,Default Category/Produkte/Parts/Kordel / Kordelzubehör,base,Kordelstopper rund,"<p>F&uuml;r Kordel 3mm</p>
+<p><strong>Abmessungen:</strong></p>
+<p>22.2 x 17.7mm</p>
+<p><strong>Material:</strong></p>
+<p>POM</p>",,0,1,Taxable Goods,"Katalog, Suche",0.9284791086,,,,,,,,,,,,,,,,,,,,,,,,,,929,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,duraflex-cordlock_ball_P026.jpg,duraflex-cordlock_ball_P026.jpg,duraflex-cordlock_ball_P026.jpg,
+FS0253,,Default,simple,Default Category/Produkte/Parts/Kordel / Kordelzubehör,base,"Kordelstopper 2fach, mit Führung","<p>f&uuml;r 2 Kordeln, 3mm </p>
+<p><strong>Abmessungen:</strong></p>
+<p>20x18x7mm</p>
+<p><strong>Material:</strong></p>
+<p>Polyamid</p>",,0,1,Taxable Goods,"Katalog, Suche",1.1141949861,,,,,,,,,,,,,,,,,,,,,,,,,,987,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,helentex-helentex_kordelstopper_doppelt_schwarz_fuehrung.jpg,helentex-helentex_kordelstopper_doppelt_schwarz_fuehrung.jpg,helentex-helentex_kordelstopper_doppelt_schwarz_fuehrung.jpg,
+FS0254,,Default,simple,Default Category/Produkte/Parts/Kordel / Kordelzubehör,base,"Kordelstopper 2fach, grün","<p>f&uuml;r 2 Kordeln, 3mm </p>
+<p><strong>Abmessungen:</strong></p>
+<p>20x18x7mm</p>
+<p><strong>Material:</strong></p>
+<p>Polyamid</p>",,0,1,Taxable Goods,"Katalog, Suche",1.1141949861,,,,,,,,,,,,,,,,,,,,,,,,,,984,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,helentex-helentex_kordelstopper_doppelt_gruen.jpg,helentex-helentex_kordelstopper_doppelt_gruen.jpg,helentex-helentex_kordelstopper_doppelt_gruen.jpg,
+FS0255,,Default,simple,Default Category/Produkte/Parts/Kordel / Kordelzubehör,base,"Kordelstopper 2fach, schwarz","<p>f&uuml;r 2 Kordeln, 3mm</p>
+<p><strong>Abmessungen:</strong></p>
+<p>20x18x7mm</p>
+<p><strong>Material:</strong></p>
+<p>Polyamid</p>",,0,1,Taxable Goods,"Katalog, Suche",1.1141949861,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,helentex-helentex_kordelstopper_doppelt_schwarz.jpg,helentex-helentex_kordelstopper_doppelt_schwarz.jpg,helentex-helentex_kordelstopper_doppelt_schwarz.jpg,
+FS0256,,Default,simple,Default Category/Produkte/Parts/Schnallen / Gurtzubehör,base,Brustgurt Wing Clip 15mm,"<p>Diese Verstellung findet verwendung bei Rucksackbrustgurten, der verschiebbare Teil kann mit einem Silikonkeder eingefasst in Cordura&nbsp; auf dem Tr&auml;gergurt angen&auml;ht werden. Der Brustgurt wird mit einem 15mm Gurtband angen&auml;ht.</p>
+<p>den passenden Silikonkeder findest du hier:</p>
+<p><a href=""/kederschnur-3mm-p-129.html"">Kederschnur 3mm</a></p>",,0,1,Taxable Goods,"Katalog, Suche",1.2999108635,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,duraflex-wing_clip.jpg,duraflex-wing_clip.jpg,duraflex-wing_clip.jpg,
+FS0257,,Default,simple,Default Category/Produkte/Parts/Schnallen / Gurtzubehör,base,Klemmschnalle 15mm,"<p>Verstellbar</p>
+<p><strong>Material:</strong></p>
+<p>Polyamid</p>",,0,1,Taxable Goods,"Katalog, Suche",1.3927688022,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,duraflex-duraflex_tensionlock_klemmschnalle_15mm.jpg,duraflex-duraflex_tensionlock_klemmschnalle_15mm.jpg,duraflex-duraflex_tensionlock_klemmschnalle_15mm.jpg,
+FS0258,,Default,simple,Default Category/Produkte/Parts/Schnallen / Gurtzubehör,base,Gurtbandführung 15mm,,,0,1,Taxable Goods,"Katalog, Suche",0.4642896936,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,duraflex-duraflex_gurtenfuehrung_15mm.jpg,duraflex-duraflex_gurtenfuehrung_15mm.jpg,duraflex-duraflex_gurtenfuehrung_15mm.jpg,
+FS0259,,Default,simple,Default Category/Produkte/Parts/Schnallen / Gurtzubehör,base,Gurtbandführung 20mm,,,0,1,Taxable Goods,"Katalog, Suche",0.5571476323,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,duraflex-duraflex_gurtenfuehrung_20mm.jpg,duraflex-duraflex_gurtenfuehrung_20mm.jpg,duraflex-duraflex_gurtenfuehrung_20mm.jpg,
+FS0260,,Default,simple,Default Category/Produkte/Parts/Schnallen / Gurtzubehör,base,Gurtbandführung 25mm,,,0,1,Taxable Goods,"Katalog, Suche",0.6499052925,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,duraflex-duraflex_gurtenfuehrung_25mm.jpg,duraflex-duraflex_gurtenfuehrung_25mm.jpg,duraflex-duraflex_gurtenfuehrung_25mm.jpg,
+FS0261,,Default,simple,Default Category/Produkte/Parts/Schnallen zweiteilig,base,Duraflex Steckschnalle 15mm,,,0,1,Taxable Goods,"Katalog, Suche",1.949816156,,,,,,,,,,,,,,,,,,,,,,,,,,990,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,duraflex-steckschnalle.jpg,duraflex-steckschnalle.jpg,duraflex-steckschnalle.jpg,
+FS0252,,Default,simple,Default Category/Produkte/Parts/Schnallen zweiteilig,base,Steckschnalle 20mm gebogen,<p>z.B. f&uuml;r Armb&auml;nder</p>,,0.01,1,Taxable Goods,"Katalog, Suche",1.2070529248,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,helentex-a802.jpg,helentex-a802.jpg,helentex-a802.jpg,
+FS5000,,Default,simple,Default Category/Produkte/Parts/Schnallen / Gurtzubehör,base,Klemmschnalle 12mm,"<p>Kann z.B f&uuml;r Verstellungen mit 25mm Einfassband (halbiert) verwendet werden</p>
+<p><strong>Material:</strong></p>
+<p>Polyamid</p>",,0,1,Taxable Goods,"Katalog, Suche",1.3927688022,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,duraflex-duraflex_tensionlock_klemmschnalle_15mm.jpg,duraflex-duraflex_tensionlock_klemmschnalle_15mm.jpg,duraflex-duraflex_tensionlock_klemmschnalle_15mm.jpg,
+FS0264,,Default,simple,Default Category/Produkte/Parts/Schnallen zweiteilig,base,Duraflex Streamline Steckschnalle 20mm,,,0.01,1,Taxable Goods,"Katalog, Suche",2.3212479109,,,,,,,,,,,,,,,,,,,,,,,,,,996,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,duraflex-steckschnalle_streamline_20mm.jpg,duraflex-steckschnalle_streamline_20mm.jpg,duraflex-steckschnalle_streamline_20mm.jpg,
+FS0265,,Default,simple,Default Category/Produkte/Parts/Schnallen zweiteilig,base,Duraflex Streamline Steckschnalle 25mm,,,0.02,1,Taxable Goods,"Katalog, Suche",3.2497270195,,,,,,,,,,,,,,,,,,,,,,,,,,997,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,duraflex-steckschnalle_streamline_25mm.jpg,duraflex-steckschnalle_streamline_25mm.jpg,duraflex-steckschnalle_streamline_25mm.jpg,
+FS0266,,Default,simple,Default Category/Produkte/Parts/Schnallen zweiteilig,base,Duraflex Streamline Steckschnalle 40mm,,,0.03,1,Taxable Goods,"Katalog, Suche",4.1783064067,,,,,,,,,,,,,,,,,,,,,,,,,,992,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,duraflex-steckschnalle_streamline_40mm.jpg,duraflex-steckschnalle_streamline_40mm.jpg,duraflex-steckschnalle_streamline_40mm.jpg,
+FS0263,,Default,simple,Default Category/Produkte/Parts/Schnallen / Gurtzubehör,base,Brustgurt Klemmschnalle 20/25mm,"<p>Diese Verstellung findet verwendung bei Rucksackbrustgurten, der verschiebbare Teil welcher auf dem Tr&auml;gergurt angen&auml;ht werden kann ist 25mm , der Brustgurt wird mit einem 20mm Gurtband angen&auml;ht.</p>",,0,1,Taxable Goods,"Katalog, Suche",1.6713426184,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,duraflex-sliplock_25mm.jpg,duraflex-sliplock_25mm.jpg,duraflex-sliplock_25mm.jpg,
+FS0267,,Default,simple,Default Category/Produkte/Parts/Schnallen / Gurtzubehör,base,Klemmschnalle 20mm,,,0,1,Taxable Goods,"Katalog, Suche",1.485626741,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,duraflex-tensionlock_20mm.jpg,duraflex-tensionlock_20mm.jpg,duraflex-tensionlock_20mm.jpg,
+FS0268,,Default,simple,Default Category/Produkte/Parts/Schnallen / Gurtzubehör,base,Klemmschnalle 25mm,,,0,1,Taxable Goods,"Katalog, Suche",1.6713426184,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,duraflex-tensionlock_20mm.jpg,duraflex-tensionlock_20mm.jpg,duraflex-tensionlock_20mm.jpg,
+FS0269,,Default,simple,Default Category/Produkte/Parts/Schnallen / Gurtzubehör,base,Endabschluss Elastomer  20mm,<p>Leicht anzunh&auml;hender Endabschluss zu 20mm Gurtband</p>,,0,1,Taxable Goods,"Katalog, Suche",0.9284791086,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,duraflex-elastomer_endabschluss_20mm.jpg,duraflex-elastomer_endabschluss_20mm.jpg,duraflex-elastomer_endabschluss_20mm.jpg,
+FS0270,,Default,simple,Default Category/Produkte/Parts/Schnallen / Gurtzubehör,base,Endabschluss Elastomer 25mm,<p>Leicht anzunh&auml;hender Endabschluss zu 25mm Gurtband</p>,,0,1,Taxable Goods,"Katalog, Suche",1.1141949861,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,duraflex-elastomer_endabschluss_25mm.jpg,duraflex-elastomer_endabschluss_25mm.jpg,duraflex-elastomer_endabschluss_25mm.jpg,
+FS0271,,Default,simple,Default Category/Produkte/Parts/Schnallen / Gurtzubehör,base,Gurtbandführung breit 25mm,,,0,1,Taxable Goods,"Katalog, Suche",0.7427632312,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,duraflex-duraflex_gurtenfuehrung_breit_25mm.jpg,duraflex-duraflex_gurtenfuehrung_breit_25mm.jpg,duraflex-duraflex_gurtenfuehrung_breit_25mm.jpg,
+FS0016,,Default,simple,Default Category/Produkte/Parts/Spezialteile,base,Flugsau Brake Handles / Knebel,"<p>Dieser Bremsgriff kann ganz einfach auf die bestehende Bremse aufgeschraubt werden. Er besteht aus je zwei teilen die mittels zweier M5 Sechskantschrauben zusammengeschraubt werden k&ouml;nnen.</p>
+<p>Durch die Rillen liegt der Griff super in der Hand.<br />&nbsp;<br /><br />Material: POM Kunststoff / Metall</p>
+<p>Durchmesser: 20mm</p>
+<p>L&auml;nge: 80mm</p>
+<p><strong>Lieferumfang:</strong></p>
+<p>2x komlette Kl&ouml;tze bestehend aus je zwei Teilen<br />2x Sechskanstschrauben M5 x 55mm<br />2x M5 Stoppmuttern</p>
+<p></p>
+<p><strong>Preis f&uuml;r ein Paar</strong></p>",,0.2,1,Taxable Goods,"Katalog, Suche",26.9266963788,,,,flugsau-brake-handles-knebel-parts,,,,,,,,,,,,,,,,,,,,,,998,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,flugsau-acrozone_handles_griff_kunststoff.png,flugsau-acrozone_handles_griff_kunststoff.png,flugsau-acrozone_handles_griff_kunststoff.png,
+FS0272,,Default,simple,Default Category/Produkte/Parts/Schnallen / Gurtzubehör,base,Einfädelschnalle 20mm,,,0,1,Taxable Goods,"Katalog, Suche",0.6963342618,,,,,,,,,,,,,,,,,,,,,,,,,,995,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,schnallen-einfaedelschnalle_20mm.jpg,schnallen-einfaedelschnalle_20mm.jpg,schnallen-einfaedelschnalle_20mm.jpg,
+FS0273,,Default,simple,Default Category/Produkte/Parts/Schnallen / Gurtzubehör,base,Einfädelschnalle 25mm,,,0,1,Taxable Goods,"Katalog, Suche",0.7427632312,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,schnallen-einfaedelschnalle_25mm.jpg,schnallen-einfaedelschnalle_25mm.jpg,schnallen-einfaedelschnalle_25mm.jpg,
+FS0274,,Default,simple,Default Category/Produkte/Parts/Schnallen / Gurtzubehör,base,Einfädelschnalle 40mm,,,0,1,Taxable Goods,"Katalog, Suche",0.8356211699,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,schnallen-einfaedelschnalle_40mm.jpg,schnallen-einfaedelschnalle_40mm.jpg,schnallen-einfaedelschnalle_40mm.jpg,
+FS0275,,Default,simple,Default Category/Produkte/Parts/Schnallen / Gurtzubehör,base,Klemmschnalle 1 Steg 25mm,,,0,1,Taxable Goods,"Katalog, Suche",1.485626741,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,schnallen-klemmschnalle_25mm_1steg.jpg,schnallen-klemmschnalle_25mm_1steg.jpg,schnallen-klemmschnalle_25mm_1steg.jpg,
+FS0276,,Default,simple,Default Category/Produkte/Parts/Schnallen / Gurtzubehör,base,Klemmschnalle 25mm,,,0,1,Taxable Goods,"Katalog, Suche",1.6713426184,,,,klemmschnalle-25mm-parts,,,,,,,,,,,,,,,,,,,,,,995,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,schnallen-klemmschnalle_25mm.jpg,schnallen-klemmschnalle_25mm.jpg,schnallen-klemmschnalle_25mm.jpg,
+FS0278,,Default,simple,Default Category/Produkte/Parts/Kordel / Kordelzubehör,base,Knebelknopf Kunststoff 40mm,"<p>Kunststoff, schwarz</p>",,0,1,Taxable Goods,"Katalog, Suche",0.9284791086,,,,,,,,,,,,,,,,,,,,,,,,,,989,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,sonstiges-knebelknopf_40mm.jpg,sonstiges-knebelknopf_40mm.jpg,sonstiges-knebelknopf_40mm.jpg,
+FS0279,,Default,simple,Default Category/Produkte/Parts/Kordel / Kordelzubehör,base,Knebelknopf Aluminium 40mm,"<p>Nur 2.5g</p>
+<p></p>
+<p>Lochdurchmesser 2mm</p>",,0,1,Taxable Goods,"Katalog, Suche",2.7855376045,,,,,,,,,,,,,,,,,,,,,,,,,,997,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,sonstiges-aluminium_verschluss_40mm.jpg,sonstiges-aluminium_verschluss_40mm.jpg,sonstiges-aluminium_verschluss_40mm.jpg,
+FS0280,,Default,simple,Default Category/Produkte/Parts/Spezialteile,base,D-Ring Kunststoff nähbar,"<p>aus der Schuhindustrie</p>
+<p><strong>Ambessung:</strong></p>
+<p>25x17mm</p>",,0,1,Taxable Goods,"Katalog, Suche",0.9284791086,,,,,,,,,,,,,,,,,,,,,,,,,,997,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,sonstiges-rundring_naehbar.jpg,sonstiges-rundring_naehbar.jpg,sonstiges-rundring_naehbar.jpg,
+FS0281,,Default,simple,Default Category/Produkte/Parts/Spezialteile,base,Schlüsselanhängerring 22mm,,,0,1,Taxable Goods,"Katalog, Suche",1.485626741,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,sonstiges-schluesselanhaengerring.jpg,sonstiges-schluesselanhaengerring.jpg,sonstiges-schluesselanhaengerring.jpg,
+FS0233,,Default,simple,Default Category/Produkte/Parts/Stoffe / Gewebe,base,CORDURA 560 hellgrau,"<p>Modische Haltbarkeit und leichtgewichtige Festigkeit. Reissfest, Abnutzungs- und Abriebresitent. Entworfen um es zu erleben - konstruiert um auszudauern.</p>
+<p><strong>Beschichtung:</strong></p>
+<p>Zweifach Acrylat</p>
+<p><strong> Farben:</strong></p>
+<p><strong></strong>K&ouml;nnen leicht vom Foto abweichen.</p>
+<p><strong>Gewicht:</strong></p>
+<p>240g per m2, +/- 5%</p>
+<p><strong>Abmessungen:</strong></p>
+<p>Rollenbreite 150cm, +/- 2</p>
+<p><span style=""font-size: large; color: #ff0000;"">Anzahl 1 = 0.5 Laufmeter</span></p>",,0.36,1,Taxable Goods,"Katalog, Suche",12.9991086351,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,cordura-560_hellgrau.jpg,cordura-560_hellgrau.jpg,cordura-560_hellgrau.jpg,
+FS0234,,Default,simple,Default Category/Produkte/Parts/Stoffe / Gewebe,base,CORDURA 560 dunkelgrau,"<p>Modische Haltbarkeit und leichtgewichtige Festigkeit. Reissfest, Abnutzungs- und Abriebresitent. Entworfen um es zu erleben - konstruiert um auszudauern.</p>
+<p><strong>Beschichtung:</strong></p>
+<p>Zweifach Acrylat</p>
+<p><strong> Farben:</strong></p>
+<p><strong></strong>K&ouml;nnen leicht vom Foto abweichen.</p>
+<p><strong>Gewicht:</strong></p>
+<p>240g per m2, +/- 5%</p>
+<p><strong>Abmessungen:</strong></p>
+<p>Rollenbreite 150cm, +/- 2</p>
+<p><span style=""font-size: large; color: #ff0000;"">Anzahl 1 = 0.5 Laufmeter&nbsp;</span></p>
+<p></p>",,0.36,1,Taxable Goods,"Katalog, Suche",12.9991086351,,,,,,,,,,,,,,,,,,,,,,,,,,997,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,cordura-560_dunkelgrau.jpg,cordura-560_dunkelgrau.jpg,cordura-560_dunkelgrau.jpg,
+FS0235,,Default,simple,Default Category/Produkte/Parts/Stoffe / Gewebe,base,CORDURA 560 gelb,"<p>Modische Haltbarkeit und leichtgewichtige Festigkeit. Reissfest, Abnutzungs- und Abriebresitent. Entworfen um es zu erleben - konstruiert um auszudauern.</p>
+<p><strong>Beschichtung:</strong></p>
+<p>Zweifach Acrylat</p>
+<p><strong> Farben:</strong></p>
+<p><strong></strong>K&ouml;nnen leicht vom Foto abweichen.</p>
+<p><strong>Gewicht:</strong></p>
+<p>240g per m2, +/- 5%</p>
+<p><strong>Abmessungen:</strong></p>
+<p>Rollenbreite 150cm, +/- 2</p>
+<p><span style=""font-size: large; color: #ff0000;"">Anzahl 1 = 0.5 Laufmeter</span></p>",,0.36,1,Taxable Goods,"Katalog, Suche",12.9991086351,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,cordura-560_gelb.jpg,cordura-560_gelb.jpg,cordura-560_gelb.jpg,
+FS0236,,Default,simple,Default Category/Produkte/Parts/Stoffe / Gewebe,base,CORDURA 560 orange,"<p>Modische Haltbarkeit und leichtgewichtige Festigkeit. Reissfest, Abnutzungs- und Abriebresitent. Entworfen um es zu erleben - konstruiert um auszudauern.</p>
+<p><strong>Beschichtung:</strong></p>
+<p>Zweifach Acrylat</p>
+<p><strong> Farben:</strong></p>
+<p><strong></strong>K&ouml;nnen leicht vom Foto abweichen.</p>
+<p><strong>Gewicht:</strong></p>
+<p>240g per m2, +/- 5%</p>
+<p><strong>Abmessungen:</strong></p>
+<p>Rollenbreite 150cm, +/- 2</p>
+<p><span style=""font-size: large; color: #ff0000;"">Anzahl 1 = 0.5 Laufmeter</span></p>",,0.36,1,Taxable Goods,"Katalog, Suche",12.9991086351,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,cordura-560_orange.jpg,cordura-560_orange.jpg,cordura-560_orange.jpg,
+FS0237,,Default,simple,Default Category/Produkte/Parts/Stoffe / Gewebe,base,CORDURA 560 rot,"<p>Modische Haltbarkeit und leichtgewichtige Festigkeit. Reissfest, Abnutzungs- und Abriebresitent. Entworfen um es zu erleben - konstruiert um auszudauern.</p>
+<p><strong>Beschichtung:</strong></p>
+<p>Zweifach Acrylat</p>
+<p><strong> Farben:</strong></p>
+<p><strong></strong>K&ouml;nnen leicht vom Foto abweichen.</p>
+<p><strong>Gewicht:</strong></p>
+<p>240g per m2, +/- 5%</p>
+<p><strong>Abmessungen:</strong></p>
+<p>Rollenbreite 150cm, +/- 2</p>
+<p><span style=""font-size: large; color: #ff0000;"">Anzahl 1 = 0.5 Laufmeter</span></p>",,0.36,1,Taxable Goods,"Katalog, Suche",12.9991086351,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,cordura-560_rot.jpg,cordura-560_rot.jpg,cordura-560_rot.jpg,
+FS0238,,Default,simple,Default Category/Produkte/Parts/Stoffe / Gewebe,base,CORDURA 560 royalblau,"<p>Modische Haltbarkeit und leichtgewichtige Festigkeit. Reissfest, Abnutzungs- und Abriebresitent. Entworfen um es zu erleben - konstruiert um auszudauern.</p>
+<p><strong>Beschichtung:</strong></p>
+<p>Zweifach Acrylat</p>
+<p><strong> Farben:</strong></p>
+<p><strong></strong>K&ouml;nnen leicht vom Foto abweichen.</p>
+<p><strong>Gewicht:</strong></p>
+<p>240g per m2, +/- 5%</p>
+<p><strong>Abmessungen:</strong></p>
+<p>Rollenbreite 150cm, +/- 2</p>
+<p><span style=""font-size: large; color: #ff0000;"">Anzahl 1 = 0.5 Laufmeter</span></p>",,0.36,1,Taxable Goods,"Katalog, Suche",12.9991086351,,,,,,,,,,,,,,,,,,,,,,,,,,998,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,cordura-560_royalblau.jpg,cordura-560_royalblau.jpg,cordura-560_royalblau.jpg,
+FS0282,,Default,simple,Default Category/Produkte/Parts/Stoffe / Gewebe,base,CORDURA 560 olivgrün,"<p>Modische Haltbarkeit und leichtgewichtige Festigkeit. Reissfest, Abnutzungs- und Abriebresitent. Entworfen um es zu erleben - konstruiert um auszudauern.</p>
+<p><strong>Beschichtung:</strong></p>
+<p>Zweifach Acrylat</p>
+<p><strong> Farben:</strong></p>
+<p><strong></strong>K&ouml;nnen leicht vom Foto abweichen.</p>
+<p><strong>Gewicht:</strong></p>
+<p>240g per m2, +/- 5%</p>
+<p><strong>Abmessungen:</strong></p>
+<p>Rollenbreite 150cm, +/- 2</p>
+<p><span style=""font-size: large; color: #ff0000;"">Anzahl 1 = 0.5 Laufmeter</span></p>
+<p></p>",,0.36,1,Taxable Goods,"Katalog, Suche",12.9991086351,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,cordura-560_olivgruen.jpg,cordura-560_olivgruen.jpg,cordura-560_olivgruen.jpg,
+FS0283,,Default,simple,Default Category/Produkte/Parts/Stoffe / Gewebe,base,CORDURA 560 hellblau,"<p>Modische Haltbarkeit und leichtgewichtige Festigkeit. Reissfest, Abnutzungs- und Abriebresitent. Entworfen um es zu erleben - konstruiert um auszudauern.</p>
+<p><strong>Beschichtung:</strong></p>
+<p>Zweifach Acrylat</p>
+<p><strong> Farben:</strong></p>
+<p><strong></strong>K&ouml;nnen leicht vom Foto abweichen.</p>
+<p><strong>Gewicht:</strong></p>
+<p>240g per m2, +/- 5%</p>
+<p><strong>Abmessungen:</strong></p>
+<p>Rollenbreite 150cm, +/- 2</p>
+<p><span style=""font-size: large; color: #ff0000;"">Anzahl 1 = 0.5 Laufmeter</span></p>",,0.36,1,Taxable Goods,"Katalog, Suche",12.9991086351,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,cordura-560_hellblau.jpg,cordura-560_hellblau.jpg,cordura-560_hellblau.jpg,
+FS0284,,Default,simple,Default Category/Produkte/Parts/Stoffe / Gewebe,base,CORDURA 560 weiss,"<p>Modische Haltbarkeit und leichtgewichtige Festigkeit. Reissfest, Abnutzungs- und Abriebresitent. Entworfen um es zu erleben - konstruiert um auszudauern.</p>
+<p><strong>Beschichtung:</strong></p>
+<p>Zweifach Acrylat</p>
+<p><strong> Farben:</strong></p>
+<p><strong></strong>K&ouml;nnen leicht vom Foto abweichen.</p>
+<p><strong>Gewicht:</strong></p>
+<p>240g per m2, +/- 5%</p>
+<p><strong>Abmessungen:</strong></p>
+<p>Rollenbreite 150cm, +/- 2</p>
+<p><span style=""font-size: large; color: #ff0000;"">Anzahl 1 = 0.5 Laufmeter</span></p>",,0.36,1,Taxable Goods,"Katalog, Suche",12.9991086351,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,cordura-560_weiss.jpg,cordura-560_weiss.jpg,cordura-560_weiss.jpg,
+FS0239,,Default,simple,Default Category/Produkte/Parts/Stoffe / Gewebe,base,Dominico 210D hellgrün,"<p>Extrem leichtes und sehr robustes Material, es findet seinen Anwendungsbereich z.B. bei Taschen, Rucks&auml;cken.</p>
+<p>Gute Schneideigenschaften, franst kaum aus.</p>
+<p><strong> Farben:</strong></p>
+<p><strong></strong>K&ouml;nnen leicht vom Foto abweichen.</p>
+<p><strong>Gewicht:</strong></p>
+<p>185g per Laufmeter, +/- 5%</p>
+<p><strong>Abmessungen:</strong></p>
+<p>Rollenbreite 150cm</p>
+<p><span style=""font-size: large; color: #ff0000;"">Anzahl 1 = 0.5 Laufmeter</span></p>",,0.19,1,Taxable Goods,"Katalog, Suche",11.8384846797,,,,,,,,,,,,,,,,,,,,,,,,,,991,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,cordura-domenico_hellgruen.jpg,cordura-domenico_hellgruen.jpg,cordura-domenico_hellgruen.jpg,
+FS0082,,Default,simple,Default Category/Produkte/Parts/Stoffe / Gewebe,base,Dominico 210D schwarz,"<p>Extrem leichtes und sehr robustes Material, es findet seinen Anwendungsbereich z.B. bei Taschen, Rucks&auml;cken.</p>
+<p>Gute Schneideigenschaften, franst kaum aus.</p>
+<p><strong> Farben:</strong></p>
+<p><strong></strong>K&ouml;nnen leicht vom Foto abweichen.</p>
+<p><strong>Gewicht:</strong></p>
+<p>185g per Laufmeter, +/- 5%</p>
+<p><strong>Abmessungen:</strong></p>
+<p>Rollenbreite 150cm</p>
+<p><span style=""font-size: large; color: #ff0000;"">Anzahl 1 = 0.5 Laufmeter</span></p>",,0.19,1,Taxable Goods,"Katalog, Suche",11.8384846797,,,,,,,,,,,,,,,,,,,,,,,,,,994,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,cordura-domenico_schwarz.jpg,cordura-domenico_schwarz.jpg,cordura-domenico_schwarz.jpg,
+FS0285,,Default,simple,Default Category/Produkte/Parts/Stoffe / Gewebe,base,Überzugstoff grau,"<p>Stoff franst beim schneiden leicht aus. Verwendung als &Uuml;berzug f&uuml;r St&uuml;hle, Sofas.</p>
+<p><strong> Farben:</strong></p>
+<p><strong></strong>K&ouml;nnen leicht vom Foto abweichen.</p>
+<p><strong>Gewicht:</strong></p>
+<p>300g per Laufmeter</p>
+<p><strong>Abmessungen:</strong></p>
+<p>Rollenbreite 150cm</p>
+<p><span style=""font-size: large; color: #ff0000;"">Anzahl 1 = 0.5 Laufmeter</span></p>",,0.19,1,Taxable Goods,"Katalog, Suche",3.9461615599,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,sonstiges-ueberzug_grau.jpg,sonstiges-ueberzug_grau.jpg,sonstiges-ueberzug_grau.jpg,
+FS0286,,Default,simple,Default Category/Produkte/Parts/Stoffe / Gewebe,base,"Frotte blau, Leona","<p>Leichte Dehnung. Verwendung als &Uuml;berzug aller Art.</p>
+<p>400m ab Lager, Preis pro Rolle 50m 280.-</p>
+<p><strong> Farben:</strong></p>
+<p><strong></strong>K&ouml;nnen leicht vom Foto abweichen</p>
+<p><strong>Material:</strong></p>
+<p>100% Polyester</p>
+<p><strong>Gewicht:</strong></p>
+<p>250g per Laufmeter</p>
+<p><strong>Abmessungen:</strong></p>
+<p>Rollenbreite 150cm</p>
+<p><span style=""font-size: large; color: #ff0000;"">Anzahl 1 = 0.5 Laufmeter</span></p>",,0.25,1,Taxable Goods,"Katalog, Suche",3.4818718663,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,sonstiges-frotte_blau_leona.jpg,sonstiges-frotte_blau_leona.jpg,sonstiges-frotte_blau_leona.jpg,
+FS0287,,Default,simple,Default Category/Produkte/Parts/Stoffe / Gewebe,base,Mesh dick schwarz,"<p>Kann als Schultertr&auml;ger bei Leichtrucks&auml;cken verwendet werden. In sich formstabil. Beidseitig verwendbar.</p>
+<p><strong>Merkmale:</strong></p>
+<p>Luftdurchl&auml;ssig, Dicke: ca. 7mm</p>
+<p><strong>Gewicht:</strong></p>
+<p>400g per Laufmeter</p>
+<p><strong>Abmessungen:</strong></p>
+<p>Rollenbreite 180cm</p>
+<p><span style=""font-size: large; color: #ff0000;"">Anzahl 1 = 0.5 Laufmeter</span></p>",,0.4,1,Taxable Goods,"Katalog, Suche",18.1058941504,,,,,,,,,,,,,,,,,,,,,,,,,,995,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,sonstiges-mesh_dick_schwarz.jpg,sonstiges-mesh_dick_schwarz.jpg,sonstiges-mesh_dick_schwarz.jpg,
+FS0289,,Default,simple,Default Category/Produkte/Parts/Stoffe / Gewebe,base,Mesh Polsterstoff neongrün,"<p>Anwendung in Rucks&auml;cken beim R&uuml;ckenteil zur Hinterl&uuml;ftung. Nur einseitig verwendbar.</p>
+<p><strong>Merkmale:</strong></p>
+<p>Luftdurchl&auml;ssig, Dicke: ca. 4mm</p>
+<p><strong>Gewicht:</strong></p>
+<p>300g per Laufmeter</p>
+<p><strong>Abmessungen:</strong></p>
+<p>Rollenbreite 150cm</p>
+<p><span style=""font-size: large; color: #ff0000;"">Anzahl 1 = 0.5 Laufmeter</span></p>",,0.4,1,Taxable Goods,"Katalog, Suche",11.3741949861,,,,,,,,,,,,,,,,,,,,,,,,,,995,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,sonstiges-mesh_polsterstoff_gruen.jpg,sonstiges-mesh_polsterstoff_gruen.jpg,sonstiges-mesh_polsterstoff_gruen.jpg,
+FS0288,,Default,simple,Default Category/Produkte/Parts/Stoffe / Gewebe,base,Mesh Polsterstoff schwarz,"<p>Anwendung in Rucks&auml;cken beim R&uuml;ckenteil zur Hinterl&uuml;ftung. Nur einseitig verwendbar.</p>
+<p><strong>Merkmale:</strong></p>
+<p>Luftdurchl&auml;ssig, Dicke: ca. 4mm</p>
+<p><strong>Gewicht:</strong></p>
+<p>300g per Laufmeter</p>
+<p><strong>Abmessungen:</strong></p>
+<p>Rollenbreite 150cm</p>
+<p><span style=""font-size: large; color: #ff0000;"">Anzahl 1 = 0.5 Laufmeter</span></p>",,0.4,1,Taxable Goods,"Katalog, Suche",11.3741949861,,,,,,,,,,,,,,,,,,,,,,,,,,994,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,sonstiges-mesh_polsterstoff_schwarz.jpg,sonstiges-mesh_polsterstoff_schwarz.jpg,sonstiges-mesh_polsterstoff_schwarz.jpg,
+FS0290,,Default,simple,Default Category/Produkte/Parts/Stoffe / Gewebe,base,CORDURA dünnes Verstärkungsmaterial,"<p>Material mit leichter Dehnung. Sehr d&uuml;nn und leicht. Kann im Bodenbereich eines Rucksackes / Tasche verwendet werden.</p>
+<p><strong>Merkmale:</strong></p>
+<p>FC Impr&auml;gniert, Eleganter Look</p>
+<p><strong>Gewicht:</strong></p>
+<p>300g per Laufmeter</p>
+<p><strong>Abmessungen:</strong></p>
+<p>Rollenbreite 150cm</p>
+<p><span style=""font-size: large; color: #ff0000;"">Anzahl 1 = 0.5 Laufmeter</span></p>",,0.4,1,Taxable Goods,"Katalog, Suche",16.2488356546,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,cordura-cordura_verstaerkung_schwarz.jpg,cordura-cordura_verstaerkung_schwarz.jpg,cordura-cordura_verstaerkung_schwarz.jpg,
+FS0291,,Default,simple,Default Category/Produkte/Parts/Schaumstoffe / Polster,base,Flexathen FT/EZ 4.5mm,"<p>Schaumstoff zur Polsterung. Plattenware max. 2000x1000mm</p>
+<p><strong>Merkmale:</strong></p>
+<p>&Auml;hnlich wie Evazote</p>
+<p><strong>Farbe:</strong></p>
+<p>Schwarz</p>
+<p><strong>Gewicht:</strong></p>
+<p>35kg / m3</p>
+<p><strong>Abmessungen:</strong></p>
+<p>Plattenbreite 100cm</p>
+<p><span style=""font-size: large; color: #ff0000;"">Anzahl 1 = 0.5 Laufmeter</span></p>",,0.6,1,Taxable Goods,"Katalog, Suche",24.1411587744,,,,,,,,,,,,,,,,,,,,,,,,,,998,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,sonstiges-flexathen.jpg,sonstiges-flexathen.jpg,sonstiges-flexathen.jpg,
+FS0292,,Default,simple,Default Category/Produkte/Parts/Schaumstoffe / Polster,base,Flexathen FT/EZ 10mm,"<p>Schaumstoff zur Polsterung. Plattenware max. 2000x1000mm</p>
+<p><strong>Merkmale:</strong></p>
+<p>&Auml;hnlich wie Evazote</p>
+<p><strong>Farbe:</strong></p>
+<p>Schwarz</p>
+<p><strong>Gewicht:</strong></p>
+<p>35kg / m3</p>
+<p><strong>Abmessungen:</strong></p>
+<p>Plattenbreite 100cm</p>
+<p><span style=""font-size: large; color: #ff0000;"">Anzahl 1 = 0.5 Laufmeter</span></p>",,0.6,1,Taxable Goods,"Katalog, Suche",28.7836545961,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,sonstiges-flexathen.jpg,sonstiges-flexathen.jpg,sonstiges-flexathen.jpg,
+FS0221,,Default,simple,Default Category/Produkte/Parts/Schnallen zweiteilig,base,Stubai Click  -28mm   13kN Schachtel à 25 Stück,<p>&Auml;lteres Modell wird nicht mehr Hergestellt (solange Vorrat)</p>,,1.2,1,Taxable Goods,"Katalog, Suche",64.0668635097,,,,,,,,,,,,,,,,,,,,,,,,,,998,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,schnallen-stubai_schnallen_schachtel.jpg,schnallen-stubai_schnallen_schachtel.jpg,schnallen-stubai_schnallen_schachtel.jpg,
+FS0294,,Default,simple,Default Category/Produkte/Parts/Stoffe / Gewebe,base,Neopren Haihaut 1.5mm,"<p>Einseitig Haihaut, andere Seite Neopren. wird f&uuml;r abwaschbare Polsterabdeckung verwendet ( Pferdesport, etc. )</p>
+<p><strong>Merkmale:</strong></p>
+<p>Franst nicht aus beim Schneiden; Nicht sehr zugfest.</p>
+<p><strong> Farben:</strong></p>
+<p>Schwarz</p>
+<p><strong>Gewicht:</strong></p>
+<p>1kg per Laufmeter</p>
+<p><strong>Abmessungen:</strong></p>
+<p>Plattenbreite 120cm</p>
+<p><span style=""font-size: large; color: #ff0000;"">Anzahl 1 = 0.5 Laufmeter</span></p>",,0.19,1,Taxable Goods,"Katalog, Suche",37.1401671309,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,stoffe-neopren_haihaut.jpg,stoffe-neopren_haihaut.jpg,stoffe-neopren_haihaut.jpg,
+FS0295,,Default,simple,Default Category/Produkte/Parts/Stoffe / Gewebe,base,Hypalon,"<p>K&uuml;nstliches Gummi, kann f&uuml;r allerlei Verst&auml;rkungsdetails verwendet werden. Das Material verf&uuml;gt &uuml;ber ein ripstopartiges Netz. Es kann mittels Schere oder Stanzen bearbeitet werden.</p>
+<p><strong>Merkmale:</strong></p>
+<p>Franst nicht aus. Wird in Plattenst&uuml;cken &agrave; 300x450mm verkauft.</p>
+<p><strong> Farben:</strong></p>
+<p>Schwarz</p>
+<p><strong>Gewicht:</strong></p>
+<p>150g pro Platte</p>
+<p><strong>Abmessungen:</strong></p>
+<p>300x450mm</p>
+<p><strong>Anzahl 1 = 1 Platte </strong></p>",,0.2,1,Taxable Goods,"Katalog, Suche",36.2116880223,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,stoffe-hypalon.jpg,stoffe-hypalon.jpg,stoffe-hypalon.jpg,
+FS0296,,Default,simple,Default Category/Produkte/Parts/Stoffe / Gewebe,base,Sonnendachstoff,"<p>Restposten solange Vorrat<br />Rollenbreite: 1.65m<br />Farbe: hellbraun</p>
+<p><strong> Farben:</strong></p>
+<p>Hellbraun</p>
+<p><strong>Gewicht:</strong></p>
+<p>800g per Laufmeter</p>
+<p><strong>Abmessungen:</strong></p>
+<p>Rollenbreite 165cm</p>
+<p><span style=""font-size: large; color: #ff0000;"">Anzahl 1 = 0.5 Laufmeter</span></p>",,0.8,1,Taxable Goods,"Katalog, Suche",10.2135710306,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,stoffe-sonnendachstoff.jpg,stoffe-sonnendachstoff.jpg,stoffe-sonnendachstoff.jpg,
+FS0297,,Default,simple,"Default Category/Produkte/Parts/Stoffe / Gewebe,Default Category/Produkte/Parts/Spezialteile",base,Verstärkungsmaterial transparent 0.5mm,"<p>Das Verst&auml;rkungsmaterial l&auml;sst sich n&auml;hen, ist aber auch ideal geeignet um Schnittmuster herzustellen da es mit wasserfesten Schreibern beschriftet werden kann.</p>
+<p></p>
+<p><strong> Farben:</strong></p>
+<p>Transparent</p>
+<p><strong>Gewicht:</strong></p>
+<p>350g pro Platte</p>
+<p><strong>Abmessungen:</strong></p>
+<p>700x1000mm</p>
+<p><strong>Anzahl 1 = 1 Platte <br /></strong></p>",,0.35,1,Taxable Goods,"Katalog, Suche",12.5348189415,,,,,,,,,,,,,,,,,,,,,,,,,,998,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,stoffe-verstaerkung_transparent.jpg,stoffe-verstaerkung_transparent.jpg,stoffe-verstaerkung_transparent.jpg,
+FS0298,,Default,simple,Default Category/Produkte/Parts/Stoffe / Gewebe,base,Netzstoff schwarz,"<p>Leicht steif. Gute Formstabilit&auml;t. L&auml;sst sich gut mit anderen Teilen zusammenn&auml;hen. Verwendung bei Taschen, Rucks&auml;cken.</p>
+<p><strong> Farben:</strong></p>
+<p>Schwarz</p>
+<p><strong>Gewicht:</strong></p>
+<p>200g per Laufmeter</p>
+<p><strong>Abmessungen:</strong></p>
+<p>Rollenbreite 150cm</p>
+<p><span style=""font-size: large; color: #ff0000;"">Anzahl 1 = 0.5 Laufmeter</span></p>",,0.8,1,Taxable Goods,"Katalog, Suche",16.2488356546,,,,,,,,,,,,,,,,,,,,,,,,,,993,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,stoffe-netzstoff_schwarz.jpg,stoffe-netzstoff_schwarz.jpg,stoffe-netzstoff_schwarz.jpg,
+FS0299,,Default,simple,Default Category/Produkte/Parts/Stoffe / Gewebe,base,Neopren beschichtet Lycra / Lycra 1.5mm,"<p>Plattenware max. 2.8m2, Rand wird von der Kaschierung &uuml;berdeckt.<br /><br /></p>
+<p><strong>Merkmale:</strong></p>
+<p>Beidseitige Lycra Beschichtung</p>
+<p><strong> Farben:</strong></p>
+<p>Schwarz</p>
+<p><strong>Gewicht:</strong></p>
+<p>1kg per Laufmeter</p>
+<p><strong>Abmessungen:</strong></p>
+<p>Plattenbreite 128cm</p>
+<p><span style=""font-size: large; color: #ff0000;"">Anzahl 1 = 0.5 Laufmeter</span></p>",,1,1,Taxable Goods,"Katalog, Suche",38.0687465181,,,,,,,,,,,,,,,,,,,,,,,,,,998,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,stoffe-neopren_lycra_lycra.jpg,stoffe-neopren_lycra_lycra.jpg,stoffe-neopren_lycra_lycra.jpg,
+FS0300,,Default,simple,Default Category/Produkte/Parts/Stoffe / Gewebe,base,Neopren beschichtet Lycra / Velcro 1.5mm,"<p>Plattenware max. 2.8m2, Rand wird von der Kaschierung &uuml;berdeckt.<br /><br /></p>
+<p><strong>Merkmale:</strong></p>
+<p>Beschichtung Lycra / Velcro</p>
+<p><strong> Farben:</strong></p>
+<p>Schwarz</p>
+<p><strong>Gewicht:</strong></p>
+<p>1kg per Laufmeter</p>
+<p><strong>Abmessungen:</strong></p>
+<p>Plattenbreite 128cm</p>
+<p><span style=""font-size: large; color: #ff0000;"">Anzahl 1 = 0.5 Laufmeter</span></p>",,1,1,Taxable Goods,"Katalog, Suche",44.5682005571,,,,,,,,,,,,,,,,,,,,,,,,,,997,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,stoffe-neopren_lycra_velcro.jpg,stoffe-neopren_lycra_velcro.jpg,stoffe-neopren_lycra_velcro.jpg,
+FS0301,,Default,simple,"Default Category/Produkte/Parts/Spezialteile,Default Category/Produkte/Parts/Schnallen / Gurtzubehör",base,Haken mit Verstellung 25mm rechts,"<p>Leichte Alternative zu zweiteiliger Steckschnalle. Passend zu Gurtband 25mm. Anwendung im Rucksack / Taschen Bereich.<br /><br /><strong>Gewicht:</strong></p>
+<p>8g</p>
+<p><strong>Abmessungen:</strong></p>
+<p>40x51mm</p>",,0.01,1,Taxable Goods,"Katalog, Suche",4.1783064067,,,,,,,,,,,,,,,,,,,,,,,,,,995,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,schnallen-haken_verstellung_25mm_rechts.jpg,schnallen-haken_verstellung_25mm_rechts.jpg,schnallen-haken_verstellung_25mm_rechts.jpg,
+FS0302,,Default,simple,"Default Category/Produkte/Parts/Spezialteile,Default Category/Produkte/Parts/Schnallen / Gurtzubehör",base,Haken mit Verstellung 15mm rechts,"<p>Leichte Alternative zu zweiteiliger Steckschnalle. Passend zu Gurtband 15mm. Anwendung im Rucksack / Taschen Bereich.<br /><br /><strong>Gewicht:</strong></p>
+<p>4g</p>
+<p><strong>Abmessungen:</strong></p>
+<p>27x45mm</p>",,0.01,1,Taxable Goods,"Katalog, Suche",3.2497270195,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,schnallen-haken_verstellung_15mm_rechts.jpg,schnallen-haken_verstellung_15mm_rechts.jpg,schnallen-haken_verstellung_15mm_rechts.jpg,
+FS0303,,Default,simple,Default Category/Produkte/Parts/Schnallen / Gurtzubehör,base,Exped Rapid Hook 20mm rechts,"<p>Extrem leichte Verstellung als Ersatz f&uuml;r Steckschnallen. Passend zu Gurtband 20mm. Anwendung im Rucksack / Taschen Bereich<br /><br /><strong>Gewicht:</strong></p>
+<p>5g</p>
+<p><strong>Farbe:</strong></p>
+<p>silber</p>",,0.01,1,Taxable Goods,"Katalog, Suche",5.9424066852,,,,,,,,,,,,,,,,,,,,,,,,,,994,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,schnallen-exped_20mm_rechts.jpg,schnallen-exped_20mm_rechts.jpg,schnallen-exped_20mm_rechts.jpg,
+FS0306,,Default,simple,Default Category/Produkte/Parts/Schnallen / Gurtzubehör,base,Exped Rapid Hook 20mm links,"<p>Extrem leichte Verstellung als Ersatz f&uuml;r Steckschnallen. Passend zu Gurtband 20mm. Anwendung im Rucksack / Taschen Bereich<br /><br /><strong>Gewicht:</strong></p>
+<p>5g</p>
+<p><strong>Farbe:</strong></p>
+<p>silber</p>",,0.01,1,Taxable Goods,"Katalog, Suche",5.9424066852,,,,,,,,,,,,,,,,,,,,,,,,,,996,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,schnallen-exped_20mm_links.jpg,schnallen-exped_20mm_links.jpg,schnallen-exped_20mm_links.jpg,
+FS0305,,Default,simple,Default Category/Produkte/Parts/Schnallen / Gurtzubehör,base,Exped Rapid Hook Orange 20mm links,"<p>Extrem leichte Verstellung als Ersatz f&uuml;r Steckschnallen. Passend zu Gurtband 20mm. Anwendung im Rucksack / Taschen Bereich<br /><br /><strong>Gewicht:</strong></p>
+<p>5g</p>
+<p><strong>Farbe:</strong></p>
+<p>orange</p>",,0.01,1,Taxable Goods,"Katalog, Suche",5.9424066852,,,,,,,,,,,,,,,,,,,,,,,,,,995,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,schnallen-exped_orange_20mm_links.jpg,schnallen-exped_orange_20mm_links.jpg,schnallen-exped_orange_20mm_links.jpg,
+FS0304,,Default,simple,Default Category/Produkte/Parts/Schnallen / Gurtzubehör,base,Exped Rapid Hook 10mm links,"<p>Extrem leichte Verstellung als Ersatz f&uuml;r Steckschnallen. Passend zu Gurtband 10mm. Anwendung im Rucksack / Taschen Bereich<br /><br /><strong>Gewicht:</strong></p>
+<p>1g</p>
+<p><strong>Farbe:</strong></p>
+<p>silber</p>",,0.01,1,Taxable Goods,"Katalog, Suche",5.1067855153,,,,,,,,,,,,,,,,,,,,,,,,,,997,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,schnallen-exped_10mm_links.jpg,schnallen-exped_10mm_links.jpg,schnallen-exped_10mm_links.jpg,
+FS0225,,Default,simple,Default Category/Produkte/Parts/Spezialteile,base,Hochwertiger Bremsleinenwirbel,"<p>Hochwertiger Wirbel ohne scharkantige Rundungen; Innen sowie aussen. Findet Verwendung im Gleitschirmsport.</p>
+<p><strong>Merkmale:</strong></p>
+<p>Geringe Reibung</p>
+<p><strong>Farbe:</strong></p>
+<p>Verchromt</p>
+<p><strong>Gewicht:</strong></p>
+<p>10g</p>
+<p><strong>Abmessungen:</strong></p>
+<p>32x9mm</p>",,0.01,1,Taxable Goods,"Katalog, Suche",7.4280334262,,,,,,,,,,,,,,,,,,,,,,,,,,988,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,sonstiges-bremsleinenwirbel.jpg,sonstiges-bremsleinenwirbel.jpg,sonstiges-bremsleinenwirbel.jpg,
+FS0307,,Default,simple,Default Category/Produkte/Parts/Spezialteile,base,RW Original Splintkabel,"<p>Stahlkabel mit Kunststoffmantel 3mm. Findet Verwendung im Fallschirmsport wie auch Gleitschirmbereich.</p>
+<p><strong>Farbe:</strong></p>
+<p>gelb</p>
+<p><strong>Gewicht:</strong></p>
+<p>17g/m</p>",,0,1,Taxable Goods,"Katalog, Suche",6.9637437326,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,sonstiges-kabel.png,sonstiges-kabel.png,sonstiges-kabel.png,
+FS0029,,Default,simple,"Default Category/Produkte/Parts/Schraubglieder / Maillon Rapide,Default Category/Produkte/Parts/Spezialteile",base,O-Ring Klein 25mm,"<p>O-Ringe werden zur fixierung von Schraubglieder (Maillon Rapide) am Gurtband verwendet.</p>
+<p>z.B. im Gleitschirmbereich bei Verbindungen von Gurtzeug und Notschirm.</p>
+<p><strong>Farbe:</strong></p>
+<p>schwarz</p>",,0.01,1,Taxable Goods,"Katalog, Suche",1.3927688022,,,,,,,,,,,,,,,,,,,,,,,,,,896,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,sonstiges-o-rings.jpg,sonstiges-o-rings.jpg,sonstiges-o-rings.jpg,
+FS0028,,Default,simple,"Default Category/Produkte/Parts/Schraubglieder / Maillon Rapide,Default Category/Produkte/Parts/Spezialteile",base,O-Ring Gross 40mm,"<p>O-Ringe werden zur fixierung von Schraubglieder (Maillon Rapide) am Gurtband verwendet.</p>
+<p>z.B. im Gleitschirmbereich bei Verbindungen von Gurtzeug und Notschirm.</p>
+<p><strong>Farbe:</strong></p>
+<p>schwarz</p>",,0.01,1,Taxable Goods,"Katalog, Suche",1.3927688022,,,,,,,,,,,,,,,,,,,,,,,,,,909,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,sonstiges-o-rings.jpg,sonstiges-o-rings.jpg,sonstiges-o-rings.jpg,
+FS0308,,Default,simple,Default Category/Produkte/Parts/Schnallen / Gurtzubehör,base,Stegschnalle 25mm Inox 162l,"<p>Hohe Festigkeit<br /><br /><strong>Gewicht:</strong></p>
+<p>16g</p>
+<p><strong>Farbe:</strong></p>
+<p>Inox, Poliert</p>
+<p><strong>Abmessungen:</strong></p>
+<p>Aussen 38x29mm, Schlitz 5mm</p>",,0.02,1,Taxable Goods,"Katalog, Suche",6.035264624,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,schnallen-inox-stegschnalle.png,schnallen-inox-stegschnalle.png,schnallen-inox-stegschnalle.png,
+FS0309,,Default,simple,Default Category/Produkte/Parts/Spezialteile,base,Fallschirmsplint gebogen,"<p>Fallschirmsplint verchromt,</p>
+<p>welcher auch bei Gleitschirmgurtzeugen und Notschirmcontainern verwendet wird.</p>
+<p><strong>Gewicht:</strong></p>
+<p>2g</p>",,0.02,1,Taxable Goods,"Katalog, Suche",6.9637437326,,,,,,,,,,,,,,,,,,,,,,,,,,996,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,sonstiges-fallschirmsplint_gebogen.jpg,sonstiges-fallschirmsplint_gebogen.jpg,sonstiges-fallschirmsplint_gebogen.jpg,
+FS0310,,Default,simple,Default Category/Produkte/Parts/Karabiner / Ringe,base,D-Ring 10/14mm,"<p>Verwendung bei Abschl&uuml;ssen mit Kordelz&uuml;gen.<br /><strong></strong></p>
+<p><strong>Drahtst&auml;rke:</strong></p>
+<p>2mm</p>
+<p><strong>Gewicht:</strong></p>
+<p>1g</p>",,0.01,1,Taxable Goods,"Katalog, Suche",1.5320557103,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,schlaufen-ringe-d-ring.jpg,schlaufen-ringe-d-ring.jpg,schlaufen-ringe-d-ring.jpg,
+FS0311,,Default,simple,Default Category/Produkte/Parts/Karabiner / Ringe,base,Schlaufe aus rundem Draht 25mm,"<p><strong>Merkmale:</strong></p>
+<p>Eisen vernickelt</p>
+<p><strong>Abmessungen:</strong></p>
+<p>Innen 26x21mm, Drahtst&auml;rke 4mm</p>
+<p><strong>Gewicht:</strong></p>
+<p>10g</p>",,0.01,1,Taxable Goods,"Katalog, Suche",2.4141058496,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,schlaufen-ringe-drahtschlaufe_rund_25mm.jpg,schlaufen-ringe-drahtschlaufe_rund_25mm.jpg,schlaufen-ringe-drahtschlaufe_rund_25mm.jpg,
+FS0312,,Default,simple,Default Category/Produkte/Parts/Karabiner / Ringe,base,Schlaufe aus rundem Draht 20mm,"<p><strong>Merkmale: </strong></p>
+<p>Eisen vernickelt</p>
+<p><strong>Abmessungen:</strong></p>
+<p>Innen 20x8mm, Drahtst&auml;rke 2mm</p>
+<p><strong>Gewicht:</strong></p>
+<p>2g</p>",,0.01,1,Taxable Goods,"Katalog, Suche",1.0213370474,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,schlaufen-ringe-drahtschlaufe_20mm.jpg,schlaufen-ringe-drahtschlaufe_20mm.jpg,schlaufen-ringe-drahtschlaufe_20mm.jpg,
+FS0313,,Default,simple,Default Category/Produkte/Parts/Karabiner / Ringe,base,Ring geschweisst 20mm,"<p><strong>Merkmale:</strong></p>
+<p>Eisen vernickelt.</p>
+<p><strong>Abmessungen:</strong></p>
+<p>Aussen 26mm, Innen 20mm</p>
+<p><strong>Gewicht:</strong></p>
+<p>3g</p>",,0.01,1,Taxable Goods,"Katalog, Suche",1.949816156,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,schlaufen-ringe-ring_geschweisst_20mm.jpg,schlaufen-ringe-ring_geschweisst_20mm.jpg,schlaufen-ringe-ring_geschweisst_20mm.jpg,
+FS0314,,Default,simple,Default Category/Produkte/Parts/Karabiner / Ringe,base,Ring geschweisst 14mm,"<p><strong>Merkmale:</strong></p>
+<p>Eisen vernickelt. </p>
+<p><strong>Abmessungen:</strong></p>
+<p>Aussen 19mm, Innen 14mm</p>
+<p><strong>Gewicht:</strong></p>
+<p>2g</p>",,0.01,1,Taxable Goods,"Katalog, Suche",1.3927688022,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,schlaufen-ringe-ring_geschweisst_14mm.jpg,schlaufen-ringe-ring_geschweisst_14mm.jpg,schlaufen-ringe-ring_geschweisst_14mm.jpg,
+FS0314,,Default,simple,Default Category/Produkte/Parts/Karabiner / Ringe,base,Ring 25mm,"<p><strong>Merkmale:</strong></p>
+<p>Messing vernickelt. Ohne Schweissnaht / Braue</p>
+<p><strong>Abmessungen:</strong></p>
+<p>Aussen 27.5mm, Innen 19.5mm<br />Dicke: 4mm</p>
+<p><strong>Gewicht:</strong></p>
+<p>8g</p>",,0.01,1,Taxable Goods,"Katalog, Suche",1.3927688022,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,schlaufen-ringe-ring_25mm_messing.jpg,schlaufen-ringe-ring_25mm_messing.jpg,schlaufen-ringe-ring_25mm_messing.jpg,
+FS0242,,Default,simple,Default Category/Produkte/Parts/Gurten / Gummibänder,base,Schlauchband Gurte 25mm Statisch,"<p>Polyamid Gurte f&uuml;r Statische Verwendungen 1376 Kgf (Herstellerangabe)</p>
+<p><br /><strong><strong><strong>Anzahl 1 = 1 Meter</strong></strong></strong></p>",,0.03,1,Taxable Goods,"Katalog, Suche",3.3425849582,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,gurten-gurte_schlauchband.jpg,gurten-gurte_schlauchband.jpg,gurten-gurte_schlauchband.jpg,
+FS0315,,Default,simple,Default Category/Produkte/Parts/Kordel / Kordelzubehör,base,Gummikordel 3mm,"<p><strong>Farbe:</strong></p>
+<p>Schwarz</p>
+<p><strong>Gewicht:</strong></p>
+<p>4g / m</p>
+<p><strong>Abmessungen:</strong></p>
+<p>3mm</p>",,0.01,1,Taxable Goods,"Katalog, Suche",1.6713426184,,,,,,,,,,,,,,,,,,,,,,,,,,974,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,sonstiges-gummikordel_3mm.jpg,sonstiges-gummikordel_3mm.jpg,sonstiges-gummikordel_3mm.jpg,
+FS0317,,Default,simple,Default Category/Produkte/Parts/Kordel / Kordelzubehör,base,Splintschnur,"<p>Original Fallschirmsprlintschnur.</p>
+<p><strong>Merkmale:</strong></p>
+<p>Spleissbar</p>
+<p><strong>Farbe:</strong></p>
+<p>weiss / gr&uuml;ner erkennungsfaden</p>
+<p><strong>Abmessungen:</strong></p>
+<p>4.5x1.5mm</p>",,0.01,1,Taxable Goods,"Katalog, Suche",6.9637437326,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,sonstiges-splintschnur.jpg,sonstiges-splintschnur.jpg,sonstiges-splintschnur.jpg,
+FS0318,,Default,simple,Default Category/Produkte/Parts/Kordel / Kordelzubehör,base,Kordel 3mm,"<p><strong>Material:</strong></p>
+<p>Polyester</p>
+<p><strong>Farbe:</strong></p>
+<p>schwarz</p>
+<p><strong>Gewicht:</strong></p>
+<p>7g / m</p>",,0.01,1,Taxable Goods,"Katalog, Suche",1.6713426184,,,,,,,,,,,,,,,,,,,,,,,,,,982,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,sonstiges-kordel_3mm.jpg,sonstiges-kordel_3mm.jpg,sonstiges-kordel_3mm.jpg,
+FS0319,,Default,simple,"Default Category/Produkte/Parts/Spezialteile,Default Category/Produkte/Parts/Kordel / Kordelzubehör",base,Kederschnur 3mm,"<p>Zum Einn&auml;hen; Bei Schultergurten von Rucks&auml;cken</p>
+<p><strong>Material:</strong></p>
+<p>Silikon</p>",,0,1,Taxable Goods,"Katalog, Suche",3.8997325905,,,,,,,,,,,,,,,,,,,,,,,,,,997,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,sonstiges-kederschnur.jpg,sonstiges-kederschnur.jpg,sonstiges-kederschnur.jpg,
+FS0320,,Default,simple,"Default Category/Produkte/Parts/Spezialteile,Default Category/Produkte/Parts/Karabiner / Ringe",base,Aluminiumring 10mm,"<p>Umlenkring zum Einspleissen. Dieser extrem leichte Ring ersetzt bei richtiger Anwendung die schwereren Rollen. z.B. bei Gleitschirmgurtzeugen oder im Segelsport.<br /><br /><strong>Abmessungen:</strong></p>
+<p>Aussen 10mm, Innen 4mm</p>
+<p><strong>Farbe:</strong></p>
+<p>schwarz</p>",,0.01,1,Taxable Goods,"Katalog, Suche",6.4066963788,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,sonstiges-reibungsloser_aluring_10mm.jpg,sonstiges-reibungsloser_aluring_10mm.jpg,sonstiges-reibungsloser_aluring_10mm.jpg,
+FS0321,,Default,simple,Default Category/Produkte/Parts/Schnallen / Gurtzubehör,base,Stegschnalle Zweiteilig 20mm,"<p>Mit Loch zur Sicherung der beiden Teile mit 10-12mm Gurt. Passend zu 20mm Gurten.</p>
+<p><strong>Material:</strong></p>
+<p>Aluminium</p>
+<p><strong>Gewicht:</strong></p>
+<p>12g</p>
+<p><strong>Abmessungen:</strong></p>
+<p>45x35mm</p>
+<p><strong>Lieferumfang: </strong></p>
+<p><strong>2 Teilig</strong></p>",,0.01,1,Taxable Goods,"Katalog, Suche",7.8923231198,,,,,,,,,,,,,,,,,,,,,,,,,,997,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,schnallen-stegschnalle_zweiteilig.jpg,schnallen-stegschnalle_zweiteilig.jpg,schnallen-stegschnalle_zweiteilig.jpg,
+FS0323,,Default,simple,"Default Category/Produkte/Parts/Spezialteile,Default Category/Produkte/Parts/Karabiner / Ringe",base,Aluminiumring 16mm,"<p>Umlenkring zum Einspleissen. Dieser extrem leichte Ring ersetzt bei richtiger Anwendung die schwereren Rollen. z.B. bei Gleitschirmgurtzeugen oder im Segelsport.<br /><br /><strong>Abmessungen:</strong></p>
+<p>Aussen 16mm, Innen 6mm</p>
+<p><strong>Farbe:</strong></p>
+<p>schwarz</p>",,0.01,1,Taxable Goods,"Katalog, Suche",7.2423175488,,,,,,,,,,,,,,,,,,,,,,,,,,995,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,sonstiges-reibungsloser_aluring_16mm.jpg,sonstiges-reibungsloser_aluring_16mm.jpg,sonstiges-reibungsloser_aluring_16mm.jpg,
+FS0322,,Default,simple,Default Category/Produkte/Parts/Schnallen zweiteilig,base,Fidlock Magnetverschluss,"<p>Dieser Verschluss findet seine Anwendung &uuml;berall dort wo es schnell gehen soll. z.B bei Schulrucks&auml;cken, Taschen, usw.<br />Zum Schliessen reicht es die Magnete in Reichweite zu bringen und schon verschliesst sich die Schnalle. Um die Verbindung zu l&ouml;sen muss der graue Knopf bet&auml;tigt werden.</p>
+<p><strong>Merkmale:</strong></p>
+<p>Einh&auml;ndig bedienbar</p>
+<p><strong>Farbe:</strong></p>
+<p>grau / schwarz</p>
+<p><strong>Abmessungen:</strong></p>
+<p>Passend zu Gurten 25mm</p>",,0.05,1,Taxable Goods,"Katalog, Suche",8.9136601671,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,schnallen-fidlock.jpg,schnallen-fidlock.jpg,schnallen-fidlock.jpg,
+FS0324,,Default,simple,Default Category/Produkte/Parts/Gurten / Gummibänder,base,Einfassband schwarz 25mm,"<p>Eng gewoben. Sehr robust und langlebig</p>
+<p>Gewicht:</p>
+<p>7g</p>
+<p><strong><strong><strong>Anzahl 1 = 1 Meter</strong></strong></strong></p>",,0.01,1,Taxable Goods,"Katalog, Suche",1.2070529248,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,gurten-einfassband.jpg,gurten-einfassband.jpg,gurten-einfassband.jpg,
+FS0325,,Default,simple,Default Category/Produkte/Parts/Gurten / Gummibänder,base,Einfassband schwarz 20mm,"<p>Eng gewoben. Sehr robust und langlebig</p>
+<p><strong>Gewicht:</strong></p>
+<p>6g</p>
+<p><strong><strong><strong>Anzahl 1 = 1 Meter</strong></strong></strong></p>",,0.01,1,Taxable Goods,"Katalog, Suche",1.0213370474,,,,,,,,,,,,,,,,,,,,,,,,,,994,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,gurten-einfassband.jpg,gurten-einfassband.jpg,gurten-einfassband.jpg,
+FS0326,,Default,simple,Default Category/Produkte/Parts/Gurten / Gummibänder,base,Einfassband neongrün 25mm,"<p>Eng gewoben. Sehr robust und langlebig</p>
+<p><strong>Gewicht:</strong></p>
+<p>7g</p>
+<p><strong><strong><strong>Anzahl 1 = 1 Meter</strong></strong></strong></p>",,0.01,1,Taxable Goods,"Katalog, Suche",1.2070529248,,,,,,,,,,,,,,,,,,,,,,,,,,984,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,gurten-einfassband.jpg,gurten-einfassband.jpg,gurten-einfassband.jpg,
+FS0327,,Default,simple,Default Category/Produkte/Parts/Gurten / Gummibänder,base,Einfassband neongrün 20mm,"<p>Eng gewoben. Sehr robust und langlebig</p>
+<p><strong>Gewicht:</strong></p>
+<p>6g / m</p>
+<p><strong><strong><strong>Anzahl 1 = 1 Meter</strong></strong></strong></p>",,0.01,1,Taxable Goods,"Katalog, Suche",1.0213370474,,,,,,,,,,,,,,,,,,,,,,,,,,972,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,gurten-einfassband.jpg,gurten-einfassband.jpg,gurten-einfassband.jpg,
+FS0328,,Default,simple,Default Category/Produkte/Parts/Gurten / Gummibänder,base,Reflektierende Gurte 20mm,"<p>z.B. f&uuml;r Hundeleinen. Beidseitig eingewobene reflektierende Elemente.</p>
+<p><strong>Gewicht:</strong></p>
+<p>16g / m</p>
+<p><strong><strong><strong>Anzahl 1 = 1 Meter</strong></strong></strong></p>",,0.01,1,Taxable Goods,"Katalog, Suche",2.3212479109,,,,,,,,,,,,,,,,,,,,,,,,,,995,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,gurten-fluoreszierende_gurte.jpg,gurten-fluoreszierende_gurte.jpg,gurten-fluoreszierende_gurte.jpg,
+FS0330,,Default,simple,Default Category/Produkte/Parts/Gurten / Gummibänder,base,Dyneema Polyester Gurte 13mm dünn,"<p>Hohe Festigkeit.</p>
+<p><strong>Materialien:</strong></p>
+<p>schwarzes Polyester, weisses Dyneema</p>
+<p><strong>Gewicht:</strong></p>
+<p>15g / m</p>
+<p><strong><strong><strong>Anzahl 1 = 1 Meter</strong></strong></strong></p>",,0,1,Taxable Goods,"Katalog, Suche",4.1783064067,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,gurten-gurte_dynema_polyester_13mm_schwarzweiss.jpg,gurten-gurte_dynema_polyester_13mm_schwarzweiss.jpg,gurten-gurte_dynema_polyester_13mm_schwarzweiss.jpg,
+FS0331,,Default,simple,Default Category/Produkte/Parts/Gurten / Gummibänder,base,Dyneema Polyester Gurte 13mm dick,"<p>Hohe Festigkeit.</p>
+<p><strong>Materialien:</strong></p>
+<p>blaues Polyester, weisses Dyneema</p>
+<p><strong>Gewicht:</strong></p>
+<p>21g / m</p>
+<p></p>
+<p><strong><strong><strong>Anzahl 1 = 1 Meter</strong></strong></strong></p>",,0,1,Taxable Goods,"Katalog, Suche",5.1067855153,,,,,,,,,,,,,,,,,,,,,,,,,,998,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,gurten-gurte_dynema_polyester_13mm_blauweiss.jpg,gurten-gurte_dynema_polyester_13mm_blauweiss.jpg,gurten-gurte_dynema_polyester_13mm_blauweiss.jpg,
+FS0332,,Default,simple,Default Category/Produkte/Parts/Gurten / Gummibänder,base,Gurtband 100mm,"<p>Verwendung bei Kraft&uuml;bertragung auf diverse K&ouml;rper.</p>
+<p><strong>Merkmale:</strong></p>
+<p>Relativ d&uuml;nn, nicht statisch belastbar</p>
+<p><strong>Farbe:</strong></p>
+<p>schwarz</p>
+<p><strong>Materialien:</strong></p>
+<p>Polyester</p>
+<p><strong>Gewicht:</strong></p>
+<p>74g / m</p>
+<p><strong><strong><strong>Anzahl 1 = 1 Meter</strong></strong></strong></p>",,0.07,1,Taxable Goods,"Katalog, Suche",8.8208022284,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,gurten-gurte_100mm.jpg,gurten-gurte_100mm.jpg,gurten-gurte_100mm.jpg,
+FS0333,,Default,simple,Default Category/Produkte/Parts/Gurten / Gummibänder,base,Gummiband 15mm stark,"<p>Gummiband zeichnet sich durch seine Langlebigkeit und Robustheit aus. Es eignet sich f&uuml;r alle offenliegenden Teile. Sei es zum zusammenheften von Gurten (als Schlauch gen&auml;ht) oder um Halterungen aller Art anzubringen. <br /><br /><strong>Merkmale:</strong></p>
+<p>Hergestellt in Italien</p>
+<p><strong>Gewicht:</strong></p>
+<p>12g / m</p>
+<p><strong>Farbe:</strong></p>
+<p>Schwarz</p>
+<p><strong><strong><strong>Anzahl 1 = 1 Meter</strong></strong></strong></p>",,0.01,1,Taxable Goods,"Katalog, Suche",1.6713426184,,,,,,,,,,,,,,,,,,,,,,,,,,992,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,gurten-gummibaender_div.jpg,gurten-gummibaender_div.jpg,gurten-gummibaender_div.jpg,
+FS0334,,Default,simple,Default Category/Produkte/Parts/Gurten / Gummibänder,base,Gummiband 20mm stark,"<p>Gummiband zeichnet sich durch seine Langlebigkeit und Robustheit aus. Es eignet sich f&uuml;r alle offenliegenden Teile. Sei es zum zusammenheften von gurten ( als Schlauch gen&auml;ht ) oder um Halterungen aller Art anzubringen. <br /><br /><strong>Merkmale:</strong></p>
+<p>Hergestellt in Italien</p>
+<p><strong>Gewicht:</strong></p>
+<p>15g / m</p>
+<p><strong>Farbe:</strong></p>
+<p>Schwarz</p>
+<p><strong><strong><strong>Anzahl 1 = 1 Meter</strong></strong></strong></p>",,0.01,1,Taxable Goods,"Katalog, Suche",2.0426740947,,,,,,,,,,,,,,,,,,,,,,,,,,988,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,gurten-gummibaender_div.jpg,gurten-gummibaender_div.jpg,gurten-gummibaender_div.jpg,
+FS0335,,Default,simple,Default Category/Produkte/Parts/Gurten / Gummibänder,base,Gummiband 25mm stark,"<p>Gummiband zeichnet sich durch seine Langlebigkeit und Robustheit aus. Es eignet sich f&uuml;r alle offenliegenden Teile. Sei es zum zusammenheften von gurten ( als Schlauch gen&auml;ht ) oder um Halterungen aller Art anzubringen. <br /><br /><strong>Merkmale:</strong></p>
+<p>Hergestellt in Italien</p>
+<p><strong>Gewicht:</strong></p>
+<p>20g / m</p>
+<p><strong>Farbe:</strong></p>
+<p>Schwarz</p>
+<p></p>
+<p><strong><strong><strong>Anzahl 1 = 1 Meter</strong></strong></strong></p>",,0.01,1,Taxable Goods,"Katalog, Suche",2.4141058496,,,,,,,,,,,,,,,,,,,,,,,,,,992,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,gurten-gummibaender_div.jpg,gurten-gummibaender_div.jpg,gurten-gummibaender_div.jpg,
+FS0336,,Default,simple,Default Category/Produkte/Parts/Gurten / Gummibänder,base,Gummiband 40mm stark,"<p>Gummiband zeichnet sich durch seine Langlebigkeit und Robustheit aus. Es eignet sich f&uuml;r alle offenliegenden Teile. Sei es zum zusammenheften von gurten ( als Schlauch gen&auml;ht ) oder um Halterungen aller Art anzubringen. <br /><br /><strong>Merkmale:</strong></p>
+<p>Hergestellt in Italien</p>
+<p><strong>Gewicht:</strong></p>
+<p>26g / m</p>
+<p><strong>Farbe:</strong></p>
+<p>Schwarz</p>
+<p></p>
+<p><strong><strong><strong>Anzahl 1 = 1 Meter</strong></strong></strong></p>",,0.01,1,Taxable Goods,"Katalog, Suche",3.3425849582,,,,,,,,,,,,,,,,,,,,,,,,,,988,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,gurten-gummibaender_div.jpg,gurten-gummibaender_div.jpg,gurten-gummibaender_div.jpg,
+FS0337,,Default,simple,Default Category/Produkte/Parts/Gurten / Gummibänder,base,Gummiband 80mm stark,"<p>Gummiband zeichnet sich durch seine Langlebigkeit und Robustheit aus. Es eignet sich f&uuml;r alle offenliegenden Teile. Sei es zum zusammenheften von gurten ( als Schlauch gen&auml;ht ) oder um Halterungen aller Art anzubringen. <br /><br /><strong>Merkmale:</strong></p>
+<p>Hergestellt in Italien</p>
+<p><strong>Gewicht:</strong></p>
+<p>35g / m</p>
+<p><strong>Farbe:</strong></p>
+<p>Schwarz</p>
+<p><strong><strong><strong>Anzahl 1 = 1 Meter</strong></strong></strong></p>",,0.01,1,Taxable Goods,"Katalog, Suche",6.685270195,,,,,,,,,,,,,,,,,,,,,,,,,,995,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,gurten-gummiband_80mm.jpg,gurten-gummiband_80mm.jpg,gurten-gummiband_80mm.jpg,
+FS0350,,Default,simple,Default Category/Produkte/Parts/Reissverschlüsse,base,Stopper Reissverschlussschlitten Typ 8,<p>Stoppt mittels Feder und verhindert so ein Aufgehen des Reissverschlusses.</p>,,0.01,1,Taxable Goods,"Katalog, Suche",1.8150417827,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,reissverschluesse-schlitten_typ8_stopper.png,reissverschluesse-schlitten_typ8_stopper.png,reissverschluesse-schlitten_typ8_stopper.png,
+FS0349,,Default,simple,Default Category/Produkte/Parts/Reissverschlüsse,base,Stopper Reissverschlussschlitten Typ 7,<p>Stoppt mittels Feder und verhindert so ein Aufgehen des Reissverschlusses.</p>,,0.01,1,Taxable Goods,"Katalog, Suche",1.4841225627,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,reissverschluesse-schlitten_typ8_stopper.png,reissverschluesse-schlitten_typ8_stopper.png,reissverschluesse-schlitten_typ8_stopper.png,
+FS0351,,Default,simple,Default Category/Produkte/Parts/Reissverschlüsse,base,Reissverschlussschlitten Typ 7,<p>Einfacher Schlitten</p>,,0.01,1,Taxable Goods,"Katalog, Suche",1.113091922,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,reissverschluesse-schlitten_typ7_schwarz.png,reissverschluesse-schlitten_typ7_schwarz.png,reissverschluesse-schlitten_typ7_schwarz.png,
+FS0348,,Default,simple,Default Category/Produkte/Parts/Reissverschlüsse,base,Reissverschlussschlitten Typ 8,<p>Einfacher Schlitten</p>,,0.01,1,Taxable Goods,"Katalog, Suche",1.764902507,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,reissverschluesse-schlitten_typ8_gruen.png,reissverschluesse-schlitten_typ8_gruen.png,reissverschluesse-schlitten_typ8_gruen.png,
+FS0347,,Default,simple,Default Category/Produkte/Parts/Reissverschlüsse,base,Reissverschlussschlitten YKK 5.6,<p>Einfacher Schlitten</p>,,0.01,1,Taxable Goods,"Katalog, Suche",1.2033426184,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,reissverschluesse-schlitten_ykk_schwarz.png,reissverschluesse-schlitten_ykk_schwarz.png,reissverschluesse-schlitten_ykk_schwarz.png,
+FS0346,,Default,simple,Default Category/Produkte/Parts/Reissverschlüsse,base,Reissverschlussschlitten YKK 8.6,<p>Einfacher Schlitten</p>,,0.01,1,Taxable Goods,"Katalog, Suche",1.764902507,,,,,,,,,,,,,,,,,,,,,,,,,,998,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,reissverschluesse-schlitten_ykk_schwarz.png,reissverschluesse-schlitten_ykk_schwarz.png,reissverschluesse-schlitten_ykk_schwarz.png,
+FS0345,,Default,simple,Default Category/Produkte/Parts/Reissverschlüsse,base,Reissverschluss YKK 8.6,"<p>Spiralreissverschluss schwarz. Anwendungsbereich Taschen, Rucks&auml;cke, usw. Endlos zum Einn&auml;hen. Bandbreite 38mm.</p>
+<p><strong><strong><strong>Anzahl 1 = 1 Meter</strong></strong></strong></p>",,0.02,1,Taxable Goods,"Katalog, Suche",5.199643454,,,,,,,,,,,,,,,,,,,,,,,,,,998,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,reissverschluesse-ykk_schwarz.png,reissverschluesse-ykk_schwarz.png,reissverschluesse-ykk_schwarz.png,
+FS0344,,Default,simple,Default Category/Produkte/Parts/Reissverschlüsse,base,Reissverschluss YKK 5.6,"<p>Spiralreissverschluss schwarz. Anwendungsbereich Seitentaschen bei Rucks&auml;cken, Taschen, usw. Endlos zum Einn&auml;hen. Bandbreite 33mm.</p>
+<p><strong><strong><strong>Anzahl 1 = 1 Meter</strong></strong></strong></p>",,0.02,1,Taxable Goods,"Katalog, Suche",4.1816155989,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,reissverschluesse-ykk_schwarz.png,reissverschluesse-ykk_schwarz.png,reissverschluesse-ykk_schwarz.png,
+FS0343,,Default,simple,Default Category/Produkte/Parts/Reissverschlüsse,base,Reissverschluss Neongrün Typ 8,"<p>Wasserabweisender Reissverschluss 8mm. Verwendung bei Rucks&auml;cken, Taschen, usw. Bandbreite 35mm</p>
+<p><strong><strong><strong>Anzahl 1 = 1 Meter</strong></strong></strong></p>",,0.03,1,Taxable Goods,"Katalog, Suche",5.3849582173,,,,,,,,,,,,,,,,,,,,,,,,,,997,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,reissverschluesse-typ8_gruen.png,reissverschluesse-typ8_gruen.png,reissverschluesse-typ8_gruen.png,
+FS0340,,Default,simple,Default Category/Produkte/Parts/Reissverschlüsse,base,Reissverschluss Neongelb Typ 7,"<p>Wasserabweisender Reissverschluss 7mm. Verwendung bei Rucks&auml;cken, Taschen, Jacken, Zelten usw. Bandbreite 32mm</p>
+<p><strong><strong><strong>Anzahl 1 = 1 Meter</strong></strong></strong></p>",,0.03,1,Taxable Goods,"Katalog, Suche",4.1816155989,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,reissverschluesse-typ7_gelb.png,reissverschluesse-typ7_gelb.png,reissverschluesse-typ7_gelb.png,
+FS0342,,Default,simple,Default Category/Produkte/Parts/Reissverschlüsse,base,Reissverschluss Orange Typ 7,"<p>Wasserabweisender Reissverschluss 7mm. Verwendung bei Rucks&auml;cken, Taschen, Jacken, Zelten usw. Bandbreite 32mm</p>
+<p><strong><strong><strong>Anzahl 1 = 1 Meter</strong></strong></strong></p>",,0.03,1,Taxable Goods,"Katalog, Suche",4.1816155989,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,reissverschluesse-typ7_orange.png,reissverschluesse-typ7_orange.png,reissverschluesse-typ7_orange.png,
+FS0341,,Default,simple,Default Category/Produkte/Parts/Reissverschlüsse,base,Reissverschluss Pink Typ 7,"<p>Wasserabweisender Reissverschluss 7mm. Verwendung bei Rucks&auml;cken, Taschen, Jacken, Zelten usw. Bandbreite 32mm</p>
+<p><strong><strong><strong>Anzahl 1 = 1 Meter</strong></strong></strong></p>",,0.03,1,Taxable Goods,"Katalog, Suche",4.1816155989,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,reissverschluesse-typ7_pink.png,reissverschluesse-typ7_pink.png,reissverschluesse-typ7_pink.png,
+FS0339,,Default,simple,Default Category/Produkte/Parts/Gurten / Gummibänder,base,Gummiband 20mm dünn Rolle à 100m,"<p>Kann auch als Gummieinfassband verwendet werden, solange Vorrat.</p>
+<p><strong>Gewicht:</strong></p>
+<p>1.25kg</p>",,1.3,1,Taxable Goods,"Katalog, Suche",60.3528467967,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,sonstiges-gummiband_20mm_rolle.jpg,sonstiges-gummiband_20mm_rolle.jpg,sonstiges-gummiband_20mm_rolle.jpg,
+FS0024,,Default,simple,"Default Category/Produkte/Parts/Schraubglieder / Maillon Rapide,Default Category/Produkte/Parts/Peguet Maillon Rapide",base,Maillon Rapide 6mm Trapez,"<p>Werden im Gleitschirmbereich zur Verbindung von Gurtzeug und Notschirm verwendet.</p>
+<p>Ideal zum verbinden von unterschiedlichen Gurtbreiten.</p>
+<p><strong>Material:</strong></p>
+<p>INOX Edelstahl</p>
+<p><strong>Gewicht:</strong></p>
+<p>45g</p>",,0.05,1,Taxable Goods,"Katalog, Suche",16.7131253482,,,,,,,,,,,,,,,,,,,,,,,,,,993,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,peguet_maillon_rapide-maillon-rapide-trapeze-photo.jpg,peguet_maillon_rapide-maillon-rapide-trapeze-photo.jpg,peguet_maillon_rapide-maillon-rapide-trapeze-photo.jpg,peguet_maillon_rapide-maillon-rapide-trapez-tabelle_highres.jpg
+FS0352,,Default,simple,"Default Category/Produkte/Parts/Schraubglieder / Maillon Rapide,Default Category/Produkte/Parts/Peguet Maillon Rapide",base,Maillon Rapide 4mm Trapez,"<p>Ideal zum verbinden von unterschiedlichen Gurtbreiten.</p>
+<p><strong>Material:</strong></p>
+<p>INOX Edelstahl</p>
+<p><strong>Gewicht:</strong></p>
+<p>15g</p>",,0.05,1,Taxable Goods,"Katalog, Suche",12.9991086351,,,,,,,,,,,,,,,,,,,,,,,,,,997,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,peguet_maillon_rapide-maillon-rapide-trapeze-photo.jpg,peguet_maillon_rapide-maillon-rapide-trapeze-photo.jpg,peguet_maillon_rapide-maillon-rapide-trapeze-photo.jpg,peguet_maillon_rapide-maillon-rapide-trapez-tabelle_highres.jpg
+FS0353,,Default,simple,"Default Category/Produkte/Parts/Schraubglieder / Maillon Rapide,Default Category/Produkte/Parts/Peguet Maillon Rapide",base,Maillon Rapide 3.5mm Trapez,"<p>Ideal zum verbinden von unterschiedlichen Gurtbreiten.</p>
+<p><strong>Material:</strong></p>
+<p>INOX Edelstahl</p>
+<p><strong>Gewicht:</strong></p>
+<p>15g</p>",,0.05,1,Taxable Goods,"Katalog, Suche",11.1420501393,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,peguet_maillon_rapide-maillon-rapide-trapeze-photo.jpg,peguet_maillon_rapide-maillon-rapide-trapeze-photo.jpg,peguet_maillon_rapide-maillon-rapide-trapeze-photo.jpg,peguet_maillon_rapide-maillon-rapide-trapez-tabelle_highres.jpg
+FS0023,,Default,simple,"Default Category/Produkte/Parts/Schraubglieder / Maillon Rapide,Default Category/Produkte/Parts/Peguet Maillon Rapide",base,Maillon Rapide 6mm Delta,"<p>Werden im Gleitschirmbereich zur Verbindung von Gurtzeug und Notschirm verwendet.</p>
+<p>Ideal zum verbinden von Gurten und Seilen.</p>
+<p><strong>Material:</strong></p>
+<p>INOX Edelstahl</p>
+<p><strong>Gewicht:</strong></p>
+<p>40g</p>",,0.05,1,Taxable Goods,"Katalog, Suche",14.8560668524,,,,,,,,,,,,,,,,,,,,,,,,,,977,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,peguet_maillon_rapide-maillon-rapide-delta-photo.jpg,peguet_maillon_rapide-maillon-rapide-delta-photo.jpg,peguet_maillon_rapide-maillon-rapide-delta-photo.jpg,peguet_maillon_rapide-maillon-rapide-delta-tabelle_highres.png
+FS0246,,Default,simple,"Default Category/Produkte/Parts/Schraubglieder / Maillon Rapide,Default Category/Produkte/Parts/Peguet Maillon Rapide",base,Maillon Rapide 5mm Delta,"<p>Ideal zum verbinden von Gurten und Seilen.</p>
+<p><strong>Material:</strong></p>
+<p>INOX Edelstahl</p>
+<p><strong>Gewicht:</strong></p>
+<p>24g</p>",,0.05,1,Taxable Goods,"Katalog, Suche",12.9991086351,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,peguet_maillon_rapide-maillon-rapide-delta-photo.jpg,peguet_maillon_rapide-maillon-rapide-delta-photo.jpg,peguet_maillon_rapide-maillon-rapide-delta-photo.jpg,peguet_maillon_rapide-maillon-rapide-delta-tabelle_highres.png
+FS0354,,Default,simple,"Default Category/Produkte/Parts/Schraubglieder / Maillon Rapide,Default Category/Produkte/Parts/Peguet Maillon Rapide",base,Maillon Rapide 4mm Delta,"<p>Ideal zum verbinden von Gurten und Seilen.</p>
+<p><strong>Material:</strong></p>
+<p>INOX Edelstahl</p>
+<p><strong>Gewicht:</strong></p>
+<p>14g</p>",,0.05,1,Taxable Goods,"Katalog, Suche",6.9637437326,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,peguet_maillon_rapide-maillon-rapide-delta-photo.jpg,peguet_maillon_rapide-maillon-rapide-delta-photo.jpg,peguet_maillon_rapide-maillon-rapide-delta-photo.jpg,peguet_maillon_rapide-maillon-rapide-delta-tabelle_highres.png
+FS0355,,Default,simple,"Default Category/Produkte/Parts/Schraubglieder / Maillon Rapide,Default Category/Produkte/Parts/Peguet Maillon Rapide",base,Maillon Rapide 3.5mm Delta,"<p>Ideal zum verbinden von Gurten und Seilen.</p>
+<p><strong>Material:</strong></p>
+<p>INOX Edelstahl</p>
+<p><strong>Gewicht:</strong></p>
+<p>10g</p>",,0.05,1,Taxable Goods,"Katalog, Suche",5.5710752089,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,peguet_maillon_rapide-maillon-rapide-delta-photo.jpg,peguet_maillon_rapide-maillon-rapide-delta-photo.jpg,peguet_maillon_rapide-maillon-rapide-delta-photo.jpg,peguet_maillon_rapide-maillon-rapide-delta-tabelle_highres.png
+FS0356,,Default,simple,"Default Category/Produkte/Parts/Schraubglieder / Maillon Rapide,Default Category/Produkte/Parts/Peguet Maillon Rapide",base,Maillon Rapide 2.5mm Delta,"<p>Ideal zum verbinden von Gurten und Seilen.</p>
+<p><strong>Material:</strong></p>
+<p>INOX Edelstahl</p>
+<p><strong>Gewicht:</strong></p>
+<p>3g</p>",,0.05,1,Taxable Goods,"Katalog, Suche",5.1067855153,,,,maillon-rapide-2.5mm-delta-parts,,,,,,,,,,,,,,,,,,,,,,997,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,peguet_maillon_rapide-maillon-rapide-delta-photo.jpg,peguet_maillon_rapide-maillon-rapide-delta-photo.jpg,peguet_maillon_rapide-maillon-rapide-delta-photo.jpg,peguet_maillon_rapide-maillon-rapide-delta-tabelle_highres.png
+FS0163,,Default,simple,"Default Category/Produkte/Parts/Schraubglieder / Maillon Rapide,Default Category/Produkte/Parts/Peguet Maillon Rapide",base,Maillon Rapide 5mm Aufhängung,"<p><strong>Material:</strong></p>
+<p>INOX Edelstahl</p>
+<p><strong>Gewicht:</strong></p>
+<p>25g</p>",,0.05,1,Taxable Goods,"Katalog, Suche",13.9275877437,,,,maillon-rapide-5mm-aufhaengung-parts,,,,,,,,,,,,,,,,,,,,,,987,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,peguet_maillon_rapide-maillon-rapide-suspente-photo.jpg,peguet_maillon_rapide-maillon-rapide-suspente-photo.jpg,peguet_maillon_rapide-maillon-rapide-suspente-photo.jpg,peguet_maillon_rapide-maillon-rapide-suspente-tabelle_highres.jpg
+FS0357,,Default,simple,"Default Category/Produkte/Parts/Schraubglieder / Maillon Rapide,Default Category/Produkte/Parts/Peguet Maillon Rapide",base,Maillon Rapide 3.5mm Aufhängung,"<p><strong>Material:</strong></p>
+<p>INOX Edelstahl</p>
+<p><strong>Gewicht:</strong></p>
+<p>25g</p>",,0.05,1,Taxable Goods,"Katalog, Suche",12.5348189415,,,,,,,,,,,,,,,,,,,,,,,,,,997,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,peguet_maillon_rapide-maillon-rapide-suspente-photo.jpg,peguet_maillon_rapide-maillon-rapide-suspente-photo.jpg,peguet_maillon_rapide-maillon-rapide-suspente-photo.jpg,peguet_maillon_rapide-maillon-rapide-suspente-tabelle_highres.jpg
+FS0027,,Default,simple,"Default Category/Produkte/Parts/Schraubglieder / Maillon Rapide,Default Category/Produkte/Parts/Peguet Maillon Rapide",base,Maillon Rapide 5mm Oval,"<p>Werden im Gleitschirmbereich zur Verbindung von Gurtzeug und Notschirm verwendet.</p>
+<p><strong>Material:</strong></p>
+<p>INOX Edelstahl</p>
+<p><strong>Gewicht:</strong></p>
+<p>21g</p>",,0.05,1,Taxable Goods,"Katalog, Suche",13.9275877437,,,,,,,,,,,,,,,,,,,,,,,,,,970,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,peguet_maillon_rapide-maillon-rapide-normal-photo.jpg,peguet_maillon_rapide-maillon-rapide-normal-photo.jpg,peguet_maillon_rapide-maillon-rapide-normal-photo.jpg,peguet_maillon_rapide-maillon-rapide-normal-tabelle_highres.jpg
+FS0358,,Default,simple,"Default Category/Produkte/Parts/Schraubglieder / Maillon Rapide,Default Category/Produkte/Parts/Peguet Maillon Rapide",base,Maillon Rapide 3mm Oval,"<p>Ideal zum verbinden von Seilen oder Ketten.&nbsp;</p>
+<p><strong>Material:</strong></p>
+<p>INOX Edelstahl</p>
+<p><strong>Gewicht:</strong></p>
+<p>5g</p>",,0.05,1,Taxable Goods,"Katalog, Suche",5.1067855153,,,,,,,,,,,,,,,,,,,,,,,,,,984,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,peguet_maillon_rapide-maillon-rapide-normal-photo.jpg,peguet_maillon_rapide-maillon-rapide-normal-photo.jpg,peguet_maillon_rapide-maillon-rapide-normal-photo.jpg,peguet_maillon_rapide-maillon-rapide-normal-tabelle_highres.jpg
+FS0359,,Default,simple,"Default Category/Produkte/Parts/Schraubglieder / Maillon Rapide,Default Category/Produkte/Parts/Peguet Maillon Rapide",base,Maillon Rapide 2.5mm Oval,"<p>Ideal zum verbinden von Seilen oder Ketten.&nbsp;</p>
+<p><strong>Material:</strong></p>
+<p>INOX Edelstahl</p>
+<p><strong>Gewicht:</strong></p>
+<p>3g</p>",,0.05,1,Taxable Goods,"Katalog, Suche",4.6424958217,,,,,,,,,,,,,,,,,,,,,,,,,,977,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,peguet_maillon_rapide-maillon-rapide-normal-photo.jpg,peguet_maillon_rapide-maillon-rapide-normal-photo.jpg,peguet_maillon_rapide-maillon-rapide-normal-photo.jpg,peguet_maillon_rapide-maillon-rapide-normal-tabelle_highres.jpg
+FS0026,,Default,simple,"Default Category/Produkte/Parts/Schraubglieder / Maillon Rapide,Default Category/Produkte/Parts/Peguet Maillon Rapide",base,Maillon Rapide 7mm Rechteckig,"<p>Werden im Gleitschirmbereich zur Verbindung von Gurtzeug und Notschirm verwendet (Tandem).</p>
+<p>Made in France</p>
+<p><strong>Material:</strong></p>
+<p>INOX Edelstahl</p>
+<p><strong>Gewicht:</strong></p>
+<p>66g</p>",,0.05,1,Taxable Goods,"Katalog, Suche",16.7131253482,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,peguet_maillon_rapide-maillon-rapide-carre-photo.jpg,peguet_maillon_rapide-maillon-rapide-carre-photo.jpg,peguet_maillon_rapide-maillon-rapide-carre-photo.jpg,peguet_maillon_rapide-maillon-rapide-carre-tabelle_highres.jpg
+FS0164,,Default,simple,"Default Category/Produkte/Parts/Schraubglieder / Maillon Rapide,Default Category/Produkte/Parts/Peguet Maillon Rapide",base,Maillon Rapide 4mm Rechteckig,"<p>Ideal zum verbinden von Gurten mit gleicher Breite.</p>
+<p>Made in France</p>
+<p><strong>Material:</strong></p>
+<p>INOX Edelstahl</p>
+<p><strong>Gewicht:</strong></p>
+<p>15g</p>",,0.05,1,Taxable Goods,"Katalog, Suche",7.6137493036,,,,,,,,,,,,,,,,,,,,,,,,,,997,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,peguet_maillon_rapide-maillon-rapide-carre-photo.jpg,peguet_maillon_rapide-maillon-rapide-carre-photo.jpg,peguet_maillon_rapide-maillon-rapide-carre-photo.jpg,peguet_maillon_rapide-maillon-rapide-carre-tabelle_highres.jpg
+FS0361,,Default,simple,"Default Category/Produkte/Parts/Schraubglieder / Maillon Rapide,Default Category/Produkte/Parts/Peguet Maillon Rapide",base,Maillon Rapide 3.5mm Rechteckig,"<p>Ideal zum verbinden von Gurten mit gleicher Breite.</p>
+<p>Made in France</p>
+<p><strong>Material:</strong></p>
+<p>INOX Edelstahl</p>
+<p><strong>Gewicht:</strong></p>
+<p>11g</p>",,0.05,1,Taxable Goods,"Katalog, Suche",7.3351754875,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,peguet_maillon_rapide-maillon-rapide-carre-photo.jpg,peguet_maillon_rapide-maillon-rapide-carre-photo.jpg,peguet_maillon_rapide-maillon-rapide-carre-photo.jpg,peguet_maillon_rapide-maillon-rapide-carre-tabelle_highres.jpg
+FS0362,,Default,simple,"Default Category/Produkte/Parts/Schraubglieder / Maillon Rapide,Default Category/Produkte/Parts/Peguet Maillon Rapide",base,Maillon Rapide 3mm Rechteckig,"<p>Ideal zum verbinden von Gurten mit gleicher Breite.</p>
+<p>Made in France</p>
+<p><strong>Material:</strong></p>
+<p>INOX Edelstahl</p>
+<p><strong>Gewicht:</strong></p>
+<p>6g</p>",,0.05,1,Taxable Goods,"Katalog, Suche",7.6137493036,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,peguet_maillon_rapide-maillon-rapide-carre-photo.jpg,peguet_maillon_rapide-maillon-rapide-carre-photo.jpg,peguet_maillon_rapide-maillon-rapide-carre-photo.jpg,peguet_maillon_rapide-maillon-rapide-carre-tabelle_highres.jpg
+FS0363,,Default,simple,"Default Category/Produkte/Parts/Schraubglieder / Maillon Rapide,Default Category/Produkte/Parts/Peguet Maillon Rapide",base,Maillon Rapide 2.5mm Rechteckig,"<p>Ideal zum verbinden von Gurten mit gleicher Breite.</p>
+<p>Made in France</p>
+<p><strong>Material:</strong></p>
+<p>INOX Edelstahl</p>
+<p><strong>Gewicht:</strong></p>
+<p>4g</p>",,0.05,1,Taxable Goods,"Katalog, Suche",8.3565125348,,,,,,,,,,,,,,,,,,,,,,,,,,996,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,peguet_maillon_rapide-maillon-rapide-carre-photo.jpg,peguet_maillon_rapide-maillon-rapide-carre-photo.jpg,peguet_maillon_rapide-maillon-rapide-carre-photo.jpg,peguet_maillon_rapide-maillon-rapide-carre-tabelle_highres.jpg
+FS0364,,Default,simple,"Default Category/Produkte/Parts/Schraubglieder / Maillon Rapide,Default Category/Produkte/Parts/Peguet Maillon Rapide",base,Maillon Rapide 3.5mm Delta Spezial,"<p>F&uuml;r diverse Anwendungen im Flugsport ( z.B. Leinenschl&ouml;sser )</p>
+<p>Made in France</p>
+<p><strong>Material:</strong></p>
+<p>INOX Edelstahl</p>
+<p><strong>Gewicht:</strong></p>
+<p>8g</p>",,0.05,1,Taxable Goods,"Katalog, Suche",4.9210696379,,,,,,,,,,,,,,,,,,,,,,,,,,998,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,peguet_maillon_rapide-maillon-rapide-delta-special-photo.jpg,peguet_maillon_rapide-maillon-rapide-delta-special-photo.jpg,peguet_maillon_rapide-maillon-rapide-delta-special-photo.jpg,peguet_maillon_rapide-maillon-rapide-delta-special-tabelle_highres.jpg
+FS0365,,Default,simple,"Default Category/Produkte/Parts/Schraubglieder / Maillon Rapide,Default Category/Produkte/Parts/Peguet Maillon Rapide",base,Maillon Rapide 3mm Delta Spezial,"<p>F&uuml;r diverse Anwendungen im Flugsport ( z.B. Leinenschl&ouml;sser )</p>
+<p>Made in France</p>
+<p><strong>Material:</strong></p>
+<p>INOX Edelstahl</p>
+<p><strong>Gewicht:</strong></p>
+<p>5g</p>",,0.05,1,Taxable Goods,"Katalog, Suche",4.6424958217,,,,,,,,,,,,,,,,,,,,,,,,,,997,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,peguet_maillon_rapide-maillon-rapide-delta-special-photo.jpg,peguet_maillon_rapide-maillon-rapide-delta-special-photo.jpg,peguet_maillon_rapide-maillon-rapide-delta-special-photo.jpg,peguet_maillon_rapide-maillon-rapide-delta-special-tabelle_highres.jpg
+FS5001,,Default,simple,"Default Category/Produkte/Parts/Austri Alpin,Default Category/Produkte/Parts/Karabiner / Ringe",base,Austri Alpin Rocket Alu Autolock,"<p>Gleitschirmkarabiner, welcher f&uuml;r Leichtgurtzeuge mit d&uuml;nner Aufh&auml;ngung verwendet werden kann. <br />Die maximale Gebrauchsdauer ist nach 1500 Flugstunden oder 5 Jahren erreicht.</p>
+<p><strong>Material:</strong> Aluminium</p>
+<p><strong>Farbe:</strong> rot/schwarz</p>
+<p><strong>Festigkeit:</strong></p>
+<ul>
+<li>geschlossen: 22 kN</li>
+<li>offen: 8kN</li>
+</ul>",,0.07,1,Taxable Goods,"Katalog, Suche",27.8551754875,,,,,,,,,,,,,,,,,,,,,,,,,,995,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,"name=Farbe,type=drop_down,required=1,price_type=fixed,sku=,option_title=Rot,price=0|name=Farbe,type=drop_down,required=1,price_type=fixed,sku=,option_title=blau,price=0",,,,,,,austrialpin-rocket.png,austrialpin-rocket.png,austrialpin-rocket.png,austrialpin-rocket-blau.png
+FS0360,,Default,simple,Default Category/Produkte/Parts/Schraubglieder / Maillon Rapide,base,Maillon Rapide 6mm Rechteckig,"<p>Werden im Gleitschirmbereich zur Verbindung von Gurtzeug und Notschirm verwendet.</p>
+<p>Made in France</p>
+<p><strong>Material:</strong></p>
+<p>INOX Edelstahl</p>
+<p><strong>Gewicht:</strong></p>
+<p>44g</p>",,0.05,1,Taxable Goods,"Katalog, Suche",16.7131253482,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,peguet_maillon_rapide-maillon-rapide-carre-photo.jpg,peguet_maillon_rapide-maillon-rapide-carre-photo.jpg,peguet_maillon_rapide-maillon-rapide-carre-photo.jpg,peguet_maillon_rapide-maillon-rapide-carre-tabelle_highres.jpg
+FS0360,,Default,simple,Default Category/Produkte/Parts/Schraubglieder / Maillon Rapide,base,Maillon Rapide 6mm Rechteckig Spezial,"<p>Werden im Gleitschirmbereich zur Verbindung von Gurtzeug und Notschirm verwendet.</p>
+<p>Made in France</p>
+<p><strong>Abmessung in mm:</strong></p>
+<p>L.T.&nbsp; &nbsp; L.I.1&nbsp;&nbsp;&nbsp; L.I.2&nbsp;&nbsp;&nbsp; H.T.&nbsp;&nbsp;&nbsp; H.I. &nbsp;&nbsp; O&nbsp; &nbsp;&nbsp; E&nbsp;&nbsp;&nbsp;&nbsp; T&nbsp;&nbsp;&nbsp; WLL(kg)&nbsp; &nbsp; BL(kg)</p>
+<p>37&nbsp; &nbsp; &nbsp;&nbsp; 13&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 55&nbsp;&nbsp;&nbsp;&nbsp; 43&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 19&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 450&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2250</p>
+<p></p>
+<p><strong>Material:</strong></p>
+<p>INOX Edelstahl</p>
+<p><strong>Gewicht:</strong></p>
+<p>42g</p>",,0.05,1,Taxable Goods,"Katalog, Suche",14.8560668524,,,,,,,,,,,,,,,,,,,,,,,,,,995,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,peguet_maillon_rapide-maillon-rapide-carre-photo.jpg,peguet_maillon_rapide-maillon-rapide-carre-photo.jpg,peguet_maillon_rapide-maillon-rapide-carre-photo.jpg,peguet_maillon_rapide-maillon-rapide-carre-tabelle_highres.jpg
+FS5002,,Default,simple,Default Category/Produkte/Parts/Karabiner / Ringe,base,Flugsau Twist Lock Karabiner,"<p>20 - 40 mm st&uuml;ckgepr&uuml;ft mit 12kN.</p>
+<p>Somo Alias Karabiner von Edelrid mit Flugsau Logo. Jeder Karabiner wird einzeln mit 12kN gepr&uuml;ft, um allf&auml;llige Materialsch&auml;den aus der Produktion aus zu schliessen.</p>
+<p><strong>Festigkeit:</strong> &lt;&gt; 22 kN</p>
+<p><strong>Farbe:</strong> schwarz</p>
+<p><strong>Material:</strong> Aluminium</p>",,0.06,1,Taxable Goods,"Katalog, Suche",26.9266963788,,,,flugsau-twist-lock-karabiner-parts,,,,,,,,,,,,,,,,,,,,,,993,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,flugsau-flugsau-twistlock.png,flugsau-flugsau-twistlock.png,flugsau-flugsau-twistlock.png,
+FS5003,,Default,simple,Default Category/Produkte/Parts/Schnallen zweiteilig,base,Wing ClipSchnalle 15mm,"<p>Diese Verstellung findet verwendung bei Rucksackbrustgurten, der verschiebbare Teil kann mit einem Silikonkeder eingefasst in Cordura&nbsp; auf dem Tr&auml;gergurt angen&auml;ht werden. Der Brustgurt wird mit einem 15mm Gurtband angen&auml;ht.</p>
+<p>den passenden Silikonkeder findest du hier:</p>
+<p><a href=""/kederschnur-3mm-p-129.html"">Kederschnur 3mm</a></p>",,0.05,1,Taxable Goods,"Katalog, Suche",1.485626741,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,duraflex-heavy-duty-wing-clip-buckle-s.jpg,duraflex-heavy-duty-wing-clip-buckle-s.jpg,duraflex-heavy-duty-wing-clip-buckle-s.jpg,
+FS5004,,Default,simple,Default Category/Produkte/Parts/Austri Alpin,base,Austri Alpin Micro Edelstahl schwarz,"<p class=""p1""><span class=""s1"">micro Darabiner aus Inox als 3-wege-autolock mit KTL-Beschichtung</span></p>
+<p class=""p2"">Wer sich beruflich in luftiger H&ouml;he bewegt, ben&ouml;tigt Ausr&uuml;stung, der er zu 100% vertrauen kann &amp; die sich schlafwandlerisch einfach bedienen l&auml;&szlig;t. Unsere Produktpalette umfasst Karabiner aus verzinktem Stahl, rostfreiem Stahl sowie Aluminium, ist CE gepr&uuml;ft und entspricht den PSA-Richtlinien. So k&ouml;nnen wir zuverl&auml;ssigkeit, optimale Funktionalit&auml;t in der Anwendung &amp; hohe Lebensdauer Garantieren. Alle Stahlkarabiner werden galvanisch verzinkt, blau passiviert geliefert, auf Anfrage sind andere Passivierungen m&ouml;glich.</p>
+<p class=""p2""><strong>Verschl&uuml;sse</strong></p>
+<p class=""p2""><strong><img src=""/picture/austrialpin/micro_schwarz/verschluss.jpg"" width=""100"" height=""67"" /></strong></p>
+<p class=""p2""><strong>Masse</strong></p>
+<p class=""p2""><strong><img src=""/picture/austrialpin/micro_schwarz/sizes.ashx.jpeg"" width=""86"" height=""84"" /><img src=""/picture/austrialpin/micro_schwarz/weight.ashx.jpeg"" width=""44"" height=""62"" /></strong></p>
+<p class=""p2""><strong>Festigkeiten</strong></p>
+<p class=""p2""><strong><img src=""/picture/austrialpin/micro_schwarz/forces.ashx.jpeg"" width=""204"" height=""36"" /></strong></p>",,0.2,1,Taxable Goods,"Katalog, Suche",27.3908857939,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,austrialpin-micro_schwarz-austrialpin_micro_schwarz.png,austrialpin-micro_schwarz-austrialpin_micro_schwarz.png,austrialpin-micro_schwarz-austrialpin_micro_schwarz.png,
+FM20KFF,,Default,simple,Default Category/Produkte/Parts/Austri Alpin,base,Austri Alpin Cobra® FM fix -20mm,"<p><span id=""plc_lt_zoneContent_pageplaceholder_pageplaceholder_lt_zoneContent_cmsdatalist_lstElem""><span>Designed als super Leichtgewicht ist die neue Cobra FM besonders gut als technisches Stilelement in Taschen und G&uuml;rteln geeignet. Funktionalit&auml;t und Gewicht machen sie aber auch f&uuml;r den sportlichen Einsatz zum perfekten Kandidaten. In allen Farben und Fix/Verstellbar-Variationen verf&uuml;gbar </span></span></p>
+<p>**NICHT ALS SICHERHEITSRELEVANTES TRAGENDES ELEMENT VERWENDBAR**</p>
+<p><strong>Gewicht:</strong></p>
+<p><strong><img src=""/picture/austrialpin/cobra_frame/weight.ashx.jpg"" alt=""Gewicht"" height=""62"" width=""44"" /></strong></p>
+<p><strong>Gurtbreite:</strong></p>
+<p><strong><img src=""/picture/austrialpin/cobra_frame/beltWidth_20mm.ashx.jpg"" alt=""Gurtbreite"" height=""36"" width=""129"" /></strong></p>
+<p><strong>Material:</strong></p>
+<p><span id=""plc_lt_zoneContent_pageplaceholder_pageplaceholder_lt_zoneContent_cmsdatalist_lstElem"">aluminium ktl</span></p>",,0.02,1,Taxable Goods,"Katalog, Suche",12.9991086351,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,austrialpin-cobra_frame-FM20KFF.jpg,austrialpin-cobra_frame-FM20KFF.jpg,austrialpin-cobra_frame-FM20KFF.jpg,
+FM25KFF,,Default,simple,Default Category/Produkte/Parts/Austri Alpin,base,Austri Alpin Cobra® FM fix -25mm,"<p><span id=""plc_lt_zoneContent_pageplaceholder_pageplaceholder_lt_zoneContent_cmsdatalist_lstElem""><span>Designed als super Leichtgewicht ist die neue Cobra FM besonders gut als technisches Stilelement in Taschen und G&uuml;rteln geeignet. Funktionalit&auml;t und Gewicht machen sie aber auch f&uuml;r den sportlichen Einsatz zum perfekten Kandidaten. In allen Farben und Fix/Verstellbar-Variationen verf&uuml;gbar </span></span></p>
+<p>**NICHT ALS SICHERHEITSRELEVANTES TRAGENDES ELEMENT VERWENDBAR**</p>
+<p><strong>Gewicht:</strong></p>
+<p><strong><img src=""/picture/austrialpin/cobra_frame/weight.ashx.jpg"" alt=""Gewicht"" height=""62"" width=""44"" /></strong></p>
+<p><strong>Gurtbreite:</strong></p>
+<p><strong><img src=""/picture/austrialpin/cobra_frame/beltWidth_25mm.ashx.jpg"" alt=""Gurtbreite"" height=""36"" width=""129"" /></strong></p>
+<p><strong>Material:</strong></p>
+<p><span id=""plc_lt_zoneContent_pageplaceholder_pageplaceholder_lt_zoneContent_cmsdatalist_lstElem"">aluminium ktl</span></p>",,0.02,1,Taxable Goods,"Katalog, Suche",12.9991086351,,,,,,,,,,,,,,,,,,,,,,,,,,999,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,austrialpin-cobra_frame-FM25KFF.jpg,austrialpin-cobra_frame-FM25KFF.jpg,austrialpin-cobra_frame-FM25KFF.jpg,
+FS5005,,Default,simple,Default Category/Produkte/Parts/Spezialteile,base,Brummelhaken,"<p>Brummelhaken aus Aluminium, z.B. zur Befestigung des Beschleunigers</p>",,0.1,1,Taxable Goods,"Katalog, Suche",2.4141058496,,,,brummelhaken-parts,,,,,,,,,,,,,,,,,,,,,,73,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,sonstiges-brummelhaken.png,sonstiges-brummelhaken.png,sonstiges-brummelhaken.png,
+FS5006,,Default,simple,Default Category/Produkte/Parts/Spezialteile,base,Brummelhaken 3 Loch,"<p>3 Loch Brummelhaken aus Aluminium, z.B. zur Befestigung des Beschleunigers</p>",,0.1,1,Taxable Goods,"Katalog, Suche",4.085448468,,,,brummelhaken-3-loch-parts,,,,,,,,,,,,,,,,,,,,,,67,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,,,,,,,,sonstiges-brummelhaken-3loch.png,sonstiges-brummelhaken-3loch.png,sonstiges-brummelhaken-3loch.png,
+FS5007,,Default,simple,Default Category/Produkte/Parts/Karabiner / Ringe,base,S-Biner,"<p>Der kleine, leichte Sicherungs- und Materialkarabiner mit Doppelverschluss</p>
+<p><strong>Bruchlast</strong></p>
+<ul>
+<li>#0: 15kg</li>
+<li>#2: 45kg</li>
+<li>#4: 11kg</li>
+</ul>",,0.1,1,Taxable Goods,"Katalog, Suche",4.8282116992,,,,s-biner-parts,,,,,,,,,,,,,,,,,,,,,,96,0,0,1,0,0,1,1,0,0,1,1,,1,1,1,0,1,0,0,1,0,1,,,,,"name=Grösse,type=drop_down,required=1,price_type=fixed,sku=,option_title=#4 (1 Stück),price=0|name=Grösse,type=drop_down,required=1,price_type=fixed,sku=,option_title=#2 (1 Stück),price=-0.276|name=Grösse,type=drop_down,required=1,price_type=fixed,sku=,option_title=#0 (2 Stück),price=0",,,,,,,sonstiges-s-biner-web.png,sonstiges-s-biner-web.png,sonstiges-s-biner-web.png,"sonstiges-s-biner-alle-web.png,sonstiges-s-biner-anwendung-web.png"

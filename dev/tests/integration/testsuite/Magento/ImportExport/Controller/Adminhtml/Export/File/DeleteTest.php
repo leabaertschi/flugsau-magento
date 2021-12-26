@@ -16,6 +16,8 @@ use Magento\TestFramework\TestCase\AbstractBackendController;
 
 /**
  * Test for \Magento\ImportExport\Controller\Adminhtml\Export\File\Delete class.
+ *
+ * @magentoAppArea adminhtml
  */
 class DeleteTest extends AbstractBackendController
 {
@@ -49,7 +51,7 @@ class DeleteTest extends AbstractBackendController
         $this->fileSystem = $this->_objectManager->get(Filesystem::class);
         $this->sourceFilePath = __DIR__ . '/../../Import/_files' . DIRECTORY_SEPARATOR . $this->fileName;
         //Refers to tests 'var' directory
-        $this->varDirectory = $this->fileSystem->getDirectoryRead(DirectoryList::VAR_DIR);
+        $this->varDirectory = $this->fileSystem->getDirectoryRead(DirectoryList::VAR_IMPORT_EXPORT);
     }
 
     /**

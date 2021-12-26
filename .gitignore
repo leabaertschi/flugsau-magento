@@ -1,4 +1,3 @@
-flugsau-magento.iml
 /.buildpath
 /.cache
 /.metadata
@@ -10,15 +9,13 @@ atlassian*
 /robots.txt
 /pub/robots.txt
 /sitemap
-/sitemap_de.xml
-/sitemap_en.xml
-/blog_sitemap_de.xml
-/blog_sitemap_en.xml
+/sitemap.xml
 /pub/sitemap
 /pub/sitemap.xml
 /.idea
 /.gitattributes
 /app/config_sandbox
+/app/etc/config.php
 /app/etc/env.php
 /app/code/Magento/TestModule*
 /lib/internal/flex/uploader/.actionScriptProperties
@@ -36,8 +33,6 @@ atlassian*
 /.php_cs
 /.php_cs.cache
 /grunt-config.json
-/dev/tools/grunt/configs/local-themes.js
-
 /pub/media/*.*
 !/pub/media/.htaccess
 /pub/media/attribute/*
@@ -53,6 +48,8 @@ atlassian*
 /pub/media/import/*
 !/pub/media/import/.htaccess
 /pub/media/logo/*
+/pub/media/custom_options/*
+!/pub/media/custom_options/.htaccess
 /pub/media/theme/*
 /pub/media/theme_customization/*
 !/pub/media/theme_customization/.htaccess
@@ -60,11 +57,9 @@ atlassian*
 !/pub/media/wysiwyg/.htaccess
 /pub/media/tmp/*
 !/pub/media/tmp/.htaccess
-/pub/media/mageplaza
-!/pub/media/mageplaza/.htaccess
 /pub/media/captcha/*
-/pub/media/magefan_blog/*
-/pub/media/blog/
+/pub/media/sitemap/*
+!/pub/media/sitemap/.htaccess
 /pub/static/*
 !/pub/static/.htaccess
 
@@ -75,12 +70,3 @@ atlassian*
 /generated/*
 !/generated/.htaccess
 .DS_Store
-
-scripts/output/*
-scripts/bigware-data.php
-scripts/pictures
-
-.breadcrumbs
-.github/
-.item.content
-

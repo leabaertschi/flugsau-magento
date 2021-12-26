@@ -315,6 +315,14 @@ return [
         'Vertex_Tax' => 1,
         'Vertex_AddressValidation' => 1,
         'Yotpo_Yotpo' => 1,
+        'Magento_InventoryCatalogSearchConfigurableProduct' => 0,
+        'Magento_InventoryCatalogSearchBundleProduct' => 0,
+        'Magento_InventoryWishlist' => 0,
+        'Magento_InventoryConfigurableProductFrontendUi' => 0,
+        'Magento_InventoryCatalogFrontendUi' => 0,
+        'Magento_InventorySwatchesFrontendUi' => 0,
+        'Magento_InventoryVisualMerchandiser' => 0,
+        'Magento_InventoryQuoteGraphQl' => 0,
     ],
     'scopes' => [
         'websites' => [
