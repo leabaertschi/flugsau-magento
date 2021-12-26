@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e7bf6707ab74af37971e8f636fe8ab21",
+    "content-hash": "7dc49c6806c841ecdc53fc9017cfe0ad",
     "packages": [
         {
             "name": "2tvenom/cborencode",
@@ -29199,7 +29199,6 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "composer/composer": 15,
         "mageplaza/magento-2-german-language-pack": 20,
         "staempfli/magento2-language-de-ch": 20
     },

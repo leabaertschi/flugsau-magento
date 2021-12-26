@@ -10,7 +10,6 @@
     "require": {
         "magento/product-community-edition": "2.4.3",
         "magento/composer-dependency-version-audit-plugin": "~0.1",
-        "composer/composer": "@alpha",
         "magefan/module-blog": "2.9.7",
         "mageplaza/magento-2-german-language-pack": "dev-master",
         "staempfli/magento2-language-de-ch": "dev-magento-2.4-compatibility",
@@ -76,5 +75,15 @@
     ],
     "extra": {
         "magento-force": "override"
+    },
+    "config": {
+        "allow-plugins": {
+            "laminas/laminas-dependency-plugin": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "magento/magento-composer-installer": true,
+            "magento/inventory-composer-installer": true,
+            "magento/composer-dependency-version-audit-plugin": true,
+            "magento/composer-root-update-plugin": true
+        }
     }
 }
