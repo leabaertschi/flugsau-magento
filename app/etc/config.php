@@ -356,11 +356,11 @@ return [
         'Smartwave_Porto' => 1,
         'Smartwave_Socialfeeds' => 1,
         'Temando_ShippingRemover' => 1,
-        'Vertex_Tax' => 1,
-        'Vertex_AddressValidationApi' => 1,
-        'Vertex_RequestLoggingApi' => 1,
-        'Vertex_RequestLogging' => 1,
-        'Vertex_AddressValidation' => 1,
+        'Vertex_Tax' => 0,
+        'Vertex_AddressValidationApi' => 0,
+        'Vertex_RequestLoggingApi' => 0,
+        'Vertex_RequestLogging' => 0,
+        'Vertex_AddressValidation' => 0,
         'Yotpo_Yotpo' => 1,
     ],
     'scopes' => [
@@ -2800,11 +2800,6 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                                 'cron_expr' => '0 0 * * *',
                             ],
                         ],
-                        'vertex_log_rotation' => [
-                            'schedule' => [
-                                'cron_expr' => '0 0 * * 1',
-                            ],
-                        ],
                         'catalog_product_alert' => [
                             'schedule' => [
                                 'cron_expr' => '0 0 * * *',
@@ -2882,35 +2877,6 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                     'display_email' => '1',
                     'apply_vat' => '0',
                     'include_in_subtotal' => '0',
-                ],
-                'vertex_settings' => [
-                    'enable_vertex' => '0',
-                    'trustedId' => null,
-                    'use_for_calculation' => '1',
-                    'invoice_order' => 'invoice_created',
-                    'api_url' => 'https://mgcsconnect.vertexsmb.com/vertex-ws/services/CalculateTax60',
-                    'address_api_url' => 'https://mgcsconnect.vertexsmb.com/vertex-ws/services/LookupTaxAreas60',
-                    'country_sort_by_region' => '{"North America":["MX","US","CA"],"Asia Pacific":["AU","BN","CC","KH","CN","PF","IN","HK","ID","JP","MY","MN","NC","NZ","PK","PH","SG","KR","LK","TW","TH","VN","FJ","PG","BD","BT","CX","CK","HM","KI","LA","NR","NP","NC","NU","PN","KP","WS","MM","SB","TK","TO","TV","VU","WF"],"Central\\/South America":["AR","BL","BS","BR","CL","CO","CR","DO","GT","PA","PE","TT","UY","VE","AG","BB","BZ","BO","DM","EC","SV","GD","GY","HN","JM","NI","PY","AI","AW","BM","VG","KY","CU","FK","GF","HT","MS","MF","AN","SH","KN","LC","VC","GS","SR","TC"],"EMEA":["AL","AM","AT","AZ","BY","BE","BA","BG","HR","CD","CG","CI","CY","CZ","DK","EG","EE","FI","FR","GE","DE","GR","GW","HU","IS","IE","IL","IT","JO","KG","KZ","KE","LV","LB","LT","LU","MK","MT","NA","MD","ME","MA","NL","NG","NO","PL","PS","PT","RO","RU","SA","RS","SK","ST","SI","TL","ZA","ES","SZ","SE","CH","LI","TR","UA","AE","GB","UZ","ZM","MU","SN","UG","ZW","AF","AX","DZ","AD","AO","BH","BJ","BW","BV","IO","BF","BI","CM","CV","CF","TD","KM","DJ","ER","ET","TF","GA","GM","GI","GL","GN","IR","IQ","KW","LS","LR","LY","MG","MW","MV","ML","MR","YT","MZ","NA","NE","OM","PW","QA","RW","PM","SM","SC","SL","SO","SD","SJ","SY","TJ","TZ","TG","TN","TM","EH","VA","YE"],"Others":["AQ","GQ","FO","GH"]}',
-                    'allowed_countries' => 'US,CA',
-                    'summarize_tax' => 'product_and_shipping',
-                    'show_manual_button' => '0',
-                    'show_taxrequest_popup' => '1',
-                    'allow_cart_request' => '1',
-                    'calculation_function' => 'CalculateTax60',
-                    'valadtion_function' => 'LookupTaxAreas60',
-                ],
-                'vertex_seller_info' => [
-                    'shipping_origin_source' => '1',
-                ],
-                'vertex_delivery_terms' => [
-                    'default_term' => 'SUP',
-                ],
-                'vertex_logging' => [
-                    'enable_logging' => '0',
-                    'enable_rotation' => '0',
-                    'rotation_action' => 'delete',
-                    'entry_lifetime' => '7',
-                    'rotation_frequency' => 'W',
                 ],
             ],
             'webapi' => [
@@ -4413,13 +4379,6 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                     'accesstocken' => '6982065089.c906d6b.c1db961f9cbc46b49bee70441f441332',
                     'user_id' => '6982065089',
                     'showing_counts' => '12',
-                ],
-            ],
-            'vertex_address_validation' => [
-                'vertex_settings' => [
-                    'enable' => '0',
-                    'address_api_url' => 'https://mgconnect.vertexsmb.com/vertex-ws/services/CalculateTax70',
-                    'always_message' => '0',
                 ],
             ],
             'yotpo' => [
