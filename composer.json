@@ -8,7 +8,7 @@
         "AFL-3.0"
     ],
     "require": {
-        "magento/product-community-edition": "2.4.3",
+        "magento/product-community-edition": "2.4.3-p1",
         "magento/composer-dependency-version-audit-plugin": "~0.1",
         "magefan/module-blog": "^2.10",
         "mageplaza/magento-2-german-language-pack": "dev-master",
