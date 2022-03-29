@@ -1488,7 +1488,7 @@ Disallow: /*SID=',
                     'client_id' => 'ATDZ9_ECFh-fudesZo4kz3fGTSO1pzuWCS4IjZMq4JKdRK7hQR3Rxyafx39H2fP363WtmlQNYXjUiAae',
                     'sandbox_client_id' => 'AUZfbDQ_4m8ibp82qV9pi9wxGkGrdGILVYWbWaTWreW9mmTm6LjQorLZxpP7kjymXc7flRnepHBFSQWp',
                     'active' => '1',
-                    'in_context' => '0',
+                    'in_context' => '1',
                     'sort_order' => 4,
                     'allowspecific' => '0',
                     'transfer_shipping_options' => '0',
@@ -4913,10 +4913,6 @@ UID Nr: CHE-116.135.646',
                 'payment' => [
                     'paypal_express_bml' => [
                         'sort_order' => null,
-                    ],
-                    'paypal_express' => [
-                        'in_context' => '0',
-                        'specificcountry' => null,
                     ],
                     'paypal_billing_agreement' => [
                         'specificcountry' => null,
