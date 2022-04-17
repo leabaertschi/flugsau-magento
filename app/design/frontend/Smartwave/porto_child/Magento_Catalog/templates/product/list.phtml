@@ -305,7 +305,7 @@ $flex_grid = "";
     <?php if(isset($_category_grid_config['infinite_scroller']) && $_category_grid_config['infinite_scroller']):?>
     <div class="infinite-loader"><span class="loading"><i class="ajax-loader small animate-spin"></i><?php echo __("Loading ..."); ?></span><a href="javascript:void(0)" class="btn-load-more"><?php echo __("Load More ..."); ?></a></div>
     <?php endif;?>
-    <?php echo $block->getToolbarHtml() ?>
+    <?php echo $block->getChildBlock('toolbar')->setIsBottom(true)->toHtml(); ?>
     <?php if (!$block->isRedirectToCartEnabled()) : ?>
         <script type="text/x-magento-init">
         {
