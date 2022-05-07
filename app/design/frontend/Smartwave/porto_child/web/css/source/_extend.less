@@ -1,4 +1,3 @@
-
 @color: #4f4d4d;
 @colorHover: darken(@color, 10%);
 @headerColor: #000;
@@ -22,7 +21,11 @@ body {
     font-family: @fontOswald;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
     color: @headerColor;
 }
 
@@ -31,9 +34,9 @@ a:hover {
 }
 
 .button.hover {
-/*    border-color: @buttonHoverBorderColor !important;
+    /*    border-color: @buttonHoverBorderColor !important;
     color: @colorHover !important;*/
-    background-color: @backgroundColor !important;
+    background-color: @backgroundColor  !important;
 }
 
 .button {
@@ -60,19 +63,19 @@ a.button {
 
 button.action.primary {
     font-family: @fontOswald;
-    color: @white !important;
-    background-color: @contrastColor !important;
-    border-color: @contrastColor !important;
+    color: @white  !important;
+    background-color: @contrastColor  !important;
+    border-color: @contrastColor  !important;
     transition: background-color;
 
     &:hover {
-        background-color: @buttonHoverBorderColor !important;
-        border-color: @buttonHoverBorderColor !important;
+        background-color: @buttonHoverBorderColor  !important;
+        border-color: @buttonHoverBorderColor  !important;
     }
 
     &:focus {
-        background-color: @buttonHoverBorderColor !important;
-        border-color: @buttonHoverBorderColor !important;
+        background-color: @buttonHoverBorderColor  !important;
+        border-color: @buttonHoverBorderColor  !important;
     }
 }
 
@@ -86,8 +89,8 @@ button.action.primary {
 }
 
 .page-header.type17 {
-    background-color: @white !important;
-    color: @color !important;
+    background-color: @white  !important;
+    color: @color  !important;
 
     .main-panel-top {
         background-color: @contrastColor;
@@ -149,8 +152,10 @@ button.action.primary {
     .cart-area {
         .minicart-wrapper {
             .action.showcart {
-                &:after, &:before {
-                    color: @color !important;
+
+                &:after,
+                &:before {
+                    color: @color  !important;
                 }
 
                 .counter {
@@ -237,7 +242,8 @@ button.action.primary {
         overflow: hidden;
         position: relative;
 
-        .item-content, .item-image {
+        .item-content,
+        .item-image {
             position: absolute;
             top: 0;
             left: 0;
@@ -254,10 +260,10 @@ button.action.primary {
         display: flex;
         justify-content: center;
         align-items: center;
-    
+
         .product-banner-image {
             margin-right: 20px;
-            width: 30%;   
+            width: 30%;
         }
 
         .product-banner-name {
@@ -271,7 +277,7 @@ button.action.primary {
                 color: @white;
 
                 &:hover {
-                    background-color: @buttonHoverBorderColor !important;
+                    background-color: @buttonHoverBorderColor  !important;
                     border-color: @buttonHoverBorderColor;
                 }
             }
@@ -316,7 +322,7 @@ button.action.primary {
         h3 {
             margin: 0;
             padding: 20px 0;
-            
+
             a {
                 font-family: @fontOpenSans;
                 font-weight: 600;
@@ -456,6 +462,11 @@ button.action.primary {
     }
 }
 
+.description a,
+.description a:visited {
+    color: @contrastColor;
+}
+
 .product-addto-links .action.mailto.friend,
 .moved-add-to-links .action.mailto.friend,
 .product-social-links .action.mailto.friend {
@@ -483,7 +494,7 @@ button.action.primary {
     float: right;
     background-color: green;
 
-    + div {
+    +div {
         clear: both;
     }
 }
@@ -495,7 +506,7 @@ button.action.primary {
     float: right;
     background-color: red;
 
-    + div {
+    +div {
         clear: both;
     }
 }
@@ -506,20 +517,20 @@ button.action.primary {
     transition: background-color;
 
     &:before {
-        color: @color !important;
+        color: @color  !important;
     }
 
     &:hover {
-        background-color: @backgroundColor !important;
+        background-color: @backgroundColor  !important;
 
         &:before {
-            color: @color !important;
+            color: @color  !important;
         }
     }
 
     &:visited {
         &:before {
-            color: @color !important;
+            color: @color  !important;
         }
     }
 }
@@ -549,7 +560,7 @@ button.action.primary {
             align-items: baseline;
 
             [class^="porto-icon-"] {
-                background-color: @white !important;
+                background-color: @white  !important;
                 color: @contrastColor;
                 font-size: 25px;
                 margin-right: 10px;
@@ -562,7 +573,7 @@ button.action.primary {
     }
 }
 
-.contact-index-index .fieldset > .legend,
+.contact-index-index .fieldset>.legend,
 .contact-index-index .contact-info .contacts-title {
     font-family: @fontOpenSans;
     color: @headerColor;
@@ -574,7 +585,9 @@ button.action.primary {
 }
 
 .checkout-payment-method {
-    input[type="radio"], input[type="checkbox"] {
+
+    input[type="radio"],
+    input[type="checkbox"] {
         margin: 0 5px 0 0;
         top: 0;
     }
@@ -594,7 +607,8 @@ button.action.primary {
         }
     }
 
-    .payment-option-content, .payment-option-title {
+    .payment-option-content,
+    .payment-option-title {
         padding-left: 0;
     }
 }
@@ -619,7 +633,9 @@ button.action.primary {
 }
 
 .cms-page-view {
-    p, li {
+
+    p,
+    li {
         font-family: @fontOpenSans;
     }
 }

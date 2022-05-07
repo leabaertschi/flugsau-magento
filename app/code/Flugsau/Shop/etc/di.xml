@@ -13,11 +13,15 @@
 
     <type name="Magento\Cms\Model\Wysiwyg\Images\Storage">
         <arguments>
-             <argument name="extensions" xsi:type="array">
-                  <item name="allowed" xsi:type="array">
-                    <item name="pdf" xsi:type="string">1</item>
-                  </item>
-             </argument>
+            <argument name="extensions" xsi:type="array">
+                <item name="allowed" xsi:type="array">
+                    <item name="pdf" xsi:type="string">application/pdf</item>
+                </item>
+                <item name="media_allowed" xsi:type="array">
+                    <item name="pdf" xsi:type="string">application/pdf</item>
+                </item>
+            </argument>
         </arguments>
-   </type>
+    </type>
+
 </config>
