@@ -1034,7 +1034,6 @@ Disallow: /*SID=',
                     'state_required' => '',
                 ],
                 'store_information' => [
-                    'hours' => 'Mo, Di, Fr, Sa: 10:00 - 12:00, 13:00 - 17:00',
                     'name' => 'Flugsau GmbH',
                     'phone' => '+41 41 637 09 39',
                     'country_id' => 'CH',
@@ -4706,9 +4705,6 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                     'locale' => [
                         'code' => 'en_US',
                         'weekend' => null,
-                    ],
-                    'store_information' => [
-                        'hours' => 'Mo, Tue, Fr, Sa: 10:00 - 12:00, 13:00 - 17:00',
                     ],
                 ],
                 'carriers' => [
