@@ -410,7 +410,7 @@ class Collection extends \Magento\Catalog\Model\ResourceModel\Product\Collection
     public function setOrder($attribute, $dir = Select::SQL_DESC)
     {
         $this->setSearchOrder($attribute, $dir);
-        if ($attribute === 'relevance') {
+        if ($attribute === 'position') {
             $this->order[$attribute] = $dir;
         } else {
             parent::setOrder($attribute, $dir);
@@ -430,7 +430,7 @@ class Collection extends \Magento\Catalog\Model\ResourceModel\Product\Collection
      */
     public function addAttributeToSort($attribute, $dir = self::SORT_ORDER_ASC)
     {
-        if ($attribute === 'relevance') {
+        if ($attribute === 'position') {
             $this->setOrder($attribute, $dir);
         } else {
             parent::addAttributeToSort($attribute, $dir);
