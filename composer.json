@@ -10,7 +10,7 @@
     "require": {
         "magento/product-community-edition": "2.4.7-p1",
         "magento/composer-dependency-version-audit-plugin": "~0.1",
-        "magefan/module-blog": "^2.10",
+        "magefan/module-blog": "^2.13",
         "mageplaza/magento-2-german-language-pack": "dev-master",
         "staempfli/magento2-language-de-ch": "dev-magento-2.4-compatibility",
         "lillik/magento2-price-decimal": "dev-master",
