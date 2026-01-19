@@ -2276,21 +2276,6 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                     'showmethod' => '0',
                     'sort_order' => null,
                 ],
-                'tablerate' => [
-                    'active' => '1',
-                    'sallowspecific' => '0',
-                    'condition_name' => 'package_weight',
-                    'include_virtual_price' => '1',
-                    'model' => 'Magento\\OfflineShipping\\Model\\Carrier\\Tablerate',
-                    'name' => 'Table Rate',
-                    'title' => 'Best Way',
-                    'specificerrmsg' => 'This shipping method is not available. To use this shipping method, please contact us.',
-                    'handling_type' => 'F',
-                    'handling_fee' => null,
-                    'specificcountry' => null,
-                    'showmethod' => '0',
-                    'sort_order' => null,
-                ],
                 'freeshipping' => [
                     'active' => '0',
                     'sallowspecific' => '0',
@@ -4866,10 +4851,6 @@ UID Nr: CHE-116.135.646',
                     ],
                 ],
                 'carriers' => [
-                    'tablerate' => [
-                        'condition_name' => 'package_weight',
-                        'include_virtual_price' => '0',
-                    ],
                     'dhl' => [
                         'doc_methods' => null,
                         'specificcountry' => null,
