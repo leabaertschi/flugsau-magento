@@ -1,0 +1,71 @@
+@media (min-width: 768px) {
+    .home-cover {
+        .product-banner {
+            .product-banner-name {
+                font-size: 40px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .category-tiles-wrapper {
+        padding: 0 @contentPadding;
+
+        .category-tiles {
+            width: 100%;
+            max-width: @contentMaxWidth;
+            margin: -1px auto;
+
+            .category-tile {
+                box-sizing: border-box;
+                width: 33%;
+                border: 1px solid @theme__color__primary-alt;
+                padding: 20px 40px;
+            }
+        }
+    }
+
+    .home-teaser-wrapper {
+        padding: 70px @contentPadding;
+
+        .home-teaser {
+            margin: 0 auto;
+            width: 100%;
+            max-width: @contentMaxWidth;
+
+            .home-teaser-video {
+                flex: 1;
+            }
+
+            .home-teaser-text {
+                font-size: 34px;
+                margin-left: 70px;
+                align-self: center;
+                width: 50%;
+            }
+        }
+    }
+
+    .home-news-wrapper {
+        padding: 70px @contentPadding;
+
+        .home-news {
+            margin: 0 auto;
+            width: 100%;
+            max-width: @contentMaxWidth;
+
+            h3 {
+                text-align: center;
+            }
+
+            .home-news-entries {
+                display: flex;
+                justify-content: space-between;
+
+                .home-news-entry {
+                    width: 48%;
+                }
+            }
+        }
+    }
+}
