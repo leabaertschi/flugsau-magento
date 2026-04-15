@@ -365,8 +365,6 @@ return [
         'Mageplaza_Core' => 1,
         'Mageplaza_BannerSlider' => 1,
         'Mageplaza_AjaxLayer' => 1,
-        'Mageplaza_LayeredNavigation' => 1,
-        'Mageplaza_Search' => 1,
         'PayPal_Braintree' => 1,
         'PayPal_BraintreeCustomerBalance' => 1,
         'PayPal_BraintreeGiftCard' => 1,
@@ -374,11 +372,6 @@ return [
         'PayPal_BraintreeGiftWrapping' => 1,
         'PayPal_BraintreeGraphQl' => 1,
         'PayPal_BraintreeReward' => 1,
-        'Smartwave_Core' => 1,
-        'Smartwave_Filterproducts' => 1,
-        'Smartwave_Megamenu' => 1,
-        'Smartwave_Porto' => 1,
-        'Smartwave_Socialfeeds' => 1,
     ],
     'scopes' => [
         'websites' => [
