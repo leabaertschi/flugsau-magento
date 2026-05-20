@@ -684,7 +684,7 @@ Disallow: /*SID=',
                     'logo_height' => '70',
                 ],
                 'theme' => [
-                    'theme_id' => 'frontend/Smartwave/port_child',
+                    'theme_id' => 'frontend/Magento/luma_child',
                 ],
             ],
             'dev' => [
@@ -4771,7 +4771,7 @@ UID Nr: CHE-116.135.646',
             'base' => [
                 'design' => [
                     'theme' => [
-                        'theme_id' => 'frontend/Smartwave/port_child',
+                        'theme_id' => 'frontend/Magento/luma_child',
                     ],
                     'pagination' => [
                         'pagination_frame_skip' => null,
