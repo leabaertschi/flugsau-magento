@@ -14,7 +14,7 @@
         "mageplaza/magento-2-german-language-pack": "dev-master",
         "staempfli/magento2-language-de-ch": "dev-magento-2.4-compatibility",
         "lillik/magento2-price-decimal": "dev-master",
-        "mageplaza/module-banner-slider": "2.0.3",
+        "mageplaza/module-banner-slider": "4.1.1",
         "mageplaza/module-core": "^1.5",
         "boldcommerce/magento2-ordercomments": "^1.6",
         "magento/composer-root-update-plugin": "^2.0.4",
