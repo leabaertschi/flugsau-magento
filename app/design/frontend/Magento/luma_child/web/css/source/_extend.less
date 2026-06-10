@@ -236,5 +236,25 @@
     }
 }
 
+.footer.content {
+    .contact-info {
+        padding: 0;
+        color: @color-white;
+
+        li {
+            margin-bottom: 10px;
+
+            a {
+                color: @footer-links-color;
+
+                &:hover {
+                    color: @footer-links-color-hover;
+                }
+            }
+        }
+
+    }
+}
+
 @import './_magento-overrides.less';
 @import './_large.less';
