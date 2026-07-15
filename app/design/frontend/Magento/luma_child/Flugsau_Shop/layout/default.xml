@@ -5,21 +5,46 @@
  * See COPYING.txt for license details.
  */
 -->
-<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceBlock name="logo">
             <arguments>
                 <argument name="logo_width" xsi:type="number">250</argument>
             </arguments>
         </referenceBlock>
-        <referenceContainer name="footer">
-            <block class="Magento\Framework\View\Element\Template" name="flugsau.footer" template="Flugsau_Shop::html/footer.phtml">
-                <block class="Flugsau\Shop\Block\StoreInformation" name="footer_contact_information" template="html/footer_contact.phtml" />
+        <referenceContainer name="catalog.topnav">
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="news">
+                <arguments>
+                    <argument name="label" xsi:type="string">News</argument>
+                    <argument name="path" xsi:type="string">news</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="about_us">
+                <arguments>
+                    <argument name="label" xsi:type="string">About us</argument>
+                    <argument name="path" xsi:type="string">about-us</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="contact">
+                <arguments>
+                    <argument name="label" xsi:type="string">Contact</argument>
+                    <argument name="path" xsi:type="string">contact</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+        <referenceContainer
+            name="footer">
+            <block class="Magento\Framework\View\Element\Template" name="flugsau.footer"
+                template="Flugsau_Shop::html/footer.phtml">
+                <block class="Flugsau\Shop\Block\StoreInformation" name="footer_contact_information"
+                    template="html/footer_contact.phtml" />
             </block>
             <referenceBlock name="footer_links" remove="true" />
             <referenceBlock name="form.subscribe" remove="true" />
             <referenceBlock name="recaptcha-newsletter" remove="true" />
         </referenceContainer>
-        <referenceBlock name="layer.catalog.leftnav" remove="true" />
+        <referenceBlock
+            name="layer.catalog.leftnav" remove="true" />
     </body>
 </page>
