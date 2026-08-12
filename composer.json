@@ -20,7 +20,7 @@
         "boldcommerce/magento2-ordercomments": "^1.6",
         "magento/composer-root-update-plugin": "^2.0.4",
         "magento/zendframework1": "^1.15",
-        "magento/module-elasticsearch-8": "^100.4",
+        "magento/module-elasticsearch-8": "^101.0",
         "mageplaza/module-ajax-layered-navigation": "^4.1"
     },
     "require-dev": {
