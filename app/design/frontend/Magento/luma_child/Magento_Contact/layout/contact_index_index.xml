@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://w3.org" layout="2columns-right" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="sidebar.additional" remove="true"/>
+        <referenceContainer name="sidebar.main">
+            <block class="Flugsau\Shop\Block\StoreInformation" name="contact_details" template="Magento_Contact::contact_details.phtml" before="contactForm"/>
+        </referenceContainer>
+    </body>
+</page>

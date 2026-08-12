@@ -1,0 +1,16 @@
+<?php /** @var \Flugsau\Shop\Block\StoreInformation $block */ ?>
+<div class="contact-map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2727.6642871883164!2d8.373184951382603!3d46.86997864646088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478ff6016c246e9f%3A0x717bb29612653748!2sFlugsau+GmbH!5e0!3m2!1sen!2sch!4v1535549728945" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+<div class="contact-detail">
+    <b><?php echo __('Phone') ?></b><br/>
+    <?php echo $block->getPhoneNumber() ?>
+</div>
+<div class="contact-detail">
+    <b><?php echo __('Email') ?></b><br/>
+    <a href="mailto:info@flugsau.ch">info@flugsau.ch</a>
+</div>
+<div class="contact-detail">
+    <b><?php echo __('Opening hours') ?></b><br/>
+    <?php echo $block->getHours() ?>
+</div>

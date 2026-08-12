@@ -2,32 +2,28 @@
 <div class="block">
     <div class="block-title"><strong><span><?php echo __('Contact') ?></span></strong></div>
     <div class="block-content">
-        <ul class="contact-info" style="padding-top: 7px;">
+        <ul class="contact-info links">
             <li>
-                <i class="porto-icon-direction">&nbsp;</i>
                 <p>
-                    <b style="color: #fff;text-transform:uppercase;"><?php echo __('Address') ?></b><br/>
+                    <b><?php echo __('Address') ?></b><br/>
                         <?php echo $block->getAddress() ?>
                 </p>
             </li>
             <li>
-                <i class="porto-icon-phone-1">&nbsp;</i>
                 <p>
-                    <b style="color: #fff;text-transform:uppercase;"><?php echo __('Phone') ?></b><br/>
+                    <b><?php echo __('Phone') ?></b><br/>
                     <?php echo $block->getPhoneNumber() ?>
                 </p>
             </li>
             <li>
-                <i class="porto-icon-mail">&nbsp;</i>
                 <p>
-                    <b style="color: #fff;text-transform:uppercase;"><?php echo __('Email') ?></b><br/>
-                    <a href="mailto:info@flugsau.ch">info@flugsau.ch</a>
+                    <b><?php echo __('Email') ?></b><br/>
+                    <a class="email" href="mailto:info@flugsau.ch">info@flugsau.ch</a>
                 </p>
             </li>
             <li>
-                <i class="porto-icon-clock-1">&nbsp;</i>
                 <p>
-                    <b style="color: #fff;text-transform:uppercase;"><?php echo __('Opening hours') ?></b><br/>
+                    <b><?php echo __('Opening hours') ?></b><br/>
                     <?php echo $block->getHours() ?>
                 </p>
             </li>
