@@ -684,10 +684,6 @@ Disallow: /*SID=',
                 'email' => [
                     'header_template' => 'design_email_header_template',
                     'footer_template' => 'design_email_footer_template',
-                    'logo' => 'default/Flugsau_Blau_Logo.png',
-                    'logo_alt' => null,
-                    'logo_width' => '120',
-                    'logo_height' => '70',
                 ],
                 'theme' => [
                     'theme_id' => 'frontend/Magento/luma_child',
@@ -3666,12 +3662,6 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
                         'swatch_image_size' => null,
                         'swatch_image_imageOpacity' => null,
                     ],
-                    'email' => [
-                        'logo_alt' => null,
-                        'logo_width' => null,
-                        'logo_height' => null,
-                        'logo' => 'stores/2/Flugsau_Blau_Logo.png',
-                    ],
                 ],
                 'payment' => [
                     'banktransfer' => [
@@ -3705,12 +3695,6 @@ UID Nr: CHE-116.135.646',
                         'small_image_imageOpacity' => null,
                         'thumbnail_size' => null,
                         'thumbnail_imageOpacity' => null,
-                    ],
-                    'email' => [
-                        'logo' => 'stores/1/Flugsau_Blau_Logo.png',
-                        'logo_alt' => null,
-                        'logo_width' => null,
-                        'logo_height' => null,
                     ],
                     'pagination' => [
                         'pagination_frame_skip' => null,
@@ -3808,12 +3792,6 @@ UID Nr: CHE-116.135.646',
                         'thumbnail_imageOpacity' => null,
                         'swatch_image_size' => null,
                         'swatch_image_imageOpacity' => null,
-                    ],
-                    'email' => [
-                        'logo_alt' => null,
-                        'logo_width' => null,
-                        'logo_height' => null,
-                        'logo' => 'websites/1/flugsau_gruen_1.png',
                     ],
                 ],
                 'payment' => [
