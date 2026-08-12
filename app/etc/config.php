@@ -1175,7 +1175,7 @@ Disallow: /*SID=',
 {{depend street2}}{{var street2}}{{/depend}}
 {{depend street3}}{{var street3}}{{/depend}}
 {{depend street4}}{{var street4}}{{/depend}}
-{{if city}}{{var city}},  {{/if}}{{if region}}{{var region}}, {{/if}}{{if postcode}}{{var postcode}}{{/if}}
+{{if postcode}} {{var postcode}}{{/if}} {{if city}}{{var city}}{{/if}}
 {{var country}}
 {{depend telephone}}T: {{var telephone}}{{/depend}}
 {{depend fax}}F: {{var fax}}{{/depend}}
@@ -1187,7 +1187,7 @@ Disallow: /*SID=',
 {{depend street2}}{{var street2}}<br />{{/depend}}
 {{depend street3}}{{var street3}}<br />{{/depend}}
 {{depend street4}}{{var street4}}<br />{{/depend}}
-{{if city}}{{var city}},  {{/if}}{{if region}}{{var region}}, {{/if}}{{if postcode}}{{var postcode}}{{/if}}<br />
+{{if postcode}} {{var postcode}}{{/if}} {{if city}}{{var city}}{{/if}}<br />
 {{var country}}<br />
 {{depend telephone}}T: <a href="tel:{{var telephone}}">{{var telephone}}</a>{{/depend}}
 {{depend fax}}<br />F: {{var fax}}{{/depend}}
@@ -1198,7 +1198,7 @@ Disallow: /*SID=',
 {{depend street2}}{{var street2}}|{{/depend}}
 {{depend street3}}{{var street3}}|{{/depend}}
 {{depend street4}}{{var street4}}|{{/depend}}
-{{if city}}{{var city}}, {{/if}}{{if region}}{{var region}}, {{/if}}{{if postcode}}{{var postcode}}{{/if}}|
+{{if postcode}}{{var postcode}} {{/if}}{{if city}}{{var city}}{{/if}}|
 {{var country}}|
 {{depend telephone}}T: {{var telephone}}|{{/depend}}
 {{depend fax}}F: {{var fax}}|{{/depend}}|
