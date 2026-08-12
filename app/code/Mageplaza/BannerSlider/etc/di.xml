@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- Falls du das Modul via vendor/ lädst, sorgt diese Preference für den PSR-4 Override -->
+    <preference for="Mageplaza\BannerSlider\Model\ResourceModel\Slider\Grid\Collection"
+                type="Mageplaza\BannerSlider\Model\ResourceModel\Slider\Grid\Collection" />
+
+    <!-- HIER lag der vergrabene Hund für PHP 8.3: Die Argumente für den Constructor -->
+    <type name="Mageplaza\BannerSlider\Model\ResourceModel\Slider\Grid\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">mageplaza_bannerslider_slider</argument>
+            <argument name="resourceModel" xsi:type="string">Mageplaza\BannerSlider\Model\ResourceModel\Slider</argument>
+            <argument name="identifierName" xsi:type="null"/>
+            <argument name="connectionName" xsi:type="null"/>
+        </arguments>
+    </type>
+</config>
+

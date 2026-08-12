@@ -37,7 +37,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Magento\\Setup\\": "setup/src/Magento/Setup/"
+            "Magento\\Setup\\": "setup/src/Magento/Setup/",
+            "Mageplaza\\BannerSlider\\Model\\ResourceModel\\Slider\\Grid\\": "app/code/Mageplaza/BannerSlider/Model/ResourceModel/Slider/Grid/"
         },
         "psr-0": {
             "": [
