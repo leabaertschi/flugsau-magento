@@ -2600,13 +2600,16 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
             'recaptcha_frontend' => [
                 'type_for' => [
                     'contact' => 'recaptcha_v3',
-                    'customer_login' => null,
+                    'customer_login'  => 'recaptcha_v3',
                     'customer_forgot_password' => 'recaptcha_v3',
                     'customer_create' => 'recaptcha_v3',
+                    'customer_edit' => 'recaptcha_v3',
                     'newsletter' => 'recaptcha_v3',
-                    'paypal_payflowpro' => null,
+                    'paypal_payflowpro' => 'recaptcha_v3',
                     'product_review' => 'recaptcha_v3',
                     'sendfriend' => 'recaptcha_v3',
+                    'place_order' => 'recaptcha_v3',
+                    'resend_confirmation_email' => 'recaptcha_v3',
                 ],
                 'type_recaptcha' => [
                     'size' => 'normal',
