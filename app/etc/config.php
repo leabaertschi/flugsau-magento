@@ -365,7 +365,7 @@ return [
         'Lillik_PriceDecimal' => 0,
         'Magefan_Community' => 1,
         'Magefan_Blog' => 1,
-        'Magefan_BlogGraphQl' => 1,
+        'Magefan_BlogGraphQl' => 0,
         'Magefan_AdminUserGuide' => 1,
         'Magefan_WysiwygAdvanced' => 1,
         'Mageplaza_Core' => 1,
@@ -2600,7 +2600,7 @@ SRtzyD0ASJBvg9aGk3lNt0qsWbgd//s8ZTNjorXTd9Y8dGOhvImobXU4qlXKdQVl
             'recaptcha_frontend' => [
                 'type_for' => [
                     'contact' => 'recaptcha_v3',
-                    'customer_login'  => 'recaptcha_v3',
+                    'customer_login' => 'recaptcha_v3',
                     'customer_forgot_password' => 'recaptcha_v3',
                     'customer_create' => 'recaptcha_v3',
                     'customer_edit' => 'recaptcha_v3',

@@ -21,7 +21,8 @@
         "magento/composer-root-update-plugin": "^2.0.4",
         "magento/zendframework1": "^1.15",
         "magento/module-elasticsearch-8": "^101.0",
-        "mageplaza/module-ajax-layered-navigation": "^4.1"
+        "mageplaza/module-ajax-layered-navigation": "^4.1",
+        "magefan/module-blog-graph-ql": "^2.2.2"
     },
     "require-dev": {
         "allure-framework/allure-phpunit": "^3.2",
